@@ -2,6 +2,7 @@
   "name": "rabbitfighter",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --aot --prod",
     "start": "node server.js",
     "ng": "ng",
     "build": "ng build",
