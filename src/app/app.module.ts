@@ -23,8 +23,6 @@ import { ToolbarMainComponent } from './components/toolbar-main/toolbar-main.com
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { NetworksComponent } from './components/networks/networks.component';
-import { StoreModule } from '@ngrx/store';
-
 
 @NgModule({
   declarations: [
