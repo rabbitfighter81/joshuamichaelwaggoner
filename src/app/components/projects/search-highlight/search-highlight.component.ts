@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { GITHUB_SEARCH_HIGHLIGHT_PROJECT } from './../../../app.constants';
-import { ISearchHighlight, SET_RESULT_COUNT, SET_SEARCH_TERM } from './../../../reducers/search-highlight/search-highlight.reducer';
 
 const TEXT =
 'Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the ' +
@@ -18,16 +15,11 @@ const TEXT =
 })
 export class SearchHighlightComponent implements OnInit {
 
-  store$: Observable<ISearchHighlight>;
-  state: ISearchHighlight;
-
   textContent: string;
+  searchTerm;
+  resultCount;
 
-  constructor(private store: Store<ISearchHighlight>) {
-    this.store$ = store.pipe(select('searchHighlight'));
-    this.store$.subscribe(state => {
-      this.state = state;
-    });
+  constructor() {
     this.textContent = TEXT;
   }
 
@@ -46,17 +38,11 @@ export class SearchHighlightComponent implements OnInit {
   }
 
   setSearchTerm(searchTerm: string): void {
-    this.store.dispatch({
-      type: SET_SEARCH_TERM,
-      payload: searchTerm
-    });
+    this.searchTerm = searchTerm;
   }
 
   setResultCount(count: number): void {
-    this.store.dispatch({
-      type: SET_RESULT_COUNT,
-      payload: count
-    });
+    this.resultCount = count;
   }
 
   navToGitHubProject(): boolean {
@@ -68,11 +54,11 @@ export class SearchHighlightComponent implements OnInit {
   }
 
   getResultCount(): number {
-    return this.state.resultCount;
+    return this.resultCount;
   }
 
   getSearchTerm(): string {
-    return this.state.searchTerm;
+    return this.searchTerm;
   }
 
 }

@@ -1,12 +1,6 @@
 import { animate, keyframes, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { select, Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-
-interface AppState {
-  count: number;
-}
 
 interface DiceRoll {
   value: number;
@@ -34,25 +28,21 @@ interface DiceRoll {
 })
 export class DiceRollerComponent implements OnInit {
 
-  count$: Observable<number>;
   diceCount = Array(100).fill(undefined).map((_, i) => i + 1);
   diceSides = [ 2, 4, 6, 8, 10, 12, 16, 20, 50, 100 ];
   form: FormGroup;
   rolls: DiceRoll[] = [];
   state: any;
 
-  constructor(private store: Store<AppState>, private fb: FormBuilder) {
-    this.count$ = store.pipe(select('count'));
-    this.count$.subscribe(s => {
-      this.state = s;
-    });
-  }
-
-  ngOnInit() {
+  constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       diceCount: [ '', Validators.required ],
       diceSides: [ '', Validators.required ],
     });
+  }
+
+  ngOnInit() {
+    
   }
 
   submitRoll(): void {

@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { ActivismComponent } from './components/pages/activism/activism.component';
 import { WorkComponent } from './components/pages/work/work.component';
@@ -10,7 +11,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PipelineContainerComponent } from './components/pipeline-container/pipeline-container.component';
 import { DiceRollerComponent } from './components/projects/dice-roller/dice-roller.component';
 import { ColorPickerComponent } from './components/projects/color-picker/color-picker.component';
@@ -24,7 +24,6 @@ import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { NetworksComponent } from './components/networks/networks.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 
 
 @NgModule({
@@ -53,7 +52,8 @@ import { reducers, metaReducers } from './reducers';
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
-    StoreModule.forRoot(reducers, { metaReducers })
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
