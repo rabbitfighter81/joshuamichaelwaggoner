@@ -1,0 +1,37 @@
+@import '../../styles/mixin';
+
+.spacer {
+  flex: 1 0 0;
+}
+
+.flex-row {
+  @include flex-row-fs();
+}
+
+.toolbar {
+  width: 100%;
+  margin: 0px;
+  background: #303030;
+  z-index: 1000;
+}
+
+
+/* TODO, cleanup **/
+h1.title {
+  color: white;
+  text-transform: UPPERCASE;
+  font-family: 'Londrina Outline' !important;
+  font-size: 38px !important;
+  margin-right: 20px;
+}
+
+h4 {
+  padding-left: 20px;
+  color: yellow;
+}
+
+.rf-icon-button {
+  .mat-icon {
+    color: #f0f0f0;
+  }
+}

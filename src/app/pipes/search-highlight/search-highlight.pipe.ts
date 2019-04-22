@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'searchHighlight' })
 export class SearchHighlightPipe implements PipeTransform {
-  constructor(private _sanitizer?: DomSanitizer) {
+  constructor(private sanitizer?: DomSanitizer) {
   }
   transform(value: any, args: any): any {
     /*tslint:disable*/

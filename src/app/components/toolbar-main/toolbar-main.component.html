@@ -1,3 +1,13 @@
-<p>
-  toolbar-main works!
-</p>
+<mat-toolbar class="toolbar">
+  <button mat-icon-button class="rf-icon-button" (click)="toggleMenuNav();">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <h1 class="title">Joshua M. Waggoner</h1>
+  <span class="spacer"></span>
+
+  <div class="right-side">
+    <button mat-icon-button class="rf-icon-button" (click)="navToGitHubProject()">
+      <mat-icon>code</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

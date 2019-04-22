@@ -1,14 +1,27 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { AboutComponent } from './about.component';
 
 describe('AboutComponent', () => {
+
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      imports: [
+        AppMaterialModule,
+        RouterTestingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule
+      ],
+      declarations: [ AboutComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
@@ -23,3 +36,4 @@ describe('AboutComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

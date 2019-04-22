@@ -1,0 +1,278 @@
+@import 'app';
+@import 'theme';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f0f0f0;
+}
+
+p,
+li {
+  line-height: 1.8em;
+  text-align: left;
+  font-size: 16px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+p,
+li,
+a,
+body,
+label {
+  font-family: 'Roboto';
+}
+
+.mat-card-subtitle,
+.mat-card-content,
+.mat-card-header .mat-card-title {
+  font-size: 16px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-text {
+  font-size: $app-large-font;
+  font-weight: 500;
+}
+
+.subheader-text {
+  font-size: $app-med-small-font-size;
+  font-weight: 500;
+}
+
+.container,
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto Condensed';
+}
+
+/deep/ .mat-card-title,
+/deep/ .mat-card-subtitle {
+  font-family: 'Roboto Condensed';
+}
+
+a {
+  text-decoration: none;
+  color: #f1453d;
+
+  :visited {
+    color: #f54a3f;
+  }
+}
+
+li {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+.img--cover {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.header-text {
+  font-size: $app-large-font;
+  font-family: 'Roboto Condensed';
+  font-weight: 500;
+}
+
+.subheader-text {
+  font-size: $app-med-small-font-size;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+input[type="text"] {
+  font-size: inherit;
+}
+
+.project-title {
+  font-size: $app-large-font !important;
+}
+
+.spacer {
+  flex: 1 0 0;
+}
+
+.container,
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.pipeline-container {
+  width: 100%;
+  margin: 20px 0% 20px 0%;
+
+  h1 {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
+    }
+  }
+
+  h2.pinline {
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 20px 0;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    text-transform: lowercase;
+  }
+
+  h2.pinline span {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  h2.pinline span:before,
+  h2.pinline span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: #000;
+    width: 99999px;
+  }
+
+  h2.pinline span:before {
+    left: 100%;
+    margin-left: 20px;
+  }
+
+  h2.pinline span:after {
+    right: 100%;
+    margin-right: 20px;
+  }
+
+  .large {
+    font-size: 1.3em;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
+    }
+  }
+
+  .small {
+    font-size: .85em;
+
+    @media only screen and (max-width: 600px) {
+      font-size: .75em;
+    }
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  p {
+    line-height: 1.8em;
+    text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.form-field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-container>* {
+  width: 100%;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.card--round-border {
+  border: solid 1px #e0e0e0;
+  border-radius: 5px !important;
+  margin-bottom: 20px;
+}
+
+.turncommerce-header-image {
+  background-image: url('/assets/img/turncommerce.png');
+  background-size: cover;
+}
+
+.rt-header-image {
+  background-image: url('/assets/img/rt.png');
+  background-size: cover;
+}
+
+.clickfox-header-image {
+  background-image: url('/assets/img/clickfox.png');
+  background-size: contain;
+}
+
+.fe-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.personal-image {
+  background-image: url('/assets/img/me.png');
+  background-size: cover;
+}
+
+.greyhound-image {
+  background-image: url('/assets/img/cga.png');
+  background-size: cover;
+}

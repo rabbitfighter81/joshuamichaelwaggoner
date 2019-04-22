@@ -1,3 +1,11 @@
-<p>
-  toolbar-nav works!
-</p>
+<mat-toolbar *ngIf="toolbarOpened"
+  class="toolbar-nav"
+  [@dropDownAnimation]
+  [@navItems]="navItems.length">
+  <div *ngFor="let item of navItems; let i = index"
+    class="nav-item"
+    routerLinkActive="nav-item-active"
+    [routerLink]="item.url">
+    {{ item.display }}
+  </div>
+</mat-toolbar>

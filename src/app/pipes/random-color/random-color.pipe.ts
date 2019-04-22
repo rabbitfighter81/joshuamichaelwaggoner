@@ -1,13 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
-@Pipe({ name: 'randomColor' })
+@Pipe({
+  name: 'randomColor'
+})
 export class RandomColorPipe implements PipeTransform {
-  constructor(private _sanitizer?: DomSanitizer) {}
+  constructor(private sanitizer?: DomSanitizer) {}
   transform(value: any): any {
     const v = value.split('');
     let html = '';
-    v.map((letter: string): void => {
+    v.map(letter => {
       const color = this.getRandomColor();
       html +=
       /*tslint:disable*/
@@ -16,7 +18,7 @@ export class RandomColorPipe implements PipeTransform {
         "</span>";
       /*tslint:enable*/
     });
-    return this._sanitizer.bypassSecurityTrustHtml(html);
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   colToHex(c: number): string {

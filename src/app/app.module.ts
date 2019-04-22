@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { ActivismComponent } from './components/pages/activism/activism.component';
 import { WorkComponent } from './components/pages/work/work.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
@@ -49,7 +50,8 @@ import { NetworksComponent } from './components/networks/networks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
