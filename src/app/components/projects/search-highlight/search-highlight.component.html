@@ -1,3 +1,34 @@
-<p>
-  search-highlight works!
-</p>
+<mat-card class="project" color="primary" class="mat-elevation-z1 card--round-border">
+  <mat-card-header>
+    <div mat-card-avatar class="personal-image"></div>
+    <mat-card-title class="project-title" color="primary">
+      Search Highlight
+    </mat-card-title>
+
+    <mat-card-subtitle class="project-subtitle">
+      Transform any text into highlighted text matching a search query
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <h1 class="search-highlight-h1">Search Highlight Pipe</h1>
+    <!-- This yeilds the React component-->
+    <br>
+    <div class="searcharea">
+      <input #searchInput type="text" (input)="setSearch(searchInput.value)">
+      <span class="spacer"></span>
+      <div class="results">
+        {{ getResultCount() }} results found
+      </div>
+    </div>
+    <div class="txt" [innerHTML]="textContent | searchHighlight: getSearchTerm()">
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    <button mat-button (click)="navToGitHubProject()">GITHUB</button>
+  </mat-card-actions>
+
+</mat-card>

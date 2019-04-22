@@ -23,6 +23,8 @@ import { ToolbarMainComponent } from './components/toolbar-main/toolbar-main.com
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { NetworksComponent } from './components/networks/networks.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 
 @NgModule({
@@ -50,8 +52,8 @@ import { NetworksComponent } from './components/networks/networks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [],
   bootstrap: [ AppComponent ]

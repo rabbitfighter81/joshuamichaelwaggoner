@@ -1,3 +1,69 @@
-<p>
-  dice-roller works!
-</p>
+<mat-card color="primary" class="mat-elevation-z1 card--round-border">
+
+  <mat-card-header>
+    <div mat-card-avatar class="personal-image"></div>
+    <mat-card-title class="project-title">
+      RPG Dice Roller
+    </mat-card-title>
+
+    <mat-card-subtitle class="project-subtitle">
+      Take a roll of the dice with this embedded RPG dice roller.
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <div class="project-content-container flex-row">
+
+      <form [formGroup]="form">
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <mat-select placeholder="Number of Sides" formControlName="diceSides">
+              <mat-option default>How many sides?</mat-option>
+              <mat-option *ngFor="let x of diceSides" [value]="x">
+                {{ x }} Sides
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('diceSides').invalid">{{ diceSidesErrorMessage }}</mat-error>
+            <mat-hint align="end">Select a number of sides for each of the dice</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <mat-select placeholder="Number of dice" formControlName="diceCount">
+              <mat-option default>How many dice?</mat-option>
+              <mat-option *ngFor="let x of diceCount" [value]="x">
+                {{ x }} Dice
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('diceCount').invalid">{{ diceCountErrorMessage }}</mat-error>
+            <mat-hint align="end">Select a number of dice</mat-hint>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <br><br>
+
+      <button mat-raised-button color="primary" class="roll-btn mat-elevation-z1 btn" [disabled]="form.invalid"
+        (click)="submitRoll()">
+        Roll Dice
+      </button>
+
+      <br>
+      <br>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content>
+    <table class="table_dice" id="table_dice" [@diceRolling]="diceRolls">
+      <div class="dice" *ngFor="let roll of diceRolls; let i = index;">{{ roll.value }}</div>
+    </table>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    <button mat-button (click)="navToGitHubProject()">GITHUB</button>
+  </mat-card-actions>
+
+</mat-card>
