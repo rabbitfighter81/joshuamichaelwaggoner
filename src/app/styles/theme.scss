@@ -23,13 +23,13 @@ $candy-app-theme-dark: mat-dark-theme($candy-app-primary, $candy-app-accent, $ca
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($candy-app-theme-dark);
 
 // Default colors
 $my-app-primary: mat-palette($mat-blue, 700, 100, 800);
 $my-app-accent:  mat-palette($mat-green, 700, 100, 800);
 $my-app-warn: mat-palette($mat-red);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);
 
 
