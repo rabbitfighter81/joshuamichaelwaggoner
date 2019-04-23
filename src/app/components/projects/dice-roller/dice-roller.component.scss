@@ -1,5 +1,4 @@
-@import "../../../styles/mixin";
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Josefin+Sans|Josefin+Slab|Raleway|Ubuntu");
+@import '../../../../styles/mixin.scss';
 
 .dice-container {
   display: flex;
@@ -24,7 +23,7 @@
   margin: 8px;
   border-radius: 5px;
   color: #eeeeee;
-  font-family: "IM Fell English SC", serif;
+  font-family: 'IM Fell English SC', serif;
 }
 
 .table_dice {

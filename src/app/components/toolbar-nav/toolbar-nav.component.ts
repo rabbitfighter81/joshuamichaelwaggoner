@@ -1,5 +1,5 @@
+import { Component, Input, OnInit } from '@angular/core';
 import { Animations } from './../../animations/animations';
-import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar-nav',

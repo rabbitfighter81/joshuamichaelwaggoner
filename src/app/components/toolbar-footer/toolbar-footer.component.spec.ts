@@ -1,13 +1,13 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from './../../modules/app-material/app-material.module';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ToolbarFooterComponent } from './toolbar-footer.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ToolbarFooterComponent', () => {
+
   let component: ToolbarFooterComponent;
   let fixture: ComponentFixture<ToolbarFooterComponent>;
 
@@ -15,10 +15,10 @@ describe('ToolbarFooterComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ ToolbarFooterComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

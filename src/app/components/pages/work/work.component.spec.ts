@@ -15,10 +15,10 @@ describe('WorkComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ WorkComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

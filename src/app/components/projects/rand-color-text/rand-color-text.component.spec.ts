@@ -15,9 +15,9 @@ describe('RandColorTextComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterTestingModule,
       ],
       declarations: [ RandColorTextComponent, RandomColorPipe ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

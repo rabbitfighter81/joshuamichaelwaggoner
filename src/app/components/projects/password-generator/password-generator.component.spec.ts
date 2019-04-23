@@ -16,7 +16,7 @@ describe('PasswordGeneratorComponent', () => {
         AppMaterialModule,
         BrowserAnimationsModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
       ],
       declarations: [ PasswordGeneratorComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -1,10 +1,6 @@
-@import './app/styles/mixin';
-@import './app/styles/theme';
-@import url('https://fonts.googleapis.com/css?family=Oswald|Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab');
-@import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab');
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,500,700');
+@import './styles/mixin.scss';
+@import './styles/theme.scss';
 /* You can add global styles to this file, and also import other style files */
-
 
 body {
   margin: 0px;

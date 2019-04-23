@@ -15,10 +15,10 @@ describe('ResumeComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ ResumeComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

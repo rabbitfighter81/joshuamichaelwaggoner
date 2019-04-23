@@ -6,16 +6,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from './../modules/app-material/app-material.module';
 import { AppComponent } from './app.component';
 
-
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ AppComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

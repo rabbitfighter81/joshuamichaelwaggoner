@@ -1,13 +1,13 @@
-import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { ContactComponent } from './contact.component';
 
 describe('ContactComponent', () => {
+
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
 
@@ -15,10 +15,10 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ ContactComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

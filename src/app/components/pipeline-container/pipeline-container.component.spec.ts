@@ -15,10 +15,10 @@ describe('PipelineContainerComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        RouterTestingModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        RouterTestingModule,
       ],
       declarations: [ PipelineContainerComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

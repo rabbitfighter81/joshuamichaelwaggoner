@@ -42,7 +42,6 @@ export class DiceRollerComponent implements OnInit {
   }
 
   ngOnInit() {
-    
   }
 
   submitRoll(): void {

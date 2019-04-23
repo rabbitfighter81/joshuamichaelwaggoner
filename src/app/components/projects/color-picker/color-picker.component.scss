@@ -1,7 +1,6 @@
-@import '../../../../styles';
-@import '../../../styles/mixin';
+@import '../../../../styles/mixin.scss';
 
-@mixin slider-col() {
+@mixin slider-col {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,7 +17,7 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  background-color:#aaa;
+  background-color: #aaa;
   height: 1px;
 }
 
@@ -32,6 +31,7 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
   @media (max-width: 767px) {
     width: 100%;
     display: flex;
@@ -41,11 +41,13 @@ hr {
   }
 }
 
-.slider-container, .side-container {
-  @include slider-col();
+.slider-container,
+.side-container {
+  @include slider-col;
   padding: 10px;
   margin: 10px;
   height: 100%;
+
   @media (max-width: 767px) {
     width: calc(100% - 20px);
     margin: 0px;
@@ -54,20 +56,22 @@ hr {
     justify-content: space-between;
     align-items: flex-start;
   }
+
   .hex-value {
     margin-top: 20px;
     border-radius: 5px;
-
   }
+
   .number-values {
     border-radius: 5px;
-
   }
+
   .hex-color {
     width: calc(100%);
     border-radius: 5px;
     margin-top: 20px;
     height: 40px;
+
     @media (max-width: 767px) {
       margin-top: 20px;
       width: 100%;
@@ -81,6 +85,7 @@ hr {
 
 .slider-container {
   width: 70%;
+
   @media (max-width: 767px) {
     width: calc(100% - 20px);
     margin: 0px;
@@ -93,6 +98,7 @@ hr {
 
 .side-container {
   width: 30%;
+
   @media (max-width: 767px) {
     width: calc(100% - 20px);
     margin: 0px;
@@ -107,50 +113,22 @@ hr {
 .slider-value.red {
   color: red;
 }
+
 .slider-value.green {
   color: green;
 }
-.slider-value.blue {
-  color:blue;
-}
-.slider-margin {
 
+.slider-value.blue {
+  color: blue;
 }
 
 h4 {
   padding-top: 0px;
-  margin-top: 0px;
-
   padding-bottom: 0px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
-/*
-.side-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 20%;
-  margin: 20px;
-  height: 100%;
-  @media (max-width: 767px) {
-    width: calc(100% - 20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0px;
-  }
-
-}
-*/
-
-
-.mat-slider-horizontal{
+.mat-slider-horizontal {
   width: 100%;
 }
-
-
-
-
