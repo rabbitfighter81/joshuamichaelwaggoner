@@ -15,11 +15,11 @@ export class ToolbarNavComponent implements OnInit {
   @Input() toolbarOpened: boolean;
 
   navItems = [
-    { id: 1, display: 'About', url: '/about' },
-    { id: 2, display: 'Resume', url: '/resume' },
-    { id: 3, display: 'Work', url: '/work' },
-    { id: 4, display: 'Activism', url: '/activism' },
-    { id: 5, display: 'Contact', url: '/contact' }
+    { id: 1, display: 'About', url: '/About' },
+    { id: 2, display: 'Resume', url: '/Resume' },
+    { id: 3, display: 'Work', url: '/Work' },
+    { id: 4, display: 'Activism', url: '/Activism' },
+    { id: 5, display: 'Contact', url: '/Contact' }
   ];
 
   constructor() { }

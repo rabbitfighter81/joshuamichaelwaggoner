@@ -14,23 +14,23 @@ export const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'about',
+    path: 'About',
     component: AboutComponent
   },
   {
-    path: 'contact',
+    path: 'Contact',
     component: ContactComponent
   },
   {
-    path: 'resume',
+    path: 'Resume',
     component: ResumeComponent
   },
   {
-    path: 'work',
+    path: 'Work',
     component: WorkComponent
   },
   {
-    path: 'activism',
+    path: 'Activism',
     component: ActivismComponent
   },
   {
@@ -38,11 +38,11 @@ export const appRoutes: Routes = [
     component: PageNotFoundComponent,
   },
   {
-    path: 'forbidden',
+    path: 'Forbidden',
     component: ForbiddenComponent
   },
   {
-    path: 'unauthorized',
+    path: 'Unauthorized',
     component: UnauthorizedComponent
   },
   {
