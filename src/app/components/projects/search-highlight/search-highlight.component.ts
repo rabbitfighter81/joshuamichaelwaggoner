@@ -44,6 +44,14 @@ export class SearchHighlightComponent implements OnInit {
     this.resultCount = count;
   }
 
+  toggleLike(): void {
+    console.log('Likes coming soon...');
+  }
+
+  share(): void {
+    console.log('Share coming soon...');
+  }
+
   navToGitHubProject(): void {
     window.open(GITHUB_SEARCH_HIGHLIGHT_PROJECT, '_blank');
   }

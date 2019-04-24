@@ -1,7 +1,12 @@
-<mat-card class="project" color="primary" class="mat-elevation-z1 card--round-border">
+<mat-card
+  class="project"
+  color="primary"
+  class="mat-elevation-z1 card--round-border">
   <mat-card-header>
     <div mat-card-avatar class="personal-image"></div>
-    <mat-card-title class="project-title" color="primary">
+    <mat-card-title
+      class="project-title"
+      color="primary">
       Search Highlight
     </mat-card-title>
 
@@ -11,27 +16,52 @@
   </mat-card-header>
 
   <mat-card-content class="card-content">
+
     <h1 class="search-highlight-h1">Search Highlight Pipe</h1>
-    <!-- This yeilds the React component-->
+    <!-- This needs to be a form TODO -->
     <br>
     <div class="searcharea">
-      <input #searchInput type="text" (input)="setSearch(searchInput.value)">
+
+      <input
+        #searchInput
+        type="text"
+        (input)="setSearch(searchInput.value)">
+
       <span class="spacer"></span>
+
       <div class="results" *ngIf="getResultCount()">
         {{ getResultCount() }} results found
       </div>
+
     </div>
-    <div class="txt" [innerHTML]="textContent | searchHighlight: getSearchTerm()">
-    </div>
+
+    <div class="txt" [innerHTML]="textContent | searchHighlight: getSearchTerm()"></div>
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-stroked-button>LIKE</button>
-    <button mat-stroked-button>SHARE</button>
-    <button mat-stroked-button
+    <button
+      mat-button
+      role="button"
+      type="button"
+      aria-role="Like button"
+      i18n="@@Projects_SearchHighlight_Actions_Like"
+      (click)="toggleLike()">
+      LIKE
+    </button>
+    <button
+      mat-button
+      role="button"
+      type="button"
+      aria-role="Share button"
+      i18n="@@Projects_SearchHighlight_Actions_Share"
+      (click)="share()">
+      SHARE
+    </button>
+    <button mat-button
       type="button"
       role="button"
       aria-label="github-link-to-search-highlight-project"
+      i18n="@@Projects_SearchHighlight_Actions_Github"
       (click)="navToGitHubProject()"
       disabled>
       GITHUB
