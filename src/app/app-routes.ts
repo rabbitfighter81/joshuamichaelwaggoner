@@ -14,36 +14,35 @@ export const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'About',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: 'Contact',
+    path: 'contact',
     component: ContactComponent
   },
   {
-    path: 'Resume',
+    path: 'resume',
     component: ResumeComponent
   },
   {
-    path: 'Work',
+    path: 'work',
     component: WorkComponent
   },
   {
-    path: 'Activism',
+    path: 'activism',
     component: ActivismComponent
   },
   {
     path: '404',
     component: PageNotFoundComponent,
-    pathMatch: 'full'
   },
   {
-    path: 'Forbidden',
+    path: 'forbidden',
     component: ForbiddenComponent
   },
   {
-    path: 'Unauthorized',
+    path: 'unauthorized',
     component: UnauthorizedComponent
   },
   {
