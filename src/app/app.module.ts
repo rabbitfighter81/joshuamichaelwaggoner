@@ -21,6 +21,8 @@ import { ToolbarNavComponent } from './components/toolbar-nav/toolbar-nav.compon
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
+import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
+import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.p
     ToolbarMainComponent,
     RandomColorPipe,
     SearchHighlightPipe,
+    ForbiddenComponent,
+    UnauthorizedComponent,
   ],
   imports: [
     BrowserModule,
