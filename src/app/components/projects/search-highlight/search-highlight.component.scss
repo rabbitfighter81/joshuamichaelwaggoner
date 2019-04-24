@@ -1,13 +1,13 @@
-@import '../../../../styles/mixin.scss';
+@import "../../../../styles/mixin.scss";
 
 .card-content {
   background-color: #333;
-  background-image: url('http://rabbitfighter.net/wp-content/uploads/2016/01/starwars2.jpg');
+  background-image: url("http://rabbitfighter.net/wp-content/uploads/2016/01/starwars2.jpg");
   color: #fff;
   font-size: 16px;
 }
 
-input{
+input {
   width: 50%;
 }
 
@@ -15,12 +15,12 @@ input{
   padding: 20px;
   line-height: 1.75em;
   font-size: $app-small-font;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
 }
 
 .search-highlight-h1 {
   font-size: 28px;
-  font-family: 'Bungee Outline';
+  font-family: "Bungee Outline";
   text-align: center;
   color: $electric-yellow;
   padding-top: 20px;
@@ -45,8 +45,7 @@ input{
   }
   .results {
     font-size: $app-med-small-font-size;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     color: $electric-blue;
   }
 }
-
