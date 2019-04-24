@@ -16,8 +16,8 @@ const TEXT =
 export class SearchHighlightComponent implements OnInit {
 
   textContent: string;
-  searchTerm;
-  resultCount;
+  searchTerm: string;
+  resultCount: number;
 
   constructor() {
     this.textContent = TEXT;
@@ -25,16 +25,15 @@ export class SearchHighlightComponent implements OnInit {
 
   ngOnInit() {}
 
-  matchCount(str, pattern) {
+  matchCount(str: string, pattern: string): number {
     const re = new RegExp(pattern, 'gi');
     return ((str || '').match(re) || []).length;
   }
 
   setSearch(searchTerm: string): void {
     const term = searchTerm.trim();
-    const count = this.matchCount(this.textContent, term);
-    this.setSearchTerm(term);
-    this.setResultCount(count);
+    this.setSearchTerm(term ? term : '');
+    this.setResultCount(term ? this.matchCount(this.textContent, term) : 0);
   }
 
   setSearchTerm(searchTerm: string): void {
@@ -45,12 +44,8 @@ export class SearchHighlightComponent implements OnInit {
     this.resultCount = count;
   }
 
-  navToGitHubProject(): boolean {
-    window.open(
-      GITHUB_SEARCH_HIGHLIGHT_PROJECT,
-      '_blank' // <- This is what makes it open in a new window.
-    );
-    return false;
+  navToGitHubProject(): void {
+    window.open(GITHUB_SEARCH_HIGHLIGHT_PROJECT, '_blank');
   }
 
   getResultCount(): number {

@@ -26,9 +26,16 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-    <button mat-button (click)="navToGitHubProject()">GITHUB</button>
+    <button mat-stroked-button>LIKE</button>
+    <button mat-stroked-button>SHARE</button>
+    <button mat-stroked-button
+      type="button"
+      role="button"
+      aria-label="github-link-to-search-highlight-project"
+      (click)="navToGitHubProject()"
+      disabled>
+      GITHUB
+    </button>
   </mat-card-actions>
 
 </mat-card>
