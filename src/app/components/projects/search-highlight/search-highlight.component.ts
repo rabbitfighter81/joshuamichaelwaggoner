@@ -53,7 +53,7 @@ export class SearchHighlightComponent implements OnInit {
   }
 
   getSearchTerm(): string {
-    return this.searchTerm;
+    return this.searchTerm || '';
   }
 
 }

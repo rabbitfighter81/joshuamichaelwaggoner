@@ -17,7 +17,7 @@
     <div class="searcharea">
       <input #searchInput type="text" (input)="setSearch(searchInput.value)">
       <span class="spacer"></span>
-      <div class="results">
+      <div class="results" *ngIf="getResultCount()">
         {{ getResultCount() }} results found
       </div>
     </div>
