@@ -20,14 +20,14 @@
   outline: none !important;
   margin: 5px;
   &:hover {
-    color: #f1453d;
+    color: $electric-blue;
   }
   &:active {
-    color: #f1453d;
+    color: $electric-blue;
   }
   cursor: pointer;
 }
 
 .nav-item-active {
-  color: #f1453d;
+  color: $electric-blue;
 }

@@ -35,10 +35,7 @@ export class ToolbarMainComponent implements OnInit {
   }
 
   navToGitHubProject(): boolean {
-    window.open(
-      GITHUB_LINK,
-      '_blank' // <- This is what makes it open in a new window.
-    );
+    window.open(GITHUB_LINK,'_blank');
     return false;
   }
 
