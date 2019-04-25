@@ -62,7 +62,7 @@ label {
 }
 
 h1 {
-  font-family: 'Roboto Condensed';
+  // font-family: 'Roboto Condensed';
   font-weight: 700;
   text-align: center;
   margin: 0;
@@ -73,12 +73,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto Condensed';
+  // font-family: 'Roboto Condensed';
 }
 
 /deep/ .mat-card-title,
 /deep/ .mat-card-subtitle {
-  font-family: 'Roboto Condensed';
+  // font-family: 'Roboto Condensed';
 }
 
 a {
@@ -116,14 +116,14 @@ li {
 
 .header-text {
   font-size: $app-large-font;
-  font-family: 'Roboto Condensed';
+  // font-family: 'Roboto Condensed';
   font-weight: 500;
 }
 
 .subheader-text {
   font-size: $app-med-small-font-size;
   font-weight: 500;
-  font-family: 'Roboto';
+  // font-family: 'Roboto';
 }
 
 input[type="text"] {
