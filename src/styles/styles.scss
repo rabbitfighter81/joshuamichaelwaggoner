@@ -83,14 +83,14 @@ h5 {
 
 a {
   text-decoration: none;
-  color: #f1453d;
+  color: $electric-blue;
 
   :visited {
-    color: #f54a3f;
+    color: $electric-blue;
   }
 
   :active {
-    color: #f54a3f;
+    color: $electric-blue;
   }
 }
 
