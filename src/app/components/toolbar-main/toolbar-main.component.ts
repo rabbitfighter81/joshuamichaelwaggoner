@@ -30,6 +30,10 @@ export class ToolbarMainComponent implements OnInit {
     }
   }
 
+  toggleSettings(): void {
+    console.log('Settings');
+  }
+
   navToGitHubProject(): boolean {
     window.open(
       GITHUB_LINK,

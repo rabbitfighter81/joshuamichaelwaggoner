@@ -1,13 +1,16 @@
 <mat-toolbar class="toolbar">
-  <button mat-icon-button class="rf-icon-button" (click)="toggleMenuNav();">
+  <button mat-icon-button class="btn-mat-icon" (click)="toggleMenuNav();">
     <mat-icon>more_vert</mat-icon>
   </button>
   <a class="no-style-link" routerLink="/"><h1 class="title">Joshua M. Waggoner</h1></a>
   <span class="spacer"></span>
 
   <div class="right-side">
-    <button mat-icon-button class="rf-icon-button" (click)="navToGitHubProject()">
+    <button mat-icon-button class="btn-mat-icon" (click)="navToGitHubProject()">
       <mat-icon>code</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-mat-icon" (click)="toggleSettings();">
+      <mat-icon>settings</mat-icon>
     </button>
   </div>
 </mat-toolbar>
