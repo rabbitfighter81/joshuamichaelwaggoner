@@ -3,13 +3,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
-import { ActivismComponent } from './activism.component';
+import { AppMaterialModule } from '../../../modules/app-material/app-material.module';
+import { GreyhoundsComponent } from './greyhounds.component';
 
-describe('ActivismComponent', () => {
+describe('GreyhoundsComponent', () => {
 
-  let component: ActivismComponent;
-  let fixture: ComponentFixture<ActivismComponent>;
+  let component: GreyhoundsComponent;
+  let fixture: ComponentFixture<GreyhoundsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,14 +20,14 @@ describe('ActivismComponent', () => {
         ReactiveFormsModule,
         BrowserAnimationsModule
       ],
-      declarations: [ ActivismComponent ],
+      declarations: [ GreyhoundsComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivismComponent);
+    fixture = TestBed.createComponent(GreyhoundsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

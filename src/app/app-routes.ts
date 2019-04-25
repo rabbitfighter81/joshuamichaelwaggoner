@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './components/pages/about/about.component';
-import { ActivismComponent } from './components/pages/activism/activism.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
+import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
+import { NetworksComponent } from './components/pages/networks/networks.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
@@ -14,7 +15,7 @@ export const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'About',
+    path: 'Home',
     component: AboutComponent
   },
   {
@@ -30,8 +31,12 @@ export const appRoutes: Routes = [
     component: WorkComponent
   },
   {
-    path: 'Activism',
-    component: ActivismComponent
+    path: 'Greyhounds',
+    component: GreyhoundsComponent
+  },
+  {
+    path: 'Networks',
+    component: NetworksComponent
   },
   {
     path: '404',

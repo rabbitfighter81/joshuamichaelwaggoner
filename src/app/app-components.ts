@@ -14,7 +14,7 @@ import { ToolbarNavComponent } from './components/toolbar-nav/toolbar-nav.compon
 import { ToolbarMainComponent } from './components/toolbar-main/toolbar-main.component';
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
-import { ActivismComponent } from './components/pages/activism/activism.component';
+import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
 
 
 const projects = [
@@ -32,7 +32,7 @@ const pipes = [
 
 const pages = [
   AboutComponent,
-  ActivismComponent,
+  GreyhoundsComponent,
   ContactComponent,
   PageNotFoundComponent,
   ResumeComponent,

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { AboutComponent } from './components/pages/about/about.component';
-import { ActivismComponent } from './components/pages/activism/activism.component';
+import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
@@ -23,29 +23,31 @@ import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
+import { NetworksComponent } from './components/pages/networks/networks.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     AboutComponent,
-    ContactComponent,
-    PageNotFoundComponent,
-    ResumeComponent,
-    WorkComponent,
-    ActivismComponent,
-    PipelineContainerComponent,
-    DiceRollerComponent,
+    AppComponent,
     ColorPickerComponent,
-    PasswordGeneratorComponent,
-    RandColorTextComponent,
-    SearchHighlightComponent,
-    ToolbarFooterComponent,
-    ToolbarNavComponent,
-    ToolbarMainComponent,
-    RandomColorPipe,
-    SearchHighlightPipe,
+    ContactComponent,
+    DiceRollerComponent,
     ForbiddenComponent,
+    GreyhoundsComponent,
+    PageNotFoundComponent,
+    PasswordGeneratorComponent,
+    PipelineContainerComponent,
+    RandColorTextComponent,
+    RandomColorPipe,
+    ResumeComponent,
+    SearchHighlightComponent,
+    SearchHighlightPipe,
+    ToolbarFooterComponent,
+    ToolbarMainComponent,
+    ToolbarNavComponent,
     UnauthorizedComponent,
+    WorkComponent,
+    NetworksComponent,
   ],
   imports: [
     BrowserModule,
