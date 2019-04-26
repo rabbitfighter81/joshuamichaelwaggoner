@@ -17,37 +17,18 @@ import { RandColorTextComponent } from './components/projects/rand-color-text/ra
 import { SearchHighlightComponent } from './components/projects/search-highlight/search-highlight.component';
 import { ToolbarFooterComponent } from './components/toolbar-footer/toolbar-footer.component';
 import { ToolbarMainComponent } from './components/toolbar-main/toolbar-main.component';
-import { ToolbarNavComponent } from './components/toolbar-nav/toolbar-nav.component';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 import { NetworksComponent } from './components/pages/networks/networks.component';
+import { components } from './app-components';
 
 @NgModule({
   declarations: [
-    AboutComponent,
     AppComponent,
-    ColorPickerComponent,
-    ContactComponent,
-    DiceRollerComponent,
-    ForbiddenComponent,
-    GreyhoundsComponent,
-    PageNotFoundComponent,
-    PasswordGeneratorComponent,
-    PipelineContainerComponent,
-    RandColorTextComponent,
-    RandomColorPipe,
-    ResumeComponent,
-    SearchHighlightComponent,
-    SearchHighlightPipe,
-    ToolbarFooterComponent,
-    ToolbarMainComponent,
-    ToolbarNavComponent,
-    UnauthorizedComponent,
-    WorkComponent,
-    NetworksComponent,
+    ...components
   ],
   imports: [
     BrowserModule,

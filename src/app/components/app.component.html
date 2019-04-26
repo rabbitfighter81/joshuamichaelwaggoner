@@ -1,34 +1,19 @@
 <app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
-<mat-sidenav-container
-  class="example-container"
-  (backdropClick)="close()"
-  *ngIf="shouldRun">
-  <mat-sidenav
-    #sidenav
-    (keydown.escape)="close()"
-    disableClose>
+<mat-sidenav-container class="example-container" (backdropClick)="close()" *ngIf="shouldRun">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
     <div class="flex-row">
       <div class="flex=-col">
         <mat-list>
-          <mat-list-item
-            *ngFor="let item of navItems; let i = index">
-            <a 
-              class="nav-item"
-              role="nav"
-              aria-label="navigation item"
-              routerLinkActive="nav-item-active"
-              [routerLink]="item.url"
-              (click)="close()">
+          <mat-list-item *ngFor="let item of navItems; let i = index">
+            <a class="nav-item" role="nav" aria-label="navigation item" routerLinkActive="nav-item-active"
+              [routerLink]="item.url" (click)="close()">
               {{ item.display }}
             </a>
           </mat-list-item>
         </mat-list>
       </div>
       <div class="flex-col">
-          <button
-            id="btn-close-nav"
-            mat-icon-button
-            (click)="close()">
+        <button id="btn-close-nav" mat-icon-button (click)="close()">
           <mat-icon color="primary">close</mat-icon>
         </button>
       </div>
