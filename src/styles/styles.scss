@@ -46,6 +46,10 @@ label,
   margin-top: 100px;
 }
 
+.spacer {
+  flex: 1 0 0;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
