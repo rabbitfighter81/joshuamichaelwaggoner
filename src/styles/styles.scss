@@ -1,4 +1,4 @@
-@import './mixin.scss';
+@import './app.scss';
 @import './theme.scss';
 
 body {
@@ -6,42 +6,6 @@ body {
   padding: 0px;
   background-color: white;
 }
-
-/*
-p,
-li {
-  line-height: 1.8em;
-  text-align: left;
-  font-size: 16px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 14px;
-  }
-}
-*/
-
-/*
-p,
-li,
-a,
-body,
-label,
-.header-text {
-  font-family: 'Roboto Condensed';
-}
-*/
-
-/*
-.mat-card-subtitle,
-.mat-card-content,
-.mat-card-header .mat-card-title {
-  font-size: 16px;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 14px;
-  }
-}
-*/
 
 .content {
   width: 80%;
@@ -90,14 +54,13 @@ label,
   text-align: center;
 }
 
-/*
 h1 {
   font-family: 'Roboto Condensed';
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   margin: 0;
   font-size: 2em;
-}*/
+}
 
 /deep/ .mat-card-title {
   font-family: 'Roboto Condensed';

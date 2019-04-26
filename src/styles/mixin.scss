@@ -1,4 +1,4 @@
-@import './app.scss';
+@import './styles.scss';
 
 $breakpoints: (
   'small':  767px,
@@ -7,3 +7,8 @@ $breakpoints: (
 ) !default;
 
 
+@mixin flex-row-space-between() {
+  @include flex-row();
+  @include align-center();
+  justify-content: space-between;
+}
