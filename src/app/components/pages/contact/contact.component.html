@@ -12,7 +12,6 @@
           <mat-form-field appearance="outline">
             <input matInput placeholder="Enter your email" formControlName="email" required>
             <mat-error *ngIf="form.get('email').invalid">{{ emailErrorMessage }}</mat-error>
-            <mat-hint align="end">Please enter a valid email address</mat-hint>
           </mat-form-field>
         </div>
         <!-- Name -->
@@ -42,7 +41,6 @@
       <button mat-raised-button color="primary" [disabled]="form.invalid">Send
         <mat-icon>email</mat-icon>
       </button>
-      <br><br><br><br>
     </mat-card-content>
   </mat-card>
 
