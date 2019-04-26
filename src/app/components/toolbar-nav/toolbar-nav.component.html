@@ -1,15 +1,1 @@
-<mat-toolbar
-  *ngIf="toolbarOpened"
-  class="toolbar-nav"
-  [@dropDownAnimation]
-  [@navItems]="navItems.length">
-  <div
-    *ngFor="let item of navItems; let i = index"
-    class="nav-item"
-    role="nav"
-    aria-label="navigation item"
-    routerLinkActive="nav-item-active"
-    [routerLink]="item.url">
-    {{ item.display }}
-  </div>
-</mat-toolbar>
+

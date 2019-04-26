@@ -8,26 +8,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ToolbarMainComponent implements OnInit {
 
-  @Output() open: EventEmitter<any> = new EventEmitter();
-  @Output() close: EventEmitter<any> = new EventEmitter();
+  @Output() toggle: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  visible = false;
-
   ngOnInit() {
+    /*
     setTimeout(() => {
-      this.toggleMenuNav();
-    }, 500);
+      this.toggleSidenav();
+    }, 1000);
+    */
   }
 
-  toggleMenuNav(): void {
-    this.visible = !this.visible;
-    if (this.visible) {
-      this.open.emit(null);
-    } else {
-      this.close.emit(null);
-    }
+  toggleSidenav(): void {
+    this.toggle.emit();
   }
 
   toggleSettings(): void {
