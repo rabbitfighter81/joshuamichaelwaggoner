@@ -1,21 +1,3 @@
-.container {
-  margin-top: 100px;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 #btn-close-nav {
   margin: 10px;
   .mat-icon {
