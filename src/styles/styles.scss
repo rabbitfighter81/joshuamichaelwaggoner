@@ -4,9 +4,10 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
+/*
 p,
 li {
   line-height: 1.8em;
@@ -17,7 +18,9 @@ li {
     font-size: 14px;
   }
 }
+*/
 
+/*
 p,
 li,
 a,
@@ -26,7 +29,9 @@ label,
 .header-text {
   font-family: 'Roboto Condensed';
 }
+*/
 
+/*
 .mat-card-subtitle,
 .mat-card-content,
 .mat-card-header .mat-card-title {
@@ -36,6 +41,7 @@ label,
     font-size: 14px;
   }
 }
+*/
 
 .content {
   width: 80%;
@@ -84,13 +90,14 @@ label,
   text-align: center;
 }
 
+/*
 h1 {
   font-family: 'Roboto Condensed';
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   margin: 0;
   font-size: 2em;
-}
+}*/
 
 /deep/ .mat-card-title {
   font-family: 'Roboto Condensed';

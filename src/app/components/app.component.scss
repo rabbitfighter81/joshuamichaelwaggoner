@@ -5,6 +5,22 @@
   }
 }
 
+.nav-item {
+  font-family: 'Roboto Condensed';
+  outline: none;
+  &:hover {
+    color: $electric-blue;
+  }
+  &:active {
+    color: $electric-blue;
+  }
+  cursor: pointer;
+}
+
+.nav-item-active {
+  color: $electric-blue;
+}
+
 .mat-sidenav-content {
   background: white;
   color: black;
