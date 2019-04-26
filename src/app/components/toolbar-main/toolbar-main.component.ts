@@ -13,24 +13,18 @@ export class ToolbarMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    /*
-    setTimeout(() => {
-      this.toggleSidenav();
-    }, 1000);
-    */
   }
 
   toggleSidenav(): void {
     this.toggle.emit();
   }
 
-  toggleSettings(): void {
+  toggleSettings(): void { // TODO: future...
     console.log('Settings');
   }
 
-  navToGitHubProject(): boolean {
-    window.open(GITHUB_LINK,'_blank');
-    return false;
+  navToGitHubProject(): void {
+    window.open(GITHUB_LINK, '_blank'); // TODO future...
   }
 
 }

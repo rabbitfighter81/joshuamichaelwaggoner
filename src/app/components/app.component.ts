@@ -1,19 +1,19 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   open = false;
-  reason = '';
   shouldRun = true;
-  toolbarOpened = false;
 
   navItems = [
     { id: 1, display: 'Resume', url: '/Resume' },
@@ -23,12 +23,25 @@ export class AppComponent implements OnInit {
     { id: 5, display: 'Contact', url: '/Contact' }
   ];
 
-  constructor() {}
+  router$: Subscription;
 
-  ngOnInit() {}
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router$ = this.router.events.subscribe(next => this.onRouteUpdated(next));
+  }
+
+  ngOnDestroy() {
+    this.router$.unsubscribe();
+  }
+
+  private onRouteUpdated(event: any): void {
+    if (event instanceof NavigationEnd) {
+      document.body.scrollTop = 0;
+    }
+  }
 
   close(reason: string): void {
-    this.reason = reason;
     this.sidenav.close();
     this.open = false;
   }
@@ -40,14 +53,6 @@ export class AppComponent implements OnInit {
       this.sidenav.open();
     }
     this.open = !this.open;
-  }
-
-  onOpen(): void {
-    this.toolbarOpened = true;
-  }
-
-  onClose(): void {
-    this.toolbarOpened = false;
   }
 
 }

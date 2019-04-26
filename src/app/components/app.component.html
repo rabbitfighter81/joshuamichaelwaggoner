@@ -1,11 +1,11 @@
 <app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
 <mat-sidenav-container
   class="example-container"
-  (backdropClick)="close('backdrop')"
+  (backdropClick)="close()"
   *ngIf="shouldRun">
   <mat-sidenav
     #sidenav
-    (keydown.escape)="close('escape')"
+    (keydown.escape)="close()"
     disableClose>
     <div class="flex-row">
       <div class="flex=-col">
@@ -18,7 +18,7 @@
               aria-label="navigation item"
               routerLinkActive="nav-item-active"
               [routerLink]="item.url"
-              (click)="close('link')">
+              (click)="close()">
               {{ item.display }}
             </a>
           </mat-list-item>
@@ -28,7 +28,7 @@
           <button
             id="btn-close-nav"
             mat-icon-button
-            (click)="close('toggle button')">
+            (click)="close()">
           <mat-icon color="primary">close</mat-icon>
         </button>
       </div>

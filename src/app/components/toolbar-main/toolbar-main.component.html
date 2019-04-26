@@ -1,15 +1,31 @@
 <mat-toolbar class="toolbar">
-  <button mat-icon-button id="btn-toggle-nav" (click)="toggleSidenav()">
+  <button
+    mat-icon-button
+    color="primary"
+    id="btn-toggle-nav"
+    (click)="toggleSidenav()">
     <mat-icon>menu</mat-icon>
   </button>
-  <a class="no-style-link" routerLink="/"><h1 class="title">Joshua M. Waggoner</h1></a>
+  <a
+    class="no-style-link"
+    routerLink="/">
+    <h1 class="title">Joshua M. Waggoner</h1>
+  </a>
   <span class="spacer"></span>
 
   <div class="right-side">
-    <button mat-icon-button class="btn-mat-icon" (click)="navToGitHubProject()">
+    <button
+      mat-icon-button
+      color="primary"
+      class="btn-mat-icon"
+      (click)="navToGitHubProject()">
       <mat-icon>code</mat-icon>
     </button>
-    <button mat-icon-button class="btn-mat-icon" (click)="toggleSettings();">
+    <button
+      mat-icon-button
+      color="primary"
+      class="btn-mat-icon"
+      (click)="toggleSettings()">
       <mat-icon>settings</mat-icon>
     </button>
   </div>
