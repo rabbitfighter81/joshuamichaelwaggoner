@@ -1,5 +1,5 @@
-@import 'app';
-@import 'theme';
+@import './app.scss';
+@import './theme.scss';
 
 body {
   margin: 0px;
@@ -70,13 +70,6 @@ h1 {
   font-size: 2em;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Roboto';
-}
-
 /deep/ .mat-card-title {
   font-family: 'Roboto Condensed';
 }
@@ -123,11 +116,11 @@ li {
 .subheader-text {
   font-size: $app-med-small-font-size;
   font-weight: 500;
-  // font-family: 'Roboto';
+  font-family: 'Roboto';
 }
 
 input[type="text"] {
-  font-size: inherit;
+  font-size: 16px;
 }
 
 .project-title {
@@ -170,7 +163,7 @@ input[type="text"] {
     font-size: 1em;
     font-weight: 100;
     margin: 20px 0;
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto';
     font-weight: 700;
     text-transform: lowercase;
   }
@@ -201,35 +194,6 @@ input[type="text"] {
     margin-right: 20px;
   }
 
-  .large {
-    font-size: 1.3em;
-    text-transform: uppercase;
-
-    @media only screen and (max-width: 600px) {
-      font-size: 1em;
-    }
-  }
-
-  .small {
-    font-size: .85em;
-
-    @media only screen and (max-width: 600px) {
-      font-size: .75em;
-    }
-  }
-
-  .italic {
-    font-style: italic;
-  }
-
-  p {
-    line-height: 1.8em;
-    text-align: center;
-
-    @media only screen and (max-width: 600px) {
-      font-size: 0.9em;
-    }
-  }
 }
 
 .form-field-container {
@@ -242,7 +206,7 @@ input[type="text"] {
 }
 
 .scrollable {
-  overflow: auto;
+  // overflow: auto;
 }
 
 .card--round-border {
