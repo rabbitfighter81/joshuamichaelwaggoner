@@ -7,6 +7,13 @@ body {
   background-color: white;
 }
 
+p {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
 .content {
   width: 80%;
   margin: 0 auto;
@@ -156,7 +163,7 @@ input[type="text"] {
     font-weight: 100;
     margin: 20px 0;
     font-family: 'Roboto';
-    font-weight: 700;
+    font-weight: 400;
     text-transform: lowercase;
   }
 
