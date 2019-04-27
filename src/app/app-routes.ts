@@ -15,7 +15,7 @@ export const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'Home',
+    path: 'About',
     component: AboutComponent
   },
   {

@@ -16,7 +16,6 @@ export class PasswordGeneratorComponent implements OnInit {
     { display: 'Alpha Numeric', value: 'alphaNum', disabled: false, warning: false },
     { display: 'ASCII', value: 'ascii', disabled: false, warning: false },
     { display: 'Hexadecimal', value: 'hex', disabled: false, warning: false },
-    { display: 'Words', value: 'words', disabled: false, warning: true },
   ];
 
   lengths = [
@@ -66,22 +65,22 @@ export class PasswordGeneratorComponent implements OnInit {
   }
 
   generateAsciiPwd(length: number): string {
-    let i: any;
-    let n: any;
-    let offset: any;
-    let random: any;
-    let retVal: any;
+    let i: number;
+    let n: number;
+    let offset: number;
+    let random: number;
+    let password: string;
 
-    retVal = '';
+    password = '';
     i = 0;
     offset = 33;
     n = 92;
     while (i < length) {
       random = Math.floor(Math.random() * n);
-      retVal += String.fromCharCode(random + offset);
+      password += String.fromCharCode(random + offset);
       ++i;
     }
-    return retVal;
+    return password;
   }
 
   setPassword(): void {
