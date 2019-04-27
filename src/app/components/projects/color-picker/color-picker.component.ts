@@ -31,31 +31,27 @@ export class ColorPickerComponent implements OnInit {
     blue: 'Pick a shade of blue',
   };
 
-  // Color values
+  // Initial Color values
   values = {
     red: 135,
     green: 200,
     blue: 85,
   };
 
-  slidersForm: FormGroup;
+  form: FormGroup;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.initForm();
-  }
-
-  initForm() {
-    this.slidersForm = this.fb.group({
+    this.form = this.fb.group({
       red: [ this.values.red, [ Validators.required ]],
       green: [ this.values.green, [ Validators.required ]],
       blue: [ this.values.blue, [ Validators.required ]],
     });
   }
 
-  updateValue(field: string, value: number) {
-    this.slidersForm.get(field).setValue(value);
+  updateValue(field: string, value: number): void {
+    this.form.get(field).setValue(value);
   }
 
   decToHex(decimalNumber: number): string {
@@ -81,17 +77,16 @@ export class ColorPickerComponent implements OnInit {
     return this.rgbToHex(this.red, this.green, this.blue);
   }
 
-  get red() {
-    return this.slidersForm.get('red').value;
+  get red(): number {
+    return this.form.get('red').value;
   }
 
-  get green() {
-    return this.slidersForm.get('green').value;
+  get green(): number {
+    return this.form.get('green').value;
   }
 
-  get blue() {
-    return this.slidersForm.get('blue').value;
+  get blue(): number {
+    return this.form.get('blue').value;
   }
-
 
 }

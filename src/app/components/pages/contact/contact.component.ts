@@ -13,15 +13,7 @@ export class ContactComponent implements OnInit {
   form: FormGroup;
 
   ngOnInit() {
-    this.form = this.getNewForm();
-  }
-
-  submit(): void {
-    console.log('Submitting message...');
-  }
-
-  getNewForm(): FormGroup {
-    return this.fb.group({
+    this.form = this.fb.group({
       email: [
         '',
         [
@@ -33,6 +25,10 @@ export class ContactComponent implements OnInit {
       reason: [ '', Validators.required ],
       message: [ '', Validators.required ]
     });
+  }
+
+  submit(): void {
+    console.log('Submitting message...');
   }
 
   get emailErrorMessage(): string {

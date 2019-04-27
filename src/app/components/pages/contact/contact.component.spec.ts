@@ -40,14 +40,6 @@ describe('ContactComponent', () => {
 
     describe('initialization', () => {
 
-      beforeEach(() => {
-        component.ngOnInit();
-      });
-
-      afterEach(() => {
-        component = undefined;
-      });
-
       it('form is invalid', () => {
         component.ngOnInit();
         expect(component.form.valid).toBeFalsy();
@@ -77,14 +69,6 @@ describe('ContactComponent', () => {
 
     describe('Form functionality', () => {
 
-      beforeEach(() => {
-        component.ngOnInit();
-      });
-
-      afterEach(() => {
-        component = undefined;
-      });
-
       it('is valid when all values are present and valid email', () => {
         component.ngOnInit();
         component.form.setValue({
@@ -97,7 +81,6 @@ describe('ContactComponent', () => {
       });
 
       it('is invalid when email is not a valid email', () => {
-        component.ngOnInit();
         component.form.setValue({
           name: 'Edgar',
           email: 'edgar',
@@ -108,7 +91,6 @@ describe('ContactComponent', () => {
       });
 
       it('is invalid when email is not defined', () => {
-        component.ngOnInit();
         component.form.setValue({
           name: 'Edgar',
           email: null,
@@ -120,7 +102,6 @@ describe('ContactComponent', () => {
 
 
       it('is invalid when name is not defined', () => {
-        component.ngOnInit();
         component.form.setValue({
           name: null,
           email: 'edgar',
@@ -131,7 +112,6 @@ describe('ContactComponent', () => {
       });
 
       it('is invalid when reason is not defined', () => {
-        component.ngOnInit();
         component.form.setValue({
           name: 'edgar',
           email: 'edgar@alan.poe.com',
@@ -142,7 +122,6 @@ describe('ContactComponent', () => {
       });
 
       it('is invalid when message is not defined', () => {
-        component.ngOnInit();
         component.form.setValue({
           name: 'edgar',
           email: 'edgar@alan.poe.com',
