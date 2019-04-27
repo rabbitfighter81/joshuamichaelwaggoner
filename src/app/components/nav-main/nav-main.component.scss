@@ -1,0 +1,14 @@
+@import '../../../styles/mixin.scss';
+
+/deep/ .mat-list-item {
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-item {
+  font-family: 'Roboto Condensed';
+  outline: none;
+  color: $electric-blue;
+}
+
+

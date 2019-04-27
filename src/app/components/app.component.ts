@@ -12,17 +12,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
-  open = false;
-  shouldRun = true;
-
-  navItems = [
-    { id: 1, display: 'About', url: '/About' },
-    { id: 2, display: 'Resume', url: '/Resume' },
-    { id: 3, display: 'Work', url: '/Work' },
-    { id: 4, display: 'Networks', url: '/Networks' },
-    { id: 5, display: 'Greyhounds', url: '/Greyhounds' },
-    { id: 6, display: 'Contact', url: '/Contact' }
-  ];
+  navOpen = false;
 
   router$: Subscription;
 
@@ -39,21 +29,24 @@ export class AppComponent implements OnInit, OnDestroy {
   private onRouteUpdated(event: any): void {
     if (event instanceof NavigationEnd) {
       document.body.scrollTop = 0;
+      if (this.navOpen) {
+        this.close();
+      }
     }
   }
 
-  close(reason: string): void {
+  close(): void {
     this.sidenav.close();
-    this.open = false;
+    this.navOpen = false;
   }
 
-  toggleSidenav() {
-    if (this.open) {
+  toggleSidenav(): void {
+    if (this.navOpen) {
       this.sidenav.close();
     } else {
       this.sidenav.open();
     }
-    this.open = !this.open;
+    this.navOpen = !this.navOpen;
   }
 
 }

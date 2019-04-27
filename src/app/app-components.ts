@@ -17,6 +17,7 @@ import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
+import { NavMainComponent } from './components/nav-main/nav-main.component';
 
 const projects = [
   RandColorTextComponent,
@@ -43,6 +44,10 @@ const pages = [
   UnauthorizedComponent
 ];
 
+const nav = [
+  NavMainComponent,
+];
+
 const header = [
   ToolbarMainComponent,
 ];
@@ -61,5 +66,6 @@ export const components = [
   ...pages,
   ...header,
   ...footer,
+  ...nav,
   ...misc
 ];
