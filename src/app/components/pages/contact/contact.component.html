@@ -6,7 +6,7 @@
   <mat-card class="mat-elevation-z1 scrollable card--round-border">
 
     <mat-card-content>
-      <form [formGroup]="form">
+      <form [formGroup]="form" (ngSubmit)="submit()">
         <!-- Email -->
         <div class="form-field-container">
           <mat-form-field appearance="outline">
@@ -37,10 +37,16 @@
             <textarea matInput placeholder="Textarea" formControlName="message" rows="12"></textarea>
           </mat-form-field>
         </div>
-      </form>
-      <button mat-raised-button color="primary" [disabled]="form.invalid">Send
-        <mat-icon>email</mat-icon>
+        <button mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="form.invalid">
+          Send
+          <mat-icon>email</mat-icon>
       </button>
+
+
+      </form>
     </mat-card-content>
   </mat-card>
 

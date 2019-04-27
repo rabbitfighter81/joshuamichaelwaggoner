@@ -16,6 +16,10 @@ export class ContactComponent implements OnInit {
     this.form = this.getNewForm();
   }
 
+  submit(): void {
+    console.log('Submitting message...');
+  }
+
   getNewForm(): FormGroup {
     return this.fb.group({
       email: [
