@@ -13,7 +13,11 @@ export class ContactComponent implements OnInit {
   form: FormGroup;
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.form = this.getNewForm();
+  }
+
+  getNewForm(): FormGroup {
+    return this.fb.group({
       email: [
         '',
         [
@@ -27,21 +31,21 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  get emailErrorMessage() {
+  get emailErrorMessage(): string {
     return this.form.get('email').hasError('required') ? 'You must enter a value' :
         this.form.get('email').hasError('email') ? 'Not a valid email' :
             '';
   }
 
-  get reasonErrorMessage() {
+  get reasonErrorMessage(): string {
     return this.form.get('reason').hasError('required') ? 'You must enter a reason' : '';
   }
 
-  get messageErrorMessage() {
+  get messageErrorMessage(): string {
     return this.form.get('message').hasError('required') ? 'You must enter a message' : '';
   }
 
-  get nameErrorMessage() {
+  get nameErrorMessage(): string {
     return this.form.get('name').hasError('required') ? 'You must enter a contact name' : '';
   }
 
