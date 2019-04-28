@@ -10,6 +10,11 @@ export class ToolbarMainComponent implements OnInit {
 
   @Output() toggle: EventEmitter<any> = new EventEmitter();
 
+  languageList = [
+    { code: 'en', label: 'English' },
+    { code: 'de', label: 'Deutsch' },
+  ];
+
   constructor() { }
 
   ngOnInit() {
@@ -19,8 +24,8 @@ export class ToolbarMainComponent implements OnInit {
     this.toggle.emit();
   }
 
-  toggleSettings(): void { // TODO: future...
-    console.log('Settings');
+  toggleLanguage(): void { // TODO: future...
+    console.log('Language');
   }
 
   navToGitHubProject(): void {

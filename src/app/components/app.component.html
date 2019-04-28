@@ -14,11 +14,6 @@
   <mat-sidenav-content>
     <app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
     <router-outlet></router-outlet>
-    <ng-container *ngFor="let language of languageList">
-        <a href="/{{language.code}}/"></a>
-      <button class="button">{{language.label}}</button>
-      </a>
-    </ng-container>
     <app-toolbar-footer></app-toolbar-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

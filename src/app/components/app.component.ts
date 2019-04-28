@@ -16,12 +16,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   router$: Subscription;
 
-  languageList = [
-    { code: 'en', label: 'English' },
-    { code: 'de', label: 'Deutsch' },
-
-  ];
-
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
     private router: Router
