@@ -32,8 +32,6 @@
     </button>
 
     <mat-menu #languageMenu="matMenu">
-      <button mat-menu-item>English</button>
-      <button mat-menu-item>Deutsch</button>
       <ng-container *ngFor="let language of languageList">
         <a href="/{{ language.code }}/">
           <button mat-menu-item>{{ language.label }}</button>
