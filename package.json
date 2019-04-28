@@ -2,10 +2,10 @@
   "name": "joshuamichaelwaggoner",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build-locale",
+    "heroku-postbuild": "ng build-locale:en --aot --prod && ng build-locale:de --aot --prod",
     "start": "node server.js",
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build-locale:en",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
