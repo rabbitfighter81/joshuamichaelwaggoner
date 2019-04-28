@@ -4,7 +4,7 @@ import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.co
 import { NetworksComponent } from './components/pages/networks/networks.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
-import { WorkComponent } from './components/pages/work/work.component';
+import { ProjectsComponent } from './components/pages/projects/projects.component';
 import { PipelineContainerComponent } from './components/pipeline-container/pipeline-container.component';
 import { ColorPickerComponent } from './components/projects/color-picker/color-picker.component';
 import { DiceRollerComponent } from './components/projects/dice-roller/dice-roller.component';
@@ -42,7 +42,7 @@ const pages = [
   PageNotFoundComponent,
   ResumeComponent,
   UnauthorizedComponent,
-  WorkComponent,
+  ProjectsComponent,
 ];
 
 const nav = [
