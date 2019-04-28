@@ -2,6 +2,7 @@ const cors = require('cors');
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const nodeMailer = require('nodemailer');
 const app = express();
 
 // Run the app by serving the static files in the dist directory

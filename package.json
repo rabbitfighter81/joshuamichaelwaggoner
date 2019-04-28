@@ -2,8 +2,8 @@
   "name": "joshuamichaelwaggoner",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng locale-postbuild",
-    "start": "node server.js",
+    "heroku-postbuild": "bash ./locale-postbuild.sh",
+    "start": "nodemon server.js",
     "ng": "ng",
     "build": "ng build-locale:en",
     "test": "ng test",
