@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   form: FormGroup;
 
@@ -28,9 +30,9 @@ export class ContactComponent implements OnInit {
   }
 
   submit(): void {
-    const subject = this.form.get('reason');
-    const body = this.form.get('message');
-    window.open(`mailto:joshuamichaelwaggoner@egmail.com?subject=${ subject }&body=${ body }`);
+    const subject = this.form.get('reason').value;
+    const body = this.form.get('message').value;
+    window.open(`mailto:joshuamichaelwaggoner@egmail.com?subject=${ subject }&body=${ body }`, '_blank');
   }
 
   get emailErrorMessage(): string {
