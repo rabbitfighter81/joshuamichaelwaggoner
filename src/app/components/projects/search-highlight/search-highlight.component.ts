@@ -14,7 +14,7 @@ const TEXT =
   templateUrl: './search-highlight.component.html',
   styleUrls: ['./search-highlight.component.scss']
 })
-export class SearchHighlightComponent  extends ProjectBaseComponent implements OnInit {
+export class SearchHighlightComponent extends ProjectBaseComponent implements OnInit {
 
   textContent: string;
   searchTerm: string;
