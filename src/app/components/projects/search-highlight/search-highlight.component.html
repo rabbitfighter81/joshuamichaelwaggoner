@@ -43,28 +43,18 @@
       mat-button
       role="button"
       type="button"
-      aria-role="Like button"
-      i18n="@@Projects_SearchHighlight_Actions_Like"
-      (click)="toggleLike('Search')">
-      LIKE
-    </button>
-    <button
-      mat-button
-      role="button"
-      type="button"
       aria-role="Share button"
-      i18n="@@Projects_SearchHighlight_Actions_Share"
-      (click)="share('Search')">
-      SHARE
+      i18n="@@Projects_Actions_Share"
+      (click)="share('Search Highlight')">
+      Share
     </button>
     <button mat-button
       type="button"
       role="button"
-      aria-label="github-link-to-search-highlight-project"
-      i18n="@@Projects_SearchHighlight_Actions_Github"
-      (click)="navToGitHubProject('Search')"
-      disabled>
-      GITHUB
+      aria-role="GitHub button"
+      i18n="@@Projects_Actions_GitHub"
+      (click)="navToGitHubProject('Search Highlight')">
+      GitHub
     </button>
   </mat-card-actions>
 

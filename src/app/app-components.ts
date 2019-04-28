@@ -5,7 +5,6 @@ import { NetworksComponent } from './components/pages/networks/networks.componen
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
-import { PipelineContainerComponent } from './components/pipeline-container/pipeline-container.component';
 import { ColorPickerComponent } from './components/projects/color-picker/color-picker.component';
 import { DiceRollerComponent } from './components/projects/dice-roller/dice-roller.component';
 import { PasswordGeneratorComponent } from './components/projects/password-generator/password-generator.component';
@@ -64,14 +63,9 @@ export const snackbars = [
   SnackbarComingSoonComponent
 ];
 
-const misc = [
-  PipelineContainerComponent
-];
-
 export const components = [
   ...footer,
   ...header,
-  ...misc,
   ...nav,
   ...pages,
   ...pipes,

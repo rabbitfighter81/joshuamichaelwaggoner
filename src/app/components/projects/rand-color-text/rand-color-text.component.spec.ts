@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_SNACK_BAR_DATA } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { RandomColorPipe } from './../../../pipes/random-color/random-color.pipe';
@@ -18,6 +19,12 @@ describe('RandColorTextComponent', () => {
         FormsModule,
         ReactiveFormsModule,
         RouterTestingModule,
+      ],
+      providers: [
+        {
+          provide: MAT_SNACK_BAR_DATA,
+          useValue: { feature: 'Random Color Text' }
+        },
       ],
       declarations: [ RandColorTextComponent, RandomColorPipe ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

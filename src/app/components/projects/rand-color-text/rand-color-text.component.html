@@ -22,9 +22,23 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-    <button mat-button (click)="navToGitHubProject()">GITHUB</button>
+    <button
+      mat-button
+      role="button"
+      type="button"
+      aria-role="Share button"
+      i18n="@@Projects_Actions_Share"
+      (click)="share('Random Color')">
+      Share
+    </button>
+    <button mat-button
+      type="button"
+      role="button"
+      aria-role="GitHub button"
+      i18n="@@Projects_Actions_GitHub"
+      (click)="navToGitHubProject('Random Color')">
+      GitHub
+    </button>
   </mat-card-actions>
 
 </mat-card>

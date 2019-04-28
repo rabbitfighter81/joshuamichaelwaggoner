@@ -44,31 +44,114 @@
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Projects_SearchHighlight_Actions_Like" datatype="html">
+      <trans-unit id="Pinline_Welcome" datatype="html">
+        <source>wel·come</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/about/about.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Contact" datatype="html">
+        <source>con·tact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Forbidden" datatype="html">
+        <source>for·bid·den</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/forbidden/forbidden.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Greyhounds" datatype="html">
+        <source>grey·hounds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/greyhounds/greyhounds.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Networks" datatype="html">
+        <source>net·works</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/networks/networks.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Resume" datatype="html">
+        <source>re·sume</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Unauthorized" datatype="html">
+        <source>un·au·thor·ize</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/unauthorized/unauthorized.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Projects" datatype="html">
+        <source>pro·jects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/projects.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_Actions_Share" datatype="html">
         <source>
-      LIKE
+      Share
     </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/color-picker/color-picker.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/dice-roller/dice-roller.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/password-generator/password-generator.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/rand-color-text/rand-color-text.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Projects_SearchHighlight_Actions_Share" datatype="html">
+      <trans-unit id="Projects_Actions_GitHub" datatype="html">
         <source>
-      SHARE
+      GitHub
     </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="sourcefile">app/components/projects/color-picker/color-picker.component.html</context>
+          <context context-type="linenumber">102</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="Projects_SearchHighlight_Actions_Github" datatype="html">
-        <source>
-      GITHUB
-    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/dice-roller/dice-roller.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/password-generator/password-generator.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/rand-color-text/rand-color-text.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
     </body>

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 import { Animations } from 'src/app/animations/animations';
 import { DiceRoll } from '../../../models/dice-roll.model';
+import { ProjectBaseComponent } from '../project-base/project-base.component';
 
 @Component({
   selector: 'app-dice-roller',
@@ -9,7 +11,7 @@ import { DiceRoll } from '../../../models/dice-roll.model';
   styleUrls: ['./dice-roller.component.scss'],
   animations: [ Animations.diceRolling ]
 })
-export class DiceRollerComponent implements OnInit {
+export class DiceRollerComponent extends ProjectBaseComponent implements OnInit {
 
   diceCount = Array(100).fill(undefined).map((_, i) => i + 1);
   diceSides = [ 2, 4, 6, 8, 10, 12, 16, 20, 50, 100 ];
@@ -17,14 +19,19 @@ export class DiceRollerComponent implements OnInit {
   rolls: DiceRoll[] = [];
   state: any;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(
+    public snackbar: MatSnackBar,
+    private fb: FormBuilder
+  ) {
+    super(snackbar);
+  }
+
+  ngOnInit() {
     this.form = this.fb.group({
       diceCount: [ '', Validators.required ],
       diceSides: [ '', Validators.required ],
     });
-  }
-
-  ngOnInit() {
   }
 
   submitRoll(): void {
@@ -33,9 +40,6 @@ export class DiceRollerComponent implements OnInit {
       .map((_, id): DiceRoll => {
         return { value: this.getRand(), id };
       });
-  }
-
-  navToGitHubProject() {
   }
 
   getRand() {

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { GITHUB_RANDOM_PASSWORD_GENERATOR_PROJECT_URL } from './../../../app.constants';
+import { MatSnackBar } from '@angular/material';
+import { ProjectBaseComponent } from '../project-base/project-base.component';
 
 @Component({
   selector: 'app-password-generator',
   templateUrl: './password-generator.component.html',
   styleUrls: ['./password-generator.component.scss']
 })
-export class PasswordGeneratorComponent implements OnInit {
+export class PasswordGeneratorComponent extends ProjectBaseComponent implements OnInit {
 
   pwTypeControl = new FormControl('', [ Validators.required ]);
   pwLengthControl = new FormControl('', [ Validators.required ]);
@@ -42,7 +43,11 @@ export class PasswordGeneratorComponent implements OnInit {
   password: string;
   charset: string;
 
-  constructor() { }
+  constructor(
+    public snackbar: MatSnackBar,
+  ) {
+    super(snackbar);
+  }
 
   ngOnInit() {
   }
@@ -98,14 +103,6 @@ export class PasswordGeneratorComponent implements OnInit {
         this.password = this.generatePwd(this.characters, this.charsetAlpha);
         break;
     }
-  }
-
-  navToGitHubProject(): boolean {
-    window.open(
-      GITHUB_RANDOM_PASSWORD_GENERATOR_PROJECT_URL,
-      '_blank' // <- This is what makes it open in a new window.
-    );
-    return false;
   }
 
   copy(): void {

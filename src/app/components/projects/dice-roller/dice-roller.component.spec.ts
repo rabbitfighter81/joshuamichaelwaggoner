@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { DiceRollerComponent } from './dice-roller.component';
+import { MAT_SNACK_BAR_DATA } from '@angular/material';
 
 describe('DiceRollerComponent', () => {
 
@@ -17,6 +18,12 @@ describe('DiceRollerComponent', () => {
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
+      ],
+      providers: [
+        {
+          provide: MAT_SNACK_BAR_DATA,
+          useValue: { feature: 'Color Picker' }
+        },
       ],
       declarations: [ DiceRollerComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

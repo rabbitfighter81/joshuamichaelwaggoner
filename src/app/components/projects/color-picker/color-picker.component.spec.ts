@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { assign } from 'lodash';
 import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { ColorPickerComponent } from './color-picker.component';
+import { MAT_SNACK_BAR_DATA } from '@angular/material';
 
 describe('ColorPickerComponent', () => {
 
@@ -18,6 +19,12 @@ describe('ColorPickerComponent', () => {
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
+      ],
+      providers: [
+        {
+          provide: MAT_SNACK_BAR_DATA,
+          useValue: { feature: 'Color Picker' }
+        },
       ],
       declarations: [ ColorPickerComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

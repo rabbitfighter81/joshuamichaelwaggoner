@@ -19,12 +19,8 @@ export class ProjectBaseComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleLike(project: string): void {
-    this.openComingSoonSnackbar(`Like ${ project }`);
-  }
-
   share(project: string): void {
-    this.openComingSoonSnackbar(`Share ${ project }`);
+    this.openComingSoonSnackbar(`Share ${ project } `);
   }
 
   openComingSoonSnackbar(feature: string): void {
@@ -37,7 +33,7 @@ export class ProjectBaseComponent implements OnInit {
 
   navToGitHubProject(link: string): void {
     // window.open(link, '_blank');
-    this.openComingSoonSnackbar(`GitHub Link`);
+    this.openComingSoonSnackbar(`GitHub Link `);
   }
 
 }

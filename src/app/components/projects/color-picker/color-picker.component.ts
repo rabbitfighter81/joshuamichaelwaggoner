@@ -1,5 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
+import { ProjectBaseComponent } from '../project-base/project-base.component';
 import { GITHUB_HEX_COLOR_PICKER_PROJECT_URL } from './../../../app.constants';
 import { MatSliderSettings } from './../../../models/mat-slider-settings.model';
 
@@ -8,7 +10,7 @@ import { MatSliderSettings } from './../../../models/mat-slider-settings.model';
   templateUrl: './color-picker.component.html',
   styleUrls: ['./color-picker.component.scss']
 })
-export class ColorPickerComponent implements OnInit, OnDestroy {
+export class ColorPickerComponent extends ProjectBaseComponent implements OnInit, OnDestroy {
 
   // Settings
   sliderSettings: MatSliderSettings = {
@@ -40,7 +42,13 @@ export class ColorPickerComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    public snackbar: MatSnackBar,
+    private fb: FormBuilder
+  ) {
+    super(snackbar);
+  }
+
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -65,10 +73,6 @@ export class ColorPickerComponent implements OnInit, OnDestroy {
 
   rgbToHex(r: number, g: number, b: number): string {
     return '#' + this.decToHex(r) + this.decToHex(g) + this.decToHex(b);
-  }
-
-  navToGitHubProject(): void {
-    window.open(GITHUB_HEX_COLOR_PICKER_PROJECT_URL, '_blank');
   }
 
   copy(): void {
