@@ -26,26 +26,20 @@
       mat-icon-button
       color="primary"
       class="btn-mat-icon"
-      (click)="toggleLanguage()">
+      (click)="toggleLanguage()"
+      [matMenuTriggerFor]="languageMenu">
       <mat-icon>language</mat-icon>
     </button>
 
-
-
-    <mat-menu #appMenu="matMenu">
+    <mat-menu #languageMenu="matMenu">
       <button mat-menu-item>English</button>
       <button mat-menu-item>Deutsch</button>
-
       <ng-container *ngFor="let language of languageList">
         <a href="/{{ language.code }}/">
           <button mat-menu-item>{{ language.label }}</button>
         </a>
        </ng-container>
     </mat-menu>
-    
-    <button mat-icon-button [matMenuTriggerFor]="appMenu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
   </div>
 </mat-toolbar>
 
