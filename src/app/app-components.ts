@@ -18,6 +18,7 @@ import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.p
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 import { NavMainComponent } from './components/nav-main/nav-main.component';
+import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 
 const projects = [
   ColorPickerComponent,
@@ -54,6 +55,13 @@ const header = [
 
 const footer = [
   ToolbarFooterComponent
+];
+
+export const dialogs = [
+];
+
+export const snackbars = [
+  SnackbarComingSoonComponent
 ];
 
 const misc = [

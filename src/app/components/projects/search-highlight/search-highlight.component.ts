@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GITHUB_SEARCH_HIGHLIGHT_PROJECT } from './../../../app.constants';
+import { MatSnackBar } from '@angular/material';
+import { ProjectBaseComponent } from '../project-base/project-base.component';
 
 const TEXT =
 'Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the ' +
@@ -13,13 +14,14 @@ const TEXT =
   templateUrl: './search-highlight.component.html',
   styleUrls: ['./search-highlight.component.scss']
 })
-export class SearchHighlightComponent implements OnInit {
+export class SearchHighlightComponent  extends ProjectBaseComponent implements OnInit {
 
   textContent: string;
   searchTerm: string;
   resultCount: number;
 
-  constructor() {
+  constructor(public snackbar: MatSnackBar) {
+    super(snackbar);
     this.textContent = TEXT;
   }
 
@@ -42,18 +44,6 @@ export class SearchHighlightComponent implements OnInit {
 
   setResultCount(count: number): void {
     this.resultCount = count;
-  }
-
-  toggleLike(): void {
-    console.log('Likes coming soon...');
-  }
-
-  share(): void {
-    console.log('Share coming soon...');
-  }
-
-  navToGitHubProject(): void {
-    window.open(GITHUB_SEARCH_HIGHLIGHT_PROJECT, '_blank');
   }
 
   getResultCount(): number {

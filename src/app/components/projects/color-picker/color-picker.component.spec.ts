@@ -109,14 +109,7 @@ describe('ColorPickerComponent', () => {
   });
 
   describe('Getters', () => {
-    //
-    /*
-    values = {
-      red: 135,
-      green: 200,
-      blue: 85,
-    };
-    */
+
     beforeEach(() => {
       component.values = {
         red: 1,
