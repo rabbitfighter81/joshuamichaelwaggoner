@@ -1,30 +1,13 @@
-import { animate, keyframes, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-interface DiceRoll {
-  value: number;
-  id: number;
-}
+import { Animations } from 'src/app/animations/animations';
+import { DiceRoll } from '../../../models/dice-roll.model';
 
 @Component({
   selector: 'app-dice-roller',
   templateUrl: './dice-roller.component.html',
   styleUrls: ['./dice-roller.component.scss'],
-  animations: [
-    trigger('diceRolling', [
-      transition('* => *', [
-        query(':enter', style({ opacity: 0 }), {optional: true}),
-        query(':enter', stagger('35ms', [
-          animate('.6s ease-in', keyframes([
-            style({opacity: 0, transform: 'translateY(-75%) rotate(-90deg)', offset: 0}),
-            style({opacity: .5, transform: 'translateY(35px) rotate(200deg)',  offset: 0.3}),
-            style({opacity: 1, transform: 'translateY(0) rotate(360deg)',     offset: 1.0}),
-          ])),
-         ]), {optional: true})
-      ])
-    ])
-  ]
+  animations: [ Animations.diceRolling ]
 })
 export class DiceRollerComponent implements OnInit {
 

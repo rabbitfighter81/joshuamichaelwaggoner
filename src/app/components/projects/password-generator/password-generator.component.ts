@@ -94,8 +94,8 @@ export class PasswordGeneratorComponent implements OnInit {
       case 'ascii':
         this.password = this.generateAsciiPwd(this.characters);
         break;
-      case 'words':
-        this.password = 'trustno1';
+      default:
+        this.password = this.generatePwd(this.characters, this.charsetAlpha);
         break;
     }
   }

@@ -20,11 +20,11 @@ import { UnauthorizedComponent } from './components/pages/unauthorized/unauthori
 import { NavMainComponent } from './components/nav-main/nav-main.component';
 
 const projects = [
+  ColorPickerComponent,
+  DiceRollerComponent,
+  PasswordGeneratorComponent,
   RandColorTextComponent,
   SearchHighlightComponent,
-  ColorPickerComponent,
-  PasswordGeneratorComponent,
-  DiceRollerComponent
 ];
 
 const pipes = [
@@ -34,14 +34,14 @@ const pipes = [
 
 const pages = [
   AboutComponent,
-  GreyhoundsComponent,
   ContactComponent,
+  ForbiddenComponent,
+  GreyhoundsComponent,
+  NetworksComponent,
   PageNotFoundComponent,
   ResumeComponent,
+  UnauthorizedComponent,
   WorkComponent,
-  NetworksComponent,
-  ForbiddenComponent,
-  UnauthorizedComponent
 ];
 
 const nav = [
@@ -61,11 +61,11 @@ const misc = [
 ];
 
 export const components = [
-  ...projects,
-  ...pipes,
-  ...pages,
-  ...header,
   ...footer,
+  ...header,
+  ...misc,
   ...nav,
-  ...misc
+  ...pages,
+  ...pipes,
+  ...projects,
 ];

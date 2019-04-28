@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GITHUB_HEX_COLOR_PICKER_PROJECT_URL } from './../../../app.constants';
 import { MatSliderSettings } from './../../../models/mat-slider-settings.model';
@@ -8,7 +8,7 @@ import { MatSliderSettings } from './../../../models/mat-slider-settings.model';
   templateUrl: './color-picker.component.html',
   styleUrls: ['./color-picker.component.scss']
 })
-export class ColorPickerComponent implements OnInit {
+export class ColorPickerComponent implements OnInit, OnDestroy {
 
   // Settings
   sliderSettings: MatSliderSettings = {
@@ -49,6 +49,8 @@ export class ColorPickerComponent implements OnInit {
       blue: [ this.values.blue, [ Validators.required ]],
     });
   }
+
+  ngOnDestroy() {}
 
   updateValue(field: string, value: number): void {
     this.form.get(field).setValue(value);
