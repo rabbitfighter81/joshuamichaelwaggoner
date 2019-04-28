@@ -39,6 +39,17 @@ app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+app.get('*', (req, res) => {
+	//this is for i18n
+  const supportedLocales = ['en', 'de'];
+  const defaultLocale = 'en';
+  const matches = req.url.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+  //check if the requested url has a correct format '/locale' and matches any of the supportedLocales
+  const locale = (matches && supportedLocales.indexOf(matches[1]) !== -1) ? matches[1] : defaultLocale;
+
+  res.render(`${ locale }/index`, { req });
+});
+
 // Fire up the server and log it
 app.listen(app.get('port'), () => {
   console.log(`Find the server at: http://localhost:${ app.get('port') }`); // eslint-disable-line no-console
