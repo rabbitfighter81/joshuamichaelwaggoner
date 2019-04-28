@@ -8,6 +8,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist'));
 app.use("/en/", express.static(__dirname + "/dist/en"));
 app.use("/de/", express.static(__dirname + "/dist/de"));
+app.use("/es/", express.static(__dirname + "/dist/es"));
 
 // CORS
 app.use(cors());
@@ -45,7 +46,7 @@ app.get('*', (request, response) => {
 
 app.get('*', (req, response) => {
 	//this is for i18n
-  const supportedLocales = ['en', 'de'];
+  const supportedLocales = ['en', 'es', 'de'];
   const defaultLocale = 'en';
   const matches = req.url.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
   //check if the requested url has a correct format '/locale' and matches any of the supportedLocales

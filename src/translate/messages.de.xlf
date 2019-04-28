@@ -18,8 +18,8 @@
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Work" datatype="html">
-        <source>Work</source>
+      <trans-unit id="Nav_Link_Projects" datatype="html">
+        <source>Projects</source>
         <target>Projekte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
@@ -44,14 +44,14 @@
       </trans-unit>
       <trans-unit id="Nav_Link_Contact" datatype="html">
         <source>Contact</source>
-        <target>Kontakt</target>
+         <target>Kontakt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="Projects_SearchHighlight_Actions_Like" datatype="html">
-        <source>Like</source>
+        <source>LIKE</source>
         <target>Mögen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
@@ -59,7 +59,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="Projects_SearchHighlight_Actions_Share" datatype="html">
-        <source>Share</source>
+        <source>SHARE</source>
         <target>Aktie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
@@ -67,7 +67,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="Projects_SearchHighlight_Actions_Github" datatype="html">
-        <source>GitHub</source>
+        <source>GITHUB</source>
         <target>GitHub</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
