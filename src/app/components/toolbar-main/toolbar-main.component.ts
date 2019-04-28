@@ -12,6 +12,7 @@ export class ToolbarMainComponent implements OnInit {
 
   languageList = [
     { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
     { code: 'de', label: 'Deutsch' },
   ];
 
