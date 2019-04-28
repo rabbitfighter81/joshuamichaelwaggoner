@@ -50,7 +50,7 @@ app.get('*', (req, response) => {
   const locale = (matches && supportedLocales.indexOf(matches[1]) !== -1) ? matches[1] : defaultLocale;
 
   //res.render(`${ locale }/index`, { req });
-  response.sendFile(path.join(__dirname, 'dist/${ locale }', 'index.html'));
+  response.sendFile(path.join(__dirname, `dist/${ locale }`, 'index.html'));
 });
 
 // Fire up the server and log it
