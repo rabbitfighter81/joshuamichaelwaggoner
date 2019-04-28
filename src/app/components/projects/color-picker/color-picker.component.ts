@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { ProjectBaseComponent } from '../project-base/project-base.component';
-import { GITHUB_HEX_COLOR_PICKER_PROJECT_URL } from './../../../app.constants';
 import { MatSliderSettings } from './../../../models/mat-slider-settings.model';
 
 @Component({
