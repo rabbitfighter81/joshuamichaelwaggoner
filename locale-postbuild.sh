@@ -2,7 +2,7 @@
 #!/bin/bash
 # file: locale-postbuild.sh
 
-echo 'Installing production builds for locales script...'
+echo $'\nInstalling and building locale bundles from source...'
 
 # Msg & Build for English
 echo $'---------------\n~~~ English ~~~\n---------------'
@@ -16,4 +16,4 @@ ng build --prod --i18n-locale de --i18n-format xlf --i18n-file src/translate/mes
 echo $'---------------\n~~~ Spanish ~~~\n---------------'
 ng build --prod --i18n-locale es --i18n-format xlf --i18n-file src/translate/messages.es.xlf --output-path=dist/es --baseHref /es/
 
-echo 'Fin...'
+echo $'\n~~~ Fin! ~~~\n'
