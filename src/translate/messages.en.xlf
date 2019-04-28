@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="Nav_Link_About" datatype="html">
         <source>About</source>
-        <target><About/target>
+        <target>About</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
           <context context-type="linenumber">8</context>
