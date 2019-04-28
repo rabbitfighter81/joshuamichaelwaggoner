@@ -35,11 +35,13 @@ app.get('/api', (req, res) => { });
 app.post('/api/sendEmail', (req, res) => { });
 
 // Required for path location strategy
+/*
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
+*/
 
-app.get('*', (req, res) => {
+app.get('*', (req, response) => {
 	//this is for i18n
   const supportedLocales = ['en', 'de'];
   const defaultLocale = 'en';
@@ -47,7 +49,8 @@ app.get('*', (req, res) => {
   //check if the requested url has a correct format '/locale' and matches any of the supportedLocales
   const locale = (matches && supportedLocales.indexOf(matches[1]) !== -1) ? matches[1] : defaultLocale;
 
-  res.render(`${ locale }/index`, { req });
+  //res.render(`${ locale }/index`, { req });
+  response.sendFile(path.join(__dirname, 'dist/${ locale }', 'index.html'));
 });
 
 // Fire up the server and log it

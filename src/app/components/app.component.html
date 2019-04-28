@@ -15,8 +15,7 @@
     <app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
     <router-outlet></router-outlet>
     <ng-container *ngFor="let language of languageList">
-        <a *ngIf="language.code === 'en'" href="/">
-        <a *ngIf="language.code !== 'en'" href="/{{language.code}}/"></a>
+        <a href="/{{language.code}}/"></a>
       <button class="button">{{language.label}}</button>
       </a>
     </ng-container>
