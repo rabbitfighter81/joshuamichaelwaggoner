@@ -50,6 +50,14 @@
               "i18nMissingTranslation": "error"
             },
 
+            "es": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+
             "production": {
               "fileReplacements": [
                 {
@@ -87,6 +95,9 @@
             },
             "en": {
               "browserTarget": "joshuamichaelwaggoner:build:en"
+            },
+            "es": {
+              "browserTarget": "joshuamichaelwaggoner:build:es"
             },
             "production": {
               "browserTarget": "joshuamichaelwaggoner:build:production"
