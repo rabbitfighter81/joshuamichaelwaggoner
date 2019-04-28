@@ -3,7 +3,9 @@
   color="primary"
   class="mat-elevation-z1 border-bottom-20">
   <mat-card-header>
-    <div mat-card-avatar class="personal-image"></div>
+    <div
+      mat-card-avatar
+      class="personal-image"></div>
     <mat-card-title
       class="project-title"
       color="primary">
@@ -35,7 +37,9 @@
 
     </div>
 
-    <div class="txt" [innerHTML]="textContent | searchHighlight: getSearchTerm()"></div>
+    <div
+    class="txt"
+    [innerHTML]="textContent | searchHighlight: getSearchTerm()"></div>
   </mat-card-content>
 
   <mat-card-actions>

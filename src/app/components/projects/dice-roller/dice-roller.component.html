@@ -54,7 +54,7 @@
           class="roll-btn mat-elevation-z1 btn"
           matTooltip="Click to roll the dice"
           [matTooltipPosition]="'after'"
-          [matTooltipShowDelay]="750"
+          matTooltipShowDelay="750"
           aria-label="Button that displays a tooltip"
           [disabled]="form.invalid"
           (click)="submitRoll()">
@@ -77,7 +77,7 @@
       role="button"
       type="button"
       matTooltip="Share project online"
-      [matTooltipShowDelay]="750"
+      matTooltipShowDelay="750"
       aria-label="Button that displays a tooltip"
       i18n="@@Projects_Actions_Share"
       (click)="share('Dice Roller')">
@@ -87,7 +87,7 @@
       type="button"
       role="button"
       matTooltip="Click to see code"
-      [matTooltipShowDelay]="750"
+      matTooltipShowDelay="750"
       aria-label="Button that displays a tooltip"
       i18n="@@Projects_Actions_GitHub"
       (click)="navToGitHubProject('Dice Roller')">
