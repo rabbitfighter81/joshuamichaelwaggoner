@@ -1,5 +1,11 @@
 @import '../../../../styles/styles.scss';
 
+@mixin slider-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
 .border {
   border: solid 2px #666;
@@ -37,7 +43,7 @@ hr {
 
 .slider-container,
 .side-container {
-  @include flex-row-justify-start-align-start;
+  @include slider-col;
   padding: 10px;
   margin: 10px;
   height: 100%;

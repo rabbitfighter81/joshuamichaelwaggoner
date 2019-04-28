@@ -82,7 +82,7 @@ form,
 }
 
 .flex-col {
-  @include flex-col;
+  @include flex-col();
 }
 
 .header-text {

@@ -11,7 +11,7 @@ import { ProjectBaseComponent } from '../project-base/project-base.component';
 export class PasswordGeneratorComponent extends ProjectBaseComponent implements OnInit {
 
   pwTypeControl = new FormControl('', [ Validators.required ]);
-  pwLengthControl = new FormControl('', [ Validators.required ]);
+  lengthControl = new FormControl('', [ Validators.required ]);
 
   pwTypes = [
     { display: 'Alpha Numeric', value: 'alphaNum', disabled: false, warning: false },
@@ -114,7 +114,7 @@ export class PasswordGeneratorComponent extends ProjectBaseComponent implements 
   }
 
   get characters(): number {
-    return this.pwLengthControl.value.value;
+    return this.lengthControl.value.value;
   }
 
 }
