@@ -1,7 +1,8 @@
 <mat-toolbar class="toolbar">
   <button
     mat-icon-button
-    color="primary"
+    aria-label="toggle sidenav button"
+    color="accent"
     class="btn-mat-icon"
     (click)="toggleSidenav()">
     <mat-icon>menu</mat-icon>
@@ -17,14 +18,16 @@
   <div class="right-side">
     <button
       mat-icon-button
-      color="primary"
+      aria-label="see code button"
+      color="accent"
       class="btn-mat-icon"
       (click)="navToGitHubProject()">
       <mat-icon>code</mat-icon>
     </button>
     <button
       mat-icon-button
-      color="primary"
+      aria-label="change language button"
+      color="accent"
       class="btn-mat-icon"
       (click)="toggleLanguage()"
       [matMenuTriggerFor]="languageMenu">
@@ -32,9 +35,9 @@
     </button>
 
     <mat-menu #languageMenu="matMenu">
-      <ng-container *ngFor="let language of languageList">
+      <ng-container *ngFor="let language of languageList" role="list-item">
         <a href="/{{ language.code }}/">
-          <button mat-menu-item>{{ language.label }}</button>
+          <button mat-menu-item aria-label="language label">{{ language.label }}</button>
         </a>
        </ng-container>
     </mat-menu>

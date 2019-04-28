@@ -28,7 +28,9 @@ export class ContactComponent implements OnInit {
   }
 
   submit(): void {
-    console.log('Submitting message...');
+    const subject = this.form.get('reason');
+    const body = this.form.get('message');
+    window.open(`mailto:joshuamichaelwaggoner@egmail.com?subject=${ subject }&body=${ body }`);
   }
 
   get emailErrorMessage(): string {

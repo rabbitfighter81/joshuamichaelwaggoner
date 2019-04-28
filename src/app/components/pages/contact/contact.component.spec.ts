@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
 import { ContactComponent } from './contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ContactComponent', () => {
 
@@ -19,6 +20,7 @@ describe('ContactComponent', () => {
           FormsModule,
           ReactiveFormsModule,
           RouterTestingModule,
+          HttpClientModule
         ],
         declarations: [ ContactComponent ],
         schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
