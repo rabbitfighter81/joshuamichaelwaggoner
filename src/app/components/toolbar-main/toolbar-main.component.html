@@ -2,6 +2,9 @@
   <button
     mat-icon-button
     aria-label="toggle sidenav button"
+    matTooltip="Open the side menu"
+    matTooltipDelay="500"
+    [mode]="'after'"
     color="accent"
     class="btn-mat-icon"
     (click)="toggleSidenav()">
@@ -19,6 +22,9 @@
     <button
       mat-icon-button
       aria-label="see code button"
+      matTooltip="See the project code"
+      matTooltipDelay="500"
+      [mode]="'below'"
       color="accent"
       class="btn-mat-icon"
       (click)="navToGitHubProject()">
@@ -27,6 +33,9 @@
     <button
       mat-icon-button
       aria-label="change language button"
+      matTooltip="Change the locale"
+      matTooltipDelay="500"
+      [mode]="'below'"
       color="accent"
       class="btn-mat-icon"
       (click)="toggleLanguage()"
