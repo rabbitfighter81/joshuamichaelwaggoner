@@ -1,14 +1,10 @@
-@import '../../styles/mixin.scss';
-
-#btn-close-nav {
-  margin: 10px;
-  .mat-icon {
-    color: white;
-  }
-}
-
-.mat-sidenav-content {
-  background: white;
-  color: black;
-  height: 100vh;
+.button {
+  background-color: darkslateblue;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  width: 10%;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }

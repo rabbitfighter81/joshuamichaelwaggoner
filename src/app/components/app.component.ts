@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, Inject, LOCALE_ID } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -16,7 +16,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
   router$: Subscription;
 
-  constructor(private router: Router) {}
+  languageList = [
+    { code: 'en', label: 'English' },
+    { code: 'de', label: 'Deutsch' },
+
+  ];
+
+  constructor(
+    @Inject(LOCALE_ID) protected localeId: string,
+    private router: Router
+    ) {}
 
   ngOnInit() {
     this.router$ = this.router.events.subscribe(next => this.onRouteUpdated(next));

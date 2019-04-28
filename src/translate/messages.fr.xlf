@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="Nav_Link_About" datatype="html">
+        <source>About</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Nav_Link_Resume" datatype="html">
+        <source>Resume</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Nav_Link_Work" datatype="html">
+        <source>Work</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Nav_Link_Networks" datatype="html">
+        <source>Networks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Nav_Link_Greyhounds" datatype="html">
+        <source>Greyhounds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Nav_Link_Contact" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_SearchHighlight_Actions_Like" datatype="html">
+        <source>
+      LIKE
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_SearchHighlight_Actions_Share" datatype="html">
+        <source>
+      SHARE
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_SearchHighlight_Actions_Github" datatype="html">
+        <source>
+      GITHUB
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,38 +1,6 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/styles.scss';
 
 .footer-toolbar {
-
-  // Flex
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  // Font
-  font-family: 'Roboto';
-  font-size: 16px;
-  // Fixed position
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  z-index: 1000;
-  background: #232323;
-
-  .copyright {
-    color: white;
-  }
-
-  .phone {
-    color: inherit;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .icon-inline {
-    color: white;
-  }
 
   @media only screen and (max-width: 600px) {
     font-size: 14px;

@@ -1,13 +1,21 @@
 /** App Variables **/
 
-$soft-black: #303030;
-$periwinkle: #D0E1F9;
-$deep-sky-blue: #00BFFF;
-$electric-yellow: #ff3;
-$app-purple: #9c27b0;
-$green:#90EE90;
+// Colors
+$color-deep-sky-blue: #00BFFF;
+$color-electric-yellow: #ff3;
+$color-dark-grey: #333;
 
+// Font sizes (WIP)
 $app-small-font: 12px;
-$app-med-small-font-size: 16px;
-$app-medium-font: 18px;
-$app-large-font: 22px;
+$app-medium-font: 22px;
+$app-title-font: 'Oswald';
+$app-header-font: 'Roboto Condensed';
+
+$app-header-font-size: 28px;
+
+// Body
+$app-body-line-height: 1.5rem;
+$app-body-font-weight: 300;
+$app-body-size: 16px;
+
+$border-bottom-20: 20px;

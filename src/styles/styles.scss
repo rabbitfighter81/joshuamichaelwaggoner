@@ -1,5 +1,6 @@
 @import './app.scss';
 @import './theme.scss';
+@import './mixin.scss';
 
 body {
   margin: 0px;
@@ -8,45 +9,90 @@ body {
 }
 
 body, p, li, a {
-  font-size: 16px;
-  line-height: 1.5em;
-  font-weight: 300;
+  font-size: $app-body-size;
+  line-height: $app-body-line-height;
+  font-weight: $app-body-font-weight;
 }
 
 .content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
-.container {
-  margin-top: 100px;
+.title {
+  color: white;
+  text-transform: UPPERCASE;
+  font-family: $app-title-font !important;
 }
 
+.toolbar {
+  width: 100%;
+  margin: 0px;
+  background: $color-dark-grey;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.btn-mat-icon {
+  .mat-icon {
+    color: #f0f0f0;
+  }
+}
+
+
+form,
+.form-field-container {
+  width: 100%;
+}
+
+
+#btn-toggle-nav {
+  margin-right: 10px;
+  .mat-icon {
+    color: white; // TODO
+  }
+}
+
+#btn-close-nav {
+  margin: 10px;
+  .mat-icon {
+    color: white;
+  }
+}
+
+.mat-sidenav-content {
+  background: white;
+  color: black;
+  height: 100vh;
+}
+
+// Flex
 .spacer {
   flex: 1 0 0;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+.flex-row-justify-start-align-start {
+  @include flex-row-justify-start-align-start();
+}
+
+.flex-row-justify-start-align-center {
+  @include flex-row-justify-start-align-center();
 }
 
 .flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-col;
 }
 
 .header-text {
-  font-size: $app-large-font;
+  font-size: $app-header-font-size;
+  font: $app-header-font;
   font-weight: 500;
 }
 
 .subheader-text {
-  font-size: $app-med-small-font-size;
+  font-size: $app-body-size;
   font-weight: 500;
 }
 
@@ -74,21 +120,28 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $deep-sky-blue;
+  color: $color-electric-yellow;
 
   :visited {
-    color: $deep-sky-blue;
+    color: $color-electric-yellow;
   }
 
   :active {
-    color: $deep-sky-blue;
+    color: $color-electric-yellow;
   }
+}
+
+p.nav-item {
+  font-family: $app-header-font;
+  outline: none;
+  color: $color-electric-yellow;
 }
 
 li {
   margin: 0px;
   margin-bottom: 10px;
   padding: 0px;
+  line-height: $app-body-line-height;
 }
 
 .img--cover {
@@ -106,27 +159,23 @@ li {
 }
 
 .header-text {
-  font-size: $app-large-font;
+  font-size: $app-header-font;
   font-family: 'Roboto Condensed';
   font-weight: 500;
 }
 
 .subheader-text {
-  font-size: $app-med-small-font-size;
+  font-size: $app-body-size;
   font-weight: 500;
   font-family: 'Roboto';
 }
 
 input[type="text"] {
-  font-size: 16px;
+  font-size: $app-body-size;
 }
 
 .project-title {
-  font-size: $app-large-font !important;
-}
-
-.spacer {
-  flex: 1 0 0;
+  font-size: $app-header-font !important;
 }
 
 .container,
@@ -203,14 +252,18 @@ input[type="text"] {
   width: 100%;
 }
 
-.scrollable {
-  // overflow: auto;
+.full-image {
+  width: 100%;
+  margin: auto;
 }
 
-.card--round-border {
-  border: solid 1px #e0e0e0;
-  border-radius: 5px !important;
-  margin-bottom: 20px;
+.touchable {
+  cursor: pointer;
+  outline: none;
+}
+
+.border-bottom-20 {
+  margin-bottom: $border-bottom-20;
 }
 
 .turncommerce-header-image {
@@ -238,7 +291,7 @@ input[type="text"] {
   background-size: cover;
 }
 
-.greyhound-image {
+.greyhound-header-image {
   background-image: url('/assets/img/cga.png');
   background-size: cover;
 }
@@ -250,6 +303,26 @@ input[type="text"] {
 
 .government-image {
   background-image: url('/assets/img/government.png');
+  background-size: cover;
+}
+
+.stackoverflow-image {
+  background-image: url('/assets/img/stackoverflow.png');
+  background-size: cover;
+}
+
+.codepen-image {
+  background-image: url('/assets/img/codepen.png');
+  background-size: cover;
+}
+
+.github-image {
+  background-image: url('/assets/img/github.png');
+  background-size: cover;
+}
+
+.linkedin-image {
+  background-image: url('/assets/img/linkedin.png');
   background-size: cover;
 }
 

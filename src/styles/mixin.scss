@@ -1,5 +1,3 @@
-@import './styles.scss';
-
 $breakpoints: (
   'small':  767px,
   'medium': 992px,
@@ -11,4 +9,25 @@ $breakpoints: (
   @include flex-row();
   @include align-center();
   justify-content: space-between;
+}
+
+@mixin flex-row-justify-start-align-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flex-row-justify-start-align-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

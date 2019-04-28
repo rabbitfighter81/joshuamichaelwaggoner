@@ -1,10 +1,10 @@
-@import "../../../../styles/mixin.scss";
+@import "../../../../styles/styles.scss";
 
 .card-content {
   background-color: #333;
   background-image: url("http://rabbitfighter.net/wp-content/uploads/2016/01/starwars2.jpg");
   color: #fff;
-  font-size: 16px;
+  font-size: $app-body-size;
 }
 
 input {
@@ -22,7 +22,7 @@ input {
   font-size: 28px;
   font-family: "Bungee Outline";
   text-align: center;
-  color: $electric-yellow;
+  color: $color-electric-yellow;
   padding-top: 20px;
 }
 
@@ -35,7 +35,7 @@ input {
   align-items: center;
   input {
     max-width: 150px;
-    font-size: 16px;
+    font-size: $app-body-size;
   }
   .search {
     display: flex;
@@ -44,8 +44,8 @@ input {
     align-items: center;
   }
   .results {
-    font-size: $app-med-small-font-size;
+    font-size: $app-body-size;
     font-family: "Roboto";
-    color: $deep-sky-blue;
+    color: $color-electric-yellow;
   }
 }

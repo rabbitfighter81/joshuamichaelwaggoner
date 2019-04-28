@@ -1,7 +1,6 @@
-<app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
 <mat-sidenav-container class="example-container" (backdropClick)="close()">
-  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
-    <div class="flex-row">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose mode="push">
+    <div class="flex-row-justify-start-align-start">
       <div class="flex-col">
        <app-nav-main></app-nav-main>
       </div>
@@ -13,8 +12,14 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
+    <app-toolbar-main (toggle)="toggleSidenav()"></app-toolbar-main>
     <router-outlet></router-outlet>
-    <br><br><br>
+    <ng-container *ngFor="let language of languageList">
+        <a *ngIf="language.code === 'en'" href="/">
+        <a *ngIf="language.code !== 'en'" href="/{{language.code}}/"></a>
+      <button class="button">{{language.label}}</button>
+      </a>
+    </ng-container>
+    <app-toolbar-footer></app-toolbar-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<app-toolbar-footer></app-toolbar-footer>

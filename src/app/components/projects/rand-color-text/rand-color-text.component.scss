@@ -1,4 +1,4 @@
-@import '../../../../styles/mixin.scss';
+@import '../../../../styles/styles.scss';
 
 .quote-container {
   padding: 20px;
@@ -12,7 +12,7 @@
   letter-spacing: 0.7rem;
   @media only screen and (max-width: 600px) {
     font-size: 1em;
-    line-height: 1.5rem;
+    line-height: $app-body-line-height;
   }
 }
 
