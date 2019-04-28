@@ -1,6 +1,6 @@
 
 #!/bin/bash
-# file: heroku-postbuild.sh
+# file: locale-postbuild.sh
 echo 'Installing production builds for locales script...'
 
 # Build for English
