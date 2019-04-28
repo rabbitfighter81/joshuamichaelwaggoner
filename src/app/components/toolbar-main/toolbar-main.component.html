@@ -4,7 +4,7 @@
     aria-label="toggle sidenav button"
     matTooltip="Open the side menu"
     matTooltipDelay="500"
-    [mode]="'after'"
+    [matTooltipPosition]="'after'"
     color="accent"
     class="btn-mat-icon"
     (click)="toggleSidenav()">
@@ -24,7 +24,7 @@
       aria-label="see code button"
       matTooltip="See the project code"
       matTooltipDelay="500"
-      [mode]="'below'"
+      [matTooltipPosition]="'below'"
       color="accent"
       class="btn-mat-icon"
       (click)="navToGitHubProject()">
@@ -35,7 +35,7 @@
       aria-label="change language button"
       matTooltip="Change the locale"
       matTooltipDelay="500"
-      [mode]="'below'"
+      [matTooltipPosition]="'below'"
       color="accent"
       class="btn-mat-icon"
       (click)="toggleLanguage()"
