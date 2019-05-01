@@ -2,37 +2,38 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
-import { PasswordGeneratorComponent } from './password-generator.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppMaterialModule } from '../../modules/app-material/app-material.module';
+import { RandomColorPipe } from '../../pipes/random-color/random-color.pipe';
+import { RandColorTextComponent } from './rand-color-text.component';
 
-describe('PasswordGeneratorComponent', () => {
+describe('RandColorTextComponent', () => {
 
-  let component: PasswordGeneratorComponent;
-  let fixture: ComponentFixture<PasswordGeneratorComponent>;
+  let component: RandColorTextComponent;
+  let fixture: ComponentFixture<RandColorTextComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         AppMaterialModule,
-        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
+        RouterTestingModule,
       ],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Password Generator' }
+          useValue: { feature: 'Random Color Text' }
         },
       ],
-      declarations: [ PasswordGeneratorComponent ],
+      declarations: [ RandColorTextComponent, RandomColorPipe ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PasswordGeneratorComponent);
+    fixture = TestBed.createComponent(RandColorTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

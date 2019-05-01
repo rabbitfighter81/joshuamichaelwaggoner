@@ -1,7 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-@Pipe({ name: 'randomColor' })
+@Pipe({
+  name: 'randomColor'
+})
 export class RandomColorPipe implements PipeTransform {
   constructor(private sanitizer?: DomSanitizer) {}
   transform(value: any): any {

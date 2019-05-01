@@ -1,30 +1,32 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { components, dialogs, snackbars } from './app-components';
 import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
-import { ProjectBaseComponent } from './components/projects/project-base/project-base.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './users/users.module';
+import { PipesModule } from './pipes/pipes.module';
+import { ProjectsModule } from './projects/projects.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ...components,
     SnackbarComingSoonComponent,
-    ProjectBaseComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    BrowserAnimationsModule,
     AppMaterialModule,
+    AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    UsersModule
+    PipesModule,
+    ProjectsModule,
+    ReactiveFormsModule,
+    UsersModule,
   ],
   entryComponents: [
     ...dialogs,

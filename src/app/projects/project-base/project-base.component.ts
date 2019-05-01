@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-import { SnackbarComingSoonComponent } from '../../snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
+import { SnackbarComingSoonComponent } from '../../components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 
 @Component({
   template: 'NO UI TO BE FOUND HERE!',

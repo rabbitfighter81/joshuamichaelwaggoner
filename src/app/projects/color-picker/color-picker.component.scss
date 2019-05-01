@@ -1,4 +1,4 @@
-@import '../../../../styles/styles.scss';
+@import '../../../styles/styles.scss';
 
 @mixin slider-col {
   display: flex;
@@ -17,7 +17,7 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  background-color: #aaa;
+  // background-color: #aaa; // TODO: SCSS Cleanup
   height: 1px;
 }
 

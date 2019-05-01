@@ -4,33 +4,12 @@ import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.co
 import { NetworksComponent } from './components/pages/networks/networks.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
-import { ProjectsComponent } from './components/pages/projects/projects.component';
-import { ColorPickerComponent } from './components/projects/color-picker/color-picker.component';
-import { DiceRollerComponent } from './components/projects/dice-roller/dice-roller.component';
-import { PasswordGeneratorComponent } from './components/projects/password-generator/password-generator.component';
-import { RandColorTextComponent } from './components/projects/rand-color-text/rand-color-text.component';
-import { SearchHighlightComponent } from './components/projects/search-highlight/search-highlight.component';
 import { ToolbarFooterComponent } from './components/toolbars/toolbar-footer/toolbar-footer.component';
 import { ToolbarMainComponent } from './components/toolbars/toolbar-main/toolbar-main.component';
-import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
-import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 import { NavMainComponent } from './components/nav-main/nav-main.component';
 import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
-
-const projects = [
-  ColorPickerComponent,
-  DiceRollerComponent,
-  PasswordGeneratorComponent,
-  RandColorTextComponent,
-  SearchHighlightComponent,
-];
-
-const pipes = [
-  RandomColorPipe,
-  SearchHighlightPipe
-];
 
 const pages = [
   AboutComponent,
@@ -41,7 +20,6 @@ const pages = [
   PageNotFoundComponent,
   ResumeComponent,
   UnauthorizedComponent,
-  ProjectsComponent,
 ];
 
 const nav = [
@@ -68,6 +46,4 @@ export const components = [
   ...header,
   ...nav,
   ...pages,
-  ...pipes,
-  ...projects,
 ];

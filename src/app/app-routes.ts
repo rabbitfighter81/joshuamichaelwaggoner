@@ -7,7 +7,6 @@ import { NetworksComponent } from './components/pages/networks/networks.componen
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ResumeComponent } from './components/pages/resume/resume.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
-import { ProjectsComponent } from './components/pages/projects/projects.component';
 
 export const appRoutes: Routes = [
   {
@@ -32,7 +31,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'Projects',
-    component: ProjectsComponent
+    loadChildren: './projects/projects.module#ProjectsModule'
   },
   {
     path: 'Greyhounds',

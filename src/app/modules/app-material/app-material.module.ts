@@ -1,4 +1,3 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import {
@@ -57,11 +56,9 @@ const modules = [
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
     ...modules
   ],
   exports: [
-    BrowserAnimationsModule,
     ...modules
   ],
   declarations: []
