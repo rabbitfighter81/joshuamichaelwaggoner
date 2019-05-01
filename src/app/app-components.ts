@@ -1,4 +1,3 @@
-import { ContactComponent } from './components/pages/contact/contact.component';
 import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
 import { NetworksComponent } from './components/pages/networks/networks.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
@@ -10,7 +9,6 @@ import { UnauthorizedComponent } from './components/pages/unauthorized/unauthori
 import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 
 const pages = [
-  ContactComponent,
   ForbiddenComponent,
   GreyhoundsComponent,
   NetworksComponent,

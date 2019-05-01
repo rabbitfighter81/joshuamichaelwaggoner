@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { ContactComponent } from './components/pages/contact/contact.component';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
 import { NetworksComponent } from './components/pages/networks/networks.component';
@@ -23,7 +22,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'Contact',
-    component: ContactComponent
+    loadChildren: './contact/contact.module#ContactModule'
   },
   {
     path: 'Resume',

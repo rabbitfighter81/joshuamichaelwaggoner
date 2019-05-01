@@ -1,16 +1,17 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
+
 import { ContactComponent } from './contact.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from '../modules/app-material/app-material.module';
 
 describe('ContactComponent', () => {
 
   let component: ContactComponent;
-  let fixture: ComponentFixture <ContactComponent> ;
+  let fixture: ComponentFixture<ContactComponent>;
 
   beforeEach(async (() => {
     TestBed.configureTestingModule({
