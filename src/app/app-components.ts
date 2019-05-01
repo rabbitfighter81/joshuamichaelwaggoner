@@ -10,8 +10,8 @@ import { DiceRollerComponent } from './components/projects/dice-roller/dice-roll
 import { PasswordGeneratorComponent } from './components/projects/password-generator/password-generator.component';
 import { RandColorTextComponent } from './components/projects/rand-color-text/rand-color-text.component';
 import { SearchHighlightComponent } from './components/projects/search-highlight/search-highlight.component';
-import { ToolbarFooterComponent } from './components/toolbar-footer/toolbar-footer.component';
-import { ToolbarMainComponent } from './components/toolbar-main/toolbar-main.component';
+import { ToolbarFooterComponent } from './components/toolbars/toolbar-footer/toolbar-footer.component';
+import { ToolbarMainComponent } from './components/toolbars/toolbar-main/toolbar-main.component';
 import { RandomColorPipe } from './pipes/random-color/random-color.pipe';
 import { SearchHighlightPipe } from './pipes/search-highlight/search-highlight.pipe';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';

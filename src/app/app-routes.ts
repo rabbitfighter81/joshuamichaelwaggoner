@@ -11,6 +11,10 @@ import { ProjectsComponent } from './components/pages/projects/projects.componen
 
 export const appRoutes: Routes = [
   {
+    path: 'users',
+    loadChildren: './users/users.module#UsersModule'
+  },
+  {
     path: '',
     component: AboutComponent
   },

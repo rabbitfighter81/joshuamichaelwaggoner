@@ -33,12 +33,12 @@ export class AppComponent implements OnInit, OnDestroy {
     if (event instanceof NavigationEnd) {
       document.body.scrollTop = 0;
       if (this.navOpen) {
-        this.close();
+        this.closeSidenav();
       }
     }
   }
 
-  close(): void {
+  closeSidenav(): void {
     this.sidenav.close();
     this.navOpen = false;
   }

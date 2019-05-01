@@ -1,4 +1,3 @@
-import { GITHUB_LINK } from './../../app.constants';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -30,7 +29,7 @@ export class ToolbarMainComponent implements OnInit {
   }
 
   navToGitHubProject(): void {
-    window.open(GITHUB_LINK, '_blank'); // TODO future...
+    // window.open(GITHUB_LINK, '_blank'); // TODO future...
   }
 
 }

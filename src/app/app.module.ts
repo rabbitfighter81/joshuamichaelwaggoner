@@ -7,6 +7,8 @@ import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { components, dialogs, snackbars } from './app-components';
 import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 import { ProjectBaseComponent } from './components/projects/project-base/project-base.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProjectBaseComponent } from './components/projects/project-base/project
     AppRoutingModule,
     AppMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    UsersModule
   ],
   entryComponents: [
     ...dialogs,
