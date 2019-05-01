@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './components/pages/about/about.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
 import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
@@ -15,11 +14,12 @@ export const appRoutes: Routes = [
   },
   {
     path: '',
-    component: AboutComponent
+    redirectTo: 'About',
+    pathMatch: 'full',
   },
   {
     path: 'About',
-    component: AboutComponent
+    loadChildren: './about/about.module#AboutModule'
   },
   {
     path: 'Contact',

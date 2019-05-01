@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-import { ProjectBaseComponent } from '../project-base/project-base.component';
+import { ProjectBaseComponent } from '../base/project-base.component';
 
 const TEXT =
 'Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the ' +

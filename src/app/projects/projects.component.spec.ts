@@ -3,13 +3,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from 'src/app/modules/app-material/app-material.module';
-import { NavMainComponent } from './nav-main.component';
+import { AppMaterialModule } from '../modules/app-material/app-material.module';
+import { ProjectsComponent } from './projects.component';
 
-describe('NavMainComponent', () => {
+describe('ProjectsComponent', () => {
 
-  let component: NavMainComponent;
-  let fixture: ComponentFixture<NavMainComponent>;
+  let component: ProjectsComponent;
+  let fixture: ComponentFixture<ProjectsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,14 +20,14 @@ describe('NavMainComponent', () => {
         ReactiveFormsModule,
         RouterTestingModule,
       ],
-      declarations: [ NavMainComponent ],
+      declarations: [ ProjectsComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavMainComponent);
+    fixture = TestBed.createComponent(ProjectsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

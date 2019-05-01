@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-import { ProjectBaseComponent } from '../project-base/project-base.component';
+import { ProjectBaseComponent } from '../base/project-base.component';
 import { GITHUB_RANDOM_COLOR_TEXT_PROJECT_URL } from '../../app.constants';
 
 @Component({

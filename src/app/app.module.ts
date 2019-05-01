@@ -10,6 +10,7 @@ import { UsersModule } from './users/users.module';
 import { PipesModule } from './pipes/pipes.module';
 import { ProjectsModule } from './projects/projects.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavModule } from './nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectsModule,
     ReactiveFormsModule,
     UsersModule,
+    NavModule
   ],
   entryComponents: [
     ...dialogs,

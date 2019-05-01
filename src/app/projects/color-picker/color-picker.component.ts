@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { ProjectBaseComponent } from '../project-base/project-base.component';
+import { ProjectBaseComponent } from '../base/project-base.component';
 import { MatSliderSettings } from '../../models/mat-slider-settings.model';
 
 @Component({

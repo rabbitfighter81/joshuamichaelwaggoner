@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { ProjectBaseComponent } from '../project-base/project-base.component';
+import { ProjectBaseComponent } from '../base/project-base.component';
 
 @Component({
   selector: 'app-password-generator',
