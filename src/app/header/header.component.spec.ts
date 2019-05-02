@@ -1,16 +1,16 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from './../../../modules/app-material/app-material.module';
-import { ToolbarFooterComponent } from './toolbar-footer.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { AppMaterialModule } from '../modules/app-material/app-material.module';
+import { HeaderComponent } from './header.component';
 
-describe('ToolbarFooterComponent', () => {
+describe('HeaderComponent', () => {
 
-  let component: ToolbarFooterComponent;
-  let fixture: ComponentFixture<ToolbarFooterComponent>;
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,14 +22,14 @@ describe('ToolbarFooterComponent', () => {
         RouterTestingModule,
         HttpClientTestingModule
       ],
-      declarations: [ ToolbarFooterComponent ],
+      declarations: [ HeaderComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ToolbarFooterComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

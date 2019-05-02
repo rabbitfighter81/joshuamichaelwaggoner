@@ -2,6 +2,12 @@
 @import './theme.scss';
 @import './mixin.scss';
 
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -12,6 +18,11 @@ body, p, li, a {
   font-size: $app-body-size;
   line-height: $app-body-line-height;
   font-weight: $app-body-font-weight;
+}
+
+li {
+  margin: 5px;
+  padding: 5px;
 }
 
 .content {
@@ -124,21 +135,21 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $color-deep-sky-blue;
+  color: $color-electric-yellow;
 
   :visited {
-    color: $color-deep-sky-blue;
+    color: $color-electric-yellow;
   }
 
   :active {
-    color: $color-deep-sky-blue;
+    color: $color-electric-yellow;
   }
 }
 
 p.nav-item {
   font-family: $app-header-font;
   outline: none;
-  color: $color-deep-sky-blue;
+  color: $color-electric-yellow;
 }
 
 li {
@@ -148,10 +159,13 @@ li {
   line-height: $app-body-line-height;
 }
 
-.img--cover {
-  width: 100%;
-  height: auto;
+img.img--cover {
+  height: 70vh;
+  width: auto;
+  margin: auto;
+  justify-content: center;
 }
+
 
 .content {
   width: 80%;

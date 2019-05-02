@@ -1,11 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-toolbar-main',
-  templateUrl: './toolbar-main.component.html',
-  styleUrls: ['./toolbar-main.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class ToolbarMainComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   @Output() toggle: EventEmitter<any> = new EventEmitter();
 

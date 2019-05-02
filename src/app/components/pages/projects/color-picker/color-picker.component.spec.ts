@@ -42,20 +42,20 @@ describe('ColorPickerComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe('Form', () => {
+  describe('Form Initialization', () => {
 
-    describe('initialization', () => {
+    describe('When the form is initialized', () => {
 
-      it('form is valid', () => {
+      it('is valid', () => {
         expect(component.form.valid).toBeTruthy();
       });
 
-      it('red field is valid', () => {
+      it('has a valid red value', () => {
         const red = component.form.get('red');
         expect(red.valid).toBeTruthy();
       });
 
-      it('green field is valid', () => {
+      it('has a valid green value', () => {
         const green = component.form.get('green');
         expect(green.valid).toBeTruthy();
       });
@@ -118,7 +118,7 @@ describe('ColorPickerComponent', () => {
   describe('Getters', () => {
 
     beforeEach(() => {
-      component.values = {
+      component.colorValues = {
         red: 1,
         green: 2,
         blue: 3
@@ -127,21 +127,21 @@ describe('ColorPickerComponent', () => {
     });
 
     afterEach(() => {
-      component.values = undefined;
+      component.colorValues = undefined;
       component.ngOnDestroy();
     });
 
-    it(`red returns 1`, () => {
+    it(`red returns 1 if the red value in 'values' is 1`, () => {
       const { red } = component;
       expect(red).toEqual(1);
     });
 
-    it(`green returns 2`, () => {
+    it(`green returns 2 if the green value in 'values' is 2`, () => {
       const { green } = component;
       expect(green).toEqual(2);
     });
 
-    it(`blue returns 3`, () => {
+    it(`blue returns 3 when the blue value in 'values' is 3`, () => {
       const { blue } = component;
       expect(blue).toEqual(3);
     });

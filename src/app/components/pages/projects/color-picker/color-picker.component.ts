@@ -11,7 +11,7 @@ import { MatSliderSettings } from 'src/app/models/mat-slider-settings.model';
 })
 export class ColorPickerComponent extends ProjectBaseComponent implements OnInit, OnDestroy {
 
-  // Settings
+  // Slider Settings
   sliderSettings: MatSliderSettings = {
     invert: false,
     disabled: false,
@@ -33,7 +33,7 @@ export class ColorPickerComponent extends ProjectBaseComponent implements OnInit
   };
 
   // Initial Color values
-  values = {
+  colorValues = {
     red: 135,
     green: 200,
     blue: 85,
@@ -48,12 +48,11 @@ export class ColorPickerComponent extends ProjectBaseComponent implements OnInit
     super(snackbar);
   }
 
-
   ngOnInit() {
     this.form = this.fb.group({
-      red: [ this.values.red, [ Validators.required ]],
-      green: [ this.values.green, [ Validators.required ]],
-      blue: [ this.values.blue, [ Validators.required ]],
+      red: [ this.colorValues.red, [ Validators.required ]],
+      green: [ this.colorValues.green, [ Validators.required ]],
+      blue: [ this.colorValues.blue, [ Validators.required ]],
     });
   }
 

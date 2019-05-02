@@ -2,7 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { components, dialogs, snackbars } from './app-components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { NavModule } from './components/nav/nav.module';
@@ -17,11 +16,12 @@ import { UnauthorizedModule } from './components/pages/unauthorized/unauthorized
 import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { PipesModule } from './pipes/pipes.module';
+import { FooterModule } from './components/footer/footer.module';
+import { HeaderModule } from './components/header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...components,
     SnackbarComingSoonComponent,
   ],
   imports: [
@@ -41,10 +41,11 @@ import { PipesModule } from './pipes/pipes.module';
     NotFoundModule,
     ResumeModule,
     UnauthorizedModule,
+    FooterModule,
+    HeaderModule
   ],
   entryComponents: [
-    ...dialogs,
-    ...snackbars
+    SnackbarComingSoonComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
