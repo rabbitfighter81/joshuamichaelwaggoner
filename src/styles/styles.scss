@@ -71,12 +71,6 @@ form,
   }
 }
 
-.mat-sidenav-content {
-  background: white;
-  color: black;
-  height: 100vh;
-}
-
 // Flex
 .spacer {
   flex: 1 0 0;
@@ -211,7 +205,7 @@ input[type="text"] {
   }
 
   h2.pinline {
-    color: white;
+    color: black;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -235,7 +229,7 @@ input[type="text"] {
     position: absolute;
     top: 50%;
     height: 1px;
-    background: white;
+    background: black;
     width: 99999px;
   }
 

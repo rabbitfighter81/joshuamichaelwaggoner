@@ -1,3 +1,5 @@
+@import '../../styles/styles.scss';
+
 .button {
   background-color: darkslateblue;
   border-radius: 5px;
@@ -9,10 +11,11 @@
   cursor: pointer;
 }
 
-/deep/ .mat-sidenav-container .mat-sidenav {
-  background: #333;
+.mat-sidenav-container .mat-sidenav {
+  background: #333 !important;
 }
 
-/deep/ .mat-sidenav-content {
-  background: #424242;
+.mat-drawer-container {
+  background: $color-body-bg !important;
+  color: white !important;
 }
