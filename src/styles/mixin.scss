@@ -1,8 +1,24 @@
 $breakpoints: (
-  'small':  767px,
+  'small':  768px,
   'medium': 992px,
-  'large':  1200px
+  'large':  1024px
 ) !default;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 
 
 @mixin flex-row-space-between() {

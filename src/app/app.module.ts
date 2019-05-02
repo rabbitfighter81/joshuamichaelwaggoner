@@ -36,14 +36,14 @@ const shared = [
   AppMaterialModule,
   PipesModule,
   AppRoutingModule,
-]
+];
 
 const external = [
   BrowserAnimationsModule,
   FormsModule,
   HttpClientModule,
   ReactiveFormsModule,
-]
+];
 
 @NgModule({
   imports: [
