@@ -211,6 +211,7 @@ input[type="text"] {
   }
 
   h2.pinline {
+    color: white;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -234,7 +235,7 @@ input[type="text"] {
     position: absolute;
     top: 50%;
     height: 1px;
-    background: #000;
+    background: white;
     width: 99999px;
   }
 
