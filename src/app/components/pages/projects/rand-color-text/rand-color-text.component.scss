@@ -1,0 +1,19 @@
+@import '../../../../../styles/styles.scss';
+
+.quote-container {
+  padding: 20px;
+  margin: 20px;
+  background-color: #111;
+  font-family: 'Oswald';
+  color: white;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
+    line-height: $app-body-line-height;
+  }
+}
+
+
