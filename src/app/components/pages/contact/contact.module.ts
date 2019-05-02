@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
-import { AppMaterialModule } from 'src/app/modules/app-material/app-material.module';
+import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
 
 @NgModule({
   declarations: [ ContactComponent ],

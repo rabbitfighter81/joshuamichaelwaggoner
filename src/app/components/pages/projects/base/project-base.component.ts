@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-import { SnackbarComingSoonComponent } from 'src/app/components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
 
 @Component({
   template: 'NO UI TO BE FOUND HERE!',
@@ -24,11 +23,14 @@ export class ProjectBaseComponent implements OnInit {
   }
 
   openComingSoonSnackbar(feature: string): void {
-    this.snackbar.openFromComponent(SnackbarComingSoonComponent, {
+    /*
+    this.snackbar.openFromComponent(Snackbar, {
       duration: 5000,
       data: { feature },
       // panelClass: ['app-snackbar']
     });
+    */
+   console.log(`${ feature } coming soon...`);
   }
 
   navToGitHubProject(link: string): void {

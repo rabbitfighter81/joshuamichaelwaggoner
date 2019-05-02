@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from '../../../modules/app-material/app-material.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 
 describe('ContactComponent', () => {
 

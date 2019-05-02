@@ -26,6 +26,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+import { CommonModule } from '@angular/common';
 
 const modules = [
   MatAutocompleteModule,
@@ -56,7 +57,8 @@ const modules = [
 
 @NgModule({
   imports: [
-    ...modules
+    CommonModule,
+     ...modules
   ],
   exports: [
     ...modules

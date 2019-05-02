@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { Animations } from 'src/app/animations/animations';
-import { DiceRoll } from '../../../../models/dice-roll.model';
+import { Animations } from 'src/app/core/animations/animations';
+import { DiceRoll } from '../../../../core/models/dice-roll.model';
 import { ProjectBaseComponent } from '../base/project-base.component';
 
 @Component({

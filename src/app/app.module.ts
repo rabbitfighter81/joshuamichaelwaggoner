@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
+import { FooterModule } from './components/footer/footer.module';
+import { HeaderModule } from './components/header/header.module';
 import { NavModule } from './components/nav/nav.module';
 import { ContactModule } from './components/pages/contact/contact.module';
 import { ForbiddenModule } from './components/pages/forbidden/forbidden.module';
@@ -13,41 +15,34 @@ import { NotFoundModule } from './components/pages/not-found/not-found.module';
 import { ProjectsModule } from './components/pages/projects/projects.module';
 import { ResumeModule } from './components/pages/resume/resume.module';
 import { UnauthorizedModule } from './components/pages/unauthorized/unauthorized.module';
-import { SnackbarComingSoonComponent } from './components/snackbars/snackbar-coming-soon/snackbar-coming-soon.component';
-import { AppMaterialModule } from './modules/app-material/app-material.module';
-import { PipesModule } from './pipes/pipes.module';
-import { FooterModule } from './components/footer/footer.module';
-import { HeaderModule } from './components/header/header.module';
+import { AppMaterialModule } from './core/modules/app-material/app-material.module';
+import { PipesModule } from './components/pipes/pipes.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SnackbarComingSoonComponent,
-  ],
   imports: [
-    BrowserAnimationsModule,
     AppMaterialModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    ContactModule,
+    FooterModule,
+    ForbiddenModule,
     FormsModule,
+    GreyhoundsModule,
+    HeaderModule,
     HttpClientModule,
+    NavModule,
+    NetworksModule,
+    NotFoundModule,
     PipesModule,
     ProjectsModule,
     ReactiveFormsModule,
-    NavModule,
-    ContactModule,
-    ForbiddenModule,
-    GreyhoundsModule,
-    NetworksModule,
-    NotFoundModule,
     ResumeModule,
     UnauthorizedModule,
-    FooterModule,
-    HeaderModule
   ],
   entryComponents: [
-    SnackbarComingSoonComponent
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  declarations: [ AppComponent ]
 })
 export class AppModule { }

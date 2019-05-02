@@ -2,12 +2,6 @@
 @import './theme.scss';
 @import './mixin.scss';
 
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -159,13 +153,9 @@ li {
   line-height: $app-body-line-height;
 }
 
-img.img--cover {
-  height: 70vh;
-  width: auto;
-  margin: auto;
-  justify-content: center;
+.img--container img {
+  width: 100%;
 }
-
 
 .content {
   width: 80%;

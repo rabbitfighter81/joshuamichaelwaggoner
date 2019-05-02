@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggle: EventEmitter<any> = new EventEmitter();
 
+  githubLink = 'https://github.com/rabbitfighter81/joshuamichaelwaggoner';
+
   languageList = [
     { code: 'en', label: 'English' },
     { code: 'es', label: 'Español' },
@@ -24,12 +26,8 @@ export class HeaderComponent implements OnInit {
     this.toggle.emit();
   }
 
-  toggleLanguage(): void { // TODO: future...
-    console.log('Language');
-  }
-
   navToGitHubProject(): void {
-    // window.open(GITHUB_LINK, '_blank'); // TODO future...
+    window.open(this.githubLink, '_blank');
   }
 
 }

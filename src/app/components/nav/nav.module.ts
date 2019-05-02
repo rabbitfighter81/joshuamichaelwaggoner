@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from './nav.component';
-
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppMaterialModule } from 'src/app/modules/app-material/app-material.module';
-import { PipesModule } from 'src/app/pipes/pipes.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { PipesModule } from 'src/app/components/pipes/pipes.module';
+import { NavComponent } from './nav.component';
 
 @NgModule({
   declarations: [ NavComponent ],

@@ -1,0 +1,9 @@
+{
+	"format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+	"format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+	"format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"format.placeOpenBraceOnNewLineForFunctions": true,
+}
