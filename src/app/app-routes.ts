@@ -1,10 +1,4 @@
 import { Routes } from '@angular/router';
-import { ForbiddenComponent } from './components/pages/forbidden/forbidden.component';
-import { GreyhoundsComponent } from './components/pages/greyhounds/greyhounds.component';
-import { NetworksComponent } from './components/pages/networks/networks.component';
-import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
-import { ResumeComponent } from './components/pages/resume/resume.component';
-import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 
 export const appRoutes: Routes = [
   {
@@ -26,7 +20,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'Resume',
-    component: ResumeComponent
+    loadChildren: './resume/resume.module#ResumeModule'
   },
   {
     path: 'Projects',
@@ -34,26 +28,26 @@ export const appRoutes: Routes = [
   },
   {
     path: 'Greyhounds',
-    component: GreyhoundsComponent
+    loadChildren: './greyhounds/greyhounds.module#GreyhoundsModule'
   },
   {
     path: 'Networks',
-    component: NetworksComponent
+    loadChildren: './networks/networks.module#NetworksModule'
   },
   {
     path: '404',
-    component: PageNotFoundComponent,
+    loadChildren: './not-found/not-found.module#NotFoundModule'
   },
   {
     path: 'Forbidden',
-    component: ForbiddenComponent
+    loadChildren: './not-found/not-found.module#NotFoundModule'
   },
   {
     path: 'Unauthorized',
-    component: UnauthorizedComponent
+    loadChildren: './unauthorized/unauthorized.module#UnauthorizedModule'
   },
   {
     path: '**',
-    component: PageNotFoundComponent
+    loadChildren: './not-found/not-found.module#NotFoundModule'
   },
 ];

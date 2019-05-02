@@ -12,6 +12,12 @@ import { ProjectsModule } from './projects/projects.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavModule } from './nav/nav.module';
 import { ContactModule } from './contact/contact.module';
+import { ForbiddenModule } from './forbidden/forbidden.module';
+import { GreyhoundsModule } from './greyhounds/greyhounds.module';
+import { NetworksModule } from './networks/networks.module';
+import { NotFoundModule } from './not-found/not-found.module';
+import { ResumeModule } from './resume/resume.module';
+import { UnauthorizedModule } from './unauthorized/unauthorized.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { ContactModule } from './contact/contact.module';
     ReactiveFormsModule,
     UsersModule,
     NavModule,
-    ContactModule
+    ContactModule,
+    ForbiddenModule,
+    GreyhoundsModule,
+    NetworksModule,
+    NotFoundModule,
+    ResumeModule,
+    UnauthorizedModule,
   ],
   entryComponents: [
     ...dialogs,
