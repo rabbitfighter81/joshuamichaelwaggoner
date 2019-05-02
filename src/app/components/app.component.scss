@@ -8,3 +8,11 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+/deep/ .mat-sidenav-container .mat-sidenav {
+  background: #333;
+}
+
+/deep/ .mat-sidenav-content {
+  background: #f0f0f0;
+}

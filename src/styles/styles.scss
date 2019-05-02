@@ -5,7 +5,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: white;
+  background-color: $color-dark-grey;
 }
 
 body, p, li, a {
@@ -128,21 +128,21 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $color-electric-yellow;
+  color: $color-deep-sky-blue;
 
   :visited {
-    color: $color-electric-yellow;
+    color: $color-deep-sky-blue;
   }
 
   :active {
-    color: $color-electric-yellow;
+    color: $color-deep-sky-blue;
   }
 }
 
 p.nav-item {
   font-family: $app-header-font;
   outline: none;
-  color: $color-electric-yellow;
+  color: $color-deep-sky-blue;
 }
 
 li {

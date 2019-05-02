@@ -3,9 +3,11 @@
 /deep/ .mat-toolbar.toolbar {
   a {
     h1.title {
-      font-size: $app-title-font-size;
       @include tablet {
-        font-size: $app-header-font-size;
+        font-size: $app-title-font-size-tablet;
+      }
+      @include desktop {
+        font-size: $app-title-font-size;
       }
     }
   }
