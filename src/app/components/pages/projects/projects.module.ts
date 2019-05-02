@@ -9,8 +9,8 @@ import { ProjectsComponent } from './projects.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { RandColorTextComponent } from './rand-color-text/rand-color-text.component';
 import { SearchHighlightComponent } from './search-highlight/search-highlight.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
-import { PipesModule } from 'src/app/components/pipes/pipes.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { PipesModule } from '../../../core/pipes/pipes.module';
 
 const projects = [
   ColorPickerComponent,

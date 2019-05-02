@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { assign } from 'lodash';
 import { ColorPickerComponent } from './color-picker.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
 
 describe('ColorPickerComponent', () => {
 

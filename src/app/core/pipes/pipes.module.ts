@@ -9,14 +9,8 @@ const pipes = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  declarations: [
-    ...pipes
-  ],
-  exports: [
-    ...pipes
-  ],
+  imports:      [ CommonModule ],
+  declarations: [ ...pipes ],
+  exports:      [ ...pipes ]
 })
 export class PipesModule { }

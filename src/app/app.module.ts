@@ -16,28 +16,40 @@ import { ProjectsModule } from './components/pages/projects/projects.module';
 import { ResumeModule } from './components/pages/resume/resume.module';
 import { UnauthorizedModule } from './components/pages/unauthorized/unauthorized.module';
 import { AppMaterialModule } from './core/modules/app-material/app-material.module';
-import { PipesModule } from './components/pipes/pipes.module';
+import { PipesModule } from './core/pipes/pipes.module';
+
+const components = [
+  ContactModule,
+  FooterModule,
+  ForbiddenModule,
+  GreyhoundsModule,
+  HeaderModule,
+  NavModule,
+  NetworksModule,
+  NotFoundModule,
+  ResumeModule,
+  UnauthorizedModule,
+  ProjectsModule,
+];
+
+const shared = [
+  AppMaterialModule,
+  PipesModule,
+  AppRoutingModule,
+]
+
+const external = [
+  BrowserAnimationsModule,
+  FormsModule,
+  HttpClientModule,
+  ReactiveFormsModule,
+]
 
 @NgModule({
   imports: [
-    AppMaterialModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ContactModule,
-    FooterModule,
-    ForbiddenModule,
-    FormsModule,
-    GreyhoundsModule,
-    HeaderModule,
-    HttpClientModule,
-    NavModule,
-    NetworksModule,
-    NotFoundModule,
-    PipesModule,
-    ProjectsModule,
-    ReactiveFormsModule,
-    ResumeModule,
-    UnauthorizedModule,
+    ...external,
+    ...shared,
+    ...components,
   ],
   entryComponents: [
   ],

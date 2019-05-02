@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
-import { RandomColorPipe } from '../../../pipes/random-color/random-color.pipe';
+import { RandomColorPipe } from '../../../../core/pipes/random-color/random-color.pipe';
 import { RandColorTextComponent } from './rand-color-text.component';
 
 describe('RandColorTextComponent', () => {

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
-import { SearchHighlightPipe } from '../../../pipes/search-highlight/search-highlight.pipe';
+import { SearchHighlightPipe } from '../../../../core/pipes/search-highlight/search-highlight.pipe';
 import { SearchHighlightComponent } from './search-highlight.component';
 
 describe('SearchHighlightComponent', () => {
