@@ -24,6 +24,16 @@ li {
   margin: 0 auto;
 }
 
+
+.project-title {
+  font-size: $app-project-title-font-size;
+  font-weight: 500;
+}
+
+.project-subtitle {
+  font-weight: 400;
+}
+
 .title {
   color: white;
   text-transform: UPPERCASE;
@@ -173,10 +183,6 @@ li {
 
 input[type="text"] {
   font-size: $app-body-size;
-}
-
-.project-title {
-  font-size: $app-header-font !important;
 }
 
 .container,

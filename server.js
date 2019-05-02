@@ -1,6 +1,7 @@
 const cors = require('cors');
 const path = require('path');
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
 const app = express();

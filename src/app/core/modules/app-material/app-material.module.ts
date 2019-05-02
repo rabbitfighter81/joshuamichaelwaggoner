@@ -62,7 +62,6 @@ const modules = [
   ],
   exports: [
     ...modules
-  ],
-  declarations: []
+  ]
 })
 export class AppMaterialModule { }

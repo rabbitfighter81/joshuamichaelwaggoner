@@ -17,20 +17,9 @@ import { ResumeModule } from './components/pages/resume/resume.module';
 import { UnauthorizedModule } from './components/pages/unauthorized/unauthorized.module';
 import { AppMaterialModule } from './core/modules/app-material/app-material.module';
 import { PipesModule } from './core/pipes/pipes.module';
+import { AppComponentsModule } from './core/modules/app-components/app-components.module';
 
-const components = [
-  ContactModule,
-  FooterModule,
-  ForbiddenModule,
-  GreyhoundsModule,
-  HeaderModule,
-  NavModule,
-  NetworksModule,
-  NotFoundModule,
-  ResumeModule,
-  UnauthorizedModule,
-  ProjectsModule,
-];
+
 
 const shared = [
   AppMaterialModule,
@@ -49,7 +38,7 @@ const external = [
   imports: [
     ...external,
     ...shared,
-    ...components,
+    AppComponentsModule
   ],
   entryComponents: [
   ],
