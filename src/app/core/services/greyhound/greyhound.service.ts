@@ -27,7 +27,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   onGreyhoundUpdate(greyhounds: Greyhound[]): void {
-    this.greyhounds.next(greyhounds);
+    this.greyhounds.next(greyhounds)
     console.log(`Greyhounds data from ${ this.url }`, greyhounds);
   }
 
@@ -38,7 +38,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   getGreyhounds(): Observable<Greyhound[]> {
     return this.http.get<Greyhound[]>(this.url).pipe(
       retry(1),
-      map(data => data),
+      map((data: any) => data.greyhounds),
     );
   }
 
