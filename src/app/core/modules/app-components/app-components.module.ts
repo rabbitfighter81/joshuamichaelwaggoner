@@ -11,6 +11,7 @@ import { NotFoundModule } from 'src/app/components/pages/not-found/not-found.mod
 import { ProjectsModule } from 'src/app/components/pages/projects/projects.module';
 import { ResumeModule } from 'src/app/components/pages/resume/resume.module';
 import { UnauthorizedModule } from 'src/app/components/pages/unauthorized/unauthorized.module';
+import { GreyhoundCardModule } from 'src/app/components/common/greyhound-card/greyhound-card.module';
 
 const components = [
   ContactModule,
@@ -24,6 +25,7 @@ const components = [
   ResumeModule,
   UnauthorizedModule,
   ProjectsModule,
+  GreyhoundCardModule
 ];
 
 @NgModule({
