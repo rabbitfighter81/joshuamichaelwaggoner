@@ -4,7 +4,7 @@ import { AppComponent } from './components/app.component';
 import { AppComponentsModule } from './core/modules/app-components/app-components.module';
 import { CoreModule } from './core/core.module';
 import { AppMaterialModule } from './core/modules/app-material/app-material.module';
-
+import { GreyhoundCardComponent } from './components/common/greyhound-card/greyhound-card.component';
 
 @NgModule({
   imports: [
@@ -17,6 +17,6 @@ import { AppMaterialModule } from './core/modules/app-material/app-material.modu
   ],
   providers: [],
   bootstrap: [ AppComponent ],
-  declarations: [ AppComponent ]
+  declarations: [ AppComponent, GreyhoundCardComponent ]
 })
 export class AppModule { }
