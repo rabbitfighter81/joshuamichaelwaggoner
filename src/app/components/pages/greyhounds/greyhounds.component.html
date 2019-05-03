@@ -46,8 +46,7 @@
     <mat-card-content class="container--greyhounds">
 
 
-      <app-greyhound-card *ngFor="let greyhound of greyhounds; let i = index;"
-        [index]="i"
+      <app-greyhound-card *ngFor="let greyhound of greyhounds;"
         [name]="greyhound.name"
         [born]="greyhound.born"
         [passed]="greyhound.passed"

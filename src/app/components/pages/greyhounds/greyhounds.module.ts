@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { GreyhoundsRoutingModule } from './greyhounds-routing.module';
 import { GreyhoundsComponent } from './greyhounds.component';
-import { SharedModule } from '../../../core/modules/shared/shared.module';
 
 @NgModule({
   declarations: [ GreyhoundsComponent ],
@@ -10,6 +10,7 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
     SharedModule,
     CommonModule,
     GreyhoundsRoutingModule
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class GreyhoundsModule { }
