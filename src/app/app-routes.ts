@@ -3,20 +3,19 @@ import { Routes } from '@angular/router';
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'About',
-    pathMatch: 'full',
+    redirectTo: 'About'
   },
   {
     path: 'About',
     loadChildren: './components/pages/about/about.module#AboutModule'
   },
   {
-    path: 'Contact',
-    loadChildren: './components/pages/contact/contact.module#ContactModule'
-  },
-  {
     path: 'Resume',
     loadChildren: './components/pages/resume/resume.module#ResumeModule'
+  },
+  {
+    path: 'Contact',
+    loadChildren: './components/pages/contact/contact.module#ContactModule'
   },
   {
     path: 'Projects',

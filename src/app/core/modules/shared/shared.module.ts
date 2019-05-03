@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from '../../pipes/pipes.module';
 import { AppMaterialModule } from '../app-material/app-material.module';
-import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { GreyhoundCardModule } from 'src/app/components/common/greyhound-card/greyhound-card.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -14,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     PipesModule,
     AppMaterialModule,
-    RouterTestingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -22,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     PipesModule,
     AppMaterialModule,
-    RouterTestingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
