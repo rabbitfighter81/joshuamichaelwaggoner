@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from '../../pipes/pipes.module';
 import { AppMaterialModule } from '../app-material/app-material.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 /**
  * The SharedModule should contain common components/pipes/directives and also export
@@ -13,11 +14,13 @@ import { AppMaterialModule } from '../app-material/app-material.module';
   imports: [
     CommonModule,
     PipesModule,
-    AppMaterialModule
+    AppMaterialModule,
+    RouterTestingModule
   ],
   exports: [
     PipesModule,
-    AppMaterialModule
+    AppMaterialModule,
+    RouterTestingModule
   ]
 })
 export class SharedModule { }

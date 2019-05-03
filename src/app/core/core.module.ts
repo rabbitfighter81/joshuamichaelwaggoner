@@ -1,15 +1,20 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GreyhoundService } from './services/greyhound/greyhound.service';
 
 const modules = [
   BrowserAnimationsModule,
   FormsModule,
   HttpClientModule,
   ReactiveFormsModule,
- ];
+];
+
+const services = [
+  GreyhoundService
+];
 
 /**
  * CoreModule should definitely contain your singleton services,
@@ -24,6 +29,9 @@ const modules = [
   ],
   exports: [
     ...modules,
+  ],
+  providers: [
+    ...services
   ]
 })
 export class CoreModule { }

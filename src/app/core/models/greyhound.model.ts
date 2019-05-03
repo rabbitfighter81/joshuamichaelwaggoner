@@ -1,6 +1,7 @@
 export interface Greyhound {
   name: string;
-  bornOn: string;
-  passedOn: string;
+  born: string;
+  passed: string;
   image: string;
+  descriptions: string[];
 }

@@ -46,16 +46,17 @@
     <mat-card-content class="container--greyhounds">
 
 
-            <!--<app-greyhound-card
-        [name]="Redd Walker"
-        [bornOn]="Oct 23, 2000"
-        [passedOn]="Feb 8, 2012"
-        [imageLocation]="./assets/img/redd-walker.png"
-        [content]="">
-      </app-greyhound-card>-->
+      <app-greyhound-card *ngFor="let greyhound of greyhounds; let i = index;"
+        [index]="i"
+        [name]="greyhound.name"
+        [born]="greyhound.born"
+        [passed]="greyhound.passed"
+        [image]="greyhound.image"
+        [descriprions]="greyhound.descriprions">
+      </app-greyhound-card>
 
 
-      <mat-card class="greyhound-card">
+      <!--<mat-card class="greyhound-card">
         <mat-card-header>
           <mat-card-title>Redd Walker</mat-card-title>
           <mat-card-subtitle>(Oct 23, 2000 - Feb 8, 2012)</mat-card-subtitle>
@@ -111,7 +112,7 @@
           <button mat-button color="primary">LIKE</button>
           <button mat-button color="primary">SHARE</button>
         </mat-card-actions>
-      </mat-card>
+      </mat-card>-->
 
 
 

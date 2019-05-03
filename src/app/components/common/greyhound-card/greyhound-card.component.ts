@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-greyhound-card',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreyhoundCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() name: string;
+  @Input() born: string;
+  @Input() passed: string;
+  @Input() image: string;
+  @Input() descriptions: string[];
+  @Input() index: number;
 
   ngOnInit() {
+  }
+
+  like(): void {
+    console.log('Liking ', this.name);
+  }
+
+  share(): void {
+    console.log('Sharing ', this.name);
   }
 
 }

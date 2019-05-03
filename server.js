@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
 const app = express();
+const fs = require('fs');
 
 // Run the app by serving the static files in the dist directory
 app.use(express.static(__dirname + '/dist'));
@@ -38,6 +39,14 @@ app.set('port', process.env.PORT || 8080);
 // TODO: unused endpoints
 app.get('/api', (req, res) => { });
 app.post('/api/sendEmail', (req, res) => { });
+
+var greyhoundsFilePath = path.join(__dirname, 'src/db.json');
+
+app.get('/api/greyhounds', function(req, res){
+  var readable = fs.createReadStream(greyhoundsFilePath);
+  console.log(res);
+  readable.pipe(res);
+});
 
 // Required for path location strategy
 /*
