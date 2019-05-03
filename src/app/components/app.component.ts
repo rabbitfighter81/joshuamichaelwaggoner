@@ -24,8 +24,8 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.router$ = this.router.events.subscribe(next => this.onRouteUpdated(next));
     setTimeout(() => {
-      this.router.navigate(['/About']);
-    }, 100);
+      this.router.navigate(['/']);
+    }, 1);
   }
 
   ngOnDestroy() {
