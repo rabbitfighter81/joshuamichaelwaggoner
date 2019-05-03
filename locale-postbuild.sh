@@ -9,7 +9,7 @@ echo $'\n---------------\n~~~ English ~~~\n---------------'
 ng build --prod --i18n-locale en --i18n-format xlf --i18n-file src/translate/messages.en.xlf --output-path=dist/en --baseHref /en/
 
 # Msg & Build for German
-echo $'--------------\n~~~ German ~~~\n--------------'
+echo $'\n--------------\n~~~ German ~~~\n--------------'
 ng build --prod --i18n-locale de --i18n-format xlf --i18n-file src/translate/messages.de.xlf --output-path=dist/de --baseHref /de/
 
 # Msg & Build for Spanish
