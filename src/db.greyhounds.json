@@ -3,21 +3,21 @@
     "name": "Raven",
     "born": "January 18, 2015",
     "passed": "Present",
-    "image": "raven.png",
+    "image": "raven.jpg",
     "descriptions": [ "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan is A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." ]
   },
   {
     "name": "Poco Gabby",
     "born": "Mar 1, 2005",
     "passed": "Apr 2, 2018",
-    "image": "poco-gabby.png",
+    "image": "poco-gabby.jpg",
     "descriptions": [ "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan is A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." ]
   },
   {
     "name": "Redd Walker",
     "born": "Oct 23, 2000",
     "passed": "Feb 8, 2012",
-    "image": "redd-walker.png",
+    "image": "redd-walker.jpg",
     "descriptions": [ "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan is A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting." ]
   }    
 ]

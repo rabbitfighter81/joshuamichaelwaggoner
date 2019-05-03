@@ -5,5 +5,5 @@
 	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
 	"format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
 	"format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-	"format.placeOpenBraceOnNewLineForFunctions": true,
+  "format.placeOpenBraceOnNewLineForFunctions": true,
 }
