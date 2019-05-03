@@ -9,7 +9,7 @@ body {
 }
 
 body, p, li, a {
-  font-size: $app-body-size;
+  font-size: $app-body-font-size;
   line-height: $app-body-line-height;
   font-weight: $app-body-font-weight;
 }
@@ -60,7 +60,6 @@ li {
   }
 }
 
-
 form,
 .form-field-container {
   width: 100%;
@@ -105,7 +104,7 @@ form,
 }
 
 .subheader-text {
-  font-size: $app-body-size;
+  font-size: $app-body-font-size;
   font-weight: 500;
 }
 
@@ -176,13 +175,13 @@ li {
 }
 
 .subheader-text {
-  font-size: $app-body-size;
+  font-size: $app-body-font-size;
   font-weight: 500;
   font-family: 'Roboto';
 }
 
 input[type="text"] {
-  font-size: $app-body-size;
+  font-size: $app-body-font-size;
 }
 
 .container,

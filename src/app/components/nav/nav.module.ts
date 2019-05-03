@@ -2,16 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
-import { AppMaterialModule } from '../..//core/modules/app-material/app-material.module';
-import { PipesModule } from '../../core/pipes/pipes.module';
 import { NavComponent } from './nav.component';
+import { SharedModule } from '../../core/modules/shared/shared.module';
 
 @NgModule({
   declarations: [ NavComponent ],
   imports: [
-    AppMaterialModule,
+    SharedModule,
     CommonModule,
-    PipesModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],

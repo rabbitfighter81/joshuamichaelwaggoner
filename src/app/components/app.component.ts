@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewChild, Inject, LOCALE_ID } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -32,8 +32,11 @@ export class AppComponent implements OnInit, OnDestroy {
   private onRouteUpdated(event: any): void {
     if (event instanceof NavigationEnd) {
       document.body.scrollTop = 0;
+    }
+    if (event instanceof NavigationStart) {
       if (this.navOpen) {
         this.closeSidenav();
+        this.navOpen = !this.navOpen;
       }
     }
   }
