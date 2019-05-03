@@ -1,9 +1,7 @@
 const cors = require('cors');
 const path = require('path');
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const nodeMailer = require('nodemailer');
 const app = express();
 const fs = require('fs');
 
@@ -36,25 +34,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Set port
 app.set('port', process.env.PORT || 8080);
 
-// TODO: unused endpoints
-app.get('/api', (req, res) => { });
-app.post('/api/sendEmail', (req, res) => { });
+// Static JSON File Paths
+const greyhoundsFilePath = path.join(__dirname, 'src/db.greyhounds.json');
 
-var greyhoundsFilePath = path.join(__dirname, 'src/db.json');
-
+// Endpoints
 app.get('/api/greyhounds', function(req, res){
-  var readable = fs.createReadStream(greyhoundsFilePath);
-  console.log(res);
+  const readable = fs.createReadStream(greyhoundsFilePath);
   readable.pipe(res);
 });
 
-// Required for path location strategy
-/*
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-*/
-
+// Locale Routing
 app.get('*', (req, response) => {
 	//this is for i18n
   const supportedLocales = ['en', 'es', 'de'];

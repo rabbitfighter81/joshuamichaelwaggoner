@@ -19,14 +19,16 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
     private router: Router
-    ) {}
+  ) {}
 
   ngOnInit() {
     this.router$ = this.router.events.subscribe(next => this.onRouteUpdated(next));
   }
 
   ngOnDestroy() {
-    this.router$.unsubscribe();
+    if (this.router$ != null) {
+      this.router$.unsubscribe();
+    }
   }
 
   private onRouteUpdated(event: any): void {

@@ -7,11 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GreyhoundCardComponent implements OnInit {
 
-  @Input() name: string;
-  @Input() born: string;
-  @Input() passed: string;
-  @Input() image: string;
-  @Input() descriptions: string[];
+  @Input() public name: string;
+  @Input() public born: string;
+  @Input() public passed: string;
+  @Input() public image: string;
+  @Input() public descriptions: string[];
+
+  constructor() {}
 
   ngOnInit() {
   }

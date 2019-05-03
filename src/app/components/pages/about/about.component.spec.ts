@@ -1,16 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CoreModule } from 'src/app/core/core.module';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
 import { AboutComponent } from './about.component';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 
 describe('AboutComponent', () => {
+
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppMaterialModule
+        SharedModule,
+        CoreModule,
       ],
       declarations: [ AboutComponent ]
     })

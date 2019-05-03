@@ -1,17 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FooterModule } from 'src/app/components/footer/footer.module';
-import { HeaderModule } from 'src/app/components/header/header.module';
-import { NavModule } from 'src/app/components/nav/nav.module';
-import { ContactModule } from 'src/app/components/pages/contact/contact.module';
-import { ForbiddenModule } from 'src/app/components/pages/forbidden/forbidden.module';
-import { GreyhoundsModule } from 'src/app/components/pages/greyhounds/greyhounds.module';
-import { NetworksModule } from 'src/app/components/pages/networks/networks.module';
-import { NotFoundModule } from 'src/app/components/pages/not-found/not-found.module';
-import { ProjectsModule } from 'src/app/components/pages/projects/projects.module';
-import { ResumeModule } from 'src/app/components/pages/resume/resume.module';
-import { UnauthorizedModule } from 'src/app/components/pages/unauthorized/unauthorized.module';
-import { GreyhoundCardModule } from 'src/app/components/common/greyhound-card/greyhound-card.module';
+import { FooterModule } from '../../../components/footer/footer.module';
+import { HeaderModule } from '../../../components/header/header.module';
+import { NavModule } from '../../../components/nav/nav.module';
+import { ContactModule } from '../../../components/pages/contact/contact.module';
+import { ForbiddenModule } from '../../../components/pages/forbidden/forbidden.module';
+import { GreyhoundsModule } from '../../../components/pages/greyhounds/greyhounds.module';
+import { NetworksModule } from '../../../components/pages/networks/networks.module';
+import { NotFoundModule } from '../../../components/pages/not-found/not-found.module';
+import { ProjectsModule } from '../../../components/pages/projects/projects.module';
+import { ResumeModule } from '../../../components/pages/resume/resume.module';
+import { UnauthorizedModule } from '../../../components/pages/unauthorized/unauthorized.module';
+import { GreyhoundCardModule } from '../../../components/common/greyhound-card/greyhound-card.module';
 
 const components = [
   ContactModule,
@@ -25,11 +25,9 @@ const components = [
   ResumeModule,
   UnauthorizedModule,
   ProjectsModule,
-  GreyhoundCardModule
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     ...components,

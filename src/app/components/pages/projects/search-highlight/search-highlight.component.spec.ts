@@ -1,11 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
-import { SearchHighlightPipe } from '../../../../core/pipes/search-highlight/search-highlight.pipe';
 import { SearchHighlightComponent } from './search-highlight.component';
+import { CoreModule } from 'src/app/core/core.module';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
 
 describe('SearchHighlightComponent', () => {
 
@@ -15,9 +12,8 @@ describe('SearchHighlightComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppMaterialModule,
-        RouterTestingModule,
-        FormsModule,
+        SharedModule,
+        CoreModule,
       ],
       providers: [
         {
@@ -25,11 +21,7 @@ describe('SearchHighlightComponent', () => {
           useValue: { feature: 'Search' }
         },
       ],
-      declarations: [
-        SearchHighlightComponent,
-        SearchHighlightPipe,
-      ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      declarations: [ SearchHighlightComponent ],
     })
     .compileComponents();
   }));

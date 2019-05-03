@@ -1,10 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from '../../core/modules/app-material/app-material.module';
 import { NavComponent } from './nav.component';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 describe('NavComponent', () => {
 
@@ -14,14 +11,10 @@ describe('NavComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppMaterialModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterTestingModule,
+        SharedModule,
+        CoreModule
       ],
       declarations: [ NavComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

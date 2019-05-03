@@ -1,10 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
 import { DiceRollerComponent } from './dice-roller.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 describe('DiceRollerComponent', () => {
 
@@ -14,10 +12,8 @@ describe('DiceRollerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppMaterialModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
+        SharedModule,
+        CoreModule,
       ],
       providers: [
         {
@@ -26,7 +22,6 @@ describe('DiceRollerComponent', () => {
         },
       ],
       declarations: [ DiceRollerComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

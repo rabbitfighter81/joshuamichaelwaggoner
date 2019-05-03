@@ -1,17 +1,18 @@
 import { TestBed } from '@angular/core/testing';
-
-import { GreyhoundService } from './greyhound.service';
-import { SharedModule } from '../../modules/shared/shared.module';
 import { CoreModule } from '../../core.module';
+import { SharedModule } from '../../modules/shared/shared.module';
+import { GreyhoundService } from './greyhound.service';
+import { GreyhoundServiceMock } from './greyhound.service.mock';
 
 describe('GreyhoundService', () => {
+
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       SharedModule,
       CoreModule
     ],
     providers: [
-      GreyhoundService
+      { provide: GreyhoundService, useClass: GreyhoundServiceMock },
     ]
   }));
 

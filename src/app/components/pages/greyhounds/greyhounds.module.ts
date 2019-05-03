@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { NgModule } from '@angular/core';
+import { GreyhoundCardComponent } from '../../common/greyhound-card/greyhound-card.component';
+import { GreyhoundCardModule } from '../../common/greyhound-card/greyhound-card.module';
 import { GreyhoundsRoutingModule } from './greyhounds-routing.module';
 import { GreyhoundsComponent } from './greyhounds.component';
 
 @NgModule({
-  declarations: [ GreyhoundsComponent ],
-  imports: [
-    SharedModule,
-    CommonModule,
-    GreyhoundsRoutingModule
+  declarations: [
+    GreyhoundsComponent,
+    GreyhoundCardComponent
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  imports: [
+    GreyhoundCardModule,
+    GreyhoundsRoutingModule
+  ]
 })
 export class GreyhoundsModule { }

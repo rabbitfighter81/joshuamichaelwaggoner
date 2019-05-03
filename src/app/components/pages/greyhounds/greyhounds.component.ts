@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { Greyhound } from '../../../core/models/greyhound.model';
 import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
 import { Subscription } from 'rxjs';
@@ -8,38 +8,15 @@ import { Subscription } from 'rxjs';
   templateUrl: './greyhounds.component.html',
   styleUrls: ['./greyhounds.component.scss']
 })
-export class GreyhoundsComponent implements OnInit, OnDestroy {
+export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private greyhounds$: Subscription;
   greyhounds: Greyhound[];
 
-  /*
-  greyhounds: Greyhound[] = [
-    {
-      name: 'Redd Walker',
-      born: 'Oct 23, 2000',
-      passed: 'Feb 8, 2012',
-      image: 'redd-walker.png',
-      descriptions: ['abc', 'qer']
-    } as Greyhound,
-    {
-      name: 'Poco Gabby',
-      born: 'Mar 1, 2005',
-      passed: 'Apr 2, 2018',
-      image: 'poco-gabby.png',
-      descriptions: ['abc', 'qer']
-    } as Greyhound,
-    {
-      name: 'Raven',
-      born: 'January 18, 2015',
-      passed: 'Present',
-      image: 'raven.png',
-      descriptions: ['abc', 'qer']
-    } as Greyhound,
-  ];
-  */
+  ready = false;
 
-  constructor(private service: GreyhoundService) { }
+  constructor(private service: GreyhoundService) {
+  }
 
   ngOnInit() {
     this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
@@ -51,12 +28,14 @@ export class GreyhoundsComponent implements OnInit, OnDestroy {
     }
   }
 
+  ngAfterViewInit() {
+    this.ready = true;
+    this.service.callGetGreyhounds();
+  }
+
   onGreyhoundsUpdate(greyhounds: Greyhound[]) {
     if (greyhounds) {
       this.greyhounds = greyhounds;
-      console.log('data', this.service.greyhounds);
-    } else {
-      console.error('No greyhound data yet...');
     }
   }
 

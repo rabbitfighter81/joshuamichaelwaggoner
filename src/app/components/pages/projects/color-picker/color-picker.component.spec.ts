@@ -1,11 +1,9 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { assign } from 'lodash';
 import { ColorPickerComponent } from './color-picker.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { AppMaterialModule } from '../../../../core/modules/app-material/app-material.module';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 describe('ColorPickerComponent', () => {
 
@@ -15,10 +13,8 @@ describe('ColorPickerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppMaterialModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
+        SharedModule,
+        CoreModule
       ],
       providers: [
         {
@@ -27,7 +23,6 @@ describe('ColorPickerComponent', () => {
         },
       ],
       declarations: [ ColorPickerComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
       .compileComponents();
   }));

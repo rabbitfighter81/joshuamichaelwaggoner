@@ -7,13 +7,12 @@ import { AppMaterialModule } from './core/modules/app-material/app-material.modu
 
 @NgModule({
   imports: [
-    CoreModule,
     AppComponentsModule,
     AppRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    CoreModule
   ],
-  entryComponents: [
-  ],
+  entryComponents: [],
   providers: [],
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ]

@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { GreyhoundCardComponent } from '../../common/greyhound-card/greyhound-card.component';
+import { GreyhoundCardModule } from '../../common/greyhound-card/greyhound-card.module';
 
 @NgModule({
   declarations: [ ContactComponent ],
@@ -15,6 +17,7 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    GreyhoundCardModule
   ]
 })
 export class ContactModule { }

@@ -1,6 +1,7 @@
 @import '../../../../styles/mixin.scss';
 
 .container--greyhounds {
+  width: 100%;
   @include tablet {
     display: flex;
     flex-direction: column;

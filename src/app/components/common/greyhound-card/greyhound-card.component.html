@@ -3,10 +3,10 @@
     <mat-card-title>{{ name }}</mat-card-title>
     <mat-card-subtitle>({{ born }} - {{ passed }})</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="{{ image }}" alt="Photo of {{ name }}">
+  <img mat-card-image src="assets/img/{{ image }}" alt="Photo of {{ name }}">
   <mat-card-content>
-    <p *ngFor="let description of descriptions;">
-      {{ description }}
+    <p *ngFor="let p of descriptions;">
+      {{ p }}
     </p>
   </mat-card-content>
   <mat-card-actions>
