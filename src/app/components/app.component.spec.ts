@@ -13,7 +13,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         SharedModule,
-        CoreModule
+        CoreModule,
+        RouterTestingModule
       ],
       declarations: [ AppComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

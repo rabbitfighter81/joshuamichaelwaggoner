@@ -3,11 +3,12 @@ import { Routes } from '@angular/router';
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'About'
+    redirectTo: 'About',
+    pathMatch: 'full',
   },
   {
     path: 'About',
-    loadChildren: './components/pages/about/about.module#AboutModule'
+    loadChildren: './components/pages/about/about.module#AboutModule',
   },
   {
     path: 'Resume',

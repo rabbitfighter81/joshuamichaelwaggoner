@@ -11,7 +11,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>([]);
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit() {

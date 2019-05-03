@@ -1,29 +1,22 @@
 <mat-sidenav-container class="example-container" (backdropClick)="closeSidenav()">
-  <mat-sidenav #sidenav (keydown.escape)="closeSidenav()" disableClose mode="push">
-    <div class="flex-row-justify-start-align-start">
-      <div class="flex-col">
+    <mat-sidenav #sidenav (keydown.escape)="closeSidenav()" disableClose mode="push">
+        <div class="flex-row-justify-start-align-start">
+            <div class="flex-col">
 
-      <app-nav (linkSelected)="closeSidenav()"></app-nav>
+                <app-nav (linkSelected)="closeSidenav()"></app-nav>
 
-      </div>
-      <div class="flex-col">
-        <button
-          id="btn-close-nav"
-          mat-icon-button
-          (click)="closeSidenav()"
-          matTooltip="Closes the sidenav"
-          [matTooltipPosition]="'before'"
-          matTooltipShowDelay="750"
-          aria-label="Button that displays a tooltip that can be programatically disabled">
+            </div>
+            <div class="flex-col">
+                <button id="btn-close-nav" mat-icon-button (click)="closeSidenav()" type="button" matTooltip="Closes the sidenav" [matTooltipPosition]="'before'" matTooltipShowDelay="750" aria-label="Button that displays a tooltip that can be programatically disabled">
           <mat-icon color="primary">close</mat-icon>
         </button>
-      </div>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <app-header (toggle)="toggleSidenav()"></app-header>
-    <router-outlet></router-outlet>
-    <br><br><br>
-    <app-footer></app-footer>
-  </mat-sidenav-content>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header (toggle)="toggleSidenav()"></app-header>
+        <router-outlet></router-outlet>
+        <br><br><br>
+        <app-footer></app-footer>
+    </mat-sidenav-content>
 </mat-sidenav-container>
