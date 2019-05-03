@@ -12,7 +12,7 @@ export class GreyhoundCardComponent implements OnInit {
   @Input() passed: string;
   @Input() image: string;
   @Input() descriptions: string[];
-  @Input() index: number;
+  @Input() index: any;
 
   ngOnInit() {
   }
