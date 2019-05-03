@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
 import { GreyhoundsRoutingModule } from './greyhounds-routing.module';
 import { GreyhoundsComponent } from './greyhounds.component';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 
 @NgModule({
   declarations: [ GreyhoundsComponent ],
   imports: [
-    AppMaterialModule,
+    SharedModule,
     CommonModule,
     GreyhoundsRoutingModule
   ]

@@ -4,7 +4,7 @@
   background-color: $color-dark-grey;
   background-image: url("http://rabbitfighter.net/wp-content/uploads/2016/01/starwars2.jpg");
   color: $color-white;
-  font-size: $app-body-size;
+  font-size: $app-body-font-size;
 }
 
 input {
@@ -14,8 +14,8 @@ input {
 .txt {
   padding: 20px;
   line-height: 1.75em;
-  font-size: $app-small-font;
-  font-family: "Roboto Mono";
+  font-size: $app-body-font-size;
+  font-family: 'Roboto Mono';
 }
 
 .search-highlight-h1 {
@@ -35,7 +35,7 @@ input {
   align-items: center;
   input {
     max-width: 150px;
-    font-size: $app-body-size;
+    font-size: $app-body-font-size;
   }
   .search {
     display: flex;
@@ -44,7 +44,7 @@ input {
     align-items: center;
   }
   .results {
-    font-size: $app-body-size;
+    font-size: $app-body-font-size;
     font-family: "Roboto";
     color: $color-deep-sky-blue;
   }

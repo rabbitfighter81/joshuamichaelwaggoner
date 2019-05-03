@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 
 @NgModule({
   declarations: [ ContactComponent ],
   imports: [
-    AppMaterialModule,
+    SharedModule,
     CommonModule,
     ContactRoutingModule,
     FormsModule,

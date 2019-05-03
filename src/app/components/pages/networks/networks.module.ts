@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NetworksRoutingModule } from './networks-routing.module';
 import { NetworksComponent } from './networks.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 
 @NgModule({
   declarations: [ NetworksComponent ],
   imports: [
-    AppMaterialModule,
+    SharedModule,
     CommonModule,
     NetworksRoutingModule
   ]

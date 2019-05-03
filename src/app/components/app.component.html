@@ -3,7 +3,7 @@
     <div class="flex-row-justify-start-align-start">
       <div class="flex-col">
 
-      <app-nav></app-nav>
+      <app-nav (linkSelected)="closeSidenav()"></app-nav>
 
       </div>
       <div class="flex-col">
@@ -23,6 +23,7 @@
   <mat-sidenav-content>
     <app-header (toggle)="toggleSidenav()"></app-header>
     <router-outlet></router-outlet>
+    <br><br><br>
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
