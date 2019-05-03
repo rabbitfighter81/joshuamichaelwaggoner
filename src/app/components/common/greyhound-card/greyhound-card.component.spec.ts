@@ -1,13 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GreyhoundCardComponent } from './greyhound-card.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { GreyhoundCardComponent } from './greyhound-card.component';
 
 describe('GreyhoundCardComponent', () => {
+
   let component: GreyhoundCardComponent;
   let fixture: ComponentFixture<GreyhoundCardComponent>;
 
