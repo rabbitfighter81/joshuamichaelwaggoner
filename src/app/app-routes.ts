@@ -1,33 +1,34 @@
 import { Routes } from '@angular/router';
+import { LOCALE_ID } from '@angular/core';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'About',
+    redirectTo: 'about',
     pathMatch: 'full',
   },
   {
-    path: 'About',
+    path: 'about',
     loadChildren: './components/pages/about/about.module#AboutModule',
   },
   {
-    path: 'Resume',
+    path: 'resume',
     loadChildren: './components/pages/resume/resume.module#ResumeModule'
   },
   {
-    path: 'Contact',
+    path: 'contact',
     loadChildren: './components/pages/contact/contact.module#ContactModule'
   },
   {
-    path: 'Projects',
+    path: 'projects',
     loadChildren: './components/pages/projects/projects.module#ProjectsModule'
   },
   {
-    path: 'Greyhounds',
+    path: 'greyhounds',
     loadChildren: './components/pages/greyhounds/greyhounds.module#GreyhoundsModule'
   },
   {
-    path: 'Networks',
+    path: 'networks',
     loadChildren: './components/pages/networks/networks.module#NetworksModule'
   },
   {
@@ -35,15 +36,15 @@ export const appRoutes: Routes = [
     loadChildren: './components/pages/not-found/not-found.module#NotFoundModule'
   },
   {
-    path: 'Forbidden',
-    loadChildren: './components/pages/not-found/not-found.module#NotFoundModule'
+    path: 'forbidden',
+    redirectTo: '404'
   },
   {
-    path: 'Unauthorized',
+    path: 'unauthorized',
     loadChildren: './components/pages/unauthorized/unauthorized.module#UnauthorizedModule'
   },
   {
     path: '**',
-    loadChildren: './components/pages/not-found/not-found.module#NotFoundModule'
+    redirectTo: '404'
   },
 ];

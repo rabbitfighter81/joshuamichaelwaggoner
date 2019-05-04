@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { NetworksComponent } from './networks.component';
 
 describe('NetworksComponent', () => {

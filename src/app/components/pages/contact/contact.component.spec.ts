@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { ContactComponent } from './contact.component';
-import { CoreModule } from 'src/app/core/core.module';
+import { CoreModule } from '../../../core/core.module';
 
 describe('ContactComponent', () => {
 

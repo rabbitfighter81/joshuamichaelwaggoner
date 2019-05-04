@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { CoreModule } from '../../../../core/core.module';
+import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { RandColorTextComponent } from './rand-color-text.component';
 
 describe('RandColorTextComponent', () => {

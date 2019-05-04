@@ -38,7 +38,6 @@ var greyhoundsFilePath = path.join(__dirname, 'src/db.greyhounds.json');
 
 app.get('/api/greyhounds', function(req, res) {
   var readable = fs.createReadStream(greyhoundsFilePath);
-  console.log(res);
   readable.pipe(res);
 });
 

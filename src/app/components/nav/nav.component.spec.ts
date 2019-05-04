@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavComponent } from './nav.component';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
-import { CoreModule } from 'src/app/core/core.module';
+import { SharedModule } from '../../core/modules/shared/shared.module';
+import { CoreModule } from '../../core/core.module';
 
 describe('NavComponent', () => {
 

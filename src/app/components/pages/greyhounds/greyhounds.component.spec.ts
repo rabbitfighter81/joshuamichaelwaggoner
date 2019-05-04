@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
-import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
-import { GreyhoundServiceMock } from 'src/app/core/services/greyhound/greyhound.service.mock';
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
+import { GreyhoundServiceMock } from '../../../core/services/greyhound/greyhound.service.mock';
 import { GreyhoundsComponent } from './greyhounds.component';
 import { GreyhoundCardComponent } from '../../common/greyhound-card/greyhound-card.component';
 

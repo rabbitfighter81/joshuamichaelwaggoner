@@ -8,6 +8,8 @@ import { Greyhound } from '../../models/greyhound.model';
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {
 
+  logging = false;
+
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>([]);
 
@@ -33,12 +35,16 @@ export class GreyhoundService implements OnInit, OnDestroy {
   onGreyhoundUpdate(response: Greyhound[]): void {
     if (response) {
       this.greyhounds.next(response);
-      console.log(`Greyhounds data from ${ this.url }`, response);
+      if (this.logging) {
+        console.log(`Greyhounds data from ${ this.url }`, response);
+      }
     }
   }
 
   onGreyhoundError(error: any): void {
-    console.log('Error fetching greyhound data from API: ', error);
+    if (this.logging) {
+      console.log('Error fetching greyhound data from API: ', error);
+    }
   }
 
   getGreyhounds(): Observable<any> {

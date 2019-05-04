@@ -1,14 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AboutRoutingModule } from './about-routing.module';
 
 @NgModule({
   declarations: [ AboutComponent ],
   imports: [
-    CommonModule,
     AppMaterialModule,
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AboutRoutingModule
   ]
 })

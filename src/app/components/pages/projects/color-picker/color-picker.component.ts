@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { ProjectBaseComponent } from '../base/project-base.component';
-import { MatSliderSettings } from 'src/app/core/models/mat-slider-settings.model';
+import { MatSliderSettings } from '../../../../core/models/mat-slider-settings.model';
 
 @Component({
   selector: 'app-color-picker',

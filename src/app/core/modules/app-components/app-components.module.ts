@@ -12,8 +12,10 @@ import { NotFoundModule } from '../../../components/pages/not-found/not-found.mo
 import { ProjectsModule } from '../../../components/pages/projects/projects.module';
 import { ResumeModule } from '../../../components/pages/resume/resume.module';
 import { UnauthorizedModule } from '../../../components/pages/unauthorized/unauthorized.module';
+import { AboutModule } from '../../../components/pages/about/about.module';
 
-const components = [
+const modules = [
+  AboutModule,
   ContactModule,
   FooterModule,
   ForbiddenModule,
@@ -31,10 +33,10 @@ const components = [
 @NgModule({
   imports: [
     CommonModule,
-    ...components,
+    ...modules,
   ],
   exports: [
-    ...components,
+    ...modules,
   ]
 })
 export class AppComponentsModule { }

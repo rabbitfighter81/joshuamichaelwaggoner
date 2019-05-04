@@ -2,8 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { assign } from 'lodash';
 import { ColorPickerComponent } from './color-picker.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
-import { CoreModule } from 'src/app/core/core.module';
+import { SharedModule } from '../../../../core/modules/shared/shared.module';
+import { CoreModule } from '../../../../core/core.module';
 
 describe('ColorPickerComponent', () => {
 

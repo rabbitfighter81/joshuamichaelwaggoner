@@ -19,13 +19,11 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
     private router: Router
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.router$ = this.router.events.subscribe(next => this.onRouteUpdated(next));
-    setTimeout(() => {
-      this.router.navigate(['/']);
-    }, 1);
   }
 
   ngOnDestroy() {
@@ -35,9 +33,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onRouteUpdated(event: any): void {
-    if (event instanceof NavigationEnd) {
-      document.body.scrollTop = 0;
-    }
     if (event instanceof NavigationStart) {
       if (this.navOpen) {
         this.closeSidenav();

@@ -14,7 +14,9 @@ import { AppMaterialModule } from './core/modules/app-material/app-material.modu
   ],
   entryComponents: [
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ]
 })
