@@ -43,11 +43,11 @@
     </button>
 
     <mat-menu #languageMenu="matMenu">
-      <a mat-button
+      <button mat-button
         mat-menu-item
         *ngFor="let language of languageList"
         role="list-item"
-        href="/{{ language.code }}/"
+        (click)="window.location.href='/' + language.code + '/'"
       >
         {{ language.label }}
       </a>
