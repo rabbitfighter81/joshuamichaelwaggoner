@@ -1,13 +1,11 @@
-@import '../../../styles/styles.scss';
-
+@import '../../../styles/mixin.scss';
 .footer-toolbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0px;
-  background: $color-dark-grey;
-  color: white;
-  font-size: 16px;
-  z-index: 100000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    background: $color-dark-grey;
+    color: white;
+    font-size: 16px;
+    z-index: 100000;
 }
-

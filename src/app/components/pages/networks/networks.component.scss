@@ -1,17 +1,21 @@
-@import '../../../../styles/styles.scss';
-
+@import '../../../../styles/mixin.scss';
 ul {
-  list-style: none;
-  margin-left: 0px;
-  padding-left: 0px;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 li {
-  margin-left: 0px;
-  padding-left: 0px;
-  white-space: pre-wrap; /* css-3 */    
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */    
-  white-space: -o-pre-wrap; /* Opera 7 */    
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+    margin-left: 0px;
+    padding-left: 0px;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
 }

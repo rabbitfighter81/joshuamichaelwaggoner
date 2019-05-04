@@ -1,8 +1,7 @@
-@import '../../../../../styles/styles.scss';
-@import url("https://fonts.googleapis.com/css?family=Bungee+Outline");
+@import '../../../../../styles/mixin.scss';
 .card-content {
     background-color: $color-dark-grey;
-    background-image: url("http://rabbitfighter.net/wp-content/uploads/2016/01/starwars2.jpg");
+    background-image: url("/assets/img/starwars.jpg");
     color: $color-white;
     font-size: $app-body-font-size;
 }

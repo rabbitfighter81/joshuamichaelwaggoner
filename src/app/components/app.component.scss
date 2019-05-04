@@ -1,21 +1,20 @@
-@import '../../styles/styles.scss';
-
+@import '../../styles/mixin.scss';
 .button {
-  background-color: darkslateblue;
-  border-radius: 5px;
-  color: white;
-  padding: 5px;
-  width: 10%;
-  margin: 5px;
-  text-decoration: none;
-  cursor: pointer;
+    background-color: darkslateblue;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 10%;
+    margin: 5px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .mat-sidenav-container .mat-sidenav {
-  background: #333 !important;
+    background: #333 !important;
 }
 
 .mat-drawer-container {
-  background: $color-body-bg !important;
-  color: white !important;
+    background: $color-body-bg !important;
+    color: white !important;
 }

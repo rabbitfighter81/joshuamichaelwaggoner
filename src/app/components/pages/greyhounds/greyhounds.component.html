@@ -1,54 +1,49 @@
 <div class="content">
-  <div class="pipeline-container">
-    <h2 class="pinline">
-      <span i18n="@@Pinline_Greyhounds">grey·hounds</span>
-    </h2>
-  </div>
+    <div class="pipeline-container">
+        <h2 class="pinline">
+            <span i18n="@@Pinline_Greyhounds">grey·hounds</span>
+        </h2>
+    </div>
 
-  <mat-card class="mat-elevation-z1 border-bottom-20">
-    <mat-card-header>
-      <mat-card-title class="project-title" color="primary">
-        Greyhound Rescue
-      </mat-card-title>
-      <mat-card-subtitle class="project-subtitle">
-        We are strong advocates of Greyhound Adoption
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="container--adoption">
-      <p>
-        We have a lot of love for Greyhounds because so many of them come from tragic environments, poor conditions, and are in immediate need for a home, love, and stability. They can come with a range of problems like worms, diseases, illnesses, malnutrition, drug addiction, PTSD, and Anxiety - all ranging from mild to extreme on a case-by-case basis.
-      </p>
-      <p>
-        We feel like rescuing these dogs - who are so loveable and kind - from kill shelters or death from neglect and abuse is so important that we have taken it up as a family cause. We plan on either adopting or fostering Greyhounds for the rest of our lives because it teaches us more about love and trust that we could ever learn from another human. Also, they make great bedtime snuggle buddies and they will pick you up when you are down, be with you when you are happy, and lick up all the food you drop on the floor.
-      </p>
-      <p>
-        For now, we just have Raven, but once we get settled in Spokane, we want to grow our Greyhound family.
-      </p>
-    </mat-card-content>
-  </mat-card>
+    <mat-card class="mat-elevation-z8 border-bottom-20">
+        <mat-card-header>
+            <mat-card-title class="project-title" color="primary">
+                Greyhound Rescue
+            </mat-card-title>
+            <mat-card-subtitle class="project-subtitle">
+                We are strong advocates of Greyhound Adoption
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="container--adoption">
+            <p>
+                We have a lot of love for Greyhounds because so many of them come from tragic environments, poor conditions, and are in immediate need for a home, love, and stability. They can come with a range of problems like worms, diseases, illnesses, malnutrition,
+                drug addiction, PTSD, and Anxiety - all ranging from mild to extreme on a case-by-case basis.
+            </p>
+            <p>
+                We feel like rescuing these dogs - who are so loveable and kind - from kill shelters or death from neglect and abuse is so important that we have taken it up as a family cause. We plan on either adopting or fostering Greyhounds for the rest of our lives
+                because it teaches us more about love and trust that we could ever learn from another human. Also, they make great bedtime snuggle buddies and they will pick you up when you are down, be with you when you are happy, and lick up all the
+                food you drop on the floor.
+            </p>
+            <p>
+                For now, we just have Raven, but once we get settled in Spokane, we want to grow our Greyhound family.
+            </p>
+        </mat-card-content>
+    </mat-card>
 
-  <mat-card class="mat-elevation-z1 border-bottom-20">
-    <mat-card-header>
-      <mat-card-title class="project-title" color="primary">
-        Our Rescues
-      </mat-card-title>
-      <mat-card-subtitle class="project-subtitle">
-        These three (so far...) souls have changed our lives for the better and
-        give us happiness.
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="container--greyhounds">
-      <app-greyhound-card
-        *ngFor="let dog of greyhounds"
-        [name]="dog.name"
-        [born]="dog.born"
-        [passed]="dog.passed"
-        [image]="dog.image"
-        [descriptions]="dog.descriptions"
-      >
-      </app-greyhound-card>
-    </mat-card-content>
-  </mat-card>
+    <mat-card class="mat-elevation-z8 border-bottom-20">
+        <mat-card-header>
+            <mat-card-title class="project-title" color="primary">
+                Our Rescues
+            </mat-card-title>
+            <mat-card-subtitle class="project-subtitle">
+                These three (so far...) souls have changed our lives for the better and give us happiness.
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="container--greyhounds">
+            <app-greyhound-card *ngFor="let dog of greyhounds" [name]="dog.name" [born]="dog.born" [passed]="dog.passed" [image]="dog.image" [descriptions]="dog.descriptions">
+            </app-greyhound-card>
+        </mat-card-content>
+    </mat-card>
 </div>
 
 <br />
