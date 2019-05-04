@@ -50,12 +50,12 @@
     </mat-card-content>
     <mat-card-content class="container--greyhounds">
       <app-greyhound-card
-        *ngFor="let greyhound of greyhounds"
-        [name]="greyhound.name"
-        [born]="greyhound.born"
-        [passed]="greyhound.passed"
-        [image]="greyhound.image"
-        [descriptions]="greyhound.descriptions"
+        *ngFor="let dog of greyhounds"
+        [name]="dog.name"
+        [born]="dog.born"
+        [passed]="dog.passed"
+        [image]="dog.image"
+        [descriptions]="dog.descriptions"
       >
       </app-greyhound-card>
     </mat-card-content>

@@ -3,7 +3,7 @@ import { Injectable, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
-import { Greyhound } from '../../models/greyhound.model';
+import { Greyhound, IGreyhound } from '../../models/greyhound.model';
 
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {
@@ -32,23 +32,23 @@ export class GreyhoundService implements OnInit, OnDestroy {
     );
   }
 
-  onGreyhoundUpdate(response: Greyhound[]): void {
+  private onGreyhoundUpdate(response: IGreyhound[]): void {
     if (response) {
-      this.greyhounds.next(response);
+      this.greyhounds.next(response.map(x => new Greyhound(x)));
       if (this.logging) {
         console.log(`Greyhounds data from ${ this.url }`, response);
       }
     }
   }
 
-  onGreyhoundError(error: any): void {
+  private onGreyhoundError(error: any): void {
     if (this.logging) {
       console.log('Error fetching greyhound data from API: ', error);
     }
   }
 
-  getGreyhounds(): Observable<any> {
-    return this.http.get(`${ window.location.origin }/api/greyhounds`).pipe(
+  getGreyhounds(): Observable<IGreyhound[]> {
+    return this.http.get<IGreyhound[]>(`${ window.location.origin }/api/greyhounds`).pipe(
       retry(1),
       map(data => data),
     );
