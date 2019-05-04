@@ -6,8 +6,8 @@
   </mat-card-header>
   <img mat-card-image src="assets/img/{{ image }}" alt="Photo of {{ name }}" />
   <mat-card-content>
-    <p *ngFor="let p of descriptions">
-      {{ p }}
+    <p *ngFor="let description of descriptions">
+      {{ description }}
     </p>
   </mat-card-content>
   <mat-card-actions>
