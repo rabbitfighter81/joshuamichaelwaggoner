@@ -47,7 +47,7 @@
         mat-menu-item
         *ngFor="let language of languageList"
         role="list-item"
-        routerLink="/{{ language.code }}/"
+        (click)="selectLanguage(language.code)"
       >
         {{ language.label }}
     </button>

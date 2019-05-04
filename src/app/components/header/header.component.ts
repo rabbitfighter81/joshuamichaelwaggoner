@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -17,13 +18,17 @@ export class HeaderComponent implements OnInit {
     { code: 'de', label: 'Deutsch' },
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   toggleSidenav(): void {
     this.toggle.emit();
+  }
+
+  selectLanguage(code: string): void {
+    this.router.navigate(['/' + code + '/']);
   }
 
   navToGitHubProject(): void {
