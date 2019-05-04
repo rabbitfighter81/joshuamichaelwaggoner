@@ -18,17 +18,13 @@ export class HeaderComponent implements OnInit {
     { code: 'de', label: 'Deutsch' },
   ];
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
   toggleSidenav(): void {
     this.toggle.emit();
-  }
-
-  selectLanguage(code: string): void {
-    this.router.navigate(['/' + code + '/']);
   }
 
   navToGitHubProject(): void {
