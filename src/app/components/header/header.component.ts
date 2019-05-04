@@ -27,6 +27,11 @@ export class HeaderComponent implements OnInit {
     this.toggle.emit();
   }
 
+  setLocale(code: string): void {
+    const url = '/' + code + '/';
+    window.location.href = url;
+  }
+
   navToGitHubProject(): void {
     window.open(this.githubLink, '_blank');
   }

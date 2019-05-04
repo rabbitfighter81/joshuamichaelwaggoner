@@ -47,7 +47,7 @@
         mat-menu-item
         *ngFor="let language of languageList"
         role="list-item"
-        (click)="window.location.href='/' + language.code + '/'"
+        (click)="setLocale(language.code)"
       >
         {{ language.label }}
     </button>
