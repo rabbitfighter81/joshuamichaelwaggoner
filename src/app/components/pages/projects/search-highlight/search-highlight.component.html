@@ -1,14 +1,11 @@
 <mat-card
   class="project"
   color="primary"
-  class="mat-elevation-z1 border-bottom-20">
+  class="mat-elevation-z1 border-bottom-20"
+>
   <mat-card-header>
-    <div
-      mat-card-avatar
-      class="personal-image"></div>
-    <mat-card-title
-      class="project-title"
-      color="primary">
+    <div mat-card-avatar class="personal-image"></div>
+    <mat-card-title class="project-title" color="primary">
       Search Highlight
     </mat-card-title>
 
@@ -18,28 +15,23 @@
   </mat-card-header>
 
   <mat-card-content class="card-content">
-
     <h1 class="search-highlight-h1">Search Highlight Pipe</h1>
     <!-- This needs to be a form TODO -->
-    <br>
+    <br />
     <div class="searcharea">
-
-      <input
-        #searchInput
-        type="text"
-        (input)="setSearch(searchInput.value)">
+      <input #searchInput type="text" (input)="setSearch(searchInput.value)" />
 
       <span class="spacer"></span>
 
       <div class="results" *ngIf="getResultCount()">
         {{ getResultCount() }} results found
       </div>
-
     </div>
 
     <div
-    class="txt"
-    [innerHTML]="textContent | searchHighlight: getSearchTerm()"></div>
+      class="txt"
+      [innerHTML]="textContent | searchHighlight: getSearchTerm()"
+    ></div>
   </mat-card-content>
 
   <mat-card-actions>
@@ -50,18 +42,20 @@
       color="primary"
       aria-role="Share button"
       i18n="@@Projects_Actions_Share"
-      (click)="share('Search Highlight')">
+      (click)="share('Search Highlight')"
+    >
       SHARE
     </button>
-    <button mat-button
+    <button
+      mat-button
       type="button"
       role="button"
       color="primary"
       aria-role="GitHub button"
       i18n="@@Projects_Actions_GitHub"
-      (click)="navToGitHubProject('Search Highlight')">
+      (click)="navToGitHubProject('Search Highlight')"
+    >
       GITHUB
     </button>
   </mat-card-actions>
-
 </mat-card>

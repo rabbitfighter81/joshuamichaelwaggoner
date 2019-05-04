@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { GreyhoundCardModule } from '../../../components/common/greyhound-card/greyhound-card.module';
 import { FooterModule } from '../../../components/footer/footer.module';
 import { HeaderModule } from '../../../components/header/header.module';
 import { NavModule } from '../../../components/nav/nav.module';
@@ -11,20 +12,20 @@ import { NotFoundModule } from '../../../components/pages/not-found/not-found.mo
 import { ProjectsModule } from '../../../components/pages/projects/projects.module';
 import { ResumeModule } from '../../../components/pages/resume/resume.module';
 import { UnauthorizedModule } from '../../../components/pages/unauthorized/unauthorized.module';
-import { GreyhoundCardModule } from '../../../components/common/greyhound-card/greyhound-card.module';
 
 const components = [
   ContactModule,
   FooterModule,
   ForbiddenModule,
+  GreyhoundCardModule,
   GreyhoundsModule,
   HeaderModule,
   NavModule,
   NetworksModule,
   NotFoundModule,
+  ProjectsModule,
   ResumeModule,
   UnauthorizedModule,
-  ProjectsModule,
 ];
 
 @NgModule({

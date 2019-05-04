@@ -3,9 +3,9 @@
     <mat-card-title>{{ name }}</mat-card-title>
     <mat-card-subtitle>({{ born }} - {{ passed }})</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="assets/img/{{ image }}" alt="Photo of {{ name }}">
+  <img mat-card-image src="assets/img/{{ image }}" alt="Photo of {{ name }}" />
   <mat-card-content>
-    <p *ngFor="let p of descriptions;">
+    <p *ngFor="let p of descriptions">
       {{ p }}
     </p>
   </mat-card-content>

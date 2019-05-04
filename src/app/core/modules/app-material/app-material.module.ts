@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -8,7 +9,6 @@ import {
   MatDialogModule,
   MatExpansionModule,
   MatGridListModule,
-  MatIconModule,
   MatInputModule,
   MatListModule,
   MatMenuModule,
@@ -26,7 +26,6 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
-import { CommonModule } from '@angular/common';
 
 const modules = [
   MatAutocompleteModule,

@@ -1,5 +1,8 @@
-<mat-card class="project" color="primary" class="mat-elevation-z1 border-bottom-20">
-
+<mat-card
+  class="project"
+  color="primary"
+  class="mat-elevation-z1 border-bottom-20"
+>
   <mat-card-header>
     <div mat-card-avatar class="personal-image"></div>
     <mat-card-title class="project-title">
@@ -14,8 +17,9 @@
   <mat-card-content>
     <div class="quote-container">
       <div id="txt" [innerHTML]="txt | randomColor"></div>
-      <br>
-      <div>-
+      <br />
+      <div>
+        -
         <span id="author" [innerHTML]="author | randomColor"></span>
       </div>
     </div>
@@ -29,18 +33,20 @@
       color="primary"
       aria-role="Share button"
       i18n="@@Projects_Actions_Share"
-      (click)="share('Random Color')">
+      (click)="share('Random Color')"
+    >
       SHARE
     </button>
-    <button mat-button
+    <button
+      mat-button
       type="button"
       role="button"
       color="primary"
       aria-role="GitHub button"
       i18n="@@Projects_Actions_GitHub"
-      (click)="navToGitHubProject('Random Color')">
+      (click)="navToGitHubProject('Random Color')"
+    >
       GITHUB
     </button>
   </mat-card-actions>
-
 </mat-card>

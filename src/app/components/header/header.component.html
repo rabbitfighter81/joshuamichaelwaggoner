@@ -7,12 +7,11 @@
     matTooltipPosition="below"
     color="accent"
     class="btn-mat-icon margin-right-10"
-    (click)="toggleSidenav()">
+    (click)="toggleSidenav()"
+  >
     <mat-icon>menu</mat-icon>
   </button>
-  <a
-    class="touchable"
-    routerLink="/">
+  <a class="touchable" routerLink="/">
     <h1 class="title">Joshua M. Waggoner</h1>
   </a>
   <span class="spacer"></span>
@@ -26,7 +25,8 @@
       matTooltipPosition="below"
       color="accent"
       class="btn-mat-icon"
-      (click)="navToGitHubProject()">
+      (click)="navToGitHubProject()"
+    >
       <mat-icon>code</mat-icon>
     </button>
     <button
@@ -37,18 +37,20 @@
       matTooltipPosition="below"
       color="accent"
       class="btn-mat-icon"
-      [matMenuTriggerFor]="languageMenu">
+      [matMenuTriggerFor]="languageMenu"
+    >
       <mat-icon>language</mat-icon>
     </button>
 
     <mat-menu #languageMenu="matMenu">
-      <ng-container *ngFor="let language of languageList" role="list-item">
-        <a href="/{{ language.code }}/">
-          <button mat-menu-item aria-label="language label">{{ language.label }}</button>
-        </a>
-       </ng-container>
+      <a
+        mat-menu-item
+        *ngFor="let language of languageList"
+        role="list-item"
+        href="/{{ language.code }}/"
+      >
+        {{ language.label }}
+      </a>
     </mat-menu>
   </div>
 </mat-toolbar>
-
-

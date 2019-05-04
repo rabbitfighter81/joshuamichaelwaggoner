@@ -1,16 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
 import { NavComponent } from './nav.component';
-import { SharedModule } from '../../core/modules/shared/shared.module';
+import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
 
 @NgModule({
   declarations: [ NavComponent ],
   imports: [
-    SharedModule,
+    AppMaterialModule,
     CommonModule,
-    ReactiveFormsModule,
     AppRoutingModule
   ],
   exports: [ NavComponent ]

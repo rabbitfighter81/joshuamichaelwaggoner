@@ -1,5 +1,4 @@
 <mat-card color="primary" class="mat-elevation-z1 border-bottom-20">
-
   <mat-card-header>
     <div mat-card-avatar class="personal-image"></div>
     <mat-card-title class="project-title">
@@ -12,31 +11,39 @@
   </mat-card-header>
 
   <mat-card-content>
-
     <div class="project-content-container flex-col">
-
       <form [formGroup]="form">
         <div class="form-field-container">
           <mat-form-field appearance="outline">
-            <mat-select placeholder="Number of Sides" formControlName="diceSides">
+            <mat-select
+              placeholder="Number of Sides"
+              formControlName="diceSides"
+            >
               <mat-option default>How many sides?</mat-option>
               <mat-option *ngFor="let x of diceSides" [value]="x">
                 {{ x }} Sides
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="form.get('diceSides').invalid">{{ diceSidesErrorMessage }}</mat-error>
+            <mat-error *ngIf="form.get('diceSides').invalid">{{
+              diceSidesErrorMessage
+            }}</mat-error>
             <mat-hint align="end">Select a number of sides</mat-hint>
           </mat-form-field>
         </div>
         <div class="form-field-container">
           <mat-form-field appearance="outline">
-            <mat-select placeholder="Number of dice" formControlName="diceCount">
+            <mat-select
+              placeholder="Number of dice"
+              formControlName="diceCount"
+            >
               <mat-option default>How many dice?</mat-option>
               <mat-option *ngFor="let x of diceCount" [value]="x">
                 {{ x }} Dice
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="form.get('diceCount').invalid">{{ diceCountErrorMessage }}</mat-error>
+            <mat-error *ngIf="form.get('diceCount').invalid">{{
+              diceCountErrorMessage
+            }}</mat-error>
             <mat-hint align="end">Select a number of dice</mat-hint>
           </mat-form-field>
         </div>
@@ -48,26 +55,30 @@
         showDelay="500"
         [matTooltipPosition]="'after'"
         aria-label="Tooltip that explains why it is disabled"
-        matTooltip="Must choose side and count">
+        matTooltip="Must choose side and count"
+      >
         <button
-          mat-raised-button color="primary"
+          mat-raised-button
+          color="primary"
           class="roll-btn mat-elevation-z1 btn"
           matTooltip="Click to roll the dice"
           [matTooltipPosition]="'after'"
           matTooltipShowDelay="750"
           aria-label="Button that displays a tooltip"
           [disabled]="form.invalid"
-          (click)="submitRoll()">
+          (click)="submitRoll()"
+        >
           Roll Dice
         </button>
       </div>
-
     </div>
   </mat-card-content>
 
   <mat-card-content>
     <table class="table_dice" id="table_dice" [@diceRolling]="diceRolls">
-      <div class="dice" *ngFor="let roll of diceRolls; let i = index;">{{ roll.value }}</div>
+      <div class="dice" *ngFor="let roll of diceRolls; let i = index">
+        {{ roll.value }}
+      </div>
     </table>
   </mat-card-content>
 
@@ -81,10 +92,12 @@
       matTooltipShowDelay="750"
       aria-label="Button that displays a tooltip"
       i18n="@@Projects_Actions_Share"
-      (click)="share('Dice Roller')">
+      (click)="share('Dice Roller')"
+    >
       SHARE
     </button>
-    <button mat-button
+    <button
+      mat-button
       type="button"
       role="button"
       color="primary"
@@ -92,9 +105,9 @@
       matTooltipShowDelay="750"
       aria-label="Button that displays a tooltip"
       i18n="@@Projects_Actions_GitHub"
-      (click)="navToGitHubProject('Dice Roller')">
+      (click)="navToGitHubProject('Dice Roller')"
+    >
       GITHUB
     </button>
   </mat-card-actions>
-
 </mat-card>
