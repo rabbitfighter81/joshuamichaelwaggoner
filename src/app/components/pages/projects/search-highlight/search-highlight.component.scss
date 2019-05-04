@@ -12,7 +12,7 @@ input {
 
 .txt {
     padding: 20px;
-    line-height: 1.75em;
+    line-height: $app-body-line-height;
     font-size: $app-body-font-size;
 }
 
@@ -36,6 +36,6 @@ input {
     }
     .results {
         font-size: $app-body-font-size;
-        color: $color-dark-orchid;
+        color: $color-electric-yellow;
     }
 }
