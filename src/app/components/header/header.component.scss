@@ -1,14 +1,13 @@
 @import "../../../styles/styles.scss";
-
 /deep/ .mat-toolbar.toolbar {
-  a {
-    h1.title {
-      @include tablet {
-        font-size: $app-title-font-size-tablet;
-      }
-      @include desktop {
-        font-size: $app-title-font-size;
-      }
+    a {
+        h1.title {
+            @include tablet {
+                font-size: $app-title-font-size-tablet;
+            }
+            @include desktop {
+                font-size: $app-title-font-size;
+            }
+        }
     }
-  }
 }
