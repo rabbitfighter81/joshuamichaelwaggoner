@@ -4,7 +4,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var fs = require('fs');
-var compression = require('compression');
 
 // Run the app by serving the static files in the dist directory
 app.use(express.static(__dirname + '/dist'));
@@ -14,7 +13,6 @@ app.use("/es/", express.static(__dirname + "/dist/es"));
 
 // CORS
 app.use(cors());
-app.use(compression())
 
 // More CORS settings
 app.use(function(req, res, next) {
