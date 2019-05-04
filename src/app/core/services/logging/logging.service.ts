@@ -15,7 +15,7 @@ export class LoggingService {
   }
 
   log(component: any, message: string, object: any): void {
-    console.log(component, message, object)
+    console.log(component, message, object);
   }
 
   err(component: any, error: any): void {
