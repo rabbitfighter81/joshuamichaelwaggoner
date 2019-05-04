@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { LOCALE_ID } from '@angular/core';
 
 export const appRoutes: Routes = [
   {

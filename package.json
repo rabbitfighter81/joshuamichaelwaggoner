@@ -9,6 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
+        "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
         "serve-en": "ng serve --aot --i18n-file=src/locale/messages.en.xlf --locale=en --i18n-format=xlf",
         "serve-es": "ng serve --aot --i18n-file=src/locale/messages.es.xlf --locale=en --i18n-format=xlf",
         "serve-de": "ng serve --aot --i18n-file=src/locale/messages.de.xlf --locale=en --i18n-format=xlf",
@@ -65,6 +66,7 @@
         "protractor": "~5.4.0",
         "ts-node": "~7.0.0",
         "tslint": "~5.11.0",
-        "typescript": "~3.2.2"
+        "typescript": "~3.2.2",
+        "webpack-bundle-analyzer": "^3.3.2"
     }
 }
