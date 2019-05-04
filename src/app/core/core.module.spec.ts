@@ -2,14 +2,14 @@ import { CoreModule } from './core.module';
 
 describe('CoreModule', () => {
 
-  let materialModule: CoreModule;
+  let module: CoreModule;
 
   beforeEach(() => {
-    materialModule = new CoreModule();
+    module = new CoreModule();
   });
 
   it('should create an instance', () => {
-    expect(materialModule).toBeTruthy();
+    expect(module).toBeTruthy();
   });
 
 });

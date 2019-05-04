@@ -36,7 +36,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (response) {
       this.greyhounds.next(response.map(x => new Greyhound(x)));
       if (this.logging) {
-        console.log(`Greyhounds data from ${ this.url }`, response);
+        console.log(`Greyhounds data from ${ this.apiUrl }`, response);
       }
     }
   }
@@ -48,13 +48,13 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   getGreyhounds(): Observable<IGreyhound[]> {
-    return this.http.get<IGreyhound[]>(`${ window.location.origin }/api/greyhounds`).pipe(
+    return this.http.get<IGreyhound[]>(this.apiUrl).pipe(
       retry(1),
       map(data => data),
     );
   }
 
-  get url(): string {
+  get apiUrl(): string {
     return `${ window.location.origin }/api/greyhounds`;
   }
 }
