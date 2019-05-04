@@ -16,7 +16,7 @@ export class Greyhound {
   constructor(dog: IGreyhound) {
     this.name = dog.name;
     this.born = new Date(dog.born);
-    this.passed = dog.passed !== '' ? new Date(dog.passed) : null;
+    this.passed = dog.passed.length ? new Date(dog.passed) : null;
     this.image = dog.image;
     this.descriptions = dog.descriptions;
   }

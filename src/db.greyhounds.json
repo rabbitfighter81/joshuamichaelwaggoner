@@ -1,6 +1,6 @@
 [{
         "name": "Raven",
-        "born": "January 1, 2015",
+        "born": "2015-01-01T00:00:00",
         "passed": "",
         "image": "raven.jpg",
         "descriptions": [
@@ -9,8 +9,8 @@
     },
     {
         "name": "Poco Gabby",
-        "born": "March 1, 2005",
-        "passed": "April 2, 2018",
+        "born": "2005-03-01T00:00:00",
+        "passed": "2018-04-02T00:00:00",
         "image": "poco-gabby.jpg",
         "descriptions": [
             "We rescued Poco Gabby in March 2012 and shortened her racing name to just Gabby. Gabby was a sweet girl who loved people, ice cream, and naps. This was the first rescue that I was in on from the ground up, and my first time partnering with CGA (Colorado Greyhound Adoption). Gabby lived a long life, was loved very much and is missed just as much still."
@@ -18,8 +18,8 @@
     },
     {
         "name": "Redd Walker",
-        "born": "'October 23, 2000",
-        "passed": "February 12, 2012",
+        "born": "2000-10-23T00:00:00",
+        "passed": "2012-02-12T00:00:00",
         "image": "redd-walker.jpg",
         "descriptions": [
             "My wife rescued Redd Walker in September 2006, 3 years before we even met. However, I wound up living with them and came to love Redd like a child. He was my first exposure to greyhounds and although he was marred by a traumatic life, we had fun and he was able to overcome many problems. He lived a long life, was loved very much, and ate lots of food."
