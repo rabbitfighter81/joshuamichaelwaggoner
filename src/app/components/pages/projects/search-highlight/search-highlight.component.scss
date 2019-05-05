@@ -1,41 +1,41 @@
-@import '../../../../../styles/mixin.scss';
-.card-content {
-    background-color: $color-dark-grey;
-    background-image: url("/assets/img/starwars.jpg");
-    color: $color-white;
-    font-size: $app-body-font-size;
+@import "../../../../../styles/mixin.scss";
+.search-area-content {
+  background-color: $color-dark-grey;
+  background-image: url("/assets/img/starwars.jpg");
+  color: $color-white;
+  font-size: $app-body-font-size;
 }
 
 input {
-    width: 50%;
+  width: 50%;
 }
 
 .txt {
-    padding: 20px;
-    line-height: $app-body-line-height;
-    font-size: $app-body-font-size;
+  padding: 20px;
+  line-height: $app-body-line-height;
+  font-size: $app-body-font-size;
 }
 
 .searcharea {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  input {
+    max-width: 150px;
+    font-size: $app-body-font-size;
+  }
+  .search {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    input {
-        max-width: 150px;
-        font-size: $app-body-font-size;
-    }
-    .search {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .results {
-        font-size: $app-body-font-size;
-        color: $color-electric-yellow;
-    }
+  }
+  .results {
+    font-size: $app-body-font-size;
+    color: $color-electric-yellow;
+  }
 }

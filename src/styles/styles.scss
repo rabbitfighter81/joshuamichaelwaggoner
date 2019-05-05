@@ -1,327 +1,203 @@
 @import "./theme.scss";
 @import "./mixin.scss";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Oswald");
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: $color-dark-grey;
+  margin: 0px;
+  padding: 0px;
+  background-color: $color-dark-grey;
 }
 
 body,
 p,
 li,
 a {
-    font-size: $app-body-font-size;
-    line-height: $app-body-line-height;
-    font-weight: $app-body-font-weight;
+  font-size: $app-body-font-size;
+  line-height: $app-body-line-height;
+  font-weight: $app-body-font-weight;
 }
 
 img.img--center {
-    margin: auto;
+  margin: auto;
 }
 
 li {
-    margin: 5px;
-    padding: 5px;
-}
-
-.content {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.project-title {
-    font-size: $app-project-title-font-size;
-    font-weight: 500;
-}
-
-.project-subtitle {
-    font-weight: 400;
-}
-
-.title {
-    color: white;
-    text-transform: UPPERCASE;
-    font-family: $app-title-font !important;
+  margin: 5px;
+  padding: 5px;
 }
 
 .toolbar {
-    width: 100%;
-    margin: 0px;
-    background: $color-dark-grey;
+  width: 100%;
+  margin: 0px;
+  background: $color-dark-grey;
 }
 
 .margin-right-10 {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .margin-right-10.mat-icon-button {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .btn-mat-icon {
-    .mat-icon {
-        color: #f0f0f0;
-    }
+  .mat-icon {
+    color: #f0f0f0;
+  }
 }
 
 form,
 .form-field-container {
-    width: 100%;
-}
-
-#btn-toggle-nav {
-    margin-right: 10px;
-    .mat-icon {
-        color: white; // TODO
-    }
-}
-
-#btn-close-nav {
-    margin: 10px;
-    .mat-icon {
-        color: white;
-    }
+  width: 100%;
 }
 
 // Flex
 .spacer {
-    flex: 1 0 0;
+  flex: 1 0 0;
 }
 
 .flex-row-justify-start-align-start {
-    @include flex-row-justify-start-align-start();
+  @include flex-row-justify-start-align-start();
 }
 
 .flex-row-justify-start-align-center {
-    @include flex-row-justify-start-align-center();
+  @include flex-row-justify-start-align-center();
 }
 
 .flex-col {
-    @include flex-col();
-}
-
-.header-text {
-    font-size: $app-header-font-size;
-    font: $app-header-font;
-    font-weight: 500;
-}
-
-.subheader-text {
-    font-size: $app-body-font-size;
-    font-weight: 500;
+  @include flex-col();
 }
 
 .container,
 .content {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .center {
-    text-align: center;
-}
-
-h1 {
-    font-family: "Roboto Condensed";
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-}
-
-/deep/ .mat-card-title {
-    font-family: "Roboto Condensed";
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
-    color: $color-dark-orchid;
-     :visited {
-        color: $color-dark-orchid;
-    }
-     :active {
-        color: $color-dark-orchid;
-    }
+  text-decoration: none;
+  color: $color-med-blue;
+  :visited {
+    color: $color-med-blue;
+  }
+  :active {
+    color: $color-med-blue;
+  }
 }
 
 p.nav-item {
-    font-family: $app-header-font;
-    outline: none;
-    color: $color-electric-yellow;
+  outline: none;
+  color: $color-electric-yellow;
 }
 
 li {
-    margin: 0px;
-    margin-bottom: 10px;
-    padding: 0px;
-    line-height: $app-body-line-height;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+  line-height: $app-body-line-height;
 }
 
 .img--container img {
-    width: 100%;
+  width: 100%;
 }
 
 .link--light-bg {
-    color: $color-dark-orchid;
+  color: $color-med-blue;
 }
 
 .link--dark-bg {
-    color: $color-electric-yellow;
-}
-
-.content {
-    width: 80%;
-    margin: 0 auto;
+  color: $color-electric-yellow;
 }
 
 .center {
-    text-align: center;
-}
-
-.header-text {
-    font-size: $app-header-font;
-    font-family: "Roboto Condensed";
-    font-weight: 500;
-}
-
-.subheader-text {
-    font-size: $app-body-font-size;
-    font-weight: 500;
-    font-family: "Roboto";
+  text-align: center;
 }
 
 input[type="text"] {
-    font-size: $app-body-font-size;
+  font-size: $app-body-font-size;
 }
 
 .container,
 .content {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.center {
-    text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .pipeline-container {
-    width: 100%;
-    margin: 20px 0% 20px 0%;
-    h1 {
-        font-family: "Roboto";
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        @media only screen and (max-width: 600px) {
-            font-size: 1em;
-        }
+  width: 100%;
+  margin: 20px 0% 20px 0%;
+  h1 {
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
     }
-    h2.pinline {
-        color: black;
-        text-align: center;
-        display: block;
-        overflow: hidden;
-        font-size: 1em;
-        font-weight: 100;
-        margin: 20px 0;
-        font-family: "Roboto";
-        font-weight: 400;
-        text-transform: lowercase;
-    }
-    h2.pinline span {
-        position: relative;
-        display: inline-block;
-        line-height: 1;
-    }
-    h2.pinline span:before,
-    h2.pinline span:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 1px;
-        background: black;
-        width: 99999px;
-    }
-    h2.pinline span:before {
-        left: 100%;
-        margin-left: 20px;
-    }
-    h2.pinline span:after {
-        right: 100%;
-        margin-right: 20px;
-    }
+  }
+  h2.pinline {
+    color: black;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 20px 0;
+    font-family: "Roboto";
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+  h2.pinline span {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+  }
+  h2.pinline span:before,
+  h2.pinline span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: black;
+    width: 99999px;
+  }
+  h2.pinline span:before {
+    left: 100%;
+    margin-left: 20px;
+  }
+  h2.pinline span:after {
+    right: 100%;
+    margin-right: 20px;
+  }
 }
 
 .form-field-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-field-container>* {
-    width: 100%;
+.form-field-container > * {
+  width: 100%;
 }
 
 .full-image {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 .touchable {
-    cursor: pointer;
-    outline: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .border-bottom-20 {
-    margin-bottom: $border-bottom-20;
-}
-
-.turncommerce-header-image {
-    background-image: url("/assets/img/turncommerce.jpg");
-    background-size: cover;
-}
-
-.rt-header-image {
-    background-image: url("/assets/img/rt.jpg");
-    background-size: cover;
-}
-
-.clickfox-header-image {
-    background-image: url("/assets/img/clickfox.jpg");
-    background-size: contain;
-}
-
-.fe-header-image {
-    background-image: url("/assets/img/me.jpg");
-    background-size: cover;
+  margin-bottom: $border-bottom-20;
 }
 
 .personal-image {
-    background-image: url("/assets/img/me.jpg");
-    background-size: cover;
-}
-
-.greyhound-header-image {
-    background-image: url("/assets/img/cga.jpg");
-    background-size: cover;
-}
-
-.stackoverflow-image {
-    background-image: url("/assets/img/stackoverflow.jpg");
-    background-size: cover;
-}
-
-.codepen-image {
-    background-image: url("/assets/img/codepen.jpg");
-    background-size: cover;
-}
-
-.github-image {
-    background-image: url("/assets/img/github.jpg");
-    background-size: cover;
-}
-
-.linkedin-image {
-    background-image: url("/assets/img/linkedin.jpg");
-    background-size: cover;
+  background-image: url("/assets/img/me.jpg");
+  background-size: cover;
 }

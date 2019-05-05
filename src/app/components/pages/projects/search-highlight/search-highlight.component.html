@@ -1,16 +1,16 @@
 <mat-card class="project mat-elevation-z8 border-bottom-20" color="primary">
     <mat-card-header>
         <div mat-card-avatar class="personal-image"></div>
-        <mat-card-title class="project-title" color="primary">
+        <mat-card-title>
             Search Highlight
         </mat-card-title>
 
-        <mat-card-subtitle class="project-subtitle">
+        <mat-card-subtitle>
             Transform any text into highlighted text matching a search query
         </mat-card-subtitle>
     </mat-card-header>
 
-    <mat-card-content class="card-content">
+    <mat-card-content class="search-area-content">
         <div class="searcharea">
             <input #searchInput type="text" (input)="setSearch(searchInput.value)" />
             <span class="spacer"></span>

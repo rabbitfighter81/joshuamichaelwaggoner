@@ -1,42 +1,46 @@
-@import './app.scss';
-$breakpoints: ( "small": 768px, "medium": 992px, "large": 1024px) !default;
+@import "./app.scss";
+$breakpoints: (
+  "small": 768px,
+  "medium": 992px,
+  "large": 1024px
+) !default;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 @mixin tablet {
-    @media (max-width: #{ $tablet-width - 1px }) {
-        @content;
-    }
+  @media (max-width: #{ $tablet-width - 1px }) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: #{$tablet-width - 1px}) {
-        @content;
-    }
+  @media (min-width: #{$tablet-width - 1px}) {
+    @content;
+  }
 }
 
 @mixin flex-row-space-between() {
-    @include flex-row();
-    @include align-center();
-    justify-content: space-between;
+  @include flex-row();
+  @include align-center();
+  justify-content: space-between;
 }
 
 @mixin flex-row-justify-start-align-start {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 @mixin flex-row-justify-start-align-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @mixin flex-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

@@ -1,13 +1,18 @@
 @import "../../../styles/mixin.scss";
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,500");
 /deep/ .mat-toolbar.toolbar {
-    a {
-        h1.title {
-            @include tablet {
-                font-size: $app-title-font-size-tablet;
-            }
-            @include desktop {
-                font-size: $app-title-font-size;
-            }
-        }
+  a {
+    h1.title {
+      color: white;
+      text-transform: UPPERCASE;
+      font-family: "Oswald", monospace !important;
+
+      @include tablet {
+        font-size: $app-title-font-size-tablet;
+      }
+      @include desktop {
+        font-size: $app-title-font-size;
+      }
     }
+  }
 }

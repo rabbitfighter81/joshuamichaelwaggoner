@@ -1,13 +1,41 @@
-@import '../../../../styles/mixin.scss';
+@import "../../../../styles/mixin.scss";
+
 ul {
-    list-style: none;
-    margin-left: 0px;
-    padding-left: 0px;
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 li {
-    margin-left: 0px;
-    padding-left: 0px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  margin-left: 0px;
+  padding-left: 0px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mat-stroked-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stackoverflow-image {
+  background-image: url("/assets/img/stackoverflow.jpg");
+  background-size: cover;
+}
+
+.codepen-image {
+  background-image: url("/assets/img/codepen.jpg");
+  background-size: cover;
+}
+
+.github-image {
+  background-image: url("/assets/img/github.jpg");
+  background-size: cover;
+}
+
+.linkedin-image {
+  background-image: url("/assets/img/linkedin.jpg");
+  background-size: cover;
 }
