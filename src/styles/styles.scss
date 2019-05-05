@@ -124,11 +124,21 @@ li {
 }
 
 .btn--flex-row {
+  margin: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
+
+.mat-stroked-button {
+  margin: 12.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 
 input[type="text"] {
   font-size: $app-body-font-size;

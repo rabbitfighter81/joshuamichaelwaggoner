@@ -1,33 +1,44 @@
 <div class="" *ngIf="greyhound">
-    <h2><mat-icon>pets</mat-icon>&nbsp;Greyhound facts for {{ greyhound.name }}</h2>
-    <mat-list>
-      <mat-list-item>
-        Color:&nbsp;<span class="bold">{{ greyhound.color }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Sex:&nbsp;<span class="bold">{{ greyhound.sex }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Earmark:&nbsp;<span class="bold">{{ greyhound.earmark }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Born:&nbsp;<span class="bold">{{ greyhound.born | date: "mediumDate" }}</span>
-      </mat-list-item>
-      <mat-list-item *ngIf="greyhound.passed !== null">
-        Passed:&nbsp;<span class="bold">{{ greyhound.passed | date: "mediumDate" }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Lbs:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Kg:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Country:&nbsp;<span class="bold">{{ greyhound.land }}</span>
-      </mat-list-item>
-      <mat-list-item *ngFor="let owner of greyhound.racingowners; let i = index;">
-        Racing owner:&nbsp;<span class="bold">{{ owner }}</span>
-      </mat-list-item>
-    </mat-list>
+  <h2>
+    <mat-icon>pets</mat-icon>&nbsp;Greyhound facts for {{ greyhound.name }}
+  </h2>
+  <mat-list>
+    <mat-list-item>
+      Color:&nbsp;<span class="bold">{{ greyhound.color }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      Sex:&nbsp;
+      <span class="bold"
+        >{{ greyhound.sex }}
+        &nbsp;
+        <span *ngIf="greyhound.sex === 'Male'">&#9794;</span>
+        <span *ngIf="greyhound.sex === 'Female'">&#9792;</span>
+      </span>
+    </mat-list-item>
+    <mat-list-item>
+      Earmark:&nbsp;<span class="bold">{{ greyhound.earmark }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      Born:&nbsp;<span class="bold">{{
+        greyhound.born | date: "mediumDate"
+      }}</span>
+    </mat-list-item>
+    <mat-list-item *ngIf="greyhound.passed !== null">
+      Passed:&nbsp;<span class="bold">{{
+        greyhound.passed | date: "mediumDate"
+      }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      Lbs:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      Kg:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      Country:&nbsp;<span class="bold">{{ greyhound.land }}</span>
+    </mat-list-item>
+    <mat-list-item *ngFor="let owner of greyhound.racingowners; let i = index">
+      Racing owner:&nbsp;<span class="bold">{{ owner }}</span>
+    </mat-list-item>
+  </mat-list>
 </div>
-
