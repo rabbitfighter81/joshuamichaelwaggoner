@@ -25,6 +25,13 @@ li {
   padding: 5px;
 }
 
+.mat-card .mat-card-header .mat-card-title {
+  font-size: $app-header-font-size;
+  @include tablet {
+    font-size: $app-header-font-size-mobile;
+  }
+}
+
 .toolbar {
   width: 100%;
   margin: 0px;
@@ -151,6 +158,7 @@ input[type="text"] {
     overflow: hidden;
     font-size: 1em;
     font-weight: 100;
+    font-family: "Roboto", sans-serif;
     margin: 20px 0;
     font-weight: 400;
     text-transform: lowercase;
