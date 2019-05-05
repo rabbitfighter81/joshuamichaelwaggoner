@@ -17,6 +17,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.callGetGreyhounds();
   }
 
   ngOnDestroy() {
@@ -33,7 +34,6 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   getGreyhound(x: any): void {
-    console.log('Hit this function...', x);
   }
 
   private onGreyhoundUpdate(response: IGreyhound[]): void {

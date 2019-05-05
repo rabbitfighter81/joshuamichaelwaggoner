@@ -1,16 +1,16 @@
-<mat-card class="greyhound-card mat-elevatrion-z8">
+<mat-card class="greyhound-card mat-elevatrion-z8" *ngIf="greyhound">
   <mat-card-header>
-    <mat-card-title>{{ name }}</mat-card-title>
-    <mat-card-subtitle *ngIf="passed">
-      ({{ born | date:'mediumDate' }} - {{ passed | date:'mediumDate' }})
+    <mat-card-title>{{ greyhound.name }}</mat-card-title>
+    <mat-card-subtitle *ngIf="greyhound.passed">
+      ({{ greyhound.born | date:'mediumDate' }} - {{ greyhound.passed | date:'mediumDate' }})
     </mat-card-subtitle>
-    <mat-card-subtitle *ngIf="!passed">
-      ({{ born | date:'mediumDate' }} - Present)
+    <mat-card-subtitle *ngIf="!greyhound.passed">
+      ({{ greyhound.born | date:'mediumDate' }} - Present)
     </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="assets/img/{{ image }}" alt="Photo of {{ name }}" />
+  <img mat-card-image src="assets/img/{{ greyhound.image }}" alt="Photo of {{ greyhound.name }}" />
   <mat-card-content>
-    <p *ngFor="let description of descriptions">
+    <p *ngFor="let description of greyhound.descriptions">
       {{ description }}
     </p>
   </mat-card-content>
@@ -21,7 +21,7 @@
       color="primary"
       type="button"
       role="button"
-      (click)="setGreyhoundDetail(route)"
+      (click)="setGreyhoundDetail(greyhound.route)"
       aria-label="Greyhound Detail Button">
       <mat-icon>pets</mat-icon>&nbsp;DETAILS
     </button>

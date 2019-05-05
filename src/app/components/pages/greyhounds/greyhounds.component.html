@@ -40,7 +40,7 @@
             </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="container--greyhounds">
-            <app-greyhound-card *ngFor="let dog of greyhounds" [name]="dog.name" [route]="dog.route" [born]="dog.born" [passed]="dog.passed" [image]="dog.image" [descriptions]="dog.descriptions">
+            <app-greyhound-card *ngFor="let dog of greyhounds" [greyhound]="dog">
             </app-greyhound-card>
         </mat-card-content>
     </mat-card>

@@ -13,8 +13,8 @@ import { ProjectsModule } from '../../../components/pages/projects/projects.modu
 import { ResumeModule } from '../../../components/pages/resume/resume.module';
 import { UnauthorizedModule } from '../../../components/pages/unauthorized/unauthorized.module';
 import { AboutModule } from '../../../components/pages/about/about.module';
-import { GreyhoundDetailModule } from 'src/app/components/common/greyhound-detail/greyhound-detail.module';
-import { TableGreyhoundModule } from 'src/app/components/tables/table-greyhound/table-greyhound.module';
+import { GreyhoundDetailModule } from '../../../components/common/greyhound-detail/greyhound-detail.module';
+import { TableGreyhoundModule } from '../../../components/tables/table-greyhound/table-greyhound.module';
 
 const modules = [
   AboutModule,

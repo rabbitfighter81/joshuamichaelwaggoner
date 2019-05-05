@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Greyhound } from '../../../core/models/greyhound.model';
 
 @Component({
   selector: 'app-greyhound-card',
@@ -8,24 +9,29 @@ import { Router } from '@angular/router';
 })
 export class GreyhoundCardComponent implements OnInit {
 
+  /*
   @Input() public name: string;
   @Input() public route: string;
   @Input() public born: string;
   @Input() public passed: string;
   @Input() public image: string;
   @Input() public descriptions: string[];
+  */
+
+  @Input() public greyhound: Greyhound;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
+    console.log(this.greyhound);
   }
 
   like(): void {
-    console.log('Liking ', this.name);
+    console.log('Liking ', this.greyhound.name);
   }
 
   share(): void {
-    console.log('Sharing ', this.name);
+    console.log('Sharing ', this.greyhound.name);
   }
 
   setGreyhoundDetail(route: string): void {

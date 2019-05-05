@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Greyhound } from '../../../core/models/greyhound.model';
+import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
 
 export interface PeriodicElement {
   name: string;
@@ -28,8 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class TableGreyhoundComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  @Input() public greyhound: Greyhound;
 
   constructor() { }
 

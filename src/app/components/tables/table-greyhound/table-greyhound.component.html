@@ -1,41 +1,17 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-  <!--
-  born: string;
-  passed: string;
-  descriptions: string[];
-  image: string;
-  name: string;
-  route: string;
-
-  racingowners: string[];
-  // kg: string;
-
-  color: string;
-  earmark: string;
-  land: string;
-  lbs: string;
-  sex: string;
-
-  -->
+<mat-list *ngIf="greyhound">
+  <mat-list-item>
+    Weight: {{ greyhound.lbs }} lbs.
+  </mat-list-item>
+  <mat-list-item>
+    Country: {{ greyhound.land }}
+  </mat-list-item>
+  <mat-list-item>
+    Color: {{ greyhound.color }}
+  </mat-list-item>
+  <mat-list-item>
+    Sex: {{ greyhound.sex }}
+  </mat-list-item>
+  <mat-list-item>
+    Ear-mark: {{ greyhound.earmark }}
+  </mat-list-item>
+</mat-list>

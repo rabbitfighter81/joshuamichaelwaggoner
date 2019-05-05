@@ -1,5 +1,5 @@
 import { Greyhound } from '../../models/greyhound.model';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of, Observable } from 'rxjs';
 import { OnInit, OnDestroy } from '@angular/core';
 
 export class GreyhoundServiceMock implements OnInit, OnDestroy {
@@ -7,6 +7,9 @@ export class GreyhoundServiceMock implements OnInit, OnDestroy {
   ngOnInit() {}
   ngOnDestroy() {}
   callGetGreyhounds(): void {}
+  getGreyhounds(): Observable<any> {
+    return new Observable();
+  }
   onGreyhoundUpdate(response: Greyhound[]): void {}
   onGreyhoundError(error: any): void {}
   get url(): string { return `/api/greyhounds`; }

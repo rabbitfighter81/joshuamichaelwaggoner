@@ -29,7 +29,7 @@ export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
     this.service.callGetGreyhounds();
   }
 
-  onGreyhoundsUpdate(greyhounds: Greyhound[]) {
+  private onGreyhoundsUpdate(greyhounds: Greyhound[]) {
     if (greyhounds) {
       this.greyhounds = greyhounds;
     }

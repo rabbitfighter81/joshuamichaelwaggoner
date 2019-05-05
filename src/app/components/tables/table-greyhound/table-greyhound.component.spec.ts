@@ -1,9 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableGreyhoundComponent } from './table-greyhound.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
-import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
+import { GreyhoundServiceMock } from 'src/app/core/services/greyhound/greyhound.service.mock';
 
 describe('TableGreyhoundComponent', () => {
   let component: TableGreyhoundComponent;
@@ -14,6 +16,9 @@ describe('TableGreyhoundComponent', () => {
       imports: [
         SharedModule,
         CoreModule
+      ],
+      providers: [
+        { provide: GreyhoundService, useClass: GreyhoundServiceMock }
       ],
       declarations: [ TableGreyhoundComponent ]
     })

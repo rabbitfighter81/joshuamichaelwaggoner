@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableGreyhoundComponent } from './table-greyhound.component';
-import { AppMaterialModule } from 'src/app/core/modules/app-material/app-material.module';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
