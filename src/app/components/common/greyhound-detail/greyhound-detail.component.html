@@ -1,18 +1,21 @@
 <div class="content">
   <div class="pipeline-container">
-    <h2 class="pinline" *ngIf="greyhound">
-      <span>{{ greyhound.name }}</span>
+    <h2 class="pinline">
+      <span i18n="@@Pinline_Greyhounds">grey·hounds</span>
     </h2>
   </div>
 
   <mat-card class="mat-elevation-z8">
-      <app-table-greyhound *ngIf="greyhound" [greyhound]="greyhound"></app-table-greyhound>
-      <br>
-      <img
-        *ngIf="greyhound && image"
-        class="image--greyhound-detail"
-        src="assets/img/{{ image }}"
-        alt="Photo of {{ image }}"
-      />
+    <app-table-greyhound
+      *ngIf="greyhound"
+      [greyhound]="greyhound"
+    ></app-table-greyhound>
+    <br />
+    <img
+      *ngIf="greyhound && image"
+      class="image--greyhound-detail"
+      src="assets/img/{{ image }}"
+      alt="Photo of {{ image }}"
+    />
   </mat-card>
 </div>
