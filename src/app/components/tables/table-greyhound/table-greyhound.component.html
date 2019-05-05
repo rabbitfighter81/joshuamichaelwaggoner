@@ -14,7 +14,7 @@
   <mat-list-item>
     Born: {{ greyhound.born | date: "mediumDate" }}
   </mat-list-item>
-  <mat-list-item *ngIf="greyhound.passed !== ''">
+  <mat-list-item *ngIf="greyhound.passed !== null">
     Passed: {{ greyhound.passed | date: "mediumDate" }}
   </mat-list-item>
   <mat-list-item>
