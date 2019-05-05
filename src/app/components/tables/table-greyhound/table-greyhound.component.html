@@ -1,9 +1,6 @@
 <mat-list *ngIf="greyhound">
   <mat-list-item>
-    Weight: {{ greyhound.lbs }} lbs.
-  </mat-list-item>
-  <mat-list-item>
-    Country: {{ greyhound.land }}
+    Name: {{ greyhound.name }{}
   </mat-list-item>
   <mat-list-item>
     Color: {{ greyhound.color }}
@@ -13,5 +10,23 @@
   </mat-list-item>
   <mat-list-item>
     Ear-mark: {{ greyhound.earmark }}
+  </mat-list-item>
+  <mat-list-item>
+    Born: {{ greyhound.born | date: "mediumDate" }}
+  </mat-list-item>
+  <mat-list-item *ngIf="greyhound.passed !== ''">
+    Passed: {{ greyhound.passed | date: "mediumDate" }}
+  </mat-list-item>
+  <mat-list-item>
+    Lbs: {{ greyhound.lbs }}
+  </mat-list-item>
+  <mat-list-item>
+    Kg: {{ greyhound.kg }}
+  </mat-list-item>
+  <mat-list-item>
+    Country: {{ greyhound.land }}
+  </mat-list-item>
+  <mat-list-item *ngFor="let owner of greyhound.owners; let i = index;">
+    Racing owner: {{ owner }}
   </mat-list-item>
 </mat-list>

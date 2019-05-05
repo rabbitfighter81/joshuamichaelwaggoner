@@ -7,7 +7,6 @@
         "kg": "",
         "land": "US",
         "earmark": "15B-66087",
-        "studbrook": "US-GSB NGA (2016)",
         "racingowners": [
           "Mary Robinette",
           "Karen L. Leg"
@@ -24,14 +23,12 @@
         "route": "gabby",
         "color": "black",
         "sex": "female",
-        "lbs":"200",
-        "kg": "",
+        "lbs":"64",
+        "kg": "29",
         "land": "US",
-        "earmark": "15B-66087",
-        "studbrook": "US-GSB NGA (2016)",
+        "earmark": "135C-31448",
         "racingowners": [
-          "Mary Robinette",
-          "Karen L. Leg"
+          "David M. Di Croce"
         ],
         "born": "2005-03-01T00:00:00",
         "passed": "2018-04-02T00:00:00",
@@ -43,16 +40,14 @@
     {
         "name": "Redd Walker",
         "route": "redd",
-        "color": "black",
+        "color": "Red",
         "sex": "male",
-        "lbs":"500",
-        "kg": "",
+        "lbs":"75",
+        "kg": "34",
         "land": "US",
-        "earmark": "15B-66087",
-        "studbrook": "US-GSB NGA (2016)",
+        "earmark": "100A-91961",
         "racingowners": [
-          "Mary Robinette",
-          "Karen L. Leg"
+          "Mohamed Mansour"
         ],
         "born": "2000-10-23T00:00:00",
         "passed": "2012-02-12T00:00:00",

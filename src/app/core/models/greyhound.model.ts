@@ -12,7 +12,6 @@ export interface IGreyhound {
   racingowners: string[];
   route: string;
   sex: string;
-  studbrook: string;
 }
 
 export class Greyhound {
@@ -29,7 +28,6 @@ export class Greyhound {
   racingowners: string[];
   route: string;
   sex: string;
-  studbrook: string;
 
   constructor(dog: IGreyhound) {
     this.born = new Date(dog.born);
@@ -45,7 +43,6 @@ export class Greyhound {
     this.racingowners = dog.racingowners;
     this.route = dog.route;
     this.sex = dog.sex;
-    this.studbrook = dog.studbrook;
   }
 
 }
