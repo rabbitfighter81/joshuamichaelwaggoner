@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { GreyhoundCardModule } from '../../common/greyhound-card/greyhound-card.module';
 import { GreyhoundDetailModule } from '../../common/greyhound-detail/greyhound-detail.module';
+import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { GreyhoundDetailModule } from '../../common/greyhound-detail/greyhound-d
     GreyhoundsRoutingModule,
     GreyhoundCardModule,
     GreyhoundDetailModule
+  ],
+  providers: [
+    GreyhoundService
   ],
   declarations: [ GreyhoundsComponent ],
 })
