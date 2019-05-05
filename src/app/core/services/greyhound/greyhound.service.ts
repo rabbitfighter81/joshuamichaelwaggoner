@@ -32,6 +32,10 @@ export class GreyhoundService implements OnInit, OnDestroy {
     );
   }
 
+  getGreyhound(x: any): void {
+    console.log('Hit this function...', x);
+  }
+
   private onGreyhoundUpdate(response: IGreyhound[]): void {
     if (response) {
       this.greyhounds.next(response.map(x => new Greyhound(x)));

@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="pipeline-container">
+    <h2 class="pinline">
+      <span>{{ name }}</span>
+    </h2>
+  </div>
+  <app-table-greyhound></app-table-greyhound>
+  <br>
+  <img
+    *ngIf="image"
+    class="image--greyhound-detail"
+    src="assets/img/{{ image }}"
+    alt="Photo of {{ name }}"
+  />
+</div>

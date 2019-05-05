@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-greyhound-card',
@@ -8,12 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GreyhoundCardComponent implements OnInit {
 
   @Input() public name: string;
+  @Input() public route: string;
   @Input() public born: string;
   @Input() public passed: string;
   @Input() public image: string;
   @Input() public descriptions: string[];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
   }
@@ -24,6 +26,10 @@ export class GreyhoundCardComponent implements OnInit {
 
   share(): void {
     console.log('Sharing ', this.name);
+  }
+
+  setGreyhoundDetail(route: string): void {
+    this.router.navigate(['/greyhounds', route]);
   }
 
 }

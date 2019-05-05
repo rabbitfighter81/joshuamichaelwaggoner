@@ -4,13 +4,15 @@ import { GreyhoundsComponent } from './greyhounds.component';
 import { CommonModule } from '@angular/common';
 import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { GreyhoundCardModule } from '../../common/greyhound-card/greyhound-card.module';
+import { GreyhoundDetailModule } from '../../common/greyhound-detail/greyhound-detail.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AppMaterialModule,
     GreyhoundsRoutingModule,
-    GreyhoundCardModule
+    GreyhoundCardModule,
+    GreyhoundDetailModule
   ],
   declarations: [ GreyhoundsComponent ],
 })

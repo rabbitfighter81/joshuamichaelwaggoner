@@ -1,24 +1,51 @@
 export interface IGreyhound {
-  name: string;
   born: string;
-  passed: string;
-  image: string;
+  color: string;
   descriptions: string[];
+  earmark: string;
+  image: string;
+  kg: string;
+  land: string;
+  lbs: string;
+  name: string;
+  passed: string;
+  racingowners: string[];
+  route: string;
+  sex: string;
+  studbrook: string;
 }
 
 export class Greyhound {
-  name: string;
   born: Date;
-  passed: Date;
-  image: string;
+  color: string;
   descriptions: string[];
+  earmark: string;
+  image: string;
+  kg: number;
+  land: string;
+  lbs: number;
+  name: string;
+  passed: Date;
+  racingowners: string[];
+  route: string;
+  sex: string;
+  studbrook: string;
 
   constructor(dog: IGreyhound) {
-    this.name = dog.name;
     this.born = new Date(dog.born);
-    this.passed = dog.passed.length ? new Date(dog.passed) : null;
-    this.image = dog.image;
+    this.color = dog.color;
     this.descriptions = dog.descriptions;
+    this.earmark = dog.earmark;
+    this.image = dog.image;
+    this.kg = parseInt(dog.kg, 10);
+    this.land = dog.land;
+    this.lbs = parseInt(dog.lbs, 10);
+    this.name = dog.name;
+    this.passed = dog.passed.length ? new Date(dog.passed) : null;
+    this.racingowners = dog.racingowners;
+    this.route = dog.route;
+    this.sex = dog.sex;
+    this.studbrook = dog.studbrook;
   }
 
 }

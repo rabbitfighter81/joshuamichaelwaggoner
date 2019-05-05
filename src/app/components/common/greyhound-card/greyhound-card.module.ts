@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { GreyhoundCardComponent } from './greyhound-card.component';
+import { SharedModule } from 'src/app/core/modules/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppMaterialModule,
+    SharedModule,
+    RouterModule
   ],
   exports: [ GreyhoundCardComponent ],
   declarations: [ GreyhoundCardComponent ]

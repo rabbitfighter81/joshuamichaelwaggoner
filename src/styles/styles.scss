@@ -116,6 +116,13 @@ li {
   text-align: center;
 }
 
+.btn--flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 input[type="text"] {
   font-size: $app-body-font-size;
 }
@@ -130,7 +137,6 @@ input[type="text"] {
   width: 100%;
   margin: 20px 0% 20px 0%;
   h1 {
-    font-family: "Roboto";
     font-weight: 700;
     text-align: center;
     margin: 0;
@@ -146,7 +152,6 @@ input[type="text"] {
     font-size: 1em;
     font-weight: 100;
     margin: 20px 0;
-    font-family: "Roboto";
     font-weight: 400;
     text-transform: lowercase;
   }

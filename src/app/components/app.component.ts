@@ -33,12 +33,26 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onRouteUpdated(event: any): void {
+    if (event instanceof NavigationEnd) {
+      this.smoothScrollTop();
+    }
     if (event instanceof NavigationStart) {
       if (this.navOpen) {
         this.closeSidenav();
         this.navOpen = !this.navOpen;
       }
     }
+  }
+
+  private smoothScrollTop(): void {
+    const scrollToTop = window.setInterval(() => {
+      const pos: number = window.pageYOffset;
+      if (pos > 0) {
+          window.scrollTo(0, pos - 20); // how far to scroll on each step
+      } else {
+          window.clearInterval(scrollToTop);
+      }
+    }, 16);
   }
 
   closeSidenav(): void {

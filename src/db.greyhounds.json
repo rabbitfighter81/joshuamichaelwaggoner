@@ -1,5 +1,17 @@
 [{
         "name": "Raven",
+        "route": "raven",
+        "color": "brindle",
+        "sex": "female",
+        "lbs":"",
+        "kg": "",
+        "land": "US",
+        "earmark": "15B-66087",
+        "studbrook": "US-GSB NGA (2016)",
+        "racingowners": [
+          "Mary Robinette",
+          "Karen L. Leg"
+        ],
         "born": "2015-01-01T00:00:00",
         "passed": "",
         "image": "raven.jpg",
@@ -9,6 +21,18 @@
     },
     {
         "name": "Poco Gabby",
+        "route": "gabby",
+        "color": "black",
+        "sex": "female",
+        "lbs":"",
+        "kg": "",
+        "land": "US",
+        "earmark": "15B-66087",
+        "studbrook": "US-GSB NGA (2016)",
+        "racingowners": [
+          "Mary Robinette",
+          "Karen L. Leg"
+        ],
         "born": "2005-03-01T00:00:00",
         "passed": "2018-04-02T00:00:00",
         "image": "poco-gabby.jpg",
@@ -18,6 +42,18 @@
     },
     {
         "name": "Redd Walker",
+        "route": "redd",
+        "color": "black",
+        "sex": "male",
+        "lbs":"",
+        "kg": "",
+        "land": "US",
+        "earmark": "15B-66087",
+        "studbrook": "US-GSB NGA (2016)",
+        "racingowners": [
+          "Mary Robinette",
+          "Karen L. Leg"
+        ],
         "born": "2000-10-23T00:00:00",
         "passed": "2012-02-12T00:00:00",
         "image": "redd-walker.jpg",
@@ -26,3 +62,4 @@
         ]
     }
 ]
+
