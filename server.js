@@ -4,6 +4,39 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var fs = require('fs');
+var brotli = require('brotli');
+
+
+var brotliSettings = {
+  extension: 'br',
+  skipLarger: true,
+  mode: 1, // 0 = generic, 1 = text, 2 = font (WOFF2)
+  quality: 10, // 0 - 11,
+  lgwin: 12 // default
+};
+
+fs.readdirSync('dist/').forEach(function(file) {
+  if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.scss') || file.endsWith('.html')) {
+    var result = brotli.compress(fs.readFileSync('dist/' + file), brotliSettings);
+    fs.writeFileSync('dist/' + file + '.br', result);
+  }
+});
+
+/*
+fs.readdirSync('dist/es/').forEach(function(file) {
+  if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.scss') || file.endsWith('.html')) {
+    var result = brotli.compress(fs.readFileSync('dist/' + file), brotliSettings);
+    fs.writeFileSync('dist/' + file + '.br', result);
+  }
+});
+
+fs.readdirSync('dist/de/').forEach(function(file) {
+  if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.scss') || file.endsWith('.html')) {
+    var result = brotli.compress(fs.readFileSync('dist/' + file), brotliSettings);
+    fs.writeFileSync('dist/' + file + '.br', result);
+  }
+});
+*/
 
 // Run the app by serving the static files in the dist directory
 app.use(express.static(__dirname + '/dist'));
