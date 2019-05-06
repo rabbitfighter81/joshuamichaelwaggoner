@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
 import { Greyhound, IGreyhound } from '../../models/greyhound.model';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {
@@ -13,10 +15,13 @@ export class GreyhoundService implements OnInit, OnDestroy {
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>([]);
 
+  env: any;
+
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
+    this.env = environment;
     this.callGetGreyhounds();
   }
 
