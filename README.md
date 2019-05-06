@@ -10,6 +10,10 @@ This is my personal app, built using Angular and Angular Material
 
 ![Mobile](https://i.imgur.com/gLH0ckY.png)
 
+## Reports and analytics of budle sizes
+
+* `npm run bundle-report` will generate a view of all modules so you can see dependencies in a visual layout.
+
 ## Technologies used
 
 * Angular 7
