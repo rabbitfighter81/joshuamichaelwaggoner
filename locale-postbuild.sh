@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # file: locale-postbuild.sh
 
