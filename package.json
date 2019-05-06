@@ -1,6 +1,6 @@
 {
     "name": "joshuamichaelwaggoner",
-    "version": "0.0.220",
+    "version": "0.0.223",
     "scripts": {
         "heroku-postbuild": "bash ./locale-postbuild.sh",
         "start": "node server.js",

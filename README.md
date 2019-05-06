@@ -60,13 +60,6 @@ Since this is a multi language `i18n` app, it has to be built for each locale at
 
 `locale-postbuild.sh` is the script that gets fired on `npm run heroku-postbuild` command that runs whenever the CD pipeline pushes to Heroku.
 
-## Author
-
-* Joshua Michael Waggoner (<joshuamichaelwaggoner@gmail.com>)
-
-## Licence
-
-&copy; Joshua M. Waggoner
 
 ## Code scaffolding
 
@@ -81,3 +74,26 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Right now there are no e2e tests.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+There are no e2e tests yet. Coming soon...
+
+## Author
+
+* Joshua Michael Waggoner (<joshuamichaelwaggoner@gmail.com>)
+
+## Licence
+
+&copy; Joshua M. Waggoner
+
+## Todos and Plans
+
+* Set up dev environment to work with staging server to speed up dev time
+* Work more on editor settings and include them and plugins used in some sort of VSCODE file
+* Increase Performance
+* SSL Working
+* Contact form securely transferring mails (not showing my credentials in git) instead of just opening your mail and filling it in. Kind of lame. Sorry, will add soon.
+* More links
+* Working links to all the projects in Git. Some need created.
+* Set up semantic versioning
+* Add features as they arise
+
