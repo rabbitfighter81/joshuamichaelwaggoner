@@ -13,6 +13,14 @@ li {
   word-wrap: break-word;
 }
 
+mat-card.mat-card
+  > mat-card-content.mat-card-content
+  > ul
+  > li
+  > button.mat-stroked-button {
+  margin: 12.5px;
+}
+
 .stackoverflow-image {
   background-image: url("/assets/img/stackoverflow.jpg");
   background-size: cover;

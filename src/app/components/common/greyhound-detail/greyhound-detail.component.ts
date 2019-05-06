@@ -16,51 +16,46 @@ interface GreyhoundRouteParamMap {
 })
 export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  private greyhound$: Subscription;
+  private route$: Subscription;
+  private greyhounds$: Subscription;
 
   greyhound: Greyhound;
-
-  x: string;
+  route: string;
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
+    private activatedRoute: ActivatedRoute,
     private service: GreyhoundService
-  ) {
-    this.service.callGetGreyhounds();
-  }
+  ) {}
 
   ngOnInit() {
-    this.greyhound$ = this.route.params.subscribe((params: GreyhoundRouteParamMap) => {
-      console.log('params: ', params);
-      if (params) {
-        const { greyhound } = params;
-        this.x = greyhound;
-      }
+    this.route$ = this.activatedRoute.params.subscribe((params: GreyhoundRouteParamMap) => {
+      this.route = params.greyhound;
     });
-  }
-
-  private onGreyhoundsUpdate(greyhounds: IGreyhound[]) {
-    const dogs = greyhounds.map(x => new Greyhound(x));
-    const index = findIndex(dogs, { route: this.x });
-    if (index > -1) {
-      this.greyhound = dogs[index];
-      console.log('xxxx', this.greyhound);
-    }
+    this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
   }
 
   ngAfterViewInit() {
-    this.service.getGreyhounds().subscribe(
-      res => this.onGreyhoundsUpdate(res),
-      err => console.log(err),
-    );
+    this.service.callGetGreyhounds();
   }
 
+  private onGreyhoundsUpdate(greyhounds: Greyhound[]): void {
+    const { route } = this;
+    const index = findIndex(greyhounds, { route });
+    if (index > -1) {
+      this.greyhound = greyhounds[index];
+    }
+  }
 
   ngOnDestroy() {
-    if (this.greyhound$ != null) {
-      this.greyhound$.unsubscribe();
-    }
+    const subscriptions = [
+      this.route$,
+      this.greyhounds$,
+    ];
+    subscriptions.forEach(subscription => {
+      if (subscription != null) {
+        subscription.unsubscribe();
+      }
+    });
   }
 
   getImgSrcByName(name: string): string {
@@ -77,8 +72,8 @@ export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestro
   }
 
   get image(): string | null {
-    return this.greyhound && this.greyhound.name
-      ? this.getImgSrcByName(this.greyhound.name)
+    return this.greyhound && this.greyhound.route
+      ? this.getImgSrcByName(this.greyhound.route)
       : null;
   }
 

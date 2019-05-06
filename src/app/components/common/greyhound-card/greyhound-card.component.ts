@@ -9,21 +9,12 @@ import { Greyhound } from '../../../core/models/greyhound.model';
 })
 export class GreyhoundCardComponent implements OnInit {
 
-  /*
-  @Input() public name: string;
-  @Input() public route: string;
-  @Input() public born: string;
-  @Input() public passed: string;
-  @Input() public image: string;
-  @Input() public descriptions: string[];
-  */
-
   @Input() public greyhound: Greyhound;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    console.log(this.greyhound);
+    // console.log(this.greyhound);
   }
 
   like(): void {

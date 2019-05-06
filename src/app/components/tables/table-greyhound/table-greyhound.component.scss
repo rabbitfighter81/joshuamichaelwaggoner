@@ -2,7 +2,9 @@ table {
   width: 100%;
 }
 
-tr:nth-child(odd) {
+div.table--greyound
+  > mat-list.mat-list
+  > mat-list-item.mat-list-item:nth-child(odd) {
   background: #fdfdfd;
 }
 

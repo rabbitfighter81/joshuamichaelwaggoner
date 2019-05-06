@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
 import { Greyhound, IGreyhound } from '../../models/greyhound.model';
@@ -15,13 +14,10 @@ export class GreyhoundService implements OnInit, OnDestroy {
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>([]);
 
-  env: any;
-
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.env = environment;
     this.callGetGreyhounds();
   }
 
@@ -29,16 +25,6 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (this.greyhounds$ != null) {
       this.greyhounds$.unsubscribe();
     }
-  }
-
-  callGetGreyhounds(): void {
-    this.greyhounds$ = this.getGreyhounds().subscribe(
-      res => this.onGreyhoundUpdate(res),
-      err => this.onGreyhoundError(err)
-    );
-  }
-
-  getGreyhound(x: any): void {
   }
 
   private onGreyhoundUpdate(response: IGreyhound[]): void {
@@ -54,6 +40,13 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (this.logging) {
       console.log('Error fetching greyhound data from API: ', error);
     }
+  }
+
+  callGetGreyhounds(): void {
+    this.greyhounds$ = this.getGreyhounds().subscribe(
+      res => this.onGreyhoundUpdate(res),
+      err => this.onGreyhoundError(err)
+    );
   }
 
   getGreyhounds(): Observable<IGreyhound[]> {

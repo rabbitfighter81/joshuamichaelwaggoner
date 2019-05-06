@@ -16,6 +16,22 @@ a {
   font-weight: $app-body-font-weight;
 }
 
+.link--body {
+  &:active {
+    color: $color-med-blue;
+  }
+  &:visited {
+    color: $color-med-blue;
+  }
+  &:link {
+    color: $color-med-blue;
+  }
+  &:hover {
+    color: $color-med-blue;
+    text-decoration: underline;
+  }
+}
+
 img.img--center {
   margin: auto;
 }
@@ -139,6 +155,11 @@ li {
   align-items: center;
 }
 
+mat-card.mat-card
+  > mat-card-actions.mat-card-actions
+  > button.mat-stroked-button {
+  margin: 12.5px;
+}
 
 input[type="text"] {
   font-size: $app-body-font-size;
