@@ -87,6 +87,8 @@ There are no e2e tests yet. Coming soon...
 
 ## Todos and Plans
 
+* Translations
+* e2e Testing
 * Set up dev environment to work with staging server to speed up dev time
 * Work more on editor settings and include them and plugins used in some sort of VSCODE file
 * Increase Performance
