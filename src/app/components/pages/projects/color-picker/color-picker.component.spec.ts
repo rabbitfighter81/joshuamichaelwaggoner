@@ -6,25 +6,20 @@ import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { CoreModule } from '../../../../core/core.module';
 
 describe('ColorPickerComponent', () => {
-
   let component: ColorPickerComponent;
   let fixture: ComponentFixture<ColorPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Color Picker' }
+          useValue: { feature: 'Color Picker' },
         },
       ],
-      declarations: [ ColorPickerComponent ],
-    })
-      .compileComponents();
+      declarations: [ColorPickerComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,9 +33,7 @@ describe('ColorPickerComponent', () => {
   });
 
   describe('Form Initialization', () => {
-
     describe('When the form is initialized', () => {
-
       it('is valid', () => {
         expect(component.form.valid).toBeTruthy();
       });
@@ -59,15 +52,13 @@ describe('ColorPickerComponent', () => {
         const blue = component.form.get('blue');
         expect(blue.valid).toBeTruthy();
       });
-
     });
 
     describe('Form functionality', () => {
-
       const validValue = {
         red: 10,
         green: 100,
-        blue: 250
+        blue: 250,
       };
 
       it('is valid when all values are present', () => {
@@ -76,47 +67,51 @@ describe('ColorPickerComponent', () => {
       });
 
       it('is invalid when all values are not present', () => {
-        component.form.setValue(assign({}, validValue, {
-          red: null,
-          green: null,
-          blue: null
-        }));
+        component.form.setValue(
+          assign({}, validValue, {
+            red: null,
+            green: null,
+            blue: null,
+          }),
+        );
         expect(component.form.valid).toBeFalsy();
       });
 
       it('is invalid when red is not defined', () => {
-        component.form.setValue(assign({}, validValue, {
-          red: null
-        }));
+        component.form.setValue(
+          assign({}, validValue, {
+            red: null,
+          }),
+        );
         expect(component.form.valid).toBeFalsy();
       });
 
       it('is invalid when green is not defined', () => {
-        component.form.setValue(assign({}, validValue, {
-          green: null
-        }));
+        component.form.setValue(
+          assign({}, validValue, {
+            green: null,
+          }),
+        );
         expect(component.form.valid).toBeFalsy();
       });
-
 
       it('is invalid when blue is not defined', () => {
-        component.form.setValue(assign({}, validValue, {
-          blue: null
-        }));
+        component.form.setValue(
+          assign({}, validValue, {
+            blue: null,
+          }),
+        );
         expect(component.form.valid).toBeFalsy();
       });
-
     });
-
   });
 
   describe('Getters', () => {
-
     beforeEach(() => {
       component.colorValues = {
         red: 1,
         green: 2,
-        blue: 3
+        blue: 3,
       };
       component.ngOnInit();
     });

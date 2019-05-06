@@ -1,52 +1,109 @@
 <mat-card class="project mat-elevation-z8 border-bottom-20" color="primary">
-    <mat-card-header>
-        <div mat-card-avatar class="personal-image"></div>
-        <mat-card-title >
-            Hex Color Picker
-        </mat-card-title>
-        <mat-card-subtitle>
-            Use the sliders for red, green, and blue to create hex colors that can be used
-        </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <div class="project-content-container">
-            <div class="side-container border">
-                <div class="number-values">
-                    <h4>Color Values (0-255)</h4>
-                    <hr />
-                    <div class="slider-value red">R: {{ red }}</div>
-                    <div class="slider-value green">G: {{ green }}</div>
-                    <div class="slider-value blue">B: {{ blue }}</div>
-                </div>
-                <div class="hex-value">
-                    <h4>Hex Value</h4>
-                    <hr /> {{ hexDisplay }}
-                </div>
-                <div class="hex-color" [style.background-color]="hexDisplay"></div>
-            </div>
-            <form [formGroup]="form" class="slider-container border">
-                <h4>Color Sliders</h4>
-                <hr />
-                <mat-slider aria-label="red color value slider" #redSlider formControlName="red" color="warn" class="example-margin red-slider" [invert]="sliderSettings.invert" [max]="sliderSettings.max" [min]="sliderSettings.min" [step]="sliderSettings.step" [thumbLabel]="sliderSettings.thumbLabel"
-                    [tickInterval]="sliderSettings.tickInterval" [vertical]="sliderSettings.vertical" (change)="updateValue('red', redSlider.value)">
-                </mat-slider>
-                <br />
-                <mat-slider aria-label="green color value slider" #greenSlider formControlName="green" color="accent" class="example-margin" [invert]="sliderSettings.invert" [max]="sliderSettings.max" [min]="sliderSettings.min" [step]="sliderSettings.step" [thumbLabel]="sliderSettings.thumbLabel"
-                    [tickInterval]="sliderSettings.tickInterval" [vertical]="sliderSettings.vertical" (change)="updateValue('green', greenSlider.value)">
-                </mat-slider>
-                <br />
-                <mat-slider aria-label="blue color value slider" #blueSlider formControlName="blue" color="primary" class="example-margin blue-slider" [invert]="sliderSettings.invert" [max]="sliderSettings.max" [min]="sliderSettings.min" [step]="sliderSettings.step"
-                    [thumbLabel]="sliderSettings.thumbLabel" [tickInterval]="sliderSettings.tickInterval" [vertical]="sliderSettings.vertical" (change)="updateValue('blue', blueSlider.value)">
-                </mat-slider>
-            </form>
+  <mat-card-header>
+    <div mat-card-avatar class="personal-image"></div>
+    <mat-card-title>
+      Hex Color Picker
+    </mat-card-title>
+    <mat-card-subtitle>
+      Use the sliders for red, green, and blue to create hex colors that can be
+      used
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="project-content-container">
+      <div class="side-container border">
+        <div class="number-values">
+          <h4>Color Values (0-255)</h4>
+          <hr />
+          <div class="slider-value red">R: {{ red }}</div>
+          <div class="slider-value green">G: {{ green }}</div>
+          <div class="slider-value blue">B: {{ blue }}</div>
         </div>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button role="button" type="button" color="primary" aria-role="Share button" i18n="@@Projects_Actions_Share" (click)="share('Color Picker')">
+        <div class="hex-value">
+          <h4>Hex Value</h4>
+          <hr />
+          {{ hexDisplay }}
+        </div>
+        <div class="hex-color" [style.background-color]="hexDisplay"></div>
+      </div>
+      <form [formGroup]="form" class="slider-container border">
+        <h4>Color Sliders</h4>
+        <hr />
+        <mat-slider
+          aria-label="red color value slider"
+          #redSlider
+          formControlName="red"
+          color="warn"
+          class="example-margin red-slider"
+          [invert]="sliderSettings.invert"
+          [max]="sliderSettings.max"
+          [min]="sliderSettings.min"
+          [step]="sliderSettings.step"
+          [thumbLabel]="sliderSettings.thumbLabel"
+          [tickInterval]="sliderSettings.tickInterval"
+          [vertical]="sliderSettings.vertical"
+          (change)="updateValue('red', redSlider.value)"
+        >
+        </mat-slider>
+        <br />
+        <mat-slider
+          aria-label="green color value slider"
+          #greenSlider
+          formControlName="green"
+          color="accent"
+          class="example-margin"
+          [invert]="sliderSettings.invert"
+          [max]="sliderSettings.max"
+          [min]="sliderSettings.min"
+          [step]="sliderSettings.step"
+          [thumbLabel]="sliderSettings.thumbLabel"
+          [tickInterval]="sliderSettings.tickInterval"
+          [vertical]="sliderSettings.vertical"
+          (change)="updateValue('green', greenSlider.value)"
+        >
+        </mat-slider>
+        <br />
+        <mat-slider
+          aria-label="blue color value slider"
+          #blueSlider
+          formControlName="blue"
+          color="primary"
+          class="example-margin blue-slider"
+          [invert]="sliderSettings.invert"
+          [max]="sliderSettings.max"
+          [min]="sliderSettings.min"
+          [step]="sliderSettings.step"
+          [thumbLabel]="sliderSettings.thumbLabel"
+          [tickInterval]="sliderSettings.tickInterval"
+          [vertical]="sliderSettings.vertical"
+          (change)="updateValue('blue', blueSlider.value)"
+        >
+        </mat-slider>
+      </form>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-button
+      role="button"
+      type="button"
+      color="primary"
+      aria-role="Share button"
+      i18n="@@Projects_Actions_Share"
+      (click)="share('Color Picker')"
+    >
       SHARE
     </button>
-        <button mat-button type="button" role="button" color="primary" aria-role="GitHub button" i18n="@@Projects_Actions_GitHub" (click)="navToGitHubProject('Color Picker')">
+    <button
+      mat-button
+      type="button"
+      role="button"
+      color="primary"
+      aria-role="GitHub button"
+      i18n="@@Projects_Actions_GitHub"
+      (click)="navToGitHubProject('Color Picker')"
+    >
       GITHUB
     </button>
-    </mat-card-actions>
+  </mat-card-actions>
 </mat-card>

@@ -13,11 +13,9 @@ import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.serv
     AppMaterialModule,
     GreyhoundsRoutingModule,
     GreyhoundCardModule,
-    GreyhoundDetailModule
+    GreyhoundDetailModule,
   ],
-  providers: [
-    GreyhoundService
-  ],
-  declarations: [ GreyhoundsComponent ],
+  providers: [GreyhoundService],
+  declarations: [GreyhoundsComponent],
 })
-export class GreyhoundsModule { }
+export class GreyhoundsModule {}

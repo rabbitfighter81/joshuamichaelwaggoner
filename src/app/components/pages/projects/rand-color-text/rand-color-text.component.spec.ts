@@ -5,25 +5,20 @@ import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { RandColorTextComponent } from './rand-color-text.component';
 
 describe('RandColorTextComponent', () => {
-
   let component: RandColorTextComponent;
   let fixture: ComponentFixture<RandColorTextComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Random Color Text' }
+          useValue: { feature: 'Random Color Text' },
         },
       ],
-      declarations: [ RandColorTextComponent ],
-    })
-    .compileComponents();
+      declarations: [RandColorTextComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

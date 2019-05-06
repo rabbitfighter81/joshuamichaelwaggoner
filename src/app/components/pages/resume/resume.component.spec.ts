@@ -5,20 +5,15 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { ResumeComponent } from './resume.component';
 
 describe('ResumeComponent', () => {
-
   let component: ResumeComponent;
   let fixture: ComponentFixture<ResumeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
-      declarations: [ ResumeComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-    })
-    .compileComponents();
+      imports: [SharedModule, CoreModule],
+      declarations: [ResumeComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

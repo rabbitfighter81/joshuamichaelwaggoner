@@ -8,7 +8,7 @@ import { AppMaterialModule } from '../../../core/modules/app-material/app-materi
 import { AppRoutingModule } from '../../../app-routing.module';
 
 @NgModule({
-  declarations: [ ContactComponent ],
+  declarations: [ContactComponent],
   imports: [
     AppMaterialModule,
     CommonModule,
@@ -16,6 +16,6 @@ import { AppRoutingModule } from '../../../app-routing.module';
     HttpClientModule,
     ReactiveFormsModule,
     ContactRoutingModule,
-  ]
+  ],
 })
-export class ContactModule { }
+export class ContactModule {}

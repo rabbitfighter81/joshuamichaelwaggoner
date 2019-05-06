@@ -9,37 +9,35 @@ import { ProjectBaseComponent } from '../base/project-base.component';
   selector: 'app-dice-roller',
   templateUrl: './dice-roller.component.html',
   styleUrls: ['./dice-roller.component.scss'],
-  animations: [ Animations.diceRolling ]
+  animations: [Animations.diceRolling],
 })
-export class DiceRollerComponent extends ProjectBaseComponent implements OnInit {
-
-  diceCount = Array(100).fill(undefined).map((_, i) => i + 1);
-  diceSides = [ 2, 4, 6, 8, 10, 12, 16, 20, 50, 100 ];
+export class DiceRollerComponent extends ProjectBaseComponent
+  implements OnInit {
+  diceCount = Array(100)
+    .fill(undefined)
+    .map((_, i) => i + 1);
+  diceSides = [2, 4, 6, 8, 10, 12, 16, 20, 50, 100];
   form: FormGroup;
   rolls: DiceRoll[] = [];
   state: any;
 
-
-  constructor(
-    public snackbar: MatSnackBar,
-    private fb: FormBuilder
-  ) {
+  constructor(public snackbar: MatSnackBar, private fb: FormBuilder) {
     super(snackbar);
   }
 
   ngOnInit() {
     this.form = this.fb.group({
-      diceCount: [ '', Validators.required ],
-      diceSides: [ '', Validators.required ],
+      diceCount: ['', Validators.required],
+      diceSides: ['', Validators.required],
     });
   }
 
   submitRoll(): void {
-    this.rolls = new Array(Number(this.count))
-      .fill(null)
-      .map((_, id): DiceRoll => {
+    this.rolls = new Array(Number(this.count)).fill(null).map(
+      (_, id): DiceRoll => {
         return { value: this.getRand(), id };
-      });
+      },
+    );
   }
 
   getRand() {
@@ -69,6 +67,4 @@ export class DiceRollerComponent extends ProjectBaseComponent implements OnInit 
   get diceRolls(): DiceRoll[] {
     return this.rolls;
   }
-
-
 }

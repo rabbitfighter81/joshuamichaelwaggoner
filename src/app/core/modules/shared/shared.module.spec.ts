@@ -1,7 +1,6 @@
 import { SharedModule } from './shared.module';
 
 describe('SharedModule', () => {
-
   let sharedModule: SharedModule;
 
   beforeEach(() => {
@@ -11,5 +10,4 @@ describe('SharedModule', () => {
   it('should create an instance', () => {
     expect(sharedModule).toBeTruthy();
   });
-
 });

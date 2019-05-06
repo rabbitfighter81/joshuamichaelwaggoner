@@ -1,7 +1,6 @@
 import { AppComponentsModule } from './app-components.module';
 
 describe('AppComponentsModule', () => {
-
   let materialModule: AppComponentsModule;
 
   beforeEach(() => {
@@ -11,5 +10,4 @@ describe('AppComponentsModule', () => {
   it('should create an instance', () => {
     expect(materialModule).toBeTruthy();
   });
-
 });

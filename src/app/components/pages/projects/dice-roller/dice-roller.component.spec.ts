@@ -5,25 +5,20 @@ import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { CoreModule } from '../../../../core/core.module';
 
 describe('DiceRollerComponent', () => {
-
   let component: DiceRollerComponent;
   let fixture: ComponentFixture<DiceRollerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Color Picker' }
+          useValue: { feature: 'Color Picker' },
         },
       ],
-      declarations: [ DiceRollerComponent ],
-    })
-    .compileComponents();
+      declarations: [DiceRollerComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -37,9 +32,7 @@ describe('DiceRollerComponent', () => {
   });
 
   describe('Form', () => {
-
     describe('initialization', () => {
-
       it('form is invalid', () => {
         expect(component.form.valid).toBeFalsy();
       });
@@ -53,15 +46,13 @@ describe('DiceRollerComponent', () => {
         const diceSides = component.form.get('diceSides');
         expect(diceSides.valid).toBeFalsy();
       });
-
     });
 
     describe('Form functionality', () => {
-
       it('is valid when all values are present', () => {
         component.form.setValue({
           diceCount: 1000,
-          diceSides: 1000
+          diceSides: 1000,
         });
         expect(component.form.valid).toBeTruthy();
       });
@@ -69,7 +60,7 @@ describe('DiceRollerComponent', () => {
       it('is invalid when all values are not present', () => {
         component.form.setValue({
           diceCount: null,
-          diceSides: null
+          diceSides: null,
         });
         expect(component.form.valid).toBeFalsy();
       });
@@ -77,7 +68,7 @@ describe('DiceRollerComponent', () => {
       it('is invalid when diceCount is not defined', () => {
         component.form.setValue({
           diceCount: null,
-          diceSides: 10
+          diceSides: 10,
         });
         expect(component.form.valid).toBeFalsy();
       });
@@ -85,12 +76,10 @@ describe('DiceRollerComponent', () => {
       it('is invalid when diceSides is not defined', () => {
         component.form.setValue({
           diceCount: 10,
-          diceSides: null
+          diceSides: null,
         });
         expect(component.form.valid).toBeFalsy();
       });
-
     });
-
   });
 });

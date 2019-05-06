@@ -5,12 +5,8 @@ import { AppMaterialModule } from '../../../core/modules/app-material/app-materi
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [ TableGreyhoundComponent ],
-  imports: [
-    AppMaterialModule,
-    CommonModule,
-    HttpClientModule,
-  ],
-  exports: [ TableGreyhoundComponent ]
+  declarations: [TableGreyhoundComponent],
+  imports: [AppMaterialModule, CommonModule, HttpClientModule],
+  exports: [TableGreyhoundComponent],
 })
-export class TableGreyhoundModule { }
+export class TableGreyhoundModule {}

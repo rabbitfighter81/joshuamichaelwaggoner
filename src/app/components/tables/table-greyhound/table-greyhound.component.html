@@ -1,6 +1,7 @@
 <div class="table--greyound" *ngIf="greyhound">
   <h2>
-    <mat-icon color="primary">pets</mat-icon>&nbsp;Greyhound facts for {{ greyhound.name }}
+    <mat-icon color="primary">pets</mat-icon>&nbsp;Greyhound facts for
+    {{ greyhound.name }}
   </h2>
   <mat-list>
     <mat-list-item>
@@ -20,12 +21,12 @@
     </mat-list-item>
     <mat-list-item>
       Born:&nbsp;<span class="bold">{{
-        greyhound.born | date: "mediumDate"
+        greyhound.born | date: 'mediumDate'
       }}</span>
     </mat-list-item>
     <mat-list-item *ngIf="greyhound.passed !== null">
       Passed:&nbsp;<span class="bold">{{
-        greyhound.passed | date: "mediumDate"
+        greyhound.passed | date: 'mediumDate'
       }}</span>
     </mat-list-item>
     <mat-list-item>

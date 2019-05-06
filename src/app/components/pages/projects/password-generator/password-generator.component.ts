@@ -6,15 +6,20 @@ import { ProjectBaseComponent } from '../base/project-base.component';
 @Component({
   selector: 'app-password-generator',
   templateUrl: './password-generator.component.html',
-  styleUrls: ['./password-generator.component.scss']
+  styleUrls: ['./password-generator.component.scss'],
 })
-export class PasswordGeneratorComponent extends ProjectBaseComponent implements OnInit {
-
-  pwTypeControl = new FormControl('', [ Validators.required ]);
-  lengthControl = new FormControl('', [ Validators.required ]);
+export class PasswordGeneratorComponent extends ProjectBaseComponent
+  implements OnInit {
+  pwTypeControl = new FormControl('', [Validators.required]);
+  lengthControl = new FormControl('', [Validators.required]);
 
   pwTypes = [
-    { display: 'Alpha Numeric', value: 'alphaNum', disabled: false, warning: false },
+    {
+      display: 'Alpha Numeric',
+      value: 'alphaNum',
+      disabled: false,
+      warning: false,
+    },
     { display: 'ASCII', value: 'ascii', disabled: false, warning: false },
     { display: 'Hexadecimal', value: 'hex', disabled: false, warning: false },
   ];
@@ -28,13 +33,11 @@ export class PasswordGeneratorComponent extends ProjectBaseComponent implements 
     { display: '14 Chars', value: 14 },
     { display: '16 Chars', value: 16 },
     { display: '18 Chars', value: 18 },
-    { display: '20 Chars', value: 20 }
+    { display: '20 Chars', value: 20 },
   ];
 
   charsetAlpha =
-  'abcdefghijklnopqrstuvwxyz' +
-  'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-  '0123456789';
+    'abcdefghijklnopqrstuvwxyz' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + '0123456789';
 
   charsetSymbols = '?!@#$&<>[]{}()-+/*%';
 
@@ -43,14 +46,11 @@ export class PasswordGeneratorComponent extends ProjectBaseComponent implements 
   password: string;
   charset: string;
 
-  constructor(
-    public snackbar: MatSnackBar,
-  ) {
+  constructor(public snackbar: MatSnackBar) {
     super(snackbar);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   generatePwd(length: number, charset: string): string {
     let i: any;
@@ -116,5 +116,4 @@ export class PasswordGeneratorComponent extends ProjectBaseComponent implements 
   get characters(): number {
     return this.lengthControl.value.value;
   }
-
 }

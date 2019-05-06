@@ -7,10 +7,10 @@ import { MatSliderSettings } from '../../../../core/models/mat-slider-settings.m
 @Component({
   selector: 'app-color-picker',
   templateUrl: './color-picker.component.html',
-  styleUrls: ['./color-picker.component.scss']
+  styleUrls: ['./color-picker.component.scss'],
 })
-export class ColorPickerComponent extends ProjectBaseComponent implements OnInit, OnDestroy {
-
+export class ColorPickerComponent extends ProjectBaseComponent
+  implements OnInit, OnDestroy {
   // Slider Settings
   sliderSettings: MatSliderSettings = {
     invert: false,
@@ -41,18 +41,15 @@ export class ColorPickerComponent extends ProjectBaseComponent implements OnInit
 
   form: FormGroup;
 
-  constructor(
-    public snackbar: MatSnackBar,
-    private fb: FormBuilder
-  ) {
+  constructor(public snackbar: MatSnackBar, private fb: FormBuilder) {
     super(snackbar);
   }
 
   ngOnInit() {
     this.form = this.fb.group({
-      red: [ this.colorValues.red, [ Validators.required ]],
-      green: [ this.colorValues.green, [ Validators.required ]],
-      blue: [ this.colorValues.blue, [ Validators.required ]],
+      red: [this.colorValues.red, [Validators.required]],
+      green: [this.colorValues.green, [Validators.required]],
+      blue: [this.colorValues.blue, [Validators.required]],
     });
   }
 
@@ -92,5 +89,4 @@ export class ColorPickerComponent extends ProjectBaseComponent implements OnInit
   get blue(): number {
     return this.form.get('blue').value;
   }
-
 }

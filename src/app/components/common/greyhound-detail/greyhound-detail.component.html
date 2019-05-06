@@ -6,9 +6,7 @@
   </div>
 
   <mat-card class="mat-elevation-z8" *ngIf="greyhound && image">
-    <app-table-greyhound
-      [greyhound]="greyhound"
-    ></app-table-greyhound>
+    <app-table-greyhound [greyhound]="greyhound"></app-table-greyhound>
     <br />
     <img
       class="image--greyhound-detail"
@@ -16,7 +14,6 @@
       alt="Photo of {{ image }}"
     />
   </mat-card>
-
 
   <mat-card class="mat-elevation-z8" *ngIf="!greyhound && image">
     <mat-card-content class="center">

@@ -1,41 +1,41 @@
 @import '../../../../../styles/mixin.scss';
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+English+SC");
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
 .dice-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    overflow: auto;
-    word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: auto;
+  word-wrap: break-word;
 }
 
 .dice {
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    float: left;
-    display: block;
-    align-items: center;
-    background-color: brown;
-    border: 3px solid #311000;
-    padding: 5px;
-    font-size: 22px;
-    text-align: center;
-    margin: 8px;
-    border-radius: 5px;
-    color: #eee;
-    font-family: 'IM Fell English SC', serif;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  float: left;
+  display: block;
+  align-items: center;
+  background-color: brown;
+  border: 3px solid #311000;
+  padding: 5px;
+  font-size: 22px;
+  text-align: center;
+  margin: 8px;
+  border-radius: 5px;
+  color: #eee;
+  font-family: 'IM Fell English SC', serif;
 }
 
 .table_dice {
-    display: table;
-    margin: 0px auto;
-    width: 100%;
-    @media only screen and (max-width: 600px) {
-        width: 90%;
-    }
+  display: table;
+  margin: 0px auto;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 form,
 .form-field-container {
-    width: 100%;
+  width: 100%;
 }

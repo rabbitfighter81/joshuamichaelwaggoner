@@ -31,16 +31,11 @@ const modules = [
   ResumeModule,
   UnauthorizedModule,
   GreyhoundDetailModule,
-  TableGreyhoundModule
+  TableGreyhoundModule,
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ...modules,
-  ],
-  exports: [
-    ...modules,
-  ]
+  imports: [CommonModule, ...modules],
+  exports: [...modules],
 })
-export class AppComponentsModule { }
+export class AppComponentsModule {}

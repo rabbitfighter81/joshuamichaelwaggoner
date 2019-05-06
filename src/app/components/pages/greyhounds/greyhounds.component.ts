@@ -6,17 +6,18 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-greyhounds',
   templateUrl: './greyhounds.component.html',
-  styleUrls: ['./greyhounds.component.scss']
+  styleUrls: ['./greyhounds.component.scss'],
 })
 export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
-
   private greyhounds$: Subscription;
   greyhounds: Greyhound[];
 
   constructor(private service: GreyhoundService) {}
 
   ngOnInit() {
-    this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
+    this.greyhounds$ = this.service.greyhounds.subscribe(next =>
+      this.onGreyhoundsUpdate(next),
+    );
   }
 
   ngOnDestroy() {
@@ -34,5 +35,4 @@ export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
       this.greyhounds = greyhounds;
     }
   }
-
 }

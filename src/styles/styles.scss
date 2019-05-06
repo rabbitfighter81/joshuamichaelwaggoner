@@ -1,6 +1,6 @@
-@import "./theme.scss";
-@import "./mixin.scss";
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import './theme.scss';
+@import './mixin.scss';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 body {
   margin: 0px;
   padding: 0px;
@@ -161,7 +161,7 @@ mat-card.mat-card
   margin: 12.5px;
 }
 
-input[type="text"] {
+input[type='text'] {
   font-size: $app-body-font-size;
 }
 
@@ -189,7 +189,7 @@ input[type="text"] {
     overflow: hidden;
     font-size: 1em;
     font-weight: 100;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 20px 0;
     font-weight: 400;
     text-transform: lowercase;
@@ -201,7 +201,7 @@ input[type="text"] {
   }
   h2.pinline span:before,
   h2.pinline span:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     height: 1px;
@@ -242,6 +242,6 @@ input[type="text"] {
 }
 
 .personal-image {
-  background-image: url("/assets/img/me.jpg");
+  background-image: url('/assets/img/me.jpg');
   background-size: cover;
 }

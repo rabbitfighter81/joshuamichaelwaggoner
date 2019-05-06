@@ -4,19 +4,14 @@ import { SharedModule } from '../../core/modules/shared/shared.module';
 import { CoreModule } from '../../core/core.module';
 
 describe('NavComponent', () => {
-
   let component: NavComponent;
   let fixture: ComponentFixture<NavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule
-      ],
-      declarations: [ NavComponent ],
-    })
-    .compileComponents();
+      imports: [SharedModule, CoreModule],
+      declarations: [NavComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

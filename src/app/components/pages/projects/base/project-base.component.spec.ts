@@ -7,19 +7,16 @@ import { SearchHighlightComponent } from '../search-highlight/search-highlight.c
 import { ProjectBaseComponent } from './project-base.component';
 
 describe('ProjectBaseComponent', () => {
-
   let component: ProjectBaseComponent;
   let fixture: ComponentFixture<ProjectBaseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        AppMaterialModule,
-      ],
+      imports: [AppMaterialModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Search' }
+          useValue: { feature: 'Search' },
         },
       ],
       declarations: [
@@ -27,9 +24,8 @@ describe('ProjectBaseComponent', () => {
         SearchHighlightComponent,
         SearchHighlightPipe,
       ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-    })
-    .compileComponents();
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

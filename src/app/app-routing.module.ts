@@ -6,9 +6,9 @@ import { appRoutes } from './app-routes';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [ RouterModule ],
-  declarations: []
+  exports: [RouterModule],
+  declarations: [],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

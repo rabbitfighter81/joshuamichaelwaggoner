@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoggingService {
-
   logging: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor() { }
+  constructor() {}
 
   setLogging(shouldLog: boolean): void {
     this.logging.next(shouldLog);

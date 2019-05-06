@@ -5,16 +5,14 @@ import { GreyhoundService } from './greyhound.service';
 import { GreyhoundServiceMock } from './greyhound.service.mock';
 
 describe('GreyhoundService', () => {
-
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [
-      SharedModule,
-      CoreModule
-    ],
-    providers: [
-      { provide: GreyhoundService, useClass: GreyhoundServiceMock },
-    ]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [SharedModule, CoreModule],
+      providers: [
+        { provide: GreyhoundService, useClass: GreyhoundServiceMock },
+      ],
+    }),
+  );
 
   it('should be created', () => {
     const service: GreyhoundService = TestBed.get(GreyhoundService);

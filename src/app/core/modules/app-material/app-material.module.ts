@@ -55,12 +55,7 @@ const modules = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-     ...modules
-  ],
-  exports: [
-    ...modules
-  ]
+  imports: [CommonModule, ...modules],
+  exports: [...modules],
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {}

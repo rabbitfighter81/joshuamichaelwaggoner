@@ -5,10 +5,9 @@ import { Greyhound } from '../../../core/models/greyhound.model';
 @Component({
   selector: 'app-greyhound-card',
   templateUrl: './greyhound-card.component.html',
-  styleUrls: ['./greyhound-card.component.scss']
+  styleUrls: ['./greyhound-card.component.scss'],
 })
 export class GreyhoundCardComponent implements OnInit {
-
   @Input() public greyhound: Greyhound;
 
   constructor(private router: Router) {}
@@ -28,5 +27,4 @@ export class GreyhoundCardComponent implements OnInit {
   setGreyhoundDetail(route: string): void {
     this.router.navigate(['/greyhounds', route]);
   }
-
 }

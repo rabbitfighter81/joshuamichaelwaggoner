@@ -5,25 +5,20 @@ import { CoreModule } from '../../../../core/core.module';
 import { SharedModule } from '../../../../core/modules/shared/shared.module';
 
 describe('SearchHighlightComponent', () => {
-
   let component: SearchHighlightComponent;
   let fixture: ComponentFixture<SearchHighlightComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Search' }
+          useValue: { feature: 'Search' },
         },
       ],
-      declarations: [ SearchHighlightComponent ],
-    })
-    .compileComponents();
+      declarations: [SearchHighlightComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

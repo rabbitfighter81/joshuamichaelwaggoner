@@ -5,25 +5,20 @@ import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { PasswordGeneratorComponent } from './password-generator.component';
 
 describe('PasswordGeneratorComponent', () => {
-
   let component: PasswordGeneratorComponent;
   let fixture: ComponentFixture<PasswordGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
         {
           provide: MAT_SNACK_BAR_DATA,
-          useValue: { feature: 'Password Generator' }
+          useValue: { feature: 'Password Generator' },
         },
       ],
-      declarations: [ PasswordGeneratorComponent ],
-    })
-    .compileComponents();
+      declarations: [PasswordGeneratorComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

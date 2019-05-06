@@ -7,15 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutRoutingModule } from './about-routing.module';
 
 @NgModule({
-  declarations: [ AboutComponent ],
+  declarations: [AboutComponent],
   imports: [
     AppMaterialModule,
     CommonModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutRoutingModule
-  ]
+    AboutRoutingModule,
+  ],
 })
-export class AboutModule { }
-
+export class AboutModule {}

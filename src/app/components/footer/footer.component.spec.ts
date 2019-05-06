@@ -4,19 +4,14 @@ import { CoreModule } from '../../core/core.module';
 import { SharedModule } from '../../core/modules/shared/shared.module';
 
 describe('FooterComponent', () => {
-
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
-      declarations: [ FooterComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule, CoreModule],
+      declarations: [FooterComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

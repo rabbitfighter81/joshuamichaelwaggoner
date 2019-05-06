@@ -5,17 +5,16 @@ import { map, retry } from 'rxjs/operators';
 import { Greyhound, IGreyhound } from '../../models/greyhound.model';
 import { environment } from 'src/environments/environment';
 
-
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {
-
   logging = false;
 
   private greyhounds$: Subscription;
-  greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>([]);
+  greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>(
+    [],
+  );
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.callGetGreyhounds();
@@ -31,7 +30,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (response) {
       this.greyhounds.next(response.map(x => new Greyhound(x)));
       if (this.logging) {
-        console.log(`Greyhounds data from ${ this.apiUrl }`, response);
+        console.log(`Greyhounds data from ${this.apiUrl}`, response);
       }
     }
   }
@@ -45,7 +44,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   callGetGreyhounds(): void {
     this.greyhounds$ = this.getGreyhounds().subscribe(
       res => this.onGreyhoundUpdate(res),
-      err => this.onGreyhoundError(err)
+      err => this.onGreyhoundError(err),
     );
   }
 
@@ -57,6 +56,6 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   get apiUrl(): string {
-    return `${ window.location.origin }/api/greyhounds`;
+    return `${window.location.origin}/api/greyhounds`;
   }
 }

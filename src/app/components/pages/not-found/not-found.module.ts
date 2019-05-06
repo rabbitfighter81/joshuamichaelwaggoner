@@ -5,11 +5,7 @@ import { NotFoundComponent } from './not-found.component';
 import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 
 @NgModule({
-  declarations: [ NotFoundComponent ],
-  imports: [
-    CommonModule,
-    AppMaterialModule,
-    NotFoundRoutingModule
-  ]
+  declarations: [NotFoundComponent],
+  imports: [CommonModule, AppMaterialModule, NotFoundRoutingModule],
 })
-export class NotFoundModule { }
+export class NotFoundModule {}

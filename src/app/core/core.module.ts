@@ -4,26 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GreyhoundService } from './services/greyhound/greyhound.service';
 import { LoggingService } from './services/logging/logging.service';
 
-const modules = [
-  BrowserAnimationsModule
-];
+const modules = [BrowserAnimationsModule];
 
-const services = [
-  GreyhoundService,
-  LoggingService
-];
+const services = [GreyhoundService, LoggingService];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    ...modules,
-  ],
-  exports: [
-    ...modules,
-  ],
-  providers: [
-    ...services
-  ]
+  imports: [CommonModule, ...modules],
+  exports: [...modules],
+  providers: [...services],
 })
-export class CoreModule { }
+export class CoreModule {}

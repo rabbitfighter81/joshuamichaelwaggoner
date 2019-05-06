@@ -1,4 +1,4 @@
-@import "../../../../styles/mixin.scss";
+@import '../../../../styles/mixin.scss';
 
 ul {
   list-style: none;
@@ -22,21 +22,21 @@ mat-card.mat-card
 }
 
 .stackoverflow-image {
-  background-image: url("/assets/img/stackoverflow.jpg");
+  background-image: url('/assets/img/stackoverflow.jpg');
   background-size: cover;
 }
 
 .codepen-image {
-  background-image: url("/assets/img/codepen.jpg");
+  background-image: url('/assets/img/codepen.jpg');
   background-size: cover;
 }
 
 .github-image {
-  background-image: url("/assets/img/github.jpg");
+  background-image: url('/assets/img/github.jpg');
   background-size: cover;
 }
 
 .linkedin-image {
-  background-image: url("/assets/img/linkedin.jpg");
+  background-image: url('/assets/img/linkedin.jpg');
   background-size: cover;
 }

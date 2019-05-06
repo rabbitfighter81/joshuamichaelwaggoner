@@ -5,11 +5,7 @@ import { ResumeComponent } from './resume.component';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
 
 @NgModule({
-  declarations: [ ResumeComponent ],
-  imports: [
-    SharedModule,
-    CommonModule,
-    ResumeRoutingModule
-  ]
+  declarations: [ResumeComponent],
+  imports: [SharedModule, CommonModule, ResumeRoutingModule],
 })
-export class ResumeModule { }
+export class ResumeModule {}

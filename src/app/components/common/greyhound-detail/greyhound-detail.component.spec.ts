@@ -8,7 +8,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TableGreyhoundModule } from '../../tables/table-greyhound/table-greyhound.module';
 
 describe('GreyhoundDetailComponent', () => {
-
   let component: GreyhoundDetailComponent;
   let fixture: ComponentFixture<GreyhoundDetailComponent>;
 
@@ -18,14 +17,13 @@ describe('GreyhoundDetailComponent', () => {
         SharedModule,
         CoreModule,
         RouterTestingModule,
-        TableGreyhoundModule
+        TableGreyhoundModule,
       ],
       providers: [
-        { provide: GreyhoundService, useClass: GreyhoundServiceMock }
+        { provide: GreyhoundService, useClass: GreyhoundServiceMock },
       ],
-      declarations: [ GreyhoundDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [GreyhoundDetailComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

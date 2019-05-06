@@ -10,14 +10,11 @@ import { AppMaterialModule } from './core/modules/app-material/app-material.modu
     CoreModule,
     AppComponentsModule,
     AppRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
   ],
-  entryComponents: [
-  ],
-  providers: [
-
-  ],
-  bootstrap: [ AppComponent ],
-  declarations: [ AppComponent ]
+  entryComponents: [],
+  providers: [],
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

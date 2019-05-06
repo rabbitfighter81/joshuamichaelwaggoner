@@ -1,7 +1,6 @@
 import { AppMaterialModule } from './app-material.module';
 
 describe('AppMaterialModule', () => {
-
   let materialModule: AppMaterialModule;
 
   beforeEach(() => {
@@ -11,5 +10,4 @@ describe('AppMaterialModule', () => {
   it('should create an instance', () => {
     expect(materialModule).toBeTruthy();
   });
-
 });

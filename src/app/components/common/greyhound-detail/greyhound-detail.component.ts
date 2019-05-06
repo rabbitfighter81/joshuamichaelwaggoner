@@ -12,10 +12,10 @@ interface GreyhoundRouteParamMap {
 @Component({
   selector: 'app-greyhound-detail',
   templateUrl: './greyhound-detail.component.html',
-  styleUrls: ['./greyhound-detail.component.scss']
+  styleUrls: ['./greyhound-detail.component.scss'],
 })
-export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestroy {
-
+export class GreyhoundDetailComponent
+  implements OnInit, AfterViewInit, OnDestroy {
   private route$: Subscription;
   private greyhounds$: Subscription;
 
@@ -24,14 +24,18 @@ export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestro
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private service: GreyhoundService
+    private service: GreyhoundService,
   ) {}
 
   ngOnInit() {
-    this.route$ = this.activatedRoute.params.subscribe((params: GreyhoundRouteParamMap) => {
-      this.route = params.greyhound;
-    });
-    this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
+    this.route$ = this.activatedRoute.params.subscribe(
+      (params: GreyhoundRouteParamMap) => {
+        this.route = params.greyhound;
+      },
+    );
+    this.greyhounds$ = this.service.greyhounds.subscribe(next =>
+      this.onGreyhoundsUpdate(next),
+    );
   }
 
   ngAfterViewInit() {
@@ -47,10 +51,7 @@ export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestro
   }
 
   ngOnDestroy() {
-    const subscriptions = [
-      this.route$,
-      this.greyhounds$,
-    ];
+    const subscriptions = [this.route$, this.greyhounds$];
     subscriptions.forEach(subscription => {
       if (subscription != null) {
         subscription.unsubscribe();
@@ -61,11 +62,11 @@ export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestro
   getImgSrcByName(name: string): string {
     switch (name) {
       case 'raven':
-       return 'raven.jpg';
+        return 'raven.jpg';
       case 'redd':
-       return 'redd-walker.jpg';
+        return 'redd-walker.jpg';
       case 'gabby':
-       return 'poco-gabby.jpg';
+        return 'poco-gabby.jpg';
       default:
         return 'poco-gabby.jpg';
     }
@@ -76,5 +77,4 @@ export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestro
       ? this.getImgSrcByName(this.greyhound.route)
       : null;
   }
-
 }

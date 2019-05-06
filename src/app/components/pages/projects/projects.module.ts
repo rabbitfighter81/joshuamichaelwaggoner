@@ -20,11 +20,7 @@ const projects = [
 ];
 
 @NgModule({
-  declarations: [
-    ProjectBaseComponent,
-    ProjectsComponent,
-    ...projects,
-  ],
+  declarations: [ProjectBaseComponent, ProjectsComponent, ...projects],
   imports: [
     SharedModule,
     CommonModule,
@@ -32,4 +28,4 @@ const projects = [
     ReactiveFormsModule,
   ],
 })
-export class ProjectsModule { }
+export class ProjectsModule {}

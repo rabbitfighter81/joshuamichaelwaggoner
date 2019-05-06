@@ -4,10 +4,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   @Output() toggle: EventEmitter<any> = new EventEmitter();
 
   githubLink = 'https://github.com/rabbitfighter81/joshuamichaelwaggoner';
@@ -18,10 +17,9 @@ export class HeaderComponent implements OnInit {
     { code: 'de', label: 'Deutsch' },
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   toggleSidenav(): void {
     this.toggle.emit();
@@ -35,5 +33,4 @@ export class HeaderComponent implements OnInit {
   navToGitHubProject(): void {
     window.open(this.githubLink, '_blank');
   }
-
 }

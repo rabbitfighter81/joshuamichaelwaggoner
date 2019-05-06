@@ -5,12 +5,12 @@ import { ResumeComponent } from './resume.component';
 const routes: Routes = [
   {
     path: '',
-    component: ResumeComponent
-  }
+    component: ResumeComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ResumeRoutingModule { }
+export class ResumeRoutingModule {}

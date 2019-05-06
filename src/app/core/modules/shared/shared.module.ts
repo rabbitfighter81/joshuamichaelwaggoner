@@ -5,7 +5,6 @@ import { AppMaterialModule } from '../app-material/app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -22,6 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-  ]
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

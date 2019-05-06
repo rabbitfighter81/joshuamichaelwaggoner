@@ -1,7 +1,7 @@
-@import "../../../../../styles/mixin.scss";
+@import '../../../../../styles/mixin.scss';
 .search-area-content {
   background-color: $color-dark-grey;
-  background-image: url("/assets/img/starwars.jpg");
+  background-image: url('/assets/img/starwars.jpg');
   color: $color-white;
   font-size: $app-body-font-size;
 }

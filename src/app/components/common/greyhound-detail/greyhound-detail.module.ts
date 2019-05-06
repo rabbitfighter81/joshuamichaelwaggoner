@@ -7,16 +7,9 @@ import { TableGreyhoundModule } from '../../tables/table-greyhound/table-greyhou
 import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule,
-    TableGreyhoundModule
-  ],
-  providers: [
-    GreyhoundService
-  ],
-  exports: [ GreyhoundDetailComponent ],
-  declarations: [ GreyhoundDetailComponent ]
+  imports: [CommonModule, SharedModule, RouterModule, TableGreyhoundModule],
+  providers: [GreyhoundService],
+  exports: [GreyhoundDetailComponent],
+  declarations: [GreyhoundDetailComponent],
 })
-export class GreyhoundDetailModule { }
+export class GreyhoundDetailModule {}

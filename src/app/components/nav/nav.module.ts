@@ -5,13 +5,8 @@ import { NavComponent } from './nav.component';
 import { AppMaterialModule } from '../../core/modules/app-material/app-material.module';
 
 @NgModule({
-  declarations: [ NavComponent ],
-  imports: [
-    AppMaterialModule,
-    CommonModule,
-    AppRoutingModule
-  ],
-  exports: [ NavComponent ]
+  declarations: [NavComponent],
+  imports: [AppMaterialModule, CommonModule, AppRoutingModule],
+  exports: [NavComponent],
 })
-export class NavModule { }
-
+export class NavModule {}

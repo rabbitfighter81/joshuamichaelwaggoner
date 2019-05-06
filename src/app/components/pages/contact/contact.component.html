@@ -1,49 +1,75 @@
 <div class="content">
-    <div class="pipeline-container">
-        <h2 class="pinline"><span i18n="@@Pinline_Contact">con·tact</span></h2>
-    </div>
+  <div class="pipeline-container">
+    <h2 class="pinline"><span i18n="@@Pinline_Contact">con·tact</span></h2>
+  </div>
 
-    <mat-card class="mat-elevation-z8 border-bottom-20">
-        <mat-card-content>
-            <form [formGroup]="form" (ngSubmit)="submit()">
-                <!-- Email -->
-                <div class="form-field-container">
-                    <mat-form-field appearance="outline">
-                        <input matInput placeholder="Enter your email" formControlName="email" required />
-                        <mat-error *ngIf="form.get('email').invalid">{{ emailErrorMessage }}
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <!-- Name -->
-                <div class="form-field-container">
-                    <mat-form-field appearance="outline">
-                        <input matInput placeholder="Enter a contact name" formControlName="name" required />
-                        <mat-error *ngIf="form.get('name').invalid">{{ nameErrorMessage }}
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <!-- Reason for contact -->
-                <div class="form-field-container">
-                    <mat-form-field appearance="outline">
-                        <mat-select placeholder="Reason for message" formControlName="reason">
-                            <mat-option value="professional">Professional</mat-option>
-                            <mat-option value="personal">Personal</mat-option>
-                        </mat-select>
-                        <mat-error *ngIf="form.get('reason').invalid">{{ reasonErrorMessage }}
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <!-- Message -->
-                <div class="form-field-container">
-                    <mat-form-field appearance="outline">
-                        <textarea matInput placeholder="Textarea" formControlName="message" rows="12"></textarea>
-                    </mat-form-field>
-                </div>
-                <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+  <mat-card class="mat-elevation-z8 border-bottom-20">
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <!-- Email -->
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              placeholder="Enter your email"
+              formControlName="email"
+              required
+            />
+            <mat-error *ngIf="form.get('email').invalid"
+              >{{ emailErrorMessage }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <!-- Name -->
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              placeholder="Enter a contact name"
+              formControlName="name"
+              required
+            />
+            <mat-error *ngIf="form.get('name').invalid"
+              >{{ nameErrorMessage }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <!-- Reason for contact -->
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <mat-select
+              placeholder="Reason for message"
+              formControlName="reason"
+            >
+              <mat-option value="professional">Professional</mat-option>
+              <mat-option value="personal">Personal</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('reason').invalid"
+              >{{ reasonErrorMessage }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <!-- Message -->
+        <div class="form-field-container">
+          <mat-form-field appearance="outline">
+            <textarea
+              matInput
+              placeholder="Textarea"
+              formControlName="message"
+              rows="12"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="form.invalid"
+        >
           Send
           <mat-icon>email</mat-icon>
         </button>
-            </form>
-        </mat-card-content>
-    </mat-card>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

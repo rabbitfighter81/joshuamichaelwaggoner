@@ -4,10 +4,7 @@ import { ForbiddenRoutingModule } from './forbidden-routing.module';
 import { ForbiddenComponent } from './forbidden.component';
 
 @NgModule({
-  declarations: [ ForbiddenComponent ],
-  imports: [
-    CommonModule,
-    ForbiddenRoutingModule
-  ]
+  declarations: [ForbiddenComponent],
+  imports: [CommonModule, ForbiddenRoutingModule],
 })
-export class ForbiddenModule { }
+export class ForbiddenModule {}

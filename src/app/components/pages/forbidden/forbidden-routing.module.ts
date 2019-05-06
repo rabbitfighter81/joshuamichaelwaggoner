@@ -5,12 +5,12 @@ import { ForbiddenComponent } from './forbidden.component';
 const routes: Routes = [
   {
     path: '',
-    component: ForbiddenComponent
-  }
+    component: ForbiddenComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ForbiddenRoutingModule { }
+export class ForbiddenRoutingModule {}

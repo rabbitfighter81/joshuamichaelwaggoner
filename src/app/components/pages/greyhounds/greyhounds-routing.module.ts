@@ -6,16 +6,16 @@ import { GreyhoundDetailComponent } from '../../common/greyhound-detail/greyhoun
 const routes: Routes = [
   {
     path: '',
-    component: GreyhoundsComponent
+    component: GreyhoundsComponent,
   },
   {
     path: 'greyhounds/:greyhound',
-    component: GreyhoundDetailComponent
+    component: GreyhoundDetailComponent,
   },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forChild(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class GreyhoundsRoutingModule { }
+export class GreyhoundsRoutingModule {}

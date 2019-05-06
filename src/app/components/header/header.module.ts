@@ -5,12 +5,8 @@ import { AboutRoutingModule } from '../pages/about/about-routing.module';
 import { AppMaterialModule } from '../../core/modules/app-material/app-material.module';
 
 @NgModule({
-  declarations: [ HeaderComponent ],
-  imports: [
-    CommonModule,
-    AppMaterialModule,
-    AboutRoutingModule
-  ],
-  exports: [ HeaderComponent ]
+  declarations: [HeaderComponent],
+  imports: [CommonModule, AppMaterialModule, AboutRoutingModule],
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}

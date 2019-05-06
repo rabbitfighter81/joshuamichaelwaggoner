@@ -7,22 +7,17 @@ import { GreyhoundsComponent } from './greyhounds.component';
 import { GreyhoundCardComponent } from '../../common/greyhound-card/greyhound-card.component';
 
 describe('GreyhoundsComponent', () => {
-
   let component: GreyhoundsComponent;
   let fixture: ComponentFixture<GreyhoundsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CoreModule,
-        SharedModule,
-      ],
+      imports: [CoreModule, SharedModule],
       providers: [
-        { provide: GreyhoundService, useClass: GreyhoundServiceMock }
+        { provide: GreyhoundService, useClass: GreyhoundServiceMock },
       ],
-      declarations: [ GreyhoundsComponent, GreyhoundCardComponent ],
-    })
-    .compileComponents();
+      declarations: [GreyhoundsComponent, GreyhoundCardComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

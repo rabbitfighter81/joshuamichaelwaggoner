@@ -5,20 +5,15 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { ProjectsComponent } from './projects.component';
 
 describe('ProjectsComponent', () => {
-
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
-      declarations: [ ProjectsComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-    })
-    .compileComponents();
+      imports: [SharedModule, CoreModule],
+      declarations: [ProjectsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

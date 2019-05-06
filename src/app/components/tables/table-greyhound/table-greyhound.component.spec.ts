@@ -13,16 +13,12 @@ describe('TableGreyhoundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule
-      ],
+      imports: [SharedModule, CoreModule],
       providers: [
-        { provide: GreyhoundService, useClass: GreyhoundServiceMock }
+        { provide: GreyhoundService, useClass: GreyhoundServiceMock },
       ],
-      declarations: [ TableGreyhoundComponent ]
-    })
-    .compileComponents();
+      declarations: [TableGreyhoundComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

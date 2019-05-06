@@ -11,13 +11,9 @@ import { CoreModule } from '../core/core.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-        RouterTestingModule
-      ],
-      declarations: [ AppComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      imports: [SharedModule, CoreModule, RouterTestingModule],
+      declarations: [AppComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));
 
@@ -26,5 +22,4 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-
 });

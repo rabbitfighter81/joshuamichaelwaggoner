@@ -12,38 +12,41 @@ export const appRoutes: Routes = [
   },
   {
     path: 'resume',
-    loadChildren: './components/pages/resume/resume.module#ResumeModule'
+    loadChildren: './components/pages/resume/resume.module#ResumeModule',
   },
   {
     path: 'contact',
-    loadChildren: './components/pages/contact/contact.module#ContactModule'
+    loadChildren: './components/pages/contact/contact.module#ContactModule',
   },
   {
     path: 'projects',
-    loadChildren: './components/pages/projects/projects.module#ProjectsModule'
+    loadChildren: './components/pages/projects/projects.module#ProjectsModule',
   },
   {
     path: 'greyhounds',
-    loadChildren: './components/pages/greyhounds/greyhounds.module#GreyhoundsModule'
+    loadChildren:
+      './components/pages/greyhounds/greyhounds.module#GreyhoundsModule',
   },
   {
     path: 'networks',
-    loadChildren: './components/pages/networks/networks.module#NetworksModule'
+    loadChildren: './components/pages/networks/networks.module#NetworksModule',
   },
   {
     path: '404',
-    loadChildren: './components/pages/not-found/not-found.module#NotFoundModule'
+    loadChildren:
+      './components/pages/not-found/not-found.module#NotFoundModule',
   },
   {
     path: 'forbidden',
-    redirectTo: '404'
+    redirectTo: '404',
   },
   {
     path: 'unauthorized',
-    loadChildren: './components/pages/unauthorized/unauthorized.module#UnauthorizedModule'
+    loadChildren:
+      './components/pages/unauthorized/unauthorized.module#UnauthorizedModule',
   },
   {
     path: '**',
-    redirectTo: '404'
+    redirectTo: '404',
   },
 ];

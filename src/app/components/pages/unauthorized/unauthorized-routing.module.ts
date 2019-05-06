@@ -5,12 +5,12 @@ import { UnauthorizedComponent } from './unauthorized.component';
 const routes: Routes = [
   {
     path: '',
-    component: UnauthorizedComponent
-  }
+    component: UnauthorizedComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class UnauthorizedRoutingModule { }
+export class UnauthorizedRoutingModule {}

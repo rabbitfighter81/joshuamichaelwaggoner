@@ -4,19 +4,14 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { AboutComponent } from './about.component';
 
 describe('AboutComponent', () => {
-
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-      ],
-      declarations: [ AboutComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule, CoreModule],
+      declarations: [AboutComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
