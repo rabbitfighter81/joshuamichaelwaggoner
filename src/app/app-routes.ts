@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AboutComponent } from './components/pages/about/about.component';
 
 export const appRoutes: Routes = [
   {
@@ -8,7 +9,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'about',
-    loadChildren: './components/pages/about/about.module#AboutModule',
+    component: AboutComponent,
   },
   {
     path: 'resume',

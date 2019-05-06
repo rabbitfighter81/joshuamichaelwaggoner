@@ -4,9 +4,26 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var fs = require('fs');
+var brotli = require('brotli');
+
+
+var brotliSettings = {
+  extension: 'br',
+  skipLarger: true,
+  mode: 1, // 0 = generic, 1 = text, 2 = font (WOFF2)
+  quality: 10, // 0 - 11,
+  lgwin: 12 // default
+};
+
+fs.readdirSync('dist/').forEach(function(file) {
+  if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.scss') || file.endsWith('.html')) {
+    var result = brotli.compress(fs.readFileSync('dist/' + file), brotliSettings);
+    fs.writeFileSync('dist/' + file + '.br', result);
+  }
+});
 
 // Run the app by serving the static files in the dist directory
-// app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
 app.use("/en/", express.static(__dirname + "/dist/en"));
 app.use("/de/", express.static(__dirname + "/dist/de"));
 app.use("/es/", express.static(__dirname + "/dist/es"));
@@ -40,6 +57,13 @@ app.get('/api/greyhounds', function(req, res) {
     var readable = fs.createReadStream(greyhoundsFilePath);
     readable.pipe(res);
 });
+
+// Required for path location strategy
+/*
+app.get('*', (request, response) => {
+  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+*/
 
 app.get('*', function(req, response) {
     //this is for i18n
