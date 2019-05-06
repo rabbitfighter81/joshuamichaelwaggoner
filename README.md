@@ -32,6 +32,12 @@ This is my personal app, built using Angular and Angular Material
 
 * Execute `npm install` from root directory to grab all the necessary dependencies for both the server and client. The dev dependiencies will be pruned from the bundle on build.
 
+## Internationalization (i18n)
+
+This app is currently set up to serve different builds for each language and locale and host them via a path prefix in the url. Supported locales are English, French, and German. 
+
+Execute `ng xi18n` or other commands (see ...) to generate an .xlf file for marking translations. This is a complex precess, so please see i18n docs to accompish these goals. I aim to add French and Chinese and have 100% translation by end of year.
+
 ## Serving
 
 * For English, execute `npm run serve-en`
