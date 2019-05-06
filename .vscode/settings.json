@@ -1,9 +1,20 @@
 {
-	"format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
-	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-	"format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-	"format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
-	"format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-  "format.placeOpenBraceOnNewLineForFunctions": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Material Theme",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
