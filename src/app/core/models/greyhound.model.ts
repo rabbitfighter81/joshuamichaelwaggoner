@@ -1,3 +1,10 @@
+const getCorrectTime = (timestamp: string): Date => {
+  const d = new Date(timestamp);
+  d.setMinutes(d.getMinutes() + d.getTimezoneOffset());
+  return d;
+};
+
+
 export interface IGreyhound {
   born: string;
   color: string;
@@ -30,7 +37,7 @@ export class Greyhound {
   sex: string;
 
   constructor(dog: IGreyhound) {
-    this.born = new Date(dog.born);
+    this.born = getCorrectTime(dog.born);
     this.color = dog.color;
     this.descriptions = dog.descriptions;
     this.earmark = dog.earmark;
@@ -39,10 +46,12 @@ export class Greyhound {
     this.land = dog.land;
     this.lbs = parseInt(dog.lbs, 10);
     this.name = dog.name;
-    this.passed = dog.passed.length ? new Date(dog.passed) : null;
+    this.passed = dog.passed.length ? getCorrectTime(dog.passed) : null;
     this.racingowners = dog.racingowners;
     this.route = dog.route;
     this.sex = dog.sex;
   }
 
 }
+
+

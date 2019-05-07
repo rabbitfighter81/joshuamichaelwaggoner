@@ -11,7 +11,7 @@ export class NavComponent implements OnInit {
 
   navItems: [
     { link: '', display: '', translationTag: '' }
-  ]
+  ];
 
   constructor() {}
 
