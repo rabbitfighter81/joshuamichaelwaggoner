@@ -3,7 +3,7 @@
     <mat-icon>assessment</mat-icon>&nbsp;Facts for
     {{ greyhound.name }}
   </h2>
-  <mat-list class="compact-list">
+  <mat-list class="list--compact">
     <mat-list-item>
       Color:&nbsp;<span class="bold">{{ greyhound.color }}</span>
     </mat-list-item>
@@ -29,16 +29,16 @@
       }}</span>
     </mat-list-item>
     <mat-list-item>
-      Lbs:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
+      Pounds:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
     </mat-list-item>
     <mat-list-item>
-      Kg:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
+      Kilograms:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
     </mat-list-item>
     <mat-list-item>
       Country:&nbsp;<span class="bold">{{ greyhound.land }}</span>
     </mat-list-item>
     <mat-list-item *ngFor="let owner of greyhound.racingowners; let i = index">
-      Racing owner:&nbsp;<span class="bold">{{ owner }}</span>
+      Racing Owner:&nbsp;<span class="bold">{{ owner }}</span>
     </mat-list-item>
   </mat-list>
 </div>

@@ -3,6 +3,7 @@ var app = require('./index');
 var fs = require('fs');
 var brotli = require('brotli');
 
+/*
 var brotliSettings = {
   extension: 'br',
   skipLarger: true,
@@ -11,7 +12,7 @@ var brotliSettings = {
   lgwin: 12, // default
 };
 
-fs.readdirSync('./dist/en/').forEach(function(file) {
+fs.readdirSync('../dist/en/').forEach(function(file) {
   if (
     file.endsWith('.js') ||
     file.endsWith('.ts') ||
@@ -19,14 +20,14 @@ fs.readdirSync('./dist/en/').forEach(function(file) {
     file.endsWith('.html')
   ) {
     var result = brotli.compress(
-      fs.readFileSync('./dist/en/' + file),
+      fs.readFileSync('../dist/en/' + file),
       brotliSettings
     );
-    fs.writeFileSync('./dist/en/' + file + '.br', result);
+    fs.writeFileSync('../dist/en/' + file + '.br', result);
   }
 });
 
-fs.readdirSync('./dist/es/').forEach(function(file) {
+fs.readdirSync('../dist/es/').forEach(function(file) {
   if (
     file.endsWith('.js') ||
     file.endsWith('.ts') ||
@@ -34,14 +35,14 @@ fs.readdirSync('./dist/es/').forEach(function(file) {
     file.endsWith('.html')
   ) {
     var result = brotli.compress(
-      fs.readFileSync('./dist/es/' + file),
+      fs.readFileSync('../dist/es/' + file),
       brotliSettings
     );
-    fs.writeFileSync('./dist/es/' + file + '.br', result);
+    fs.writeFileSync('../dist/es/' + file + '.br', result);
   }
 });
 
-fs.readdirSync('./dist/de/').forEach(function(file) {
+fs.readdirSync('../dist/de/').forEach(function(file) {
   if (
     file.endsWith('.js') ||
     file.endsWith('.ts') ||
@@ -49,12 +50,13 @@ fs.readdirSync('./dist/de/').forEach(function(file) {
     file.endsWith('.html')
   ) {
     var result = brotli.compress(
-      fs.readFileSync('./dist/de/' + file),
+      fs.readFileSync('../dist/de/' + file),
       brotliSettings
     );
-    fs.writeFileSync('./dist/de/' + file + '.br', result);
+    fs.writeFileSync('../dist/de/' + file + '.br', result);
   }
 });
+*/
 
 var greyhoundsFilePath = path.join(__dirname, './static/db.greyhounds.json');
 
