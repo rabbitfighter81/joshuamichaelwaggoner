@@ -3,6 +3,7 @@ var app = require('./index');
 var fs = require('fs');
 var brotli = require('brotli');
 
+/*
 var brotliSettings = {
   extension: 'br',
   skipLarger: true,
@@ -55,6 +56,7 @@ fs.readdirSync('../dist/de/').forEach(function(file) {
     fs.writeFileSync('../dist/de/' + file + '.br', result);
   }
 });
+*/
 
 var greyhoundsFilePath = path.join(__dirname, './static/db.greyhounds.json');
 
