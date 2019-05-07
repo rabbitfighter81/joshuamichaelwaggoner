@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { assign } from 'lodash';
+import assign from 'lodash.assign';
 import { ColorPickerComponent } from './color-picker.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
 import { SharedModule } from '../../../../core/modules/shared/shared.module';
