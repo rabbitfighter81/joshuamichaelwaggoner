@@ -15,7 +15,44 @@ a {
   font-weight: $app-body-font-weight;
 }
 
-.link--body {
+li {
+  margin: 5px;
+  padding: 5px;
+}
+
+form {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $color-med-blue;
+  :visited {
+    color: $color-med-blue;
+  }
+  :active {
+    color: $color-med-blue;
+  }
+}
+
+li {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+  line-height: $app-body-line-height;
+}
+
+input[type='text'] {
+  font-size: $app-body-font-size;
+}
+
+mat-card.mat-card
+  > mat-card-actions.mat-card-actions
+  > button.mat-stroked-button {
+  margin: 12.5px;
+}
+
+a.link--body {
   &:active {
     color: $color-med-blue;
   }
@@ -35,31 +72,13 @@ img.img--center {
   margin: auto;
 }
 
-li {
-  margin: 5px;
-  padding: 5px;
+p.nav-item {
+  outline: none;
+  color: $color-electric-yellow;
 }
 
-.mat-card .mat-card-header .mat-card-title {
-  font-size: $app-header-font-size;
-  @include tablet {
-    font-size: $app-header-font-size-mobile;
-  }
-}
-
-.toolbar {
-  width: 100%;
-  margin: 0px;
-  background: $color-dark-grey;
-}
-
-.margin-right-10 {
-  margin-right: 10px;
-}
-
-
-.margin-right-10.mat-icon-button {
-  margin-right: 10px;
+.border-bottom-20 {
+  margin-bottom: $border-bottom-20;
 }
 
 .btn-mat-icon {
@@ -68,14 +87,22 @@ li {
   }
 }
 
-form,
-.form-field-container {
-  width: 100%;
+.btn--flex-row {
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-// Flex
-.spacer {
-  flex: 1 0 0;
+.center {
+  text-align: center;
+}
+
+.container,
+.content {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .flex-row-justify-start-align-start {
@@ -90,37 +117,19 @@ form,
   @include flex-col();
 }
 
-.container,
-.content {
-  width: 90%;
-  margin: 0 auto;
+.form-field-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.center {
-  text-align: center;
+.form-field-container > * {
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: $color-med-blue;
-  :visited {
-    color: $color-med-blue;
-  }
-  :active {
-    color: $color-med-blue;
-  }
-}
-
-p.nav-item {
-  outline: none;
-  color: $color-electric-yellow;
-}
-
-li {
-  margin: 0px;
-  margin-bottom: 10px;
-  padding: 0px;
-  line-height: $app-body-line-height;
+.full-image {
+  width: 100%;
+  margin: auto;
 }
 
 .img--container img {
@@ -135,16 +144,19 @@ li {
   color: $color-electric-yellow;
 }
 
-.center {
-  text-align: center;
+.margin-right-10 {
+  margin-right: 10px;
 }
 
-.btn--flex-row {
-  margin: 12px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.margin-right-10.mat-icon-button {
+  margin-right: 10px;
+}
+
+.mat-card .mat-card-header .mat-card-title {
+  font-size: $app-header-font-size;
+  @include tablet {
+    font-size: $app-header-font-size-mobile;
+  }
 }
 
 .mat-stroked-button {
@@ -155,20 +167,9 @@ li {
   align-items: center;
 }
 
-mat-card.mat-card
-  > mat-card-actions.mat-card-actions
-  > button.mat-stroked-button {
-  margin: 12.5px;
-}
-
-input[type='text'] {
-  font-size: $app-body-font-size;
-}
-
-.container,
-.content {
-  width: 90%;
-  margin: 0 auto;
+.personal-image {
+  background-image: url('/assets/img/me.jpg');
+  background-size: cover;
 }
 
 .pipeline-container {
@@ -183,7 +184,7 @@ input[type='text'] {
     }
   }
   h2.pinline {
-    color: white;
+    color: black;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -205,7 +206,7 @@ input[type='text'] {
     position: absolute;
     top: 50%;
     height: 1px;
-    background: white;
+    background: black;
     width: 99999px;
   }
   h2.pinline span:before {
@@ -218,30 +219,17 @@ input[type='text'] {
   }
 }
 
-.form-field-container {
-  display: flex;
-  flex-direction: column;
+.spacer {
+  flex: 1 0 0;
 }
 
-.form-field-container > * {
+.toolbar {
   width: 100%;
-}
-
-.full-image {
-  width: 100%;
-  margin: auto;
+  margin: 0px;
+  background: $color-dark-grey;
 }
 
 .touchable {
   cursor: pointer;
   outline: none;
-}
-
-.border-bottom-20 {
-  margin-bottom: $border-bottom-20;
-}
-
-.personal-image {
-  background-image: url('/assets/img/me.jpg');
-  background-size: cover;
 }

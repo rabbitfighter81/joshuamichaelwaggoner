@@ -21,3 +21,9 @@ h2 {
   font-weight: 500;
   color: #333;
 }
+
+.table--greyound
+  > .compact-list
+  > .mat-list-item {
+  margin-bottom: 0px;
+}
