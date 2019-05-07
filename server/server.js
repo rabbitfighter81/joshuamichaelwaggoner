@@ -2,24 +2,7 @@ var path = require('path');
 var app = require('./index');
 var fs = require('fs');
 var brotli = require('brotli');
-var shrinkRay = require('shrink-ray-current');
 
-// compress all requests
-app.use(shrinkRay());
-
-app.use(shrinkRay({ filter: shouldCompress }));
-
-function shouldCompress(req, res) {
-  if (req.headers['x-no-compression']) {
-    // don't compress responses with this request header
-    return false;
-  }
-
-  // fallback to standard filter function
-  return shrinkRay.filter(req, res);
-}
-
-/*
 var brotliSettings = {
   extension: 'br',
   skipLarger: true,
@@ -72,22 +55,10 @@ fs.readdirSync('../dist/de/').forEach(function(file) {
     fs.writeFileSync('../dist/de/' + file + '.br', result);
   }
 });
-*/
 
 var greyhoundsFilePath = path.join(__dirname, './static/db.greyhounds.json');
 
-/*
 app.get('/api/greyhounds', function(req, res) {
-  var readable = fs.createReadStream(greyhoundsFilePath);
-  readable.pipe(res);
-});
-*/
-
-// server-sent event stream
-app.get('/api/greyhounds', function(req, res) {
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-
   var readable = fs.createReadStream(greyhoundsFilePath);
   readable.pipe(res);
 });
