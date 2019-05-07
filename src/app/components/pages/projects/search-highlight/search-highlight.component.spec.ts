@@ -30,4 +30,6 @@ describe('SearchHighlightComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // TODO: Test
 });

@@ -2,11 +2,11 @@
   <mat-card-header>
     <mat-card-title>{{ greyhound.name }}</mat-card-title>
     <mat-card-subtitle *ngIf="greyhound.passed">
-      ({{ greyhound.born | date: "mediumDate" }} -
-      {{ greyhound.passed | date: "mediumDate" }})
+      ({{ greyhound.born | date: 'mediumDate' }} -
+      {{ greyhound.passed | date: 'mediumDate' }})
     </mat-card-subtitle>
     <mat-card-subtitle *ngIf="!greyhound.passed">
-      ({{ greyhound.born | date: "mediumDate" }} - Present)
+      ({{ greyhound.born | date: 'mediumDate' }} - Present)
     </mat-card-subtitle>
   </mat-card-header>
   <img

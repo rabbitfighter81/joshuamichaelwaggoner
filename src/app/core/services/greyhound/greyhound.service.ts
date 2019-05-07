@@ -3,7 +3,7 @@ import { Injectable, OnDestroy, OnInit } from '@angular/core';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
 import { Greyhound, IGreyhound } from '../../models/greyhound.model';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {

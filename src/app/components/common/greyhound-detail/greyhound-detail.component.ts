@@ -1,9 +1,10 @@
-import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
-import { ActivatedRoute, Router, ChildActivationStart } from '@angular/router';
-import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
-import { Subscription } from 'rxjs';
-import { Greyhound, IGreyhound } from '../../../core/models/greyhound.model';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { findIndex } from 'lodash';
+import { Subscription } from 'rxjs';
+import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
+import { Greyhound } from '../../../core/models/greyhound.model';
+import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
 
 interface GreyhoundRouteParamMap {
   greyhound: string;
@@ -14,8 +15,8 @@ interface GreyhoundRouteParamMap {
   templateUrl: './greyhound-detail.component.html',
   styleUrls: ['./greyhound-detail.component.scss'],
 })
-export class GreyhoundDetailComponent
-  implements OnInit, AfterViewInit, OnDestroy {
+export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestroy {
+
   private route$: Subscription;
   private greyhounds$: Subscription;
 
@@ -42,21 +43,17 @@ export class GreyhoundDetailComponent
     this.service.callGetGreyhounds();
   }
 
+  ngOnDestroy() {
+    const subscriptions = [this.route$, this.greyhounds$];
+    unsubscribeAll(subscriptions);
+  }
+
   private onGreyhoundsUpdate(greyhounds: Greyhound[]): void {
     const { route } = this;
     const index = findIndex(greyhounds, { route });
     if (index > -1) {
       this.greyhound = greyhounds[index];
     }
-  }
-
-  ngOnDestroy() {
-    const subscriptions = [this.route$, this.greyhounds$];
-    subscriptions.forEach(subscription => {
-      if (subscription != null) {
-        subscription.unsubscribe();
-      }
-    });
   }
 
   getImgSrcByName(name: string): string {

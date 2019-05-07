@@ -8,10 +8,7 @@
     "kg": "27",
     "land": "US",
     "earmark": "15B-66087",
-    "racingowners": [
-      "Mary Robinette",
-      "Karen L. Leg"
-    ],
+    "racingowners": ["Mary Robinette", "Karen L. Leg"],
     "born": "2015-01-01T00:00:00",
     "passed": "",
     "image": "raven.jpg",
@@ -28,9 +25,7 @@
     "kg": "29",
     "land": "US",
     "earmark": "135C-31448",
-    "racingowners": [
-      "David M. Di Croce"
-    ],
+    "racingowners": ["David M. Di Croce"],
     "born": "2005-03-01T00:00:00",
     "passed": "2018-04-02T00:00:00",
     "image": "poco-gabby.jpg",
@@ -47,9 +42,7 @@
     "kg": "34",
     "land": "US",
     "earmark": "100A-91961",
-    "racingowners": [
-      "Unknown"
-    ],
+    "racingowners": ["Unknown"],
     "born": "2000-10-23T00:00:00",
     "passed": "2012-02-12T00:00:00",
     "image": "redd-walker.jpg",

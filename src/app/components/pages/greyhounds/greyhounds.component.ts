@@ -1,7 +1,8 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
 import { Greyhound } from '../../../core/models/greyhound.model';
 import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-greyhounds',
@@ -15,22 +16,19 @@ export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(private service: GreyhoundService) {}
 
   ngOnInit() {
-    this.greyhounds$ = this.service.greyhounds.subscribe(next =>
-      this.onGreyhoundsUpdate(next),
-    );
+    this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
   }
 
   ngOnDestroy() {
-    if (this.greyhounds$ != null) {
-      this.greyhounds$.unsubscribe();
-    }
+    const subscriptions = [this.greyhounds$];
+    unsubscribeAll(subscriptions);
   }
 
   ngAfterViewInit() {
     this.service.callGetGreyhounds();
   }
 
-  private onGreyhoundsUpdate(greyhounds: Greyhound[]) {
+  private onGreyhoundsUpdate(greyhounds: Greyhound[]): void {
     if (greyhounds) {
       this.greyhounds = greyhounds;
     }

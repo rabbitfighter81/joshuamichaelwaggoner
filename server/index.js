@@ -1,4 +1,4 @@
-var express = require('express')
+var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var app = express();
@@ -13,7 +13,7 @@ app.use('/es/', express.static(__dirname + '/../dist/es'));
 app.use(cors());
 
 // More CORS settings
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
   res.header(
@@ -27,9 +27,11 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 
 // Support encoded bodies
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  }),
+);
 
 // Set port
 app.set('port', process.env.PORT || 8080);
