@@ -11,7 +11,6 @@
       Sex:&nbsp;
       <span class="bold"
         >{{ greyhound.sex }}
-        &nbsp;
         <span *ngIf="greyhound.sex === 'Male'">&#9794;</span>
         <span *ngIf="greyhound.sex === 'Female'">&#9792;</span>
       </span>
@@ -24,7 +23,7 @@
         greyhound.born | date: 'mediumDate'
       }}</span>
     </mat-list-item>
-    <mat-list-item *ngIf="greyhound.passed !== null">
+    <mat-list-item *ngIf="greyhound.passed">
       Passed:&nbsp;<span class="bold">{{
         greyhound.passed | date: 'mediumDate'
       }}</span>
