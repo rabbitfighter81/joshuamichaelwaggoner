@@ -3,14 +3,14 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var app = express();
 
+// CORS
+app.use(cors());
+
 // Run the app by serving the static files in the dist directory
 app.use(express.static(__dirname + '../dist'));
 app.use('/en/', express.static(__dirname + '/../dist/en'));
 app.use('/de/', express.static(__dirname + '/../dist/de'));
 app.use('/es/', express.static(__dirname + '/../dist/es'));
-
-// CORS
-app.use(cors());
 
 // More CORS settings
 app.use(function(req, res, next) {

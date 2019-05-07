@@ -92,7 +92,6 @@ There are no e2e tests yet. Coming soon...
 * Set up dev environment to work with staging server to speed up dev time
 * Work more on editor settings and include them and plugins used in some sort of VSCODE file
 * Increase Performance
-* SSL Working
 * Contact form securely transferring mails (not showing my credentials in git) instead of just opening your mail and filling it in. Kind of lame. Sorry, will add soon.
 * More links
 * Working links to all the projects in Git. Some need created.
