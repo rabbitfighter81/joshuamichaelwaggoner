@@ -4,7 +4,6 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: $color-dark-grey;
 }
 
 body,
@@ -57,6 +56,7 @@ li {
 .margin-right-10 {
   margin-right: 10px;
 }
+
 
 .margin-right-10.mat-icon-button {
   margin-right: 10px;
@@ -183,7 +183,7 @@ input[type='text'] {
     }
   }
   h2.pinline {
-    color: black;
+    color: white;
     text-align: center;
     display: block;
     overflow: hidden;
@@ -205,7 +205,7 @@ input[type='text'] {
     position: absolute;
     top: 50%;
     height: 1px;
-    background: black;
+    background: white;
     width: 99999px;
   }
   h2.pinline span:before {
