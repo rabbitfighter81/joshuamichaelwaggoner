@@ -1,62 +1,6 @@
 var path = require('path');
 var app = require('./index');
 var fs = require('fs');
-var brotli = require('brotli');
-
-/*
-var brotliSettings = {
-  extension: 'br',
-  skipLarger: true,
-  mode: 1, // 0 = generic, 1 = text, 2 = font (WOFF2)
-  quality: 6, // 0 - 11,
-  lgwin: 12, // default
-};
-
-fs.readdirSync('../dist/en/').forEach(function(file) {
-  if (
-    file.endsWith('.js') ||
-    file.endsWith('.ts') ||
-    file.endsWith('.scss') ||
-    file.endsWith('.html')
-  ) {
-    var result = brotli.compress(
-      fs.readFileSync('../dist/en/' + file),
-      brotliSettings
-    );
-    fs.writeFileSync('../dist/en/' + file + '.br', result);
-  }
-});
-
-fs.readdirSync('../dist/es/').forEach(function(file) {
-  if (
-    file.endsWith('.js') ||
-    file.endsWith('.ts') ||
-    file.endsWith('.scss') ||
-    file.endsWith('.html')
-  ) {
-    var result = brotli.compress(
-      fs.readFileSync('../dist/es/' + file),
-      brotliSettings
-    );
-    fs.writeFileSync('../dist/es/' + file + '.br', result);
-  }
-});
-
-fs.readdirSync('../dist/de/').forEach(function(file) {
-  if (
-    file.endsWith('.js') ||
-    file.endsWith('.ts') ||
-    file.endsWith('.scss') ||
-    file.endsWith('.html')
-  ) {
-    var result = brotli.compress(
-      fs.readFileSync('../dist/de/' + file),
-      brotliSettings
-    );
-    fs.writeFileSync('../dist/de/' + file + '.br', result);
-  }
-});
-*/
 
 var greyhoundsFilePath = path.join(__dirname, './static/db.greyhounds.json');
 
