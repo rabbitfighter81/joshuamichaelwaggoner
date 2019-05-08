@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { GreyhoundCardComponent } from './greyhound-card.component';
-import { SharedModule } from '../../../core/modules/shared/shared.module';
-import { CoreModule } from '../../../core/core.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { GreyhoundCardComponent } from './greyhound-card.component';
 
 describe('GreyhoundCardComponent', () => {
   let component: GreyhoundCardComponent;

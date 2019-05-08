@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { SearchHighlightComponent } from './search-highlight.component';
 import { CoreModule } from '../../../../core/core.module';
 import { SharedModule } from '../../../../core/modules/shared/shared.module';
+import { SearchHighlightComponent } from './search-highlight.component';
 
 describe('SearchHighlightComponent', () => {
   let component: SearchHighlightComponent;

@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DiceRollerComponent } from './dice-roller.component';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
-import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { CoreModule } from '../../../../core/core.module';
+import { SharedModule } from '../../../../core/modules/shared/shared.module';
+import { DiceRollerComponent } from './dice-roller.component';
 
 describe('DiceRollerComponent', () => {
   let component: DiceRollerComponent;

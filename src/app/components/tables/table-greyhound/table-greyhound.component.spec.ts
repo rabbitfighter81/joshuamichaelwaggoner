@@ -1,13 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TableGreyhoundComponent } from './table-greyhound.component';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
+import { GreyhoundServiceMock } from '../../../core/services/greyhound/greyhound.service.mock';
 import { CoreModule } from '../../../core/core.module';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
-import { GreyhoundService } from 'src/app/core/services/greyhound/greyhound.service';
-import { GreyhoundServiceMock } from 'src/app/core/services/greyhound/greyhound.service.mock';
+import { TableGreyhoundComponent } from './table-greyhound.component';
 
 describe('TableGreyhoundComponent', () => {
+
   let component: TableGreyhoundComponent;
   let fixture: ComponentFixture<TableGreyhoundComponent>;
 

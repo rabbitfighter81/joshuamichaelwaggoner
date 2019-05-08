@@ -1,12 +1,4 @@
-import {
-  trigger,
-  style,
-  animate,
-  transition,
-  query,
-  stagger,
-  keyframes,
-} from '@angular/animations';
+import { animate, keyframes, query, stagger, style, transition, trigger } from '@angular/animations';
 
 export class Animations {
   public static fadeIn = trigger('fadeInAnimation', [

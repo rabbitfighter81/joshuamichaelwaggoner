@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { AboutComponent } from './about.component';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { AboutRoutingModule } from './about-routing.module';
+import { AboutComponent } from './about.component';
 
 @NgModule({
   declarations: [AboutComponent],

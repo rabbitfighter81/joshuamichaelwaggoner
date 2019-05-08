@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
-import { AppRoutingModule } from '../../../app-routing.module';
 
 @NgModule({
   declarations: [ContactComponent],

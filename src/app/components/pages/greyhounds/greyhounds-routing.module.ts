@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GreyhoundsComponent } from './greyhounds.component';
 import { GreyhoundDetailComponent } from '../../common/greyhound-detail/greyhound-detail.component';
+import { GreyhoundsComponent } from './greyhounds.component';
 
 const routes: Routes = [
   {

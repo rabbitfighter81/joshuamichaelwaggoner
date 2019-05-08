@@ -49,7 +49,7 @@ input[type='text'] {
 mat-card.mat-card
   > mat-card-actions.mat-card-actions
   > button.mat-stroked-button {
-  margin: 12.5px;
+  margin: 13px;
 }
 
 a.link--body {
@@ -99,10 +99,11 @@ p.nav-item {
   text-align: center;
 }
 
-.container,
 .content {
+  background: $color-body-bg;
   width: 90%;
   margin: 0 auto;
+  height: calc(100vh - 64px);
 }
 
 .flex-row-justify-start-align-start {
@@ -159,8 +160,12 @@ p.nav-item {
   }
 }
 
+.mat-card .mat-card-content {
+  margin: 13px;
+}
+
 .mat-stroked-button {
-  margin: 12.5px;
+  margin: 13px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

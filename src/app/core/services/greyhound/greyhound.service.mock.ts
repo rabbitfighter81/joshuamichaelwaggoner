@@ -1,6 +1,6 @@
+import { OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Greyhound } from '../../models/greyhound.model';
-import { BehaviorSubject, of, Observable } from 'rxjs';
-import { OnInit, OnDestroy } from '@angular/core';
 
 export class GreyhoundServiceMock implements OnInit, OnDestroy {
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>(

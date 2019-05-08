@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { GreyhoundDetailComponent } from './greyhound-detail.component';
-import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
-import { GreyhoundServiceMock } from '../../../core/services/greyhound/greyhound.service.mock';
+import { RouterTestingModule } from '@angular/router/testing';
 import { CoreModule } from '../../../core/core.module';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
-import { RouterTestingModule } from '@angular/router/testing';
+import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
+import { GreyhoundServiceMock } from '../../../core/services/greyhound/greyhound.service.mock';
 import { TableGreyhoundModule } from '../../tables/table-greyhound/table-greyhound.module';
+import { GreyhoundDetailComponent } from './greyhound-detail.component';
 
 describe('GreyhoundDetailComponent', () => {
   let component: GreyhoundDetailComponent;

@@ -59,7 +59,7 @@ export class AppComponent implements OnInit, OnDestroy {
       } else {
         window.clearInterval(scrollToTop);
       }
-    }, 16);
+    }, 8);
   }
 
   closeSidenav(): void {

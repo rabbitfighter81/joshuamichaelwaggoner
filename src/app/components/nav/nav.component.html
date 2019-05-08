@@ -6,7 +6,7 @@
     routerLink="/about"
     (click)="selected('about')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_About">About</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_About">About</p>
   </mat-list-item>
 
   <mat-list-item
@@ -16,7 +16,7 @@
     routerLink="/resume"
     (click)="selected('resume')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_Resume">Resume</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Resume">Resume</p>
   </mat-list-item>
 
   <mat-list-item
@@ -26,7 +26,7 @@
     routerLink="/projects"
     (click)="selected('projects')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_Projects">Projects</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Projects">Projects</p>
   </mat-list-item>
 
   <mat-list-item
@@ -36,7 +36,17 @@
     routerLink="/networks"
     (click)="selected('networks')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_Networks">Networks</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Networks">Networks</p>
+  </mat-list-item>
+
+  <mat-list-item
+    aria-label="navigation item"
+    class="touchable"
+    routerLinkActive="nav-item-active"
+    routerLink="/resources"
+    (click)="selected('resources')"
+  >
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Resources">Resources</p>
   </mat-list-item>
 
   <mat-list-item
@@ -46,7 +56,17 @@
     routerLink="/greyhounds"
     (click)="selected('greyhounds')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_Greyhounds">Greyhounds</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Greyhounds">Greyhounds</p>
+  </mat-list-item>
+
+  <mat-list-item
+    aria-label="navigation item"
+    class="touchable"
+    routerLinkActive="nav-item-active"
+    routerLink="/music"
+    (click)="selected('music')"
+  >
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Music">Music</p>
   </mat-list-item>
 
   <mat-list-item
@@ -56,7 +76,7 @@
     routerLink="/contact"
     (click)="selected('contact')"
   >
-    <p class="nav-item" i18n="@@Nav_Link_Contact">Contact</p>
+    <p class="nav-item" i18n="@@NavComponent_NavLink_Contact">Contact</p>
   </mat-list-item>
 </mat-list>
 

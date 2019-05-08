@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header.component';
-import { AboutRoutingModule } from '../pages/about/about-routing.module';
+import { NgModule } from '@angular/core';
 import { AppMaterialModule } from '../../core/modules/app-material/app-material.module';
+import { AboutRoutingModule } from '../pages/about/about-routing.module';
+import { HeaderComponent } from './header.component';
 
 @NgModule({
   declarations: [HeaderComponent],

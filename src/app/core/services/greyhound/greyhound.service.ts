@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy, OnInit } from '@angular/core';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
 import { Greyhound, IGreyhound } from '../../models/greyhound.model';
-import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {

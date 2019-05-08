@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './not-found.component';
+import { MusicComponent } from './music.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: NotFoundComponent,
+    component: MusicComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class NotFoundRoutingModule {}
+export class MusicRoutingModule { }

@@ -32,6 +32,14 @@ export const appRoutes: Routes = [
     loadChildren: './components/pages/networks/networks.module#NetworksModule',
   },
   {
+    path: 'resources',
+    loadChildren: './components/pages/resources/resources.module#ResourcesModule',
+  },
+  {
+    path: 'music',
+    loadChildren: './components/pages/music/music.module#MusicModule',
+  },
+  {
     path: '404',
     loadChildren:
       './components/pages/not-found/not-found.module#NotFoundModule',

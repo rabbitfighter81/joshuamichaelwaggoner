@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableGreyhoundComponent } from './table-greyhound.component';
-import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
+import { TableGreyhoundComponent } from './table-greyhound.component';
 
 @NgModule({
   declarations: [TableGreyhoundComponent],
