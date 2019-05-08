@@ -1,13 +1,6 @@
-import {
-  Component,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-  Inject,
-  LOCALE_ID,
-} from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router, NavigationStart } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({

@@ -1,24 +1,28 @@
 @import '../../styles/mixin.scss';
 
-.mat-sidenav-container .mat-sidenav {
-  background: #333 !important;
+.mat-sidenav-container > .mat-sidenav {
+  background: $color-mat-sidenav-bg;
 }
 
 .mat-drawer-container {
-  background: $color-body-bg !important;
-  color: white !important;
+  background: $color-body-bg;
+  color: $color-white;
+}
+
+.mat-drawer-content {
+  overflow: hidden;
 }
 
 #btn-toggle-nav {
   margin-right: 10px;
   .mat-icon {
-    color: white; // TODO
+    color: $color-white; // TODO
   }
 }
 
 #btn-close-nav {
   margin: 10px;
   .mat-icon {
-    color: white;
+    color: $color-white;
   }
 }

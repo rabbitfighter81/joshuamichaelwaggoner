@@ -11,10 +11,16 @@ app.use(compression());
 app.use(cors());
 
 // Run the app by serving the static files in the dist directory
-app.use(express.static(__dirname + '../dist'));
-app.use('/en/', express.static(__dirname + '/../dist/en'));
-app.use('/de/', express.static(__dirname + '/../dist/de'));
-app.use('/es/', express.static(__dirname + '/../dist/es'));
+// app.use(express.static(__dirname + '../dist'));
+
+var locales = ['en', 'es', 'de'];
+
+locales.forEach(function(locale) {
+  app.use(`/${ locale }/`, express.static(__dirname + `/../dist/${ locale }`));
+})
+// app.use('/en/', express.static(__dirname + '/../dist/en'));
+// app.use('/de/', express.static(__dirname + '/../dist/de'));
+// app.use('/es/', express.static(__dirname + '/../dist/es'));
 
 // More CORS settings
 app.use(function(req, res, next) {
