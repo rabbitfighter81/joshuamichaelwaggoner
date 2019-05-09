@@ -1,0 +1,15 @@
+@import '../../../../styles/mixin.scss';
+
+.record-card {
+  margin-right: 13px;
+  margin-left: 13px;
+  margin-bottom: 10px;
+  background: white;
+  color: black;
+  .mat-card-subtitle {
+    color: #666;
+  }
+  @include tablet {
+    margin-bottom: 20px !important;
+  }
+}

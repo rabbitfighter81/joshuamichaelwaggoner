@@ -2,7 +2,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "An Old Hope Classic",
+  "workbench.colorTheme": "An Old Hope",
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "[scss]": {

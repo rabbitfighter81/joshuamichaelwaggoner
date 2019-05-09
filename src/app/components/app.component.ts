@@ -1,14 +1,8 @@
-import {
-  Component,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-  Inject,
-  LOCALE_ID,
-} from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router, NavigationStart } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { DiscogsService } from '../core/services/discogs/discogs.service';
 
 @Component({
   selector: 'app-root',
@@ -19,12 +13,11 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   navOpen = false;
-
   router$: Subscription;
 
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {
