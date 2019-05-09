@@ -1,7 +1,8 @@
-import { Injectable, OnInit, OnDestroy } from '@angular/core';
-import { Subscription, BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { retry, map } from 'rxjs/operators';
+import { Injectable, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { map, retry } from 'rxjs/operators';
+import { IDiscogRecord, Record } from '../../models/discogs-record.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ export class DiscogsService implements OnInit, OnDestroy {
   logging = true;
 
   private records$: Subscription;
-  records: BehaviorSubject<any> = new BehaviorSubject<any>([]);
+  records: BehaviorSubject<Record[]> = new BehaviorSubject<Record[]>([]);
 
   constructor(private http: HttpClient) {}
 
@@ -24,12 +25,16 @@ export class DiscogsService implements OnInit, OnDestroy {
     }
   }
 
-  private onRecordUpdate(response: any): void {
+  private onRecordUpdate(releases: any): void {
     // TODO: Type...
-    if (response) {
-      this.records.next(response);
+    if (releases && releases.length) {
+      this.records.next(
+        releases.map(
+          (record: IDiscogRecord): Record => new Record(record),
+        ),
+      );
       if (this.logging) {
-        console.log(`Records data from ${this.apiUrl}`, response);
+        console.log(`Records data from ${this.apiUrl}/records`, releases);
       }
     }
   }
@@ -50,7 +55,7 @@ export class DiscogsService implements OnInit, OnDestroy {
   getRecords(): Observable<any> {
     return this.http.get<any>(this.apiUrl).pipe(
       retry(1),
-      map(data => data),
+      map(data => data.releases),
     );
   }
 

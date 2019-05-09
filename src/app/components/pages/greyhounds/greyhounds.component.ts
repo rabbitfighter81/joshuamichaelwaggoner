@@ -16,7 +16,9 @@ export class GreyhoundsComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(private service: GreyhoundService) {}
 
   ngOnInit() {
-    this.greyhounds$ = this.service.greyhounds.subscribe(next => this.onGreyhoundsUpdate(next));
+    this.greyhounds$ = this.service.greyhounds.subscribe(next =>
+      this.onGreyhoundsUpdate(next),
+    );
   }
 
   ngOnDestroy() {

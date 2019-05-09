@@ -1,0 +1,22 @@
+<div class="content">
+  <div class="pipeline-container">
+    <h2 class="pinline">
+      <span i18n="@@Pinline_Discogs">disc·ogs</span>
+    </h2>
+  </div>
+  <mat-card>
+
+    <!--<mat-card-title>
+      <ng-container i18n="@@MusicComponent_Title">Music</ng-container>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <ng-container i18n="@@MusicComponent_SubTitle">My records</ng-container>
+    </mat-card-subtitle>-->
+    <mat-card-content class="container--records">
+      <app-record-card *ngFor="let record of records" [record]="record">
+      </app-record-card>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+

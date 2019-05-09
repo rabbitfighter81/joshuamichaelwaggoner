@@ -7,23 +7,15 @@ import { DiscogsServiceMock } from 'src/app/core/services/discogs/discogs.servic
 import { RecordDetailComponent } from './record-detail.component';
 
 describe('RecordDetailComponent', () => {
-
   let component: RecordDetailComponent;
   let fixture: ComponentFixture<RecordDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SharedModule,
-        CoreModule,
-        RouterTestingModule
-      ],
-      providers: [
-        { provide: DiscogsService, useClass: DiscogsServiceMock },
-      ],
+      imports: [SharedModule, CoreModule, RouterTestingModule],
+      providers: [{ provide: DiscogsService, useClass: DiscogsServiceMock }],
       declarations: [RecordDetailComponent],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -4,20 +4,18 @@ import { AppMaterialModule } from '../../../core/modules/app-material/app-materi
 import { DiscogsService } from '../../../core/services/discogs/discogs.service';
 import { RecordCardModule } from '../../common/record-card/record-card.module';
 import { RecordDetailModule } from '../../common/record-detail/record-detail.module';
-import { MusicRoutingModule } from './music-routing.module';
-import { MusicComponent } from './music.component';
+import { DiscogsRoutingModule } from './discogs-routing.module';
+import { DiscogsComponent } from './discogs.component';
 
 @NgModule({
   imports: [
     AppMaterialModule,
     CommonModule,
-    MusicRoutingModule,
+    DiscogsRoutingModule,
     RecordCardModule,
     RecordDetailModule,
   ],
   providers: [DiscogsService],
-  declarations: [MusicComponent],
+  declarations: [DiscogsComponent],
 })
-export class MusicModule { }
-
-
+export class DiscogsModule {}

@@ -18,7 +18,6 @@ var records;
 
 var col = dis.user().collection();
 col.getReleases('thee.cosmic.oasis', 0, {page: 1, per_page: 100 }, function(err, data){
-  console.log('my records', data);
   records = data;
 });
 

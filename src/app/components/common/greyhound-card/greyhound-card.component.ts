@@ -12,8 +12,7 @@ export class GreyhoundCardComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   like(): void {
     console.log('Liking ', this.greyhound.name);
