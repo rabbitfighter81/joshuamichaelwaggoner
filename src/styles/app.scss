@@ -6,8 +6,22 @@ $color-med-blue: #2983dd;
 $color-electric-yellow: #ff3;
 $color-dark-grey: #333;
 $color-white: #fff;
-$color-body-bg: #fdfdfd;
-$app-title-font: 'Oswald';
+$color-black: #000;
+$color-body-bg: #fafafa;
+
+// Dark grey stuff...
+$color-mat-sidenav-bg: $color-dark-grey; // Follow this convention. Name the thing, not the color. The color is obvious
+$color-search-area-bg: $color-dark-grey;
+$color-toolbar-bg: $color-dark-grey;
+$color-footer-bg: $color-dark-grey;
+
+$app-font-size-xl: 32px;
+$app-font-size-large: 28px;
+$app-font-size-medium: 22px;
+$app-font-size-small: 16px;
+$app-font-size-zs: 14px;
+
+$app-title-font: 'Oswald', sans-serif;
 $app-header-font-size: 22px;
 $app-header-font-size-mobile: 18px;
 $app-title-font-size: 22px;

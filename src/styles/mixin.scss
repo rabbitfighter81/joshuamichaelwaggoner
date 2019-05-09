@@ -4,8 +4,10 @@ $breakpoints: (
   'medium': 992px,
   'large': 1024px,
 ) !default;
+
 $tablet-width: 768px;
 $desktop-width: 1024px;
+
 @mixin tablet {
   @media (max-width: #{ $tablet-width - 1px }) {
     @content;
@@ -18,29 +20,23 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin flex-row-space-between() {
-  @include flex-row();
-  @include align-center();
-  justify-content: space-between;
-}
-
 @mixin flex-row-justify-start-align-start {
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
 }
 
 @mixin flex-row-justify-start-align-center {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
 }
 
 @mixin flex-col {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
 }

@@ -1,9 +1,14 @@
-@import './theme.scss';
-@import './mixin.scss';
+@import './theme';
+@import './mixin';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  overflow-x: initial !important;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body,
@@ -16,65 +21,52 @@ a {
 }
 
 li {
-  margin: 5px;
-  padding: 5px;
+  line-height: $app-body-line-height;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
 form {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: $color-med-blue;
-  :visited {
-    color: $color-med-blue;
-  }
-  :active {
-    color: $color-med-blue;
-  }
-}
-
-li {
-  margin: 0px;
-  margin-bottom: 10px;
-  padding: 0px;
-  line-height: $app-body-line-height;
-}
-
-input[type='text'] {
+input {
   font-size: $app-body-font-size;
 }
 
-mat-card.mat-card
-  > mat-card-actions.mat-card-actions
-  > button.mat-stroked-button {
+.mat-card >.mat-card-actions >.mat-stroked-button {
   margin: 13px;
 }
 
-a.link--body {
+.link--body {
+  color: $color-med-blue;
+  text-decoration: none;
   &:active {
     color: $color-med-blue;
   }
+
   &:visited {
     color: $color-med-blue;
   }
+
   &:link {
     color: $color-med-blue;
   }
+
   &:hover {
     color: $color-med-blue;
     text-decoration: underline;
   }
 }
 
-img.img--center {
+.img--center {
   margin: auto;
 }
 
-p.nav-item {
-  outline: none;
+.nav-item {
   color: $color-electric-yellow;
+  outline: none;
 }
 
 .border-bottom-20 {
@@ -83,16 +75,16 @@ p.nav-item {
 
 .btn-mat-icon {
   .mat-icon {
-    color: #f0f0f0;
+    color: $color-white;
   }
 }
 
 .btn--flex-row {
-  margin: 12px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  margin: 12px;
 }
 
 .center {
@@ -101,9 +93,10 @@ p.nav-item {
 
 .content {
   background: $color-body-bg;
-  width: 90%;
+  height: 100vh;
   margin: 0 auto;
-  height: calc(100vh - 64px);
+  width: 90%;
+  margin-bottom: 100px;
 }
 
 .flex-row-justify-start-align-start {
@@ -119,9 +112,9 @@ p.nav-item {
 }
 
 .form-field-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form-field-container > * {
@@ -129,11 +122,11 @@ p.nav-item {
 }
 
 .full-image {
-  width: 100%;
   margin: auto;
+  width: 100%;
 }
 
-.img--container img {
+.img--container > img {
   width: 100%;
 }
 
@@ -149,27 +142,24 @@ p.nav-item {
   margin-right: 10px;
 }
 
-.margin-right-10.mat-icon-button {
-  margin-right: 10px;
-}
-
-.mat-card .mat-card-header .mat-card-title {
-  font-size: $app-header-font-size;
+.mat-card > .mat-card-header > .mat-card-title {
   @include tablet {
     font-size: $app-header-font-size-mobile;
   }
+
+  font-size: $app-header-font-size;
 }
 
-.mat-card .mat-card-content {
+.mat-card >.mat-card-content {
   margin: 13px;
 }
 
 .mat-stroked-button {
-  margin: 13px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  margin: 13px;
 }
 
 .personal-image {
@@ -178,50 +168,62 @@ p.nav-item {
 }
 
 .pipeline-container {
+  margin: 20px 0;
   width: 100%;
-  margin: 20px 0% 20px 0%;
+
   h1 {
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
     @media only screen and (max-width: 600px) {
       font-size: 1em;
     }
-  }
-  h2.pinline {
-    color: black;
+
+    font-weight: 700;
+    margin: 0;
     text-align: center;
+  }
+
+  .pinline {
+    color: $color-black;
     display: block;
-    overflow: hidden;
-    font-size: 1em;
-    font-weight: 100;
     font-family: 'Roboto', sans-serif;
-    margin: 20px 0;
+    font-size: 1em;
     font-weight: 400;
+    margin: 20px 0;
+    overflow: hidden;
+    text-align: center;
     text-transform: lowercase;
   }
-  h2.pinline span {
-    position: relative;
+
+  .pinline > span {
     display: inline-block;
-    line-height: 1;
+    position: relative;
   }
-  h2.pinline span:before,
-  h2.pinline span:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    height: 1px;
-    background: black;
-    width: 99999px;
+
+  .pinline > span,
+  .pinline > span {
+
+    &::after {
+      background: $color-black;
+      content: '';
+      height: 1px;
+      margin-right: 20px;
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      width: 99999px;
+    }
+
+    &::before {
+      background: $color-black;
+      content: '';
+      height: 1px;
+      left: 100%;
+      margin-left: 20px;
+      position: absolute;
+      top: 50%;
+      width: 99999px;
+    }
   }
-  h2.pinline span:before {
-    left: 100%;
-    margin-left: 20px;
-  }
-  h2.pinline span:after {
-    right: 100%;
-    margin-right: 20px;
-  }
+
 }
 
 .spacer {
@@ -229,9 +231,9 @@ p.nav-item {
 }
 
 .toolbar {
+  background: $color-toolbar-bg;
+  margin: 0;
   width: 100%;
-  margin: 0px;
-  background: $color-dark-grey;
 }
 
 .touchable {

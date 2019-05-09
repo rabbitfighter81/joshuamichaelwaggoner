@@ -1,18 +1,8 @@
 @import '../../../styles/mixin.scss';
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-mat-toolbar.mat-toolbar.toolbar {
-  a {
-    h1.title {
-      color: white;
-      text-transform: UPPERCASE;
-      font-family: 'Oswald', monospace !important;
-
-      @include tablet {
-        font-size: $app-title-font-size-tablet;
-      }
-      @include desktop {
-        font-size: $app-title-font-size;
-      }
-    }
-  }
+.toolbar >.link--no-style > .title {
+  color: $color-white;
+  font-family: 'Oswald', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: $app-title-font-size;
+  text-transform: UPPERCASE;
 }

@@ -28,10 +28,11 @@
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content cdkScrollable>
+  <mat-sidenav-content>
     <app-header (toggle)="toggleSidenav()"></app-header>
-    <router-outlet></router-outlet>
-    <br /><br /><br />    <br /><br /><br />
+    <div class="container">
+        <router-outlet></router-outlet>
+      </div>
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
