@@ -16,7 +16,6 @@ export class DiscogsService implements OnInit, OnDestroy {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.callGetRecords();
   }
 
   ngOnDestroy() {
