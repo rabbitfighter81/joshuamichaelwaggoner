@@ -29,7 +29,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (response) {
       this.greyhounds.next(response.map(x => new Greyhound(x)));
       if (this.logging) {
-        console.log(`Greyhounds data from ${this.apiUrl}`, response);
+        console.log(`Greyhounds data from ${this.apiUrl}/greyhounds`, response);
       }
     }
   }

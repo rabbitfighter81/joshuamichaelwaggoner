@@ -5,13 +5,10 @@ import { DiscogsService } from './discogs.service';
 import { DiscogsServiceMock } from './discogs.service.mock';
 
 describe('DiscogsService', () => {
-
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [SharedModule, CoreModule],
-      providers: [
-        { provide: DiscogsService, useClass: DiscogsServiceMock },
-      ],
+      providers: [{ provide: DiscogsService, useClass: DiscogsServiceMock }],
     }),
   );
 

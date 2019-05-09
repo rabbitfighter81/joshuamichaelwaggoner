@@ -5,7 +5,6 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { RecordCardComponent } from './record-card.component';
 
 describe('RecordCardComponent', () => {
-
   let component: RecordCardComponent;
   let fixture: ComponentFixture<RecordCardComponent>;
 
@@ -13,8 +12,7 @@ describe('RecordCardComponent', () => {
     TestBed.configureTestingModule({
       imports: [SharedModule, CoreModule, RouterTestingModule],
       declarations: [RecordCardComponent],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

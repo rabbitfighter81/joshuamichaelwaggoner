@@ -7,6 +7,10 @@ export class DiscogsServiceMock implements OnInit, OnDestroy {
   ngOnInit() {}
   ngOnDestroy() {}
   callGetRecords(): void {}
-  getRecords(): Observable<any> { return new Observable(); }
-  get apiUrl(): string { return `/api/records`; }
+  getRecords(): Observable<any> {
+    return new Observable();
+  }
+  get apiUrl(): string {
+    return `/api/records`;
+  }
 }

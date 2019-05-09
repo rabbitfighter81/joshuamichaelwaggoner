@@ -1,9 +1,4 @@
-const getCorrectTime = (timestamp: string): Date => {
-  const d = new Date(timestamp);
-  d.setMinutes(d.getMinutes() + d.getTimezoneOffset());
-  return d;
-};
-
+import { getCorrectTime } from '../helpers/correct-time.helper';
 
 export interface IGreyhound {
   born: string;

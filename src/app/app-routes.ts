@@ -36,8 +36,8 @@ export const appRoutes: Routes = [
     loadChildren: './components/pages/resources/resources.module#ResourcesModule',
   },
   {
-    path: 'music',
-    loadChildren: './components/pages/music/music.module#MusicModule',
+    path: 'discogs',
+    loadChildren: './components/pages/discogs/discogs.module#DiscogsModule',
   },
   {
     path: '404',

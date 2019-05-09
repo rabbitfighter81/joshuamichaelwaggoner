@@ -15,6 +15,9 @@ import { ProjectsModule } from '../../../components/pages/projects/projects.modu
 import { ResumeModule } from '../../../components/pages/resume/resume.module';
 import { UnauthorizedModule } from '../../../components/pages/unauthorized/unauthorized.module';
 import { TableGreyhoundModule } from '../../../components/tables/table-greyhound/table-greyhound.module';
+import { DiscogsModule } from 'src/app/components/pages/discogs/discogs.module';
+import { RecordCardModule } from 'src/app/components/common/record-card/record-card.module';
+import { RecordDetailModule } from 'src/app/components/common/record-detail/record-detail.module';
 
 const modules = [
   AboutModule,
@@ -22,16 +25,19 @@ const modules = [
   FooterModule,
   ForbiddenModule,
   GreyhoundCardModule,
+  GreyhoundDetailModule,
   GreyhoundsModule,
   HeaderModule,
+  DiscogsModule,
   NavModule,
   NetworksModule,
   NotFoundModule,
   ProjectsModule,
+  RecordCardModule,
+  RecordDetailModule,
   ResumeModule,
-  UnauthorizedModule,
-  GreyhoundDetailModule,
   TableGreyhoundModule,
+  UnauthorizedModule,
 ];
 
 @NgModule({

@@ -1,19 +1,10 @@
-<mat-card class="record-card mat-elevatrion-z8">
+<mat-card class="record-card mat-elevatrion-z8" *ngIf="record">
   <mat-card-header>
-    <mat-card-title>Title</mat-card-title>
-    <mat-card-subtitle>
-      Record Title
-    </mat-card-subtitle>
-    <mat-card-subtitle>
-      Record SubTitle
-    </mat-card-subtitle>
+    <img mat-card-avatar src="{{ record.thumb }}" alt="Thumb Photo of {{ record.artist }}" />
+    <mat-card-title>{{ record.artist }}</mat-card-title>
+    <mat-card-subtitle>{{ record.title }}</mat-card-subtitle>
   </mat-card-header>
-  <!-- img -->
-  <mat-card-content>
-    <p>
-      Description
-    </p>
-  </mat-card-content>
+  <img mat-card-image src="{{ record.coverImage }}" alt="Photo of {{ record.title }} by {{ record.artist }}">
   <mat-card-actions>
     <button
       mat-stroked-button
@@ -21,10 +12,10 @@
       color="primary"
       type="button"
       role="button"
-      (click)="setRecordDetail('bread')"
-      aria-label="Greyhound Detail Button"
+      aria-label="Record Detail Button"
     > <!-- TODO: Test -->
       <mat-icon>album</mat-icon>&nbsp;DETAILS
     </button>
   </mat-card-actions>
 </mat-card>
+
