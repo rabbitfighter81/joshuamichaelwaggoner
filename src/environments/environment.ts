@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  discogsConsumerUsername: '',
-  discogsConsumerKey: '',
-  discogsConsumerSecret:  ''
+  discogsConsumerUsername: 'xxx',
+  discogsConsumerKey: 'xxx',
+  discogsConsumerSecret:  'xxx'
 };
 
 /*
