@@ -17,10 +17,11 @@
     <mat-chip-list *ngIf="record?.formats?.descriptions" color="primary">
       <mat-chip
         *ngFor="let item of record.formats.descriptions; let i = index"
-        color="accent"
+        color="primary"
         selected="true"
         role="option"
         aria-label="Record drescription tag"
+        disabled
       >
         {{ item | titlecase }}
       </mat-chip>
@@ -57,3 +58,4 @@
     </button>
   </mat-card-actions>
 </mat-card>
+<br />
