@@ -4,15 +4,15 @@ import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { map, retry, tap } from 'rxjs/operators';
 import { IDiscogRecord, Record } from '../../models/discogs-record.model';
 import { unsubscribeAll } from '../../helpers/unsubscribe.helper';
+import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class DiscogsService implements OnInit, OnDestroy {
   logging = true;
 
-  username = 'thee.cosmic.oasis';
-
-  key = 'zCFAXgobryPsTObDinhG';
-  secret = 'VtITbAdNJowUHxKFHwNuXadpDXFiHzSg';
+  username = environment.discogsConsumerUsername;
+  key = environment.discogsConsumerKey;
+  secret = environment.discogsConsumerSecret;
 
   urlBase = 'https://api.discogs.com';
 

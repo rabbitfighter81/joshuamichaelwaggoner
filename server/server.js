@@ -1,29 +1,6 @@
 var path = require('path');
 var app = require('./index');
 var fs = require('fs');
-var Discogs = require('disconnect').Client;
-
-// Authenticate by consumer key and secret
-var dis = new Discogs('MyUserAgent/1.2.1', {
-	consumerKey: 'zCFAXgobryPsTObDinhG', // 'YOUR_CONSUMER_KEY',
-	consumerSecret: 'VtITbAdNJowUHxKFHwNuXadpDXFiHzSg' //'YOUR_CONSUMER_SECRET'
-});
-
-var db = dis.database();
-db.getRelease(176126, function(err, data){
-    // console.log(data);
-});
-
-var records;
-
-var col = dis.user().collection();
-col.getReleases('thee.cosmic.oasis', 0, {page: 1, per_page: 100 }, function(err, data){
-  records = data;
-});
-
-app.get('/api/records', function(req, response) {
-  response.send(JSON.stringify(records));
-});
 
 var greyhoundsFilePath = path.join(__dirname, './static/db.greyhounds.json');
 

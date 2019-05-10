@@ -24,6 +24,12 @@ This is my personal app, built using Angular and Angular Material
 * MongoDB
 * Lodash
 
+## Environment Variables
+
+### Accessing config var values from code
+
+Config vars are exposed to your app’s code as environment variables. For example, in Node.js you can access your app’s DATABASE_URL config var with process.env.DATABASE_URL. For discogs, I'm using `process.env.DISOCGS_CONSUMER_KEY` and `process.env.DISCOGS_CONSUMER_SECRET` in my Heroku environment to obscure them for GitHub.
+
 ## Limitations and requirements
 
 * You need to have Node to run `npm i` which is required for most eberything and included in most all scripts
