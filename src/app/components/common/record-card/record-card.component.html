@@ -1,10 +1,44 @@
 <mat-card class="record-card mat-elevatrion-z8" *ngIf="record">
   <mat-card-header>
-    <img mat-card-avatar src="{{ record.thumb }}" alt="Thumb Photo of {{ record.artist }}" />
+    <img
+      mat-card-avatar
+      src="{{ record.thumb }}"
+      alt="Thumb Photo of {{ record.artist }}"
+    />
     <mat-card-title>{{ record.artist }}</mat-card-title>
     <mat-card-subtitle>{{ record.title }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="{{ record.coverImage }}" alt="Photo of {{ record.title }} by {{ record.artist }}">
+  <img
+    mat-card-image
+    src="{{ record.coverImage }}"
+    alt="Photo of {{ record.title }} by {{ record.artist }}"
+  />
+  <mat-card-content>
+    <mat-chip-list *ngIf="record?.formats?.descriptions" color="primary">
+      <mat-chip
+        *ngFor="let item of record.formats.descriptions; let i = index"
+        color="primary"
+        role="option"
+        aria-label="Record drescription tag"
+      >
+        {{ item | titlecase }}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-list class="list--compact">
+      <mat-list-item *ngIf="record?.formats?.name">
+        <ng-container i18n="@@RecordCard__ListItemHeader__Format"
+          >Format</ng-container
+        >:&nbsp;<span class="bold">{{ record.formats.name | titlecase }}</span>
+      </mat-list-item>
+      <mat-list-item *ngIf="record?.formats?.text">
+        <ng-container i18n="@@RecordCard__ListItemHeader__Extras"
+          >Extras</ng-container
+        >:&nbsp;<span class="bold">{{ record.formats.text | titlecase }}</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
   <mat-card-actions>
     <button
       mat-stroked-button
@@ -13,9 +47,12 @@
       type="button"
       role="button"
       aria-label="Record Detail Button"
-    > <!-- TODO: Test -->
-      <mat-icon>album</mat-icon>&nbsp;DETAILS
+    >
+      <!-- TODO: Test -->
+      <mat-icon>album</mat-icon>&nbsp;<ng-container
+        i18n="@@RecordCard__Button__Details"
+        >Details</ng-container
+      >
     </button>
   </mat-card-actions>
 </mat-card>
-

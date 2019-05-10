@@ -7,6 +7,7 @@ export class DiscogsServiceMock implements OnInit, OnDestroy {
   ngOnInit() {}
   ngOnDestroy() {}
   callGetRecords(): void {}
+  callGetFolders(): void {}
   getRecords(): Observable<any> {
     return new Observable();
   }

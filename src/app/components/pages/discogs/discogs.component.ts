@@ -21,6 +21,7 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.discogsService.callGetRecords();
+    this.discogsService.callGetFolders();
   }
 
   ngOnDestroy() {
