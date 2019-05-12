@@ -24,6 +24,7 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  height: auto;
   @include tablet {
     width: 90%;
   }
