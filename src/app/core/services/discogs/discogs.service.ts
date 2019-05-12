@@ -15,7 +15,7 @@ const initialPagination: Pagination = {
 
 @Injectable()
 export class DiscogsService implements OnInit, OnDestroy {
-  logging = true;
+  logging = false;
 
   username = environment.discogsConsumerUsername;
   key = environment.discogsConsumerKey;
@@ -74,7 +74,9 @@ export class DiscogsService implements OnInit, OnDestroy {
 
   private onFoldersUpdate(folders: any): void {
     if (folders) {
-      console.log('Folders: ', folders);
+      if (this.logging) {
+        console.log('Folders: ', folders);
+      }
       this.folders.next(folders);
     }
   }

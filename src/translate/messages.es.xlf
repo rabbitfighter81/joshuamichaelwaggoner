@@ -1,58 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="Nav_Link_About" datatype="html">
-        <source>About</source>
-        <target>Acerca de</target>
+      <trans-unit id="Pinline_Greyhounds" datatype="html">
+        <source>grey·hounds</source>
+        <target>galgos</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">app/components/common/greyhound-detail/greyhound-detail.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/greyhounds/greyhounds.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Resume" datatype="html">
+      <trans-unit id="NavComponent_NavLink_Home" datatype="html">
+        <source>Home</source>
+        <target>Inicio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="NavComponent_NavLink_Resume" datatype="html">
         <source>Resume</source>
         <target>Currículum</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Projects" datatype="html">
+      <trans-unit id="NavComponent_NavLink_Projects" datatype="html">
         <source>Projects</source>
         <target>Proyecto</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Networks" datatype="html">
+      <trans-unit id="NavComponent_NavLink_Networks" datatype="html">
         <source>Networks</source>
         <target>Redes</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Greyhounds" datatype="html">
+      <trans-unit id="NavComponent_NavLink_Greyhounds" datatype="html">
         <source>Greyhounds</source>
         <target>Galgos</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Nav_Link_Contact" datatype="html">
+      <trans-unit id="NavComponent_NavLink_Discogs" datatype="html">
+        <source>Discogs</source>
+        <target>Discogs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="NavComponent_NavLink_Contact" datatype="html">
         <source>Contact</source>
         <target>Contacto</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/nav-main/nav-main.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Welcome" datatype="html">
-        <source>wel·come</source>
-        <target>bien·venido</target>
+      <trans-unit id="NavComponent_NavLink_About" datatype="html">
+        <source>About</source>
+        <target>Acerca de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/nav/nav.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="RecordCard__ListItemHeader__Format" datatype="html">
+        <source>Format</source>
+        <target>Formato</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="RecordCard__ListItemHeader__Extras" datatype="html">
+        <source>Extras</source>
+        <target>Extras</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="RecordCard__Button__Details" datatype="html">
+        <source>Details</source>
+        <target>Detallers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_About" datatype="html">
+        <source>ab·out</source>
+        <target>acerca·de</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/about/about.component.html</context>
           <context context-type="linenumber">3</context>
@@ -63,22 +115,30 @@
         <target>con·tac·to</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Discogs" datatype="html">
+        <source>disc·ogs</source>
+        <target>disc·ogs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/discogs/discogs.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="Pinline_Forbidden" datatype="html">
         <source>for·bid·den</source>
-        <target>pro·hibido</target>
+        <target>pro·hi·bid·o</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/forbidden/forbidden.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Greyhounds" datatype="html">
-        <source>grey·hounds</source>
-        <target>gal·gos</target>
+      <trans-unit id="Pinline_Welcome" datatype="html">
+        <source>wel·come</source>
+        <target>bien·ven·i·do</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/greyhounds/greyhounds.component.html</context>
+          <context context-type="sourcefile">app/components/pages/home/home.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
@@ -90,13 +150,69 @@
           <context context-type="linenumber">3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/page-not-found/page-not-found.component.html</context>
+          <context context-type="sourcefile">app/components/pages/not-found/not-found.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Pinline_Projects" datatype="html">
+        <source>pro·jects</source>
+        <target>pro·yec·to</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/projects.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_Actions_Share" datatype="html">
+        <source>SHARE</source>
+        <target>SHARE</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/color-picker/color-picker.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/dice-roller/dice-roller.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/password-generator/password-generator.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/rand-color-text/rand-color-text.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/search-highlight/search-highlight.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Projects_Actions_GitHub" datatype="html">
+        <source>GITHUB</source>
+        <target>GITHUB</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/color-picker/color-picker.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/dice-roller/dice-roller.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/password-generator/password-generator.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/rand-color-text/rand-color-text.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/search-highlight/search-highlight.component.html</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="Pinline_Resume" datatype="html">
         <source>re·sume</source>
-        <target>curr·ícu·lum</target>
+        <target>cur·ríc·u·lum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/resume/resume.component.html</context>
           <context context-type="linenumber">3</context>
@@ -104,68 +220,37 @@
       </trans-unit>
       <trans-unit id="Pinline_Unauthorized" datatype="html">
         <source>un·au·thor·ize</source>
-        <target>no auto·rizado</target>
+         <target>no auto·rizado</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/unauthorized/unauthorized.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="Pinline_Projects" datatype="html">
-        <source>pro·jects</source>
-        <target>proy·ecto</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/projects/projects.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Projects_Actions_Share" datatype="html">
-       <source>Share</source>
-       <target>Compartir</target>
+      <trans-unit id="Pinline_Resources" datatype="html">
+        <source>re·source·s</source>
+        <source>re·curs·so</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/color-picker/color-picker.component.html</context>
-          <context context-type="linenumber">94</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/dice-roller/dice-roller.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/password-generator/password-generator.component.html</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/rand-color-text/rand-color-text.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Projects_Actions_GitHub" datatype="html">
-        <source>GitHub</source>
-        <target>GitHub</target>
+      <trans-unit id="ResourcesComponent_Title" datatype="html">
+        <source>Resources</source>
+        <target>Recurso</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/color-picker/color-picker.component.html</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="ResourcesComponent_SubTitle" datatype="html">
+        <source>Coming Soon...</source>
+        <target>Próximamente...</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/dice-roller/dice-roller.component.html</context>
-          <context context-type="linenumber">74</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/password-generator/password-generator.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/rand-color-text/rand-color-text.component.html</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/projects/search-highlight/search-highlight.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
     </body>
   </file>
 </xliff>
+
