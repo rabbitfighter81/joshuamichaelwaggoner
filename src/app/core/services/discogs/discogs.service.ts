@@ -147,7 +147,6 @@ export class DiscogsService implements OnInit, OnDestroy {
       sort
     }`).pipe(
       retry(1),
-      tap(data => console.log(data)),
       map(data => data),
     );
   }
