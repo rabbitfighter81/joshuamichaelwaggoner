@@ -15,9 +15,9 @@ const targetPath = `./src/environments/environment.${ environment }.ts`;
 const envConfigFile = `
 export const environment = {
   production: ${ isProd },
-  discogsConsumerKey: "${ process.env.DISCOGS_CONSUMER_KEY }",
-  discogsConsumerSecret: "${ process.env.DISCOGS_CONSUMER_SECRET }",
-  discogsConsumerUsername: "${ process.env.DISCOGS_CONSUMER_USERNAME }"
+  discogsConsumerKey: '${ process.env.DISCOGS_CONSUMER_KEY }',
+  discogsConsumerSecret: '${ process.env.DISCOGS_CONSUMER_SECRET }',
+  discogsConsumerUsername: '${ process.env.DISCOGS_CONSUMER_USERNAME }'
 };
 `;
 fs.writeFile(targetPath, envConfigFile, (err) => {
