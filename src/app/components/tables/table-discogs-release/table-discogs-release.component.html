@@ -13,35 +13,56 @@
 -->
 
 <div class="table--greyound" *ngIf="release">
-    <h2>
-      <mat-icon>album</mat-icon>&nbsp;Facts for
-      {{ release.title }}
-    </h2>
-    <mat-list class="list--compact">
-      <mat-list-item>
-        Artist:&nbsp;<span class="bold">{{ release.artists[0].name }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Title:&nbsp;
-        <span class="bold">{{ release.title }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Genres:&nbsp;<span class="bold">{{ release.genres.length > 1 ? release.genres.join(', ') : release.genres[0] }}</span>
-      </mat-list-item>
-      <mat-list-item>
-          Styles:&nbsp;<span class="bold">{{ release.styles.length > 1 ? release.styles.join(', ') : release.styles[0] }}</span>
-        </mat-list-item>
-      <!--<mat-list-item>
+  <h3>
+    Facts for {{ release.title }}
+  </h3>
+  <mat-list class="list--compact">
+    <mat-list-item>
+      <p>Artist:&nbsp;<span class="bold">{{ release.artists[0].name }}</span></p>
+    </mat-list-item>
+    <mat-list-item>
+      <p>Title:&nbsp;
+        <span class="bold">{{ release.title }}</span></p>
+    </mat-list-item>
+    <mat-list-item *ngIf="release.genres && release.genres.length">
+      <p>Genres:&nbsp;<span
+          class="bold">{{ release.genres.length > 1 ? release.genres.join(', ') : release.genres[0] }}</span></p>
+    </mat-list-item>
+    <mat-list-item *ngIf="release.styles && release.styles.length">
+      <p>Styles:&nbsp;<span
+          class="bold">{{ release.styles.length > 1 ? release.styles.join(', ') : release.styles[0] }}</span></p>
+    </mat-list-item>
+    <!--<mat-list-item>
           Formats:&nbsp;<span class="bold">{{ release.formats.length > 1 ? release.formats.join(', ') : release.formats[0] }}</span>
         </mat-list-item>-->
-      <mat-list-item>
-        Released:&nbsp;<span class="bold">{{
+    <mat-list-item *ngIf="release.released">
+      <p>Released:&nbsp;<span class="bold">{{
           release.released
-        }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        Lowest Price:&nbsp;<span class="bold">{{ release.lowestprice }}</span>
-      </mat-list-item>
-    </mat-list>
-  </div>
-  
+        }}</span></p>
+    </mat-list-item>
+    <mat-list-item *ngIf="release.lowestprice">
+      <p>Lowest Price:&nbsp;<span class="bold">${{ release.lowestprice }} (USD)</span></p>
+    </mat-list-item>
+    <mat-list-item *ngIf="release.notes">
+      <p>Notes:&nbsp;<span class="bold">{{ release.notes }}</span></p>
+    </mat-list-item>
+  </mat-list>
+
+  <h3 *ngIf="release.videos && release.videos.length">
+    Videos
+  </h3>
+
+  <mat-card *ngFor="let video of release.videos; let i = index;" class="mat-elevation-z5 card--video">
+    <mat-card-header>
+      <mat-card-title>
+        {{ video.title }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <iframe [src]="video.uri | safe">
+      </iframe>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>

@@ -16,7 +16,7 @@ const initialPagination: Pagination = {
 
 @Injectable()
 export class DiscogsService implements OnInit, OnDestroy {
-  logging = false;
+  logging = true;
 
   username = environment.discogsConsumerUsername;
   key = environment.discogsConsumerKey;
@@ -96,7 +96,7 @@ export class DiscogsService implements OnInit, OnDestroy {
   private onReleaseByIdUpdate(release: any): void {
     if (release) {
       if (this.logging) {
-        console.log('Release: ', release);
+        console.log('Release: ', release.videos);
       }
       const next = new Release(release);
       this.release.next(next);

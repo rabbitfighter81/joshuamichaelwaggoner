@@ -47,6 +47,7 @@ export interface IDiscogRecord {
   id: number;
   instance_id: number;
   rating: number;
+  videos: any;
 }
 
 export class DiscogRecord {
@@ -81,6 +82,7 @@ export class Record {
   title: string;
   formats: IFormat;
   id: number;
+  videos: any[];
   constructor(record: IDiscogRecord) {
     this.artist = record.basic_information.artists[0].name;
     this.label = record.basic_information.labels[0].name;
@@ -89,6 +91,7 @@ export class Record {
     this.title = record.basic_information.title;
     this.id = record.id;
     this.formats = record.basic_information.formats[0];
+    this.videos = record.videos;
   }
 }
 
