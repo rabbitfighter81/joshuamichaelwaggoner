@@ -1,3 +1,4 @@
+<app-header (toggle)="toggleSidenav()"></app-header>
 <mat-sidenav-container
   class="example-container"
   (backdropClick)="closeSidenav()"
@@ -29,10 +30,9 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-header (toggle)="toggleSidenav()"></app-header>
     <div class="container">
         <router-outlet></router-outlet>
       </div>
-    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<app-footer></app-footer>

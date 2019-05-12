@@ -2,7 +2,7 @@ import { Component, Inject, LOCALE_ID, OnDestroy, OnInit, ViewChild } from '@ang
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { DiscogsService } from '../core/services/discogs/discogs.service';
+import { smoothScrollTop } from '../core/helpers/smooth-scroll-top';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private onRouteUpdated(event: any): void {
     if (event instanceof NavigationEnd) {
-      this.smoothScrollTop();
+      smoothScrollTop();
     }
     if (event instanceof NavigationStart) {
       if (this.navOpen) {
@@ -42,17 +42,6 @@ export class AppComponent implements OnInit, OnDestroy {
         this.navOpen = !this.navOpen;
       }
     }
-  }
-
-  private smoothScrollTop(): void {
-    const scrollToTop = window.setInterval(() => {
-      const pos: number = window.pageYOffset;
-      if (pos > 0) {
-        window.scrollTo(0, pos - 20); // how far to scroll on each step
-      } else {
-        window.clearInterval(scrollToTop);
-      }
-    }, 8);
   }
 
   closeSidenav(): void {

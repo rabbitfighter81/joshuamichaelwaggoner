@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
 import { Pagination } from '../../../core/models/pagination.model';
 import { DiscogsService } from '../../../core/services/discogs/discogs.service';
+import { smoothScrollTop } from 'src/app/core/helpers/smooth-scroll-top';
 
 @Component({
   selector: 'app-discogs',
@@ -58,6 +59,7 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
     if (pagination) {
       this.pagination = pagination;
       this.discogsService.callGetRecords(pagination);
+      smoothScrollTop();
     }
   }
 
