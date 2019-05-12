@@ -21,6 +21,8 @@ import { UnauthorizedModule } from '../../../components/pages/unauthorized/unaut
 import { TableGreyhoundModule } from '../../../components/tables/table-greyhound/table-greyhound.module';
 
 const modules = [
+  HomeModule,
+  NavModule,
   AboutModule,
   ContactModule,
   DiscogsModule,
@@ -30,8 +32,6 @@ const modules = [
   GreyhoundDetailModule,
   GreyhoundsModule,
   HeaderModule,
-  HomeModule,
-  NavModule,
   NetworksModule,
   NotFoundModule,
   ProjectsModule,

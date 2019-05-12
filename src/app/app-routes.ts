@@ -11,10 +11,6 @@ export const appRoutes: Routes = [
     loadChildren: './components/pages/home/home.module#HomeModule',
   },
   {
-    path: 'about',
-    loadChildren: './components/pages/about/about.module#AboutModule',
-  },
-  {
     path: 'resume',
     loadChildren: './components/pages/resume/resume.module#ResumeModule',
   },
@@ -43,6 +39,12 @@ export const appRoutes: Routes = [
     path: 'discogs',
     loadChildren: './components/pages/discogs/discogs.module#DiscogsModule',
   },
+  /*
+  {
+    path: 'about',
+    loadChildren: './components/pages/about/about.module#AboutModule',
+  }.
+  */
   {
     path: '404',
     loadChildren:
