@@ -1,1 +1,6 @@
 @import '../../../../styles/mixin.scss';
+
+
+.mat-card > .mat-card-content.center {
+  text-align: center;
+}

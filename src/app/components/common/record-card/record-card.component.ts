@@ -17,7 +17,7 @@ export class RecordCardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // console.log('[RecordCardComponent]: Record', this.record);
+    console.log('[RecordCardComponent]: Record', this.record);
   }
 
   like(): void {
@@ -29,7 +29,7 @@ export class RecordCardComponent implements OnInit, AfterViewInit {
   }
 
   setRecordDetail(recordId: string): void {
-    this.router.navigate(['/greyhounds', recordId]);
+    this.router.navigate(['/discogs', recordId]);
   }
 
 

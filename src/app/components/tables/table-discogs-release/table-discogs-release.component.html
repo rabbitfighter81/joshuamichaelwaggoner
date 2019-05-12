@@ -1,0 +1,47 @@
+<!--
+  interface Release {
+	artists: Artist[];
+	extraartists: ExtraArtist[];
+	formats: Formats[];
+	genres: string[]; // ['rock']
+	notes: string; // notes
+	released: string; // date
+	styles: string[];
+	title: string[]; // easter everywhere 
+	lowest_price: number; // 19.99
+}
+-->
+
+<div class="table--greyound" *ngIf="release">
+    <h2>
+      <mat-icon>album</mat-icon>&nbsp;Facts for
+      {{ release.title }}
+    </h2>
+    <mat-list class="list--compact">
+      <mat-list-item>
+        Artist:&nbsp;<span class="bold">{{ release.artists[0].name }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        Title:&nbsp;
+        <span class="bold">{{ release.title }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        Genres:&nbsp;<span class="bold">{{ release.genres.length > 1 ? release.genres.join(', ') : release.genres[0] }}</span>
+      </mat-list-item>
+      <mat-list-item>
+          Styles:&nbsp;<span class="bold">{{ release.styles.length > 1 ? release.styles.join(', ') : release.styles[0] }}</span>
+        </mat-list-item>
+      <!--<mat-list-item>
+          Formats:&nbsp;<span class="bold">{{ release.formats.length > 1 ? release.formats.join(', ') : release.formats[0] }}</span>
+        </mat-list-item>-->
+      <mat-list-item>
+        Released:&nbsp;<span class="bold">{{
+          release.released
+        }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        Lowest Price:&nbsp;<span class="bold">{{ release.lowestprice }}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

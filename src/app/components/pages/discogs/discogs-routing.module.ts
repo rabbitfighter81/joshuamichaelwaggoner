@@ -9,7 +9,7 @@ const routes: Routes = [
     component: DiscogsComponent,
   },
   {
-    path: 'records/:record',
+    path: ':recordId',
     component: RecordDetailComponent,
   },
 ];

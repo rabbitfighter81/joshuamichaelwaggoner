@@ -80,12 +80,14 @@ export class Record {
   thumb: string;
   title: string;
   formats: IFormat;
+  id: number;
   constructor(record: IDiscogRecord) {
     this.artist = record.basic_information.artists[0].name;
     this.label = record.basic_information.labels[0].name;
     this.coverImage = record.basic_information.cover_image;
     this.thumb = record.basic_information.thumb;
     this.title = record.basic_information.title;
+    this.id = record.id;
     this.formats = record.basic_information.formats[0];
   }
 }

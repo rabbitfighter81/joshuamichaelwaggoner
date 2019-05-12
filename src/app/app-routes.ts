@@ -44,11 +44,6 @@ export const appRoutes: Routes = [
     loadChildren: './components/pages/about/about.module#AboutModule',
   },
   {
-    path: '404',
-    loadChildren:
-      './components/pages/not-found/not-found.module#NotFoundModule',
-  },
-  {
     path: 'forbidden',
     redirectTo: '404',
   },
@@ -56,6 +51,11 @@ export const appRoutes: Routes = [
     path: 'unauthorized',
     loadChildren:
       './components/pages/unauthorized/unauthorized.module#UnauthorizedModule',
+  },
+  {
+    path: '404',
+    loadChildren:
+      './components/pages/not-found/not-found.module#NotFoundModule',
   },
   {
     path: '**',

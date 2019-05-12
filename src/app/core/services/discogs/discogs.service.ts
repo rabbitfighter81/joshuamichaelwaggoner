@@ -2,11 +2,12 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, OnDestroy, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { map, retry } from 'rxjs/operators';
+import { map, retry, tap } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
 import { unsubscribeAll } from '../../helpers/unsubscribe.helper';
 import { IDiscogRecord, Record } from '../../models/discogs-record.model';
 import { Pagination } from '../../models/pagination.model';
+import { Release } from '../../models/release.model';
 
 const initialPagination: Pagination = {
   pageIndex: 0,
@@ -23,6 +24,8 @@ export class DiscogsService implements OnInit, OnDestroy {
 
   urlBase = 'https://api.discogs.com';
 
+  urlRelease = this.urlBase + `/releases`;
+
   urlFolders = this.urlBase + `/users/${
     this.username
   }/collection/folders`;
@@ -33,8 +36,10 @@ export class DiscogsService implements OnInit, OnDestroy {
 
   private records$: Subscription;
   private folders$: Subscription;
+  private release$: Subscription;
 
   records: BehaviorSubject<Record[]> = new BehaviorSubject<Record[]>([]);
+  release: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   folders: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   pagination: BehaviorSubject<Pagination> = new BehaviorSubject<Pagination>(initialPagination);
   totalRecords: BehaviorSubject<number> = new BehaviorSubject<number>(0);
@@ -48,6 +53,7 @@ export class DiscogsService implements OnInit, OnDestroy {
     const subscriptions = [
       this.records$,
       this.folders$,
+      this.release$,
     ];
     unsubscribeAll(subscriptions);
   }
@@ -87,10 +93,33 @@ export class DiscogsService implements OnInit, OnDestroy {
     }
   }
 
+  private onReleaseByIdUpdate(release: any): void {
+    if (release) {
+      if (this.logging) {
+        console.log('Release: ', release);
+      }
+      const next = new Release(release);
+      this.release.next(next);
+    }
+  }
+
+  private onReleaseByIdError(error: any): void {
+    if (this.logging) {
+      console.log('Error fetching Release data from API: ', error);
+    }
+  }
+
   callGetRecords(pagination: Pagination): void {
     this.records$ = this.getRecords(pagination).subscribe(
       (res: any) => this.onRecordsUpdate(res),
       (err: HttpErrorResponse | ErrorEvent) => this.onRecordsError(err),
+    );
+  }
+
+  callGetReleaseById(releaseId: string): void {
+    this.release$ = this.getReleaseById(releaseId).subscribe(
+      (res: any) => this.onReleaseByIdUpdate(res),
+      (err: HttpErrorResponse | ErrorEvent) => this.onReleaseByIdError(err),
     );
   }
 
@@ -105,6 +134,7 @@ export class DiscogsService implements OnInit, OnDestroy {
     const pageSize = JSON.stringify(pagination.pageSize);
     const page = JSON.stringify(pagination.pageIndex + 1);
     const { key, secret } = this;
+    const sort = 'artist';
     return this.http.get<any>(`${ this.urlAllFolders }?per_page=${
       pageSize
     }&key=${
@@ -113,6 +143,21 @@ export class DiscogsService implements OnInit, OnDestroy {
       secret
     }&page=${
       page
+    }&sort=${
+      sort
+    }`).pipe(
+      retry(1),
+      tap(data => console.log(data)),
+      map(data => data),
+    );
+  }
+
+  getReleaseById(releaseId: string): Observable<any> {
+    const currAbbr = 'USD';
+    return this.http.get<any>(`${ this.urlRelease }/${
+      releaseId
+    }?${
+      currAbbr
     }`).pipe(
       retry(1),
       map(data => data),

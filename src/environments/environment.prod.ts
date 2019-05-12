@@ -1,7 +1,7 @@
 
 export const environment = {
   production: true,
-  discogsConsumerKey: 'xxx',
-  discogsConsumerSecret: 'xxx',
-  discogsConsumerUsername: 'xxx'
+  discogsConsumerKey: 'zCFAXgobryPsTObDinhG',
+  discogsConsumerSecret: 'VtITbAdNJowUHxKFHwNuXadpDXFiHzSg',
+  discogsConsumerUsername: 'thee.cosmic.oasis'
 };

@@ -1,3 +1,19 @@
-<p>
-  record-detail works!
-</p>
+<div class="content">
+    <div class="pipeline-container">
+      <h2 class="pinline">
+        <span i18n="@@Pinline_Discogs">disc·ogs</span>
+      </h2>
+    </div>
+  
+    <mat-card class="mat-elevation-z5">
+      <app-table-discogs-release [release]="release"></app-table-discogs-release>
+    </mat-card>
+  
+    <mat-card class="mat-elevation-z5" *ngIf="!release">
+      <mat-card-content class="center">
+        Greyhound not found
+      </mat-card-content>
+    </mat-card>
+  </div>
+<!--<iframe *ngIf="safeUrl" [src]='safeURL' width="560" height="315" frameborder="0" allowfullscreen></iframe>-->
+<!-- https://stackoverflow.com/questions/42439060/how-to-embed-a-youtube-video-in-angular2 -->

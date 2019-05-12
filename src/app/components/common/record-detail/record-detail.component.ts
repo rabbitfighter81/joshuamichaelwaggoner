@@ -1,12 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DiscogsService } from '../../../core/services/discogs/discogs.service';
+import { Subscription } from 'rxjs';
+import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
+import { DomSanitizer } from '@angular/platform-browser';
+
+interface DiscogsRouteParamMap {
+  recordId: any;
+}
 
 @Component({
   selector: 'app-record-detail',
   templateUrl: './record-detail.component.html',
   styleUrls: ['./record-detail.component.scss'],
 })
-export class RecordDetailComponent implements OnInit {
-  constructor() {}
+export class RecordDetailComponent implements OnInit, AfterViewInit, OnDestroy {
+  private route$: Subscription;
+  private release$: Subscription;
 
-  ngOnInit() {}
+  embedded = 'https://www.youtube.com/embed/1ozGKlOzEVc';
+  safeURL: any;
+
+  recordId: any;
+  release: any; // TODO. YARR!!
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private service: DiscogsService,
+    // private sanitizer: DomSanitizer
+  ) {
+    // this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(videoURL);
+  }
+
+  ngOnInit() {
+    this.route$ = this.activatedRoute.params.subscribe(
+      (params: DiscogsRouteParamMap) => {
+        this.recordId = params.recordId;
+      },
+    );
+    this.release$ = this.service.release.subscribe(next =>
+      this.onReleaseUpdate(next),
+    );
+  }
+
+  ngAfterViewInit() {
+    this.service.callGetReleaseById(this.recordId);
+  }
+
+  ngOnDestroy() {
+    const subscriptions = [this.route$, this.release$];
+    unsubscribeAll(subscriptions);
+  }
+
+  private onReleaseUpdate(release: any): void {
+    this.release = release;
+  }
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: GreyhoundsComponent,
   },
   {
-    path: 'greyhounds/:greyhound',
+    path: ':greyhound',
     component: GreyhoundDetailComponent,
   },
 ];
