@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
-import { DiscogsService } from 'src/app/core/services/discogs/discogs.service';
-import { DiscogsServiceMock } from 'src/app/core/services/discogs/discogs.service.mock';
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { DiscogsService } from '../../../core/services/discogs/discogs.service';
+import { DiscogsServiceMock } from '../../../core/services/discogs/discogs.service.mock';
 import { RecordDetailComponent } from './record-detail.component';
 
 describe('RecordDetailComponent', () => {

@@ -16,6 +16,17 @@
       <app-record-card *ngFor="let record of records" [record]="record">
       </app-record-card>
     </mat-card-content>
+
+    <mat-paginator
+      class="paginator--centered"
+      *ngIf="totalRecords"
+      [length]="totalRecords"
+      [pageSize]="pageSize"
+      [pageIndex]="0"
+      [pageSizeOptions]="pageSizeOptions"
+      [showFirstLastButtons]="true"
+      (page)="setPagination($event)">
+    </mat-paginator>
   </mat-card>
 
 </div>

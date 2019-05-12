@@ -4,8 +4,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../core/modules/shared/shared.module';
 import { AppComponent } from './app.component';
-import { DiscogsService } from '../core/services/discogs/discogs.service';
-import { DiscogsServiceMock } from '../core/services/discogs/discogs.service.mock';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

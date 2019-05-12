@@ -3,8 +3,12 @@ import { Routes } from '@angular/router';
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadChildren: './components/pages/home/home.module#HomeModule',
   },
   {
     path: 'about',
