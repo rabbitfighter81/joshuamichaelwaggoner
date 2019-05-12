@@ -17,7 +17,7 @@ export class RecordCardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log('[RecordCardComponent]: Record', this.record);
+    // console.log('[RecordCardComponent]: Record', this.record);
   }
 
   like(): void {

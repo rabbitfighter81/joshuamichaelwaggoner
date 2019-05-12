@@ -16,7 +16,7 @@ const initialPagination: Pagination = {
 
 @Injectable()
 export class DiscogsService implements OnInit, OnDestroy {
-  logging = true;
+  logging = false;
 
   username = environment.discogsConsumerUsername;
   key = environment.discogsConsumerKey;

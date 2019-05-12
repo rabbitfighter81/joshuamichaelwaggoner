@@ -1,9 +1,8 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DiscogsService } from '../../../core/services/discogs/discogs.service';
 import { Subscription } from 'rxjs';
 import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DiscogsService } from '../../../core/services/discogs/discogs.service';
 
 interface DiscogsRouteParamMap {
   recordId: any;
@@ -27,10 +26,7 @@ export class RecordDetailComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private activatedRoute: ActivatedRoute,
     private service: DiscogsService,
-    // private sanitizer: DomSanitizer
-  ) {
-    // this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(videoURL);
-  }
+  ) {}
 
   ngOnInit() {
     this.route$ = this.activatedRoute.params.subscribe(

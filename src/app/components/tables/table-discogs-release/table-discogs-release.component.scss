@@ -10,12 +10,6 @@
   height:initial!important;
 }
 
-mat-list.list--compact
-  > mat-list-item.mat-list-item {
-  height: 1.65rem !important;
-  font-size: $app-header-font-size-mobile;
-}
-
 .bold {
   font-weight: 500;
   color: #333;
@@ -29,13 +23,19 @@ h3 {
 iframe {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: auto;
+  width: 560px;
+  height: 315px;
   @include tablet {
-    width: 90%;
+    width: 260px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
 .mat-card.card--video {
   margin-bottom: 20px;
+}
+
+.mat-card-content {
+  display: flex;
 }
