@@ -39,12 +39,10 @@ export const appRoutes: Routes = [
     path: 'discogs',
     loadChildren: './components/pages/discogs/discogs.module#DiscogsModule',
   },
-  /*
   {
     path: 'about',
     loadChildren: './components/pages/about/about.module#AboutModule',
-  }.
-  */
+  },
   {
     path: '404',
     loadChildren:

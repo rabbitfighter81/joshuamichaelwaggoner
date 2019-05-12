@@ -2,11 +2,119 @@
   <div class="pipeline-container">
     <h2 class="pinline"><span i18n="@@Pinline_About">ab·out</span></h2>
   </div>
-  <mat-card class="mat-elevation-z5 border-bottom-20">
+  <mat-card class="about-content mat-elevation-z5 border-bottom-20">
+    <mat-card-header>
+      <mat-card-title>
+        About This App
+      </mat-card-title>
+      <mat-card-subtitle>
+        I am listing key features for nerds ¯\_(ツ)_/¯ and also plans for the future.
+      </mat-card-subtitle>
+    </mat-card-header>
     <mat-card-content>
       <p>
-        Coming soon...
+        This app was made because I wanted to make a nobile first, high performing personal site for a long time
+        to both showcase my talents and also to just refer people to this page when I want to show them my dogs,
+        or my resume, etc...
       </p>
+      <p>
+        I am releasing it now as a beta version but will be adding functionality to it as I get time. For now,
+        it is what it is, however, it has some pretty cool functionality and constructs. I feel like it is about 25%
+        done though. I'd like to do so much more with it.
+      </p>
+      <p>
+        This app follows Angular best practices and has been heavily modified for performance boosts. I have done my
+        best to make it accessible to any viewport, provide security, and make the load times and budle sizes optimal.
+      </p>
+      <p>
+        Most importantly, this app is a living labor of love, and has been a joyous process. I don't work on it when I'm
+        down, and I think things through before I do them -- on a level that I've never done before. I hope you either
+        enjoy the site, or can learn something from the code-base. Feel free to contact me with questions or concerns.
+      </p>
+      <h4>Some of processes and the technologies used for making this app are:</h4>
+      <ul>
+        <li>
+          Angular 7 UI combined with and Express server. The Server serves the app based on locale and also handles HTTP
+          requests and hosts my API. I also interfaces with external API's such as Discogs API.
+        </li>
+        <li>
+          Internationalization and Localization via Angular i18n tools. The app uses .xlf translation files and a
+          different build is generated for each locale in the post-build script, so the app defaults to the /en/ prefix
+          in the URL, but when you click the Language icon in the upper right corner, when you choose another language,
+          it swaps that out, replaces the /xx/ prefix with the new language and the server servers up that specific
+          build. This all adheres to the Angular guidelines and standard best practices. There are advantages and
+          disadvantages to the "Angular way", but I have found that if you follow the Angular conventions for things,
+          instead of custom middleware solutions or build time magic, your app's functionality and code-base will be
+          better off.
+        </li>
+        <li>
+          Lazy loading for faster initial rendering, and then loads all lazy loaded routes and caches them in the
+          background once the screen paints and the process has time. This leads to better UX and snappy load times.
+        </li>
+        <li>
+          After initially scoring very low on the Chrome Lighthouse extension, I delved into making the app more performant. The overall performance score was at 6%. My SEO score was at 20%. My Best Practices score was low because I had no SSL yet, and it was just damning in general. I almost had a heart attack, but they provided suggestions and they weren't all clear, some required extensive research, but I took it as a challenge to make as many modifications as I could to improve the performance of the app. I added things like Brotli text compression with GZIP fallback for browsers that don't support Brotli like IE and Edge. In addition, all HTTP communication is compressed by the server. Another thing I did was make all images as small as possible by compressing and optimizing sizes and quality to get the image sizes down to kb levels instead of mb levels. Also, since this app is HTTPS, I am using 'dns-prefetch' directives to all links to prefetch the content in the background to get the screen to paint as quickly as possible.
+        </li>
+        <li>
+          I also am using a tool called bundle-report that generates a visual chart of all of your modules and what is taking up space in your modjules and vendor bundles. This allows you to see if you are importing things unnecessarily, or more than once. For example, I saw Lodash was a big box in the printout, you couldn’t miss it. So I researched how to import just the two functions from Lodash that I am using, and not the whole library. Pretty easy, and what a payoff! Afterwards, you could see two tiny lodash imports, but you would need glasses. There is also a VSCode extension called 'import-cost' that will let you know how big your imports are. These tools have drastically helped me reduce bundle sizes.  (None of this was rocket science, it was mostly just busy work, and little additions to the codebase that made it now score over 90% in all categories on the Lighthouse speed test! The scores may go up or down as I'm developing, but I try to do a weekly hardening to make all the perf adjustments I need).
+        </li>
+        <li>
+          Dynamic variable injection via a builld script that injects environment varibales such as secret keys for
+          API's and sensitive info by rewriting the environment file, this way, I can host the code on GitHub and still
+          retain some amount of security.
+        </li>
+        <li>
+          Unfortunately, there is no greyhound API I could find, so all greyhound data is served via HTTPS, but from
+          custom JSON files and schemas I made from physical info I got from the internet.
+        </li>
+        <li>
+          This app has comprehensive Unit Testing, and uses a strict linting process to force developer to comply to
+          standard practices. I don’t really care if people use semicolons or not for example, but in this app, if you
+          do not use a semicolon at the end of a statement, the linter will catch it. There is no e2e testing yet, but I
+          plan to add them as I have time.
+        </li>
+        <li>
+          Extensive use of RxJs, so most everything in the app is based on observable streams and subscriptions.
+          Subscriptions trigger actions. It makes sense to me that if you have a variable that changes from some
+          response, you will want to do something when that variable changes, so observables are a great weapon. RxJs
+          makes life easy when dealing with asynchronicity and eliminates most race conditions.
+        </li>
+        <li>
+          This app has comprehensive Unit Testing, and uses a strict linting process to force developer to comply to
+          standard practices. I don’t really care if people use semicolons or not for example, but in this app, if you
+          do not use a semicolon at the end of a statement, the linter will catch it. There is no e2e testing yet, but I
+          plan to add them as I have time.
+        </li>
+        <li>
+          Last, but not least, I am using SCSS and Angular Material to the best of my abilities to create a coherent and
+          uniformed UX. I am admittedly a develop over a designer, and work best with requirements and the help of
+          professional designers. That was a major choice when adopting material specs.
+        </li>
+      </ul>
+
+      <h4>Some of the plans for the near and far future:</h4>
+      <ul>
+        <li>
+          Add a MongoDB instance for the API be able to make CRUD operations on it. 
+        </li>
+        <li>
+          Add a music page to showcase some of the music I compose.
+        </li>
+        <li>
+          Add OAth flow for Discogs API and make my Discogs page more feature heavy.
+        </li>
+        <li>
+          Make better documentation.
+        </li>
+        <li>
+          Make an optional dark theme.
+        </li>
+        <li>
+          Make ALL content translatable once I can afford or find trnaslators.
+        </li>
+        <li>
+          Have fun making more list items on this page... :)
+        </li>
+      </ul>
     </mat-card-content>
   </mat-card>
 </div>
