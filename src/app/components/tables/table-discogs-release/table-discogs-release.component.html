@@ -1,5 +1,5 @@
 <div class="table--discogs" *ngIf="release">
-  <h3>Release&nbsp;<mat-icon>album</mat-icon></h3>
+  <h2 class="detail-header">Release&nbsp;<mat-icon>album</mat-icon></h2>
   <mat-list class="list--compact">
     <mat-list-item>
       <p>
@@ -44,17 +44,17 @@
   </mat-list>
   <hr />
 
-  <h3 *ngIf="release.notes">
+  <h2 class="detail-header" *ngIf="release.notes">
     Release Notes
     &nbsp;<mat-icon>notes</mat-icon>
-  </h3>
+  </h2>
   <p class="release-notes" *ngIf="release.notes">{{ release.notes }}</p>
   <hr *ngIf="release.notes" />
 
-  <h3 *ngIf="release.tracklist">
+  <h2 class="detail-header" *ngIf="release.tracklist">
     Tracklist
     &nbsp;<mat-icon>queue_music</mat-icon>
-  </h3>
+  </h2>
   <table mat-table [dataSource]="release.tracklist" class="mat-elevation-z8">
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef>Position</th>
@@ -74,10 +74,10 @@
   <br />
   <hr *ngIf="release.tracklist" />
 
-  <h3 *ngIf="release.videos && release.videos.length">
+  <h2 class="detail-header" *ngIf="release.videos && release.videos.length">
     Videos
     &nbsp;<mat-icon>music_video</mat-icon>
-  </h3>
+  </h2>
   <div *ngFor="let video of release.videos; let i = index" class="div--video">
     <iframe [src]="video.uri | safe"> </iframe>
   </div>

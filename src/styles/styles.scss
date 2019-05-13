@@ -20,6 +20,15 @@ a {
   font-weight: $app-body-font-weight;
 }
 
+h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 13px;
+  font-size: $app-header-font-size;
+}
+
 li {
   line-height: $app-body-line-height;
   margin: 0;
@@ -35,44 +44,9 @@ input {
   font-size: $app-body-font-size;
 }
 
-.mat-card >.mat-card-actions >.mat-stroked-button {
-  margin: 13px;
-}
-
-.link--body {
-  color: $color-med-blue;
-  text-decoration: none;
-  &:active {
-    color: $color-med-blue;
-  }
-
-  &:visited {
-    color: $color-med-blue;
-  }
-
-  &:link {
-    color: $color-med-blue;
-  }
-
-  &:hover {
-    color: $color-med-blue;
-    text-decoration: underline;
-  }
-}
-
-.img--center {
-  margin: auto;
-}
-
-.nav-item, .nav-item-active {
-  color: $color-electric-yellow;
-  outline: none;
-  margin-left: 13px;
-  cursor: pointer;
-}
-
-.nav-item-active {
-  color: $color-med-blue;
+.bold {
+  font-weight: 500;
+  color: #333;
 }
 
 .border-bottom-20 {
@@ -90,11 +64,15 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 12px;
+  margin: 13px;
 }
 
 .center {
   text-align: center;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 .content {
@@ -131,16 +109,47 @@ input {
   width: 100%;
 }
 
+.img--center {
+  margin: auto;
+}
+
 .img--container > img {
   width: 100%;
 }
 
-.link--dark-bg {
+.link--body {
+  color: $color-med-blue;
+  text-decoration: none;
+  &:active {
+    color: $color-med-blue;
+  }
+
+  &:visited {
+    color: $color-med-blue;
+  }
+
+  &:link {
+    color: $color-med-blue;
+  }
+
+  &:hover {
+    color: $color-med-blue;
+    text-decoration: underline;
+  }
+}
+
+.link--yellow {
   color: $color-electric-yellow;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .margin-right-10 {
   margin-right: 10px;
+}
+
+.mat-card >.mat-card-actions >.mat-stroked-button {
+  margin: 13px;
 }
 
 .mat-card > .mat-card-header > .mat-card-title {
@@ -155,12 +164,27 @@ input {
   margin: 13px;
 }
 
+mat-list.list--compact > mat-list-item.mat-list-item {
+  height: 1.65rem !important;
+  font-size: $app-header-font-size-mobile;
+}
+
 .mat-stroked-button {
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin: 13px;
+}
+
+.nav-item, .nav-item-active {
+  color: $color-electric-yellow;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-item-active {
+  color: $color-med-blue;
 }
 
 .personal-image {

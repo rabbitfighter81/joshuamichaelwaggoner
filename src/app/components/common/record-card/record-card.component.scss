@@ -10,26 +10,7 @@
 
   @include tablet {
     max-width: 100%;
-  }
-  .mat-card-subtitle {
-    color: #666;
-  }
-  @include tablet {
     margin-bottom: 20px !important;
-  }
-
-  .bold {
-    font-weight: 500;
-    color: #333;
-  }
-
-  .mat-card-content > mat-list.list--compact {
-    padding-left: 0;
-  }
-  .mat-card-content > mat-list.list--compact > mat-list-item.mat-list-item {
-    height: 1.65rem !important;
-    font-size: $app-font-size-small;
-    padding: 0 !important;
   }
 
   /deep/ .mat-list-base .mat-list-item .mat-list-item-content {
