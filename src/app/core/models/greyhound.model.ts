@@ -46,7 +46,4 @@ export class Greyhound {
     this.route = dog.route;
     this.sex = dog.sex;
   }
-
 }
-
-

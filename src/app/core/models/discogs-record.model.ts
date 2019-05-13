@@ -1,5 +1,3 @@
-import { getCorrectTime } from '../helpers/correct-time.helper';
-
 interface IArtist {
   id: number; // Keep
   name: string; // Name of band
@@ -25,20 +23,26 @@ interface IFormat {
 }
 
 export interface IBasicInformation {
- labels: any[];
- year: number;
- master_url: string;
- master_id: number; // ???
- artists: IArtist[];
- cover_image: string; // YES!!!
- id: number;
- resource_url: string; // ???
- thumb: string; // Thunmnail image
- title: string; // Album name
- date_added: string; // Needs conversion...
- instance_id: number; // ???
- rating: number; /// Nopt used I dont think...
- formats: IFormat;
+  labels: any[];
+  year: number;
+  master_url: string;
+  master_id: number; // ???
+  artists: IArtist[];
+  cover_image: string; // YES!!!
+  id: number;
+  resource_url: string; // ???
+  thumb: string; // Thunmnail image
+  title: string; // Album name
+  date_added: string; // Needs conversion...
+  instance_id: number; // ???
+  rating: number; /// Nopt used I dont think...
+  formats: IFormat;
+}
+
+interface TrackList {
+  duration: string; // "7:55"
+  position: string; // "A1"
+  title: string; // "Slip Inside This House"
 }
 
 export interface IDiscogRecord {
@@ -48,30 +52,7 @@ export interface IDiscogRecord {
   instance_id: number;
   rating: number;
   videos: any;
-}
-
-export class DiscogRecord {
-  basicInformation: IBasicInformation;
-  dateAdded: Date; // Date string
-  id: number;
-  instanceId: number;
-  rating: number;
-  formats: IFormat;
-
-  constructor(record: IDiscogRecord) {
-    this.basicInformation = record.basic_information;
-    this.dateAdded = getCorrectTime(record.date_added); // Date string
-    this.id = record.id;
-    this.instanceId = record.instance_id;
-    this.rating = record.rating;
-    this.formats = record.basic_information.formats;
-  }
-
-}
-
-interface Artist {
-  name: string; // Name of band
-  resource_url: string; // Artist url on discogs
+  tracklist: TrackList[];
 }
 
 export class Record {
@@ -83,6 +64,7 @@ export class Record {
   formats: IFormat;
   id: number;
   videos: any[];
+  tracklist: TrackList[];
   constructor(record: IDiscogRecord) {
     this.artist = record.basic_information.artists[0].name;
     this.label = record.basic_information.labels[0].name;
@@ -92,7 +74,11 @@ export class Record {
     this.id = record.id;
     this.formats = record.basic_information.formats[0];
     this.videos = record.videos;
+    this.tracklist = record.tracklist;
   }
 }
-
-
+interface TrackList {
+  duration: string; // "7:55"
+  position: string; // "A1"
+  title: string; // "Slip Inside This House"
+}

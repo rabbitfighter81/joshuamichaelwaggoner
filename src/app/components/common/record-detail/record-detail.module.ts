@@ -7,9 +7,14 @@ import { TableDiscogsReleaseModule } from '../../tables/table-discogs-release/ta
 import { RecordDetailComponent } from './record-detail.component';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, RouterModule, TableDiscogsReleaseModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule,
+    TableDiscogsReleaseModule,
+  ],
   providers: [DiscogsService],
   exports: [RecordDetailComponent],
   declarations: [RecordDetailComponent],
 })
-export class RecordDetailModule { }
+export class RecordDetailModule {}

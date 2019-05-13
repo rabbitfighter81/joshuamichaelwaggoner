@@ -9,10 +9,9 @@ import { smoothScrollTop } from '../../../core/helpers/smooth-scroll-top';
 @Component({
   selector: 'app-discogs',
   templateUrl: './discogs.component.html',
-  styleUrls: ['./discogs.component.scss']
+  styleUrls: ['./discogs.component.scss'],
 })
 export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
-
   private pagination$: Subscription;
   private records$: Subscription;
   private totalRecords$: Subscription;
@@ -28,12 +27,18 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
   // MatPaginator Output
   // pageEvent: PageEvent;
 
-  constructor(private discogsService: DiscogsService) { }
+  constructor(private discogsService: DiscogsService) {}
 
   ngOnInit() {
-    this.pagination$ = this.discogsService.pagination.subscribe(next => this.onPageUpdate(next));
-    this.records$ = this.discogsService.records.subscribe(next => this.onRecordsUpdate(next));
-    this.totalRecords$ = this.discogsService.totalRecords.subscribe(next => this.totalRecords = next);
+    this.pagination$ = this.discogsService.pagination.subscribe(next =>
+      this.onPageUpdate(next),
+    );
+    this.records$ = this.discogsService.records.subscribe(next =>
+      this.onRecordsUpdate(next),
+    );
+    this.totalRecords$ = this.discogsService.totalRecords.subscribe(
+      next => (this.totalRecords = next),
+    );
   }
 
   ngAfterViewInit() {
@@ -41,11 +46,7 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    const subscriptions = [
-      this.pagination$,
-      this.records$,
-      this.totalRecords$,
-    ];
+    const subscriptions = [this.pagination$, this.records$, this.totalRecords$];
     unsubscribeAll(subscriptions);
   }
 
@@ -66,5 +67,4 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
   setPagination(event: PageEvent): void {
     this.discogsService.setPagination(event);
   }
-
 }

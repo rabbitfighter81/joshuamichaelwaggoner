@@ -33,7 +33,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'resources',
-    loadChildren: './components/pages/resources/resources.module#ResourcesModule',
+    loadChildren:
+      './components/pages/resources/resources.module#ResourcesModule',
   },
   {
     path: 'discogs',

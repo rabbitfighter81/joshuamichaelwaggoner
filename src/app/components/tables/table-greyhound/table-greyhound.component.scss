@@ -1,9 +1,5 @@
 @import '../../../../styles/mixin.scss';
 
-table {
-  width: 100%;
-}
-
 div.table--greyound
   > mat-list.mat-list
   > mat-list-item.mat-list-item:nth-child(odd) {
@@ -24,14 +20,11 @@ h2 {
   color: #333;
 }
 
-.table--greyound
-  > .compact-list
-  > .mat-list-item {
+.table--greyound > .compact-list > .mat-list-item {
   margin-bottom: 0px;
 }
 
-mat-list.list--compact
-  > mat-list-item.mat-list-item {
+mat-list.list--compact > mat-list-item.mat-list-item {
   height: 1.65rem !important;
   font-size: $app-header-font-size-mobile;
 }

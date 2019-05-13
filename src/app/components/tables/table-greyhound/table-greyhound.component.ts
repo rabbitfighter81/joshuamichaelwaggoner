@@ -7,7 +7,6 @@ import { Greyhound } from '../../../core/models/greyhound.model';
   styleUrls: ['./table-greyhound.component.scss'],
 })
 export class TableGreyhoundComponent implements OnInit {
-
   @Input() public greyhound: Greyhound;
 
   constructor() {}

@@ -1,24 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { DiscogsService } from '../../../core/services/discogs/discogs.service';
+import { DiscogsServiceMock } from '../../../core/services/discogs/discogs.service.mock';
 import { TableDiscogsReleaseComponent } from './table-discogs-release.component';
-import { SharedModule } from 'src/app/core/modules/shared/shared.module';
-import { CoreModule } from 'src/app/core/core.module';
-import { DiscogsService } from 'src/app/core/services/discogs/discogs.service';
-import { DiscogsServiceMock } from 'src/app/core/services/discogs/discogs.service.mock';
 
 describe('TableDiscogsReleaseComponent', () => {
+
   let component: TableDiscogsReleaseComponent;
   let fixture: ComponentFixture<TableDiscogsReleaseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule, CoreModule],
-      providers: [
-        { provide: DiscogsService, useClass: DiscogsServiceMock },
-      ],
+      providers: [{ provide: DiscogsService, useClass: DiscogsServiceMock }],
       declarations: [TableDiscogsReleaseComponent],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -39,6 +39,7 @@ interface IRelease {
   title: string[]; // easter everywhere
   lowest_price?: number; // 1
   videos: any[];
+  tracklist: TrackList[];
 }
 
 export class Release implements IRelease {
@@ -52,6 +53,7 @@ export class Release implements IRelease {
   title: string[]; // easter everywhere
   lowestprice: number; // 19.99
   videos: any[];
+  tracklist: TrackList[];
   constructor(release: IRelease) {
     this.artists = release.artists;
     this.extraartists = release.extraartists;
@@ -63,5 +65,6 @@ export class Release implements IRelease {
     this.title = release.title;
     this.lowestprice = release.lowest_price; // Important to avoid _
     this.videos = release.videos;
+    this.tracklist = release.tracklist;
   }
 }

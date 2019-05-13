@@ -1,68 +1,84 @@
-<!--
-  interface Release {
-	artists: Artist[];
-	extraartists: ExtraArtist[];
-	formats: Formats[];
-	genres: string[]; // ['rock']
-	notes: string; // notes
-	released: string; // date
-	styles: string[];
-	title: string[]; // easter everywhere 
-	lowest_price: number; // 19.99
-}
--->
-
-<div class="table--greyound" *ngIf="release">
-  <h3>
-    Facts for {{ release.title }}
-  </h3>
+<div class="table--discogs" *ngIf="release">
+  <h3>Release&nbsp;<mat-icon>album</mat-icon></h3>
   <mat-list class="list--compact">
     <mat-list-item>
-      <p>Artist:&nbsp;<span class="bold">{{ release.artists[0].name }}</span></p>
+      <p>
+        Artist:&nbsp;<span class="bold">{{ release.artists[0].name }}</span>
+      </p>
     </mat-list-item>
     <mat-list-item>
-      <p>Title:&nbsp;
-        <span class="bold">{{ release.title }}</span></p>
+      <p>
+        Title:&nbsp; <span class="bold">{{ release.title }}</span>
+      </p>
     </mat-list-item>
     <mat-list-item *ngIf="release.genres && release.genres.length">
-      <p>Genres:&nbsp;<span
-          class="bold">{{ release.genres.length > 1 ? release.genres.join(', ') : release.genres[0] }}</span></p>
+      <p>
+        Genres:&nbsp;<span class="bold">{{
+          release.genres.length > 1
+            ? release.genres.join(', ')
+            : release.genres[0]
+        }}</span>
+      </p>
     </mat-list-item>
     <mat-list-item *ngIf="release.styles && release.styles.length">
-      <p>Styles:&nbsp;<span
-          class="bold">{{ release.styles.length > 1 ? release.styles.join(', ') : release.styles[0] }}</span></p>
+      <p>
+        Styles:&nbsp;<span class="bold">{{
+          release.styles.length > 1
+            ? release.styles.join(', ')
+            : release.styles[0]
+        }}</span>
+      </p>
     </mat-list-item>
-    <!--<mat-list-item>
-          Formats:&nbsp;<span class="bold">{{ release.formats.length > 1 ? release.formats.join(', ') : release.formats[0] }}</span>
-        </mat-list-item>-->
     <mat-list-item *ngIf="release.released">
-      <p>Released:&nbsp;<span class="bold">{{
-          release.released
-        }}</span></p>
+      <p>
+        Released:&nbsp;<span class="bold">{{ release.released }}</span>
+      </p>
     </mat-list-item>
     <mat-list-item *ngIf="release.lowestprice">
-      <p>Lowest Price:&nbsp;<span class="bold">${{ release.lowestprice }} (USD)</span></p>
-    </mat-list-item>
-    <mat-list-item *ngIf="release.notes">
-      <p>Notes:&nbsp;<span class="bold">{{ release.notes }}</span></p>
+      <p>
+        Lowest Price:&nbsp;<span class="bold"
+          >${{ release.lowestprice }} (USD)</span
+        >
+      </p>
     </mat-list-item>
   </mat-list>
+  <hr />
+
+  <h3 *ngIf="release.notes">
+    Release Notes
+    &nbsp;<mat-icon>notes</mat-icon>
+  </h3>
+  <p class="release-notes" *ngIf="release.notes">{{ release.notes }}</p>
+  <hr *ngIf="release.notes" />
+
+  <h3 *ngIf="release.tracklist">
+    Tracklist
+    &nbsp;<mat-icon>queue_music</mat-icon>
+  </h3>
+  <table mat-table [dataSource]="release.tracklist" class="mat-elevation-z8">
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>Position</th>
+      <td mat-cell *matCellDef="let track">{{ track.position }}</td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let track">{{ track.title }}</td>
+    </ng-container>
+    <ng-container matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef>Length</th>
+      <td mat-cell *matCellDef="let track">{{ track.duration || 'N/A' }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <br />
+  <hr *ngIf="release.tracklist" />
 
   <h3 *ngIf="release.videos && release.videos.length">
     Videos
+    &nbsp;<mat-icon>music_video</mat-icon>
   </h3>
-
-  <mat-card *ngFor="let video of release.videos; let i = index;" class="mat-elevation-z5 card--video">
-    <mat-card-header>
-      <mat-card-title>
-        {{ video.title }}
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <iframe [src]="video.uri | safe">
-      </iframe>
-    </mat-card-content>
-  </mat-card>
-
-
+  <div *ngFor="let video of release.videos; let i = index" class="div--video">
+    <iframe [src]="video.uri | safe"> </iframe>
+  </div>
 </div>

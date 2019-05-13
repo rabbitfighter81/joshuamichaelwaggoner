@@ -8,135 +8,271 @@
         About This App
       </mat-card-title>
       <mat-card-subtitle>
-        I am listing key features for nerds ¯\_(ツ)_/¯ and also plans for the future.
+        I am listing key features for nerds ¯\_(ツ)_/¯ and also plans for the
+        future.
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p>
-        This app was made because I wanted to make a nobile first, high performing personal site for a long time
-        to showcase the things I do and also to just refer people to this page when I want to show them my dogs,
+        This app was made because I wanted to make a nobile first, high
+        performing personal site for a long time to showcase the things I do and
+        also to just refer people to this page when I want to show them my dogs,
         or my resume, etc...
       </p>
       <p>
-        I am releasing it now as a beta version but will be adding functionality to it as I get time. For now,
-        it is what it is, however, it has some pretty cool functionality and constructs. I'd like to do so much more
-        with it. For those interested, there is a <code>code</code> icon in the top toolbar that leads to the <a
-          href="https://github.com/rabbitfighter81/joshuamichaelwaggoner" class="link--body" target="_blank" rel="dns-prefetch">Git
-          repository for this page</a>.
+        I am releasing it now as a beta version but will be adding functionality
+        to it as I get time. For now, it is what it is, however, it has some
+        pretty cool functionality and constructs. I'd like to do so much more
+        with it. For those interested, there is a <code>code</code> icon in the
+        top toolbar that leads to the
+        <a
+          href="https://github.com/rabbitfighter81/joshuamichaelwaggoner"
+          class="link--body"
+          target="_blank"
+          rel="dns-prefetch"
+          >Git repository for this page</a
+        >.
       </p>
       <p>
-        This app follows Angular best practices and has been heavily modified for performance boosts. I have done my
-        best to make it accessible to any viewport, provide basic multi locale support, provide security, and make the
-        load times and budle sizes optimal.
+        This app follows Angular best practices and has been heavily modified
+        for performance boosts. I have done my best to make it accessible to any
+        viewport, provide basic multi locale support, provide security, and make
+        the load times and budle sizes optimal.
       </p>
       <p>
-        Most importantly, this app is a living labor of ♥, and has been a joyous process. I don't work on it when I'm
-        down, and I think things through before I do them -- on a level that I've never done before. I hope you either
-        enjoy the site, or can learn something from the <a
-          href="https://github.com/rabbitfighter81/joshuamichaelwaggoner" class="link--body" target="_blank"
-          rel="dns-prefetch">code-base</a>. Feel free to <a class="link--body" routerLink="/contact">contact</a> me with questions or
-        concerns.
+        Most importantly, this app is a living labor of ♥, and has been a joyous
+        process. I don't work on it when I'm down, and I think things through
+        before I do them -- on a level that I've never done before. I hope you
+        either enjoy the site, or can learn something from the
+        <a
+          href="https://github.com/rabbitfighter81/joshuamichaelwaggoner"
+          class="link--body"
+          target="_blank"
+          rel="dns-prefetch"
+          >code-base</a
+        >. Feel free to
+        <a class="link--body" routerLink="/contact">contact</a> me with
+        questions or concerns.
       </p>
-      <h3>Some of processes and the technologies used for making this app are:</h3>
+      <h3>
+        Some of processes and the technologies used for making this app are:
+      </h3>
       <ul>
         <li>
-          Angular 7 UI combined with and Express server. The Server serves the app based on locale and also handles HTTP
-          requests and hosts my API. I also interfaces with external API's such as <a
-            href="https://www.discogs.com/developers/" class="link--body" target="_blank" rel="dns-prefetch">Discogs API</a>.
+          Angular 7 UI combined with and Express server. The Server serves the
+          app based on locale and also handles HTTP requests and hosts my API. I
+          also interfaces with external API's such as
+          <a
+            href="https://www.discogs.com/developers/"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >Discogs API</a
+          >.
         </li>
         <li>
-          Internationalization and Localization via <a rel="dns-prefetch" class="link--body" href="https://angular.io/guide/i18n"
-            target="_blank">Angular i18n tools</a>. The app uses .xlf translation files and a
-          different build is generated for each locale in the post-build script, so the app defaults to the
-          <code>/en/</code> prefix
-          in the URL, but when you click the Language icon in the upper right corner, when you choose another language,
-          it swaps that out, replaces the <code>/xx/</code> prefix with the new language and the server servers up that
-          specific
-          build. This all adheres to the <a rel="dns-prefetch" class="link--body" href="https://angular.io/guide/styleguide"
-            target="_blank">Angular guidelines and standard best practices</a>. There are advantages and
-          disadvantages to the "Angular way", but I have found that if you follow the Angular conventions for things,
-          instead of custom middleware solutions or build time magic, your app's functionality and code-base will be
-          better off.
+          Internationalization and Localization via
+          <a
+            rel="dns-prefetch"
+            class="link--body"
+            href="https://angular.io/guide/i18n"
+            target="_blank"
+            >Angular i18n tools</a
+          >. The app uses .xlf translation files and a different build is
+          generated for each locale in the post-build script, so the app
+          defaults to the <code>/en/</code> prefix in the URL, but when you
+          click the Language icon in the upper right corner, when you choose
+          another language, it swaps that out, replaces the
+          <code>/xx/</code> prefix with the new language and the server servers
+          up that specific build. This all adheres to the
+          <a
+            rel="dns-prefetch"
+            class="link--body"
+            href="https://angular.io/guide/styleguide"
+            target="_blank"
+            >Angular guidelines and standard best practices</a
+          >. There are advantages and disadvantages to the "Angular way", but I
+          have found that if you follow the Angular conventions for things,
+          instead of custom middleware solutions or build time magic, your app's
+          functionality and code-base will be better off.
         </li>
         <li>
-          <a rel="dns-prefetch" class="link--body" href="https://angular.io/guide/lazy-loading-ngmodules" target="_blank">Lazy loading</a>
-          for faster initial rendering, and then loads all lazy loaded routes and caches them in the
-          background once the screen paints and the process has time. This leads to better UX and snappy load times.
+          <a
+            rel="dns-prefetch"
+            class="link--body"
+            href="https://angular.io/guide/lazy-loading-ngmodules"
+            target="_blank"
+            >Lazy loading</a
+          >
+          for faster initial rendering, and then loads all lazy loaded routes
+          and caches them in the background once the screen paints and the
+          process has time. This leads to better UX and snappy load times.
         </li>
         <li>
-          After initially scoring very low on the <a rel="dns-prefetch"
-          class="link--body" href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Chrome Lighthouse</a> extension,
-          I delved into making the app more performant. The overall performance score was at 6%. My SEO score was at
-          20%. My Best Practices score was low because I had no SSL yet, and it was just damning in general. I almost
-          had a heart attack, but they provided suggestions and they weren't all clear, some required extensive
-          research, but I took it as a challenge to make as many modifications as I could to improve the performance of
-          the app. I added things like <a href="https://en.wikipedia.org/wiki/Brotli" class="link--body" target="_blank"
-            rel="dns-prefetch">Brotli</a> text compression (br) with <a href="https://en.wikipedia.org/wiki/Gzip"
-            class="link--body" target="_blank" rel="dns-prefetch">GZIP</a> fallback for browsers that don't support <code>.br</code>
-          like IE and Edge. In addition, all HTTP communication is compressed by the server. Another thing I did was
-          make all images as small as possible by compressing and optimizing sizes and quality to get the image sizes
-          down to kb levels instead of mb levels. I used <a href="https://www.gimp.org/" class="link--body" target="_blank"
-            rel="dns-prefetch">GIMP</a> and free online tools to do this. No fancy photoshop required. Also, since this
-          app is HTTPS, I am using 'dns-prefetch' directives to
-          all links to prefetch the content in the background to get the screen to paint as quickly as possible.
+          After initially scoring very low on the
+          <a
+            rel="dns-prefetch"
+            class="link--body"
+            href="https://developers.google.com/web/tools/lighthouse/"
+            target="_blank"
+            >Chrome Lighthouse</a
+          >
+          extension, I delved into making the app more performant. The overall
+          performance score was at 6%. My SEO score was at 20%. My Best
+          Practices score was low because I had no SSL yet, and it was just
+          damning in general. I almost had a heart attack, but they provided
+          suggestions and they weren't all clear, some required extensive
+          research, but I took it as a challenge to make as many modifications
+          as I could to improve the performance of the app. I added things like
+          <a
+            href="https://en.wikipedia.org/wiki/Brotli"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >Brotli</a
+          >
+          text compression (br) with
+          <a
+            href="https://en.wikipedia.org/wiki/Gzip"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >GZIP</a
+          >
+          fallback for browsers that don't support <code>.br</code> like IE and
+          Edge. In addition, all HTTP communication is compressed by the server.
+          Another thing I did was make all images as small as possible by
+          compressing and optimizing sizes and quality to get the image sizes
+          down to kb levels instead of mb levels. I used
+          <a
+            href="https://www.gimp.org/"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >GIMP</a
+          >
+          and free online tools to do this. No fancy photoshop required. Also,
+          since this app is HTTPS, I am using 'dns-prefetch' directives to all
+          links to prefetch the content in the background to get the screen to
+          paint as quickly as possible.
         </li>
         <li>
-          I also am using a tool called <a href="https://www.npmjs.com/package/webpack-bundle-analyzer" class="link--body" target="_blank"
-            rel="dns-prefetch">Webpack Bundle Analyzer</a> that generates a birds eye visual representation of all of
-          your modules and what is taking up space in your modules and bundles. This allows you to see if you are
-          importing things unnecessarily, or more than once. For example, I saw <a href="https://lodash.com/"
-            target="_blank" class="link--body" rel="dns-prefetch">Lodash</a> was a big box in the printout,
-          you couldn’t miss it. So I researched how to import just the two functions from Lodash that I am using, and
+          I also am using a tool called
+          <a
+            href="https://www.npmjs.com/package/webpack-bundle-analyzer"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >Webpack Bundle Analyzer</a
+          >
+          that generates a birds eye visual representation of all of your
+          modules and what is taking up space in your modules and bundles. This
+          allows you to see if you are importing things unnecessarily, or more
+          than once. For example, I saw
+          <a
+            href="https://lodash.com/"
+            target="_blank"
+            class="link--body"
+            rel="dns-prefetch"
+            >Lodash</a
+          >
+          was a big box in the printout, you couldn’t miss it. So I researched
+          how to import just the two functions from Lodash that I am using, and
           not the whole library. Pretty easy, and what a payoff! Ca-ching!
         </li>
         <li>
-          Afterwards, you could see two tiny Lodash imports and more open space in the core bundle, but
-          you would need glasses to spot the lodash imports because they were so small. There is also a VSCode extension
-          called <a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" class="link--body" target="_blank"
-            rel="dns-pre-fetch">import-cost</a> that will let you know how large
-          your imports are. These tools have drastically helped me reduce bundle sizes. (None of this was rocket
-          science, it was mostly just busy work, and little additions to the codebase that made it now score over 90% in
-          all categories on the Lighthouse speed test! The scores may go up or down as I'm developing, but I try to do a
-          weekly hardening to make all the perf adjustments I need).
+          Afterwards, you could see two tiny Lodash imports and more open space
+          in the core bundle, but you would need glasses to spot the lodash
+          imports because they were so small. There is also a VSCode extension
+          called
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"
+            class="link--body"
+            target="_blank"
+            rel="dns-pre-fetch"
+            >import-cost</a
+          >
+          that will let you know how large your imports are. These tools have
+          drastically helped me reduce bundle sizes. (None of this was rocket
+          science, it was mostly just busy work, and little additions to the
+          codebase that made it now score over 90% in all categories on the
+          Lighthouse speed test! The scores may go up or down as I'm developing,
+          but I try to do a weekly hardening to make all the perf adjustments I
+          need).
         </li>
         <li>
-          Dynamic variable injection via a build script that injects environment varibales such as secret keys for
-          API's and sensitive info by rewriting the environment file, this way, I can host the code on GitHub and still
-          retain some amount of security.
+          Dynamic variable injection via a build script that injects environment
+          varibales such as secret keys for API's and sensitive info by
+          rewriting the environment file, this way, I can host the code on
+          GitHub and still retain some amount of security.
         </li>
         <li>
-          Unfortunately, there is no greyhound API I could find, so all greyhound data is served via the API, but from
-          custom static JSON files and schemas I made from physical info I got from the internet that are. I'd like to
-          spearhead some sort of international Greyhound API, but that's another fight for another day.
+          Unfortunately, there is no greyhound API I could find, so all
+          greyhound data is served via the API, but from custom static JSON
+          files and schemas I made from physical info I got from the internet
+          that are. I'd like to spearhead some sort of international Greyhound
+          API, but that's another fight for another day.
         </li>
         <li>
-          This app has comprehensive Unit Testing, and uses a strict linting process to force developers to comply to
-          standard practices. I don’t really care if people use semicolons or not for example, but in this app, if you
-          do not use a semicolon at the end of a statement, the linter will catch it. There is no e2e testing yet, but I
-          plan to add them as I have time.
+          This app has comprehensive Unit Testing, and uses a strict linting
+          process to force developers to comply to standard practices. I don’t
+          really care if people use semicolons or not for example, but in this
+          app, if you do not use a semicolon at the end of a statement, the
+          linter will catch it. There is no e2e testing yet, but I plan to add
+          them as I have time.
         </li>
         <li>
-          I'm extensively using <a href="https://rxjs-dev.firebaseapp.com/" class="link--body" target="_blank" rel="dns-prefetch">RxJs</a>,
-          so most everything in the app is based on observable streams and subscriptions.
-          The app subscribes to API responses. Subscriptions trigger actions. The app updates when an action takes
-          place. I tried to follow this pattern. It makes sense to me that if you have a variable that changes from some
-          response, you will want to do something when that variable changes, so observables are a great weapon. RxJs
-          makes life easy when dealing with asynchronicity and eliminates most race conditions.
+          I'm extensively using
+          <a
+            href="https://rxjs-dev.firebaseapp.com/"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >RxJs</a
+          >, so most everything in the app is based on observable streams and
+          subscriptions. The app subscribes to API responses. Subscriptions
+          trigger actions. The app updates when an action takes place. I tried
+          to follow this pattern. It makes sense to me that if you have a
+          variable that changes from some response, you will want to do
+          something when that variable changes, so observables are a great
+          weapon. RxJs makes life easy when dealing with asynchronicity and
+          eliminates most race conditions.
         </li>
         <li>
-          This app has comprehensive <a href="https://www.npmjs.com/package/karma-jasmine" class="link--body" target="_blank"
-            rel="dns-prefetch">Karma/Jasmine Unit Testing</a>, and uses a linting process to force developer to comply
-          to
-          standard practices. I don’t really care if people use semicolons or not for example, but in this app, if you
-          do not use a semicolon at the end of a statement, the linter will catch it. There is no e2e testing yet, but I
-          plan to add them as I have time.
+          This app has comprehensive
+          <a
+            href="https://www.npmjs.com/package/karma-jasmine"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >Karma/Jasmine Unit Testing</a
+          >, and uses a linting process to force developer to comply to standard
+          practices. I don’t really care if people use semicolons or not for
+          example, but in this app, if you do not use a semicolon at the end of
+          a statement, the linter will catch it. There is no e2e testing yet,
+          but I plan to add them as I have time.
         </li>
         <li>
-          Last, but not least, I am using <a href="https://sass-lang.com/" class="link--body" target="_blank" rel="dns-prefetch">SASS</a>
-          and <a href="https://material.angular.io/" class="link--body" target="_blank" rel="dns-prefetch">Angular Material</a> to the best
-          of my abilities to create a coherent and
-          uniformed UX. I am admittedly a develop over a designer, and work best with requirements and the help of
-          professional designers. That was a major choice when adopting material specs. Also, writing my own component
+          Last, but not least, I am using
+          <a
+            href="https://sass-lang.com/"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >SASS</a
+          >
+          and
+          <a
+            href="https://material.angular.io/"
+            class="link--body"
+            target="_blank"
+            rel="dns-prefetch"
+            >Angular Material</a
+          >
+          to the best of my abilities to create a coherent and uniformed UX. I
+          am admittedly a develop over a designer, and work best with
+          requirements and the help of professional designers. That was a major
+          choice when adopting material specs. Also, writing my own component
           library would take too much time.
         </li>
       </ul>
@@ -147,13 +283,15 @@
           Finish the record detail view for discogs page.
         </li>
         <li>
-          Add a MongoDB instance for the API be able to make CRUD operations on it.
+          Add a MongoDB instance for the API be able to make CRUD operations on
+          it.
         </li>
         <li>
           Add a music page to showcase some of the music I compose.
         </li>
         <li>
-          Add OAth flow for Discogs API and make my Discogs page more feature heavy.
+          Add OAth flow for Discogs API and make my Discogs page more feature
+          heavy.
         </li>
         <li>
           Make better documentation.

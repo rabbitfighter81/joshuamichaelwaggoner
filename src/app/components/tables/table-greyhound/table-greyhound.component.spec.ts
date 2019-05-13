@@ -6,7 +6,6 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { TableGreyhoundComponent } from './table-greyhound.component';
 
 describe('TableGreyhoundComponent', () => {
-
   let component: TableGreyhoundComponent;
   let fixture: ComponentFixture<TableGreyhoundComponent>;
 

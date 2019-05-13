@@ -1,23 +1,17 @@
-
 @import '../../../../styles/mixin.scss';
 
-::ng-deep .mat-list .mat-list-item .mat-line {
-  word-wrap: break-word;
-  white-space: pre-wrap;
-}
-
-::ng-deep .mat-list .mat-list-item {
-  height:initial!important;
-}
-
-.bold {
-  font-weight: 500;
-  color: #333;
+p {
+  padding: 0 12.5px;
 }
 
 h3 {
   margin-left: 12.5px;
   margin-right: 12.5px;
+  @include flex-row-justify-start-align-center;
+}
+
+table {
+  width: 100%;
 }
 
 iframe {
@@ -32,10 +26,44 @@ iframe {
   }
 }
 
-.mat-card.card--video {
-  margin-bottom: 20px;
+::ng-deep .mat-list .mat-list-item .mat-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
-.mat-card-content {
-  display: flex;
+.table--discogs mat-list-item.mat-list-item {
+  font-size: $app-font-size-small;
+  padding: 0 !important;
 }
+
+.mat-card-content mat-list-item.mat-list-item p {
+  font-size: $app-font-size-small;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1.23rem;
+}
+
+/deep/ .mat-list-base .mat-list-item .mat-list-item-content {
+  padding: 0 !important;
+}
+
+.release-notes {
+  color: $color-dark-grey;
+}
+
+.bold {
+  font-weight: 500;
+  color: #333;
+}
+
+div.div--video {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-title {
+  color: $color-dark-grey;
+}
+

@@ -64,9 +64,14 @@ input {
   margin: auto;
 }
 
-.nav-item {
+.nav-item, .nav-item-active {
   color: $color-electric-yellow;
   outline: none;
+  margin-left: 13px;
+}
+
+.nav-item-active {
+  color: $color-med-blue;
 }
 
 .border-bottom-20 {
@@ -127,10 +132,6 @@ input {
 
 .img--container > img {
   width: 100%;
-}
-
-.link--light-bg {
-  color: $color-med-blue;
 }
 
 .link--dark-bg {

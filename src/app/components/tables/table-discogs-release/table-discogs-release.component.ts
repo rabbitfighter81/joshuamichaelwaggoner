@@ -1,25 +1,14 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Release } from '../../../core/models/release.model';
-import { ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe } from '@angular/core';
-
 
 @Component({
   selector: 'app-table-discogs-release',
   templateUrl: './table-discogs-release.component.html',
-  styleUrls: ['./table-discogs-release.component.scss']
+  styleUrls: ['./table-discogs-release.component.scss'],
 })
-export class TableDiscogsReleaseComponent implements OnInit, AfterViewInit {
-
+export class TableDiscogsReleaseComponent {
   @Input() public release: Release;
+  displayedColumns: string[] = ['position', 'title', 'duration'];
 
   constructor() {}
-
-  ngOnInit() {
-    // console.log('xxx', this.release);
-  }
-
-  ngAfterViewInit() {
-    // console.log('xxx', this.release);
-  }
-
 }

@@ -19,9 +19,7 @@ describe('RecordDetailComponent', () => {
         RouterTestingModule,
         TableDiscogsReleaseModule,
       ],
-      providers: [
-        { provide: DiscogsService, useClass: DiscogsServiceMock },
-      ],
+      providers: [{ provide: DiscogsService, useClass: DiscogsServiceMock }],
       declarations: [RecordDetailComponent],
     }).compileComponents();
   }));

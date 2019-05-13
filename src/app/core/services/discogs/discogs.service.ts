@@ -26,13 +26,10 @@ export class DiscogsService implements OnInit, OnDestroy {
 
   urlRelease = this.urlBase + `/releases`;
 
-  urlFolders = this.urlBase + `/users/${
-    this.username
-  }/collection/folders`;
+  urlFolders = this.urlBase + `/users/${this.username}/collection/folders`;
 
-  urlAllFolders = this.urlBase + `/users/${
-    this.username
-  }/collection/folders/0/releases`;
+  urlAllFolders =
+    this.urlBase + `/users/${this.username}/collection/folders/0/releases`;
 
   private records$: Subscription;
   private folders$: Subscription;
@@ -41,20 +38,17 @@ export class DiscogsService implements OnInit, OnDestroy {
   records: BehaviorSubject<Record[]> = new BehaviorSubject<Record[]>([]);
   release: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   folders: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  pagination: BehaviorSubject<Pagination> = new BehaviorSubject<Pagination>(initialPagination);
+  pagination: BehaviorSubject<Pagination> = new BehaviorSubject<Pagination>(
+    initialPagination,
+  );
   totalRecords: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
-    const subscriptions = [
-      this.records$,
-      this.folders$,
-      this.release$,
-    ];
+    const subscriptions = [this.records$, this.folders$, this.release$];
     unsubscribeAll(subscriptions);
   }
 
@@ -68,13 +62,16 @@ export class DiscogsService implements OnInit, OnDestroy {
       releases.map((record: IDiscogRecord): Record => new Record(record)),
     );
     if (this.logging) {
-      console.log(`Records data from ${ this.urlAllFolders }`, releases);
+      console.log(`Records data from ${this.urlAllFolders}`, releases);
     }
   }
 
   private onRecordsError(error: any): void {
     if (this.logging) {
-      console.log('Error fetching Record data from API at ${ this.urlAllFolders }: ', error);
+      console.log(
+        'Error fetching Record data from API at ${ this.urlAllFolders }: ',
+        error,
+      );
     }
   }
 
@@ -135,32 +132,27 @@ export class DiscogsService implements OnInit, OnDestroy {
     const page = JSON.stringify(pagination.pageIndex + 1);
     const { key, secret } = this;
     const sort = 'artist';
-    return this.http.get<any>(`${ this.urlAllFolders }?per_page=${
-      pageSize
-    }&key=${
-      key
-    }&secret=${
-      secret
-    }&page=${
-      page
-    }&sort=${
-      sort
-    }`).pipe(
-      retry(1),
-      map(data => data),
-    );
+    return this.http
+      .get<any>(
+        `${
+          this.urlAllFolders
+        }?per_page=${pageSize}&key=${key}&secret=${secret}&page=${page}&sort=${sort}`,
+      )
+      .pipe(
+        retry(1),
+        map(data => data),
+      );
   }
 
   getReleaseById(releaseId: string): Observable<any> {
     const currAbbr = 'USD';
-    return this.http.get<any>(`${ this.urlRelease }/${
-      releaseId
-    }?${
-      currAbbr
-    }`).pipe(
-      retry(1),
-      map(data => data),
-    );
+    return this.http
+      .get<any>(`${this.urlRelease}/${releaseId}?${currAbbr}`)
+      .pipe(
+        retry(1),
+        tap(data => console.log(data)),
+        map(data => data),
+      );
   }
 
   getFolders(): Observable<any> {
@@ -174,8 +166,7 @@ export class DiscogsService implements OnInit, OnDestroy {
     const { pageSize, pageIndex } = event;
     this.pagination.next({
       pageSize,
-      pageIndex
+      pageIndex,
     });
   }
-
 }

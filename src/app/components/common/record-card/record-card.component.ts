@@ -5,16 +5,14 @@ import { Record } from '../../../core/models/discogs-record.model';
 @Component({
   selector: 'app-record-card',
   templateUrl: './record-card.component.html',
-  styleUrls: ['./record-card.component.scss']
+  styleUrls: ['./record-card.component.scss'],
 })
 export class RecordCardComponent implements OnInit, AfterViewInit {
-
   @Input() public record: Record; // TODO: Type...
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     // console.log('[RecordCardComponent]: Record', this.record);
@@ -31,6 +29,4 @@ export class RecordCardComponent implements OnInit, AfterViewInit {
   setRecordDetail(recordId: string): void {
     this.router.navigate(['/discogs', recordId]);
   }
-
-
 }
