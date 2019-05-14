@@ -1,61 +1,41 @@
-<div class="table--greyound" *ngIf="greyhound">
+<div class="div--feature-detail" *ngIf="greyhound">
   <h2 class="detail-header">
     Facts for {{ greyhound.name }}&nbsp;<mat-icon>assessment</mat-icon>
   </h2>
-  <mat-list class="list--compact">
-    <mat-list-item>
-      <p>
-        Color:&nbsp;<span class="bold">{{ greyhound.color }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Sex:&nbsp;
-        <span class="bold"
-          >{{ greyhound.sex }}
-          <span *ngIf="greyhound.sex === 'Male'">&#9794;</span>
-          <span *ngIf="greyhound.sex === 'Female'">&#9792;</span>
-        </span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Earmark:&nbsp;<span class="bold">{{ greyhound.earmark }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Born:&nbsp;<span class="bold">{{
-          greyhound.born | date: 'mediumDate'
-        }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item *ngIf="greyhound.passed">
-      <p>
-        Passed:&nbsp;<span class="bold">{{
-          greyhound.passed | date: 'mediumDate'
-        }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Pounds:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Kilograms:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item>
-      <p>
-        Country:&nbsp;<span class="bold">{{ greyhound.land }}</span>
-      </p>
-    </mat-list-item>
-    <mat-list-item *ngFor="let owner of greyhound.racingowners; let i = index">
-      <p>
-        Racing Owner:&nbsp;<span class="bold">{{ owner }}</span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+  <p>
+    Color:&nbsp;<span class="bold">{{ greyhound.color }}</span>
+  </p>
+  <p>
+    Sex:&nbsp;
+    <span class="bold"
+      >{{ greyhound.sex }}
+      <span *ngIf="greyhound.sex === 'Male'">&#9794;</span>
+      <span *ngIf="greyhound.sex === 'Female'">&#9792;</span>
+    </span>
+  </p>
+  <p>
+    Earmark:&nbsp;<span class="bold">{{ greyhound.earmark }}</span>
+  </p>
+  <p>
+    Born:&nbsp;<span class="bold">{{
+      greyhound.born | date: 'mediumDate'
+    }}</span>
+  </p>
+  <p *ngIf="greyhound.passed">
+    Passed:&nbsp;<span class="bold">{{
+      greyhound.passed | date: 'mediumDate'
+    }}</span>
+  </p>
+  <p>
+    Pounds:&nbsp;<span class="bold">{{ greyhound.lbs }}</span>
+  </p>
+  <p>
+    Kilograms:&nbsp;<span class="bold">{{ greyhound.kg }}</span>
+  </p>
+  <p>
+    Country:&nbsp;<span class="bold">{{ greyhound.land }}</span>
+  </p>
+  <p *ngFor="let owner of greyhound.racingowners; let i = index">
+    Racing Owner:&nbsp;<span class="bold">{{ owner }}</span>
+  </p>
 </div>

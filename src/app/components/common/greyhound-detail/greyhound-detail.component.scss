@@ -1,22 +1,10 @@
 @import '../../../../styles/mixin.scss';
 
-.greyhound-detail {
-  color: black;
-  font-family: 'Roboto', monospace;
-  margin: 20px;
-  font-size: 45px;
-}
-
 .image--greyhound-detail {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  @include tablet {
-    width: 100%;
-  }
 }
 
-.mat-card > .mat-card-content.center {
-  text-align: center;
-}
+

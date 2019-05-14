@@ -2,10 +2,6 @@
 @import './mixin';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html {
-  overflow-x: initial !important;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -15,9 +11,13 @@ body,
 p,
 li,
 a {
-  font-size: $app-body-font-size;
+  font-size: $app-header-font-size-mobile;
   line-height: $app-body-line-height;
   font-weight: $app-body-font-weight;
+}
+
+div.div--feature-detail > p {
+  margin: 0 13px;
 }
 
 h2 {
@@ -164,10 +164,12 @@ input {
   margin: 13px;
 }
 
+/*
 mat-list.list--compact > mat-list-item.mat-list-item {
   height: 1.65rem !important;
   font-size: $app-header-font-size-mobile;
 }
+*/
 
 .mat-stroked-button {
   align-items: center;
