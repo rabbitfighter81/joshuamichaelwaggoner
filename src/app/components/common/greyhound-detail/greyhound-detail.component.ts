@@ -15,8 +15,8 @@ interface GreyhoundRouteParamMap {
   templateUrl: './greyhound-detail.component.html',
   styleUrls: ['./greyhound-detail.component.scss'],
 })
-export class GreyhoundDetailComponent implements OnInit, AfterViewInit, OnDestroy {
-
+export class GreyhoundDetailComponent
+  implements OnInit, AfterViewInit, OnDestroy {
   private route$: Subscription;
   private greyhounds$: Subscription;
 

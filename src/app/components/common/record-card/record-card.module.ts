@@ -5,12 +5,8 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { RecordCardComponent } from './record-card.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule
-  ],
-  exports: [ RecordCardComponent ],
-  declarations: [ RecordCardComponent ]
+  imports: [CommonModule, SharedModule, RouterModule],
+  exports: [RecordCardComponent],
+  declarations: [RecordCardComponent],
 })
-export class RecordCardModule { }
+export class RecordCardModule {}

@@ -8,8 +8,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class NavComponent implements OnInit {
   @Output() linkSelected: EventEmitter<any> = new EventEmitter();
 
-  navItems: [{ link: ''; display: ''; translationTag: '' }];
-
   constructor() {}
 
   ngOnInit() {}

@@ -5,12 +5,8 @@ import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { GreyhoundCardComponent } from './greyhound-card.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule
-  ],
-  exports: [ GreyhoundCardComponent ],
-  declarations: [ GreyhoundCardComponent ]
+  imports: [CommonModule, SharedModule, RouterModule],
+  exports: [GreyhoundCardComponent],
+  declarations: [GreyhoundCardComponent],
 })
-export class GreyhoundCardModule { }
+export class GreyhoundCardModule {}
