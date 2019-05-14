@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, OnDestroy, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { map, retry, tap } from 'rxjs/operators';
+import { map, retry } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
 import { unsubscribeAll } from '../../helpers/unsubscribe.helper';
 import { IDiscogRecord, Record } from '../../models/discogs-record.model';
@@ -150,7 +150,6 @@ export class DiscogsService implements OnInit, OnDestroy {
       .get<any>(`${this.urlRelease}/${releaseId}?${currAbbr}`)
       .pipe(
         retry(1),
-        tap(data => console.log(data)),
         map(data => data),
       );
   }
