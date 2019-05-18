@@ -76,12 +76,6 @@ input {
   text-decoration: line-through;
 }
 
-.content {
-  background: $color-body-bg;
-  width: 90%;
-  margin: 13px auto;
-  min-height: calc(100vh - 64px);
-}
 
 .flex-row-justify-start-align-start {
   @include flex-row-justify-start-align-start();
@@ -272,3 +266,96 @@ mat-list.list--compact > mat-list-item.mat-list-item {
 }
 
 */
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: $font-family-lato;
+}
+
+p, li {
+  font-size: $app-font-size-small;
+  line-height: 1.8rem;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+li:nth-last-child {
+ margin-bottom: 0;
+}
+
+.mat-toolbar .title {
+  font-family: $font-family-oswald;
+  // font-size: $app-font-size-large;
+  color: white;
+}
+
+h1 {
+  font-family: $font-family-oswald;
+}
+
+a.link--no-style {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a.link--body {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: $color-deep-sky-blue;
+}
+
+.spacer {
+  flex: 1 0 0;
+}
+
+.flex-row-fs {
+  @include flex-row-fs();
+}
+
+.mat-icon-button.margin-6 {
+  margin: 6px;
+}
+
+.container {
+  padding: 16px;
+}
+
+.img--full {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.personal-image {
+  background-image: url('/assets/img/me.jpg');
+  background-size: cover;
+}
+
+.mat-sidenav-container {
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+}
+
+.toolbar-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0px;
+  z-index: 10;
+}

@@ -1,3 +1,4 @@
+
 <app-header (toggle)="toggleSidenav()"></app-header>
 <mat-sidenav-container
   class="example-container"
@@ -9,23 +10,19 @@
     disableClose
     mode="push"
   >
-    <div class="flex-row-justify-start-align-start">
-      <div class="flex-col">
-        <app-nav (linkSelected)="closeSidenav()"></app-nav>
-      </div>
-      <div class="flex-col">
-        <button
-          id="btn-close-nav"
-          mat-icon-button
-          (click)="closeSidenav()"
-          type="button"
-          matTooltip="Closes the sidenav"
-          [matTooltipPosition]="'before'"
-          matTooltipShowDelay="750"
-          aria-label="Button that displays a tooltip that can be programatically disabled">
-          <mat-icon color="primary">close</mat-icon>
-        </button>
-      </div>
+    <div class="flex-row-fs">
+      <app-nav (linkSelected)="closeSidenav()"></app-nav>
+      <button
+        class="margin-6"
+        mat-icon-button
+        (click)="closeSidenav()"
+        type="button"
+        matTooltip="Closes the sidenav"
+        [matTooltipPosition]="'before'"
+        matTooltipShowDelay="750"
+        aria-label="Button that displays a tooltip that can be programatically disabled">
+        <mat-icon color="primary">close</mat-icon>
+      </button>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>

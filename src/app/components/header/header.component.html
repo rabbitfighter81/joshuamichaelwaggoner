@@ -1,19 +1,19 @@
-<mat-toolbar class="header-toolbar">
+<mat-toolbar class="flex-row-fs-center toolbar-header">
   <button
     mat-icon-button
     aria-label="toggle sidenav button"
     matTooltip="Open the side menu"
     matTooltipShowDelay="750"
     matTooltipPosition="below"
-    color="accent"
+    color="primary"
     class="btn-mat-icon margin-right-10"
     (click)="toggleSidenav()"
   >
     <mat-icon>menu</mat-icon>
   </button>
-  &nbsp;
+  &nbsp;&nbsp;
   <a class="link--no-style" routerLink="/">
-    <h1 class="title">Joshua M. Waggoner</h1>
+    <h1 class="title">JOSHUA M. WAGGONER</h1>
   </a>
   <span class="spacer"></span>
 
@@ -24,7 +24,7 @@
       matTooltip="See the project code"
       matTooltipShowDelay="750"
       matTooltipPosition="below"
-      color="accent"
+      color="primary"
       class="btn-mat-icon"
       (click)="navToGitHubProject()"
     >
@@ -36,7 +36,7 @@
       matTooltip="Change the locale"
       matTooltipShowDelay="750"
       matTooltipPosition="below"
-      color="accent"
+      color="primary"
       class="btn-mat-icon"
       [matMenuTriggerFor]="languageMenu"
     >

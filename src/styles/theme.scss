@@ -22,13 +22,21 @@ $rgb-app-theme-dark: mat-dark-theme(
   $rgb-app-accent,
   $rgb-app-warn
 );
+
+// NOTE: From `2.0.0-beta.10`, you can now pass the typography via the mat-core() mixin:
+$custom-typography: mat-typography-config(
+  $font-family: 'Lato'
+);
+@include mat-core($custom-typography);
+
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, yous can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($rgb-app-theme-dark);
 // Default colors
-$my-app-primary: mat-palette($mat-blue, 700, 100, 800);
+$my-app-primary: mat-palette($mat-light-blue, 400, 100, 800);
 $my-app-accent: mat-palette($mat-green, 700, 100, 800);
 $my-app-warn: mat-palette($mat-red, 700, 100, 800);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);

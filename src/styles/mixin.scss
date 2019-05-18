@@ -20,8 +20,15 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin flex-row-justify-start-align-start {
+@mixin flex-row-fs {
   align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@mixin flex-row-fs-center {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

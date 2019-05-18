@@ -7,7 +7,11 @@ import { LoggingService } from './services/logging/logging.service';
 
 const modules = [BrowserAnimationsModule];
 
-const services = [GreyhoundService, LoggingService, DiscogsService];
+const services = [
+  DiscogsService,
+  GreyhoundService,
+  LoggingService,
+];
 
 @NgModule({
   declarations: [],

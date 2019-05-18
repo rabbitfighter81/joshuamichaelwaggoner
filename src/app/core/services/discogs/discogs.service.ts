@@ -26,10 +26,10 @@ export class DiscogsService implements OnInit, OnDestroy {
 
   urlRelease = this.urlBase + `/releases`;
 
-  urlFolders = this.urlBase + `/users/${this.username}/collection/folders`;
+  urlFolders = this.urlBase + `/users/${ this.username }/collection/folders`;
 
   urlAllFolders =
-    this.urlBase + `/users/${this.username}/collection/folders/0/releases`;
+    this.urlBase + `/users/${ this.username }/collection/folders/0/releases`;
 
   private records$: Subscription;
   private folders$: Subscription;

@@ -4,8 +4,9 @@
 
 export const environment = {
   production: false,
-  discogsConsumerUsername: 'xxx',
-  discogsConsumerKey: 'xxx',
-  discogsConsumerSecret:  'xxx'
+  apiUrl: 'http://localhost:8080',
+  discogsConsumerKey: 'zCFAXgobryPsTObDinhG',
+  discogsConsumerSecret: 'VtITbAdNJowUHxKFHwNuXadpDXFiHzSg',
+  discogsConsumerUsername: 'thee.cosmic.oasis'
 };
 
