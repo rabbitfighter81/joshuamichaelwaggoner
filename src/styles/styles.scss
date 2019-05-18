@@ -1,5 +1,6 @@
 @import './theme';
 @import './mixin';
+
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /*
@@ -275,13 +276,17 @@ mat-list.list--compact > mat-list-item.mat-list-item {
   outline: none;
 }
 
+html {
+  font-family: $font-family-lato;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
-html {
-  font-family: $font-family-lato;
+h1 {
+  font-family: $font-family-oswald;
 }
 
 p, li {
@@ -290,7 +295,7 @@ p, li {
 }
 
 li {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;;
 }
 
 li:nth-last-child {
@@ -299,13 +304,10 @@ li:nth-last-child {
 
 .mat-toolbar .title {
   font-family: $font-family-oswald;
-  // font-size: $app-font-size-large;
   color: white;
 }
 
-h1 {
-  font-family: $font-family-oswald;
-}
+
 
 a.link--no-style {
   text-decoration: none;
@@ -318,6 +320,32 @@ a.link--body {
   outline: none;
   cursor: pointer;
   color: $color-deep-sky-blue;
+}
+
+a.link--toolbar {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: $color-electric-yellow;
+}
+
+.col-margins > button:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.button--margin {
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mat-card.card--no-logo > .mat-card-header > .mat-card-header-text {
+ margin: 0;
+}
+
+.margin-bottom--card {
+  margin-bottom: 1rem;
 }
 
 .spacer {
@@ -333,7 +361,21 @@ a.link--body {
 }
 
 .container {
-  padding: 16px;
+  padding: 1rem;
+}
+
+.flex-col-fs {
+  @include flex-col-fs();
+}
+
+.toolbar-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0px;
+  color: white;
+  font-size: 1rem;;
+  z-index: 10;
 }
 
 .img--full {
@@ -342,14 +384,27 @@ a.link--body {
   height: auto;
 }
 
+
+.nav-item, .nav-item-active {
+  color: $color-electric-yellow;
+  outline: none;
+  cursor: pointer;
+}
+
 .personal-image {
   background-image: url('/assets/img/me.jpg');
+  background-size: cover;
+}
+
+.future-image {
+  background-image: url('/assets/img/crystal-ball.jpg');
   background-size: cover;
 }
 
 .mat-sidenav-container {
   margin-top: 64px;
   min-height: calc(100vh - 64px);
+  margin-bottom: 64px;
 }
 
 .toolbar-header {
@@ -358,4 +413,8 @@ a.link--body {
   width: 100%;
   margin: 0px;
   z-index: 10;
+}
+
+.line-through {
+  text-decoration: line-through;
 }

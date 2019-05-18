@@ -2,9 +2,9 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import findIndex from 'lodash.findindex';
 import { Subscription } from 'rxjs';
-import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
-import { Greyhound } from '../../../core/models/greyhound.model';
-import { GreyhoundService } from '../../../core/services/greyhound/greyhound.service';
+import { unsubscribeAll } from '../../../../core/helpers/unsubscribe.helper';
+import { Greyhound } from '../../../../core/models/greyhound.model';
+import { GreyhoundService } from '../../../../core/services/greyhound/greyhound.service';
 
 interface GreyhoundRouteParamMap {
   greyhound: string;

@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
 import { DiscogsService } from '../../../core/services/discogs/discogs.service';
-import { RecordCardModule } from '../../common/record-card/record-card.module';
-import { RecordDetailModule } from '../../common/record-detail/record-detail.module';
+import { RecordCardModule } from './record-card/record-card.module';
+import { RecordDetailModule } from './record-detail/record-detail.module';
 import { DiscogsRoutingModule } from './discogs-routing.module';
 import { DiscogsComponent } from './discogs.component';
 

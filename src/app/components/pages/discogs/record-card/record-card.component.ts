@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Record } from '../../../core/models/discogs-record.model';
+import { Record } from '../../../../core/models/discogs-record.model';
 
 @Component({
   selector: 'app-record-card',

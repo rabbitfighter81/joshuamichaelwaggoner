@@ -20,6 +20,13 @@ $desktop-width: 1024px;
   }
 }
 
+@mixin flex-col-fs {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 @mixin flex-row-fs {
   align-items: flex-start;
   display: flex;

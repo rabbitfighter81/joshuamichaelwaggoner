@@ -1,4 +1,4 @@
-<mat-card class="record-card mat-elevatrion-z8" *ngIf="record">
+<mat-card class="mat-elevation-z8 margin-bottom--card " *ngIf="record">
   <mat-card-header>
     <img
       mat-card-avatar
@@ -42,21 +42,21 @@
     </mat-list>
   </mat-card-content>
   <mat-card-actions>
-    <button
-      mat-stroked-button
-      class="btn--flex-row"
-      color="primary"
-      type="button"
-      role="button"
-      aria-label="Record Detail Button"
-      (click)="setRecordDetail(record.id)"
-    >
-      <!-- TODO: Test -->
-      <mat-icon>album</mat-icon>&nbsp;<ng-container
-        i18n="@@RecordCard__Button__Details"
-        >Details</ng-container
+    <div class="button--margin">
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        role="button"
+        aria-label="Record Detail Button"
+        (click)="setRecordDetail(record.id)"
       >
-    </button>
+        <!-- TODO: Test -->
+        <mat-icon>album</mat-icon>&nbsp;<ng-container
+          i18n="@@RecordCard__Button__Details"
+          >Details</ng-container
+        >
+      </button>
+    </div>
   </mat-card-actions>
 </mat-card>
-<br />

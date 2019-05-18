@@ -1,4 +1,4 @@
-<mat-card class="mat-elevation-z5 border-bottom-20" *ngIf="greyhound">
+<mat-card class="mat-elevation-z8 margin-bottom--card card--no-logo" *ngIf="greyhound">
   <mat-card-header>
     <mat-card-title>{{ greyhound.name }}</mat-card-title>
     <mat-card-subtitle *ngIf="greyhound.passed">
@@ -20,16 +20,17 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button
-      mat-stroked-button
-      class="btn--flex-row"
-      color="primary"
-      type="button"
-      role="button"
-      (click)="setGreyhoundDetail(greyhound.route)"
-      aria-label="Greyhound Detail Button"
-    >
-      <mat-icon>pets</mat-icon>&nbsp;DETAILS
-    </button>
+    <div class="button--margin">
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        role="button"
+        (click)="setGreyhoundDetail(greyhound.route)"
+        aria-label="Greyhound Detail Button"
+      >
+        <mat-icon>pets</mat-icon>&nbsp;DETAILS
+      </button>
+    </div>
   </mat-card-actions>
 </mat-card>

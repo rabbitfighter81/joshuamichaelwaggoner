@@ -5,7 +5,7 @@
     </h2>
   </div>
 
-  <mat-card class="mat-elevation-z5" *ngIf="greyhound && image">
+  <mat-card class="mat-elevation-z8" *ngIf="greyhound && image">
     <app-table-greyhound [greyhound]="greyhound"></app-table-greyhound>
     <br />
     <img
@@ -15,7 +15,7 @@
     />
   </mat-card>
 
-  <mat-card class="mat-elevation-z5" *ngIf="!greyhound && image">
+  <mat-card class="mat-elevation-z8" *ngIf="!greyhound && image">
     <mat-card-content class="center">
       Greyhound not found
     </mat-card-content>

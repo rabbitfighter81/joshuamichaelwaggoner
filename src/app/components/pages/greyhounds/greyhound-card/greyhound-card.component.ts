@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Greyhound } from '../../../core/models/greyhound.model';
+import { Greyhound } from '../../../../core/models/greyhound.model';
 
 @Component({
   selector: 'app-greyhound-card',

@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { unsubscribeAll } from '../../../core/helpers/unsubscribe.helper';
-import { DiscogsService } from '../../../core/services/discogs/discogs.service';
+import { unsubscribeAll } from '../../../../core/helpers/unsubscribe.helper';
+import { DiscogsService } from '../../../../core/services/discogs/discogs.service';
 
 interface DiscogsRouteParamMap {
   recordId: any;
