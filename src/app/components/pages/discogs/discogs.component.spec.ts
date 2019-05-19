@@ -3,7 +3,7 @@ import { CoreModule } from '../../../core/core.module';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
 import { DiscogsService } from '../../../core/services/discogs/discogs.service';
 import { DiscogsServiceMock } from '../../../core/services/discogs/discogs.service.mock';
-import { RecordCardComponent } from '../../common/record-card/record-card.component';
+import { RecordCardComponent } from './record-card/record-card.component';
 import { DiscogsComponent } from './discogs.component';
 
 describe('DiscogsModule', () => {

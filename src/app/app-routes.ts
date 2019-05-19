@@ -3,12 +3,12 @@ import { Routes } from '@angular/router';
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'welcome',
     pathMatch: 'full',
   },
   {
-    path: 'home',
-    loadChildren: './components/pages/home/home.module#HomeModule',
+    path: 'welcome',
+    loadChildren: './components/pages/welcome/welcome.module#WelcomeModule',
   },
   {
     path: 'resume',
@@ -30,11 +30,6 @@ export const appRoutes: Routes = [
   {
     path: 'networks',
     loadChildren: './components/pages/networks/networks.module#NetworksModule',
-  },
-  {
-    path: 'resources',
-    loadChildren:
-      './components/pages/resources/resources.module#ResourcesModule',
   },
   {
     path: 'discogs',

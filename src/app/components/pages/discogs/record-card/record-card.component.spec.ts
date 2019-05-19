@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { CoreModule } from '../../../core/core.module';
-import { SharedModule } from '../../../core/modules/shared/shared.module';
+import { CoreModule } from '../../../../core/core.module';
+import { SharedModule } from '../../../../core/modules/shared/shared.module';
 import { RecordCardComponent } from './record-card.component';
 
 describe('RecordCardComponent', () => {

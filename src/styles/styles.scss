@@ -307,7 +307,15 @@ li:nth-last-child {
   color: white;
 }
 
+.form-field-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.form-field-container > * {
+  width: 100%;
+}
 
 a.link--no-style {
   text-decoration: none;

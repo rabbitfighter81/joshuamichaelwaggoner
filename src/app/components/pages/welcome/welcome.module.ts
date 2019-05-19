@@ -3,18 +3,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from '../../../core/modules/app-material/app-material.module';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { WelcomeRoutingModule } from './welcome-routing.module';
+import { WelcomeComponent } from './welcome.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [WelcomeComponent],
   imports: [
     AppMaterialModule,
     CommonModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    HomeRoutingModule,
+    WelcomeRoutingModule,
   ],
 })
-export class HomeModule {}
+export class WelcomeModule {}

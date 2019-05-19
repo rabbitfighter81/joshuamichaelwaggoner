@@ -1,12 +1,10 @@
 @import '../../../../../styles/mixin.scss';
 
-/*
 
 .search-area-content {
   background-color: $color-search-area-bg;
   background-image: url('/assets/img/starwars.jpg');
   color: $color-white;
-  font-size: $app-body-font-size;
 }
 
 input {
@@ -15,8 +13,6 @@ input {
 
 .txt {
   padding: 20px;
-  line-height: $app-body-line-height;
-  font-size: $app-body-font-size;
 }
 
 .searcharea {
@@ -29,7 +25,6 @@ input {
   align-items: center;
   input {
     max-width: 150px;
-    font-size: $app-body-font-size;
   }
   .search {
     display: flex;
@@ -38,8 +33,7 @@ input {
     align-items: center;
   }
   .results {
-    font-size: $app-body-font-size;
     color: $color-electric-yellow;
   }
 }
-*/
+

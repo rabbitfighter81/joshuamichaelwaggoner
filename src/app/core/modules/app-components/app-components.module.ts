@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { WelcomeModule } from 'src/app/components/pages/welcome/welcome.module';
 import { FooterModule } from '../../../components/footer/footer.module';
 import { HeaderModule } from '../../../components/header/header.module';
 import { NavModule } from '../../../components/nav/nav.module';
@@ -12,7 +13,6 @@ import { ForbiddenModule } from '../../../components/pages/forbidden/forbidden.m
 import { GreyhoundCardModule } from '../../../components/pages/greyhounds/greyhound-card/greyhound-card.module';
 import { GreyhoundDetailModule } from '../../../components/pages/greyhounds/greyhound-detail/greyhound-detail.module';
 import { GreyhoundsModule } from '../../../components/pages/greyhounds/greyhounds.module';
-import { HomeModule } from '../../../components/pages/home/home.module';
 import { NetworksModule } from '../../../components/pages/networks/networks.module';
 import { NotFoundModule } from '../../../components/pages/not-found/not-found.module';
 import { ProjectsModule } from '../../../components/pages/projects/projects.module';
@@ -21,7 +21,7 @@ import { UnauthorizedModule } from '../../../components/pages/unauthorized/unaut
 import { TableGreyhoundModule } from '../../../components/tables/table-greyhound/table-greyhound.module';
 
 const modules = [
-  HomeModule,
+  WelcomeModule,
   NavModule,
   AboutModule,
   ContactModule,

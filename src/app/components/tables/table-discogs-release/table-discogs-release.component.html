@@ -1,5 +1,5 @@
 <div class="div--feature-detail" *ngIf="release">
-  <h2 class="detail-header">Release&nbsp;<mat-icon>album</mat-icon></h2>
+  <h2 class="flex-row-fs">Release&nbsp;<mat-icon>album</mat-icon></h2>
   <p *ngFor="let artist of release.artists">
     Artist:&nbsp;<span class="bold">{{ artist.name }}</span>
   </p>
@@ -26,13 +26,13 @@
   </p>
   <hr />
 
-  <h2 class="detail-header" *ngIf="release.notes">
+  <h2 class="flex-row-fs" *ngIf="release.notes">
     Release Notes &nbsp;<mat-icon>notes</mat-icon>
   </h2>
-  <p class="release-notes" *ngIf="release.notes">{{ release.notes }}</p>
+  <p *ngIf="release.notes">{{ release.notes }}</p>
   <hr *ngIf="release.notes" />
 
-  <h2 class="detail-header" *ngIf="release.tracklist">
+  <h2 class="flex-row-fs" *ngIf="release.tracklist">
     Tracklist &nbsp;<mat-icon>queue_music</mat-icon>
   </h2>
   <table mat-table [dataSource]="release.tracklist" class="mat-elevation-z8">
@@ -55,10 +55,19 @@
   <br />
   <hr *ngIf="release.tracklist" />
 
-  <h2 class="detail-header" *ngIf="release.videos && release.videos.length">
+  <h2 class="flex-row-fs" *ngIf="release.videos && release.videos.length">
     Videos &nbsp;<mat-icon>music_video</mat-icon>
   </h2>
-  <div *ngFor="let video of release.videos; let i = index" class="video-container">
-    <iframe class="video" frameborder="0" allowfullscreen [src]="video.uri | safe"> </iframe>
+  <div
+    *ngFor="let video of release.videos; let i = index"
+    class="video-container"
+  >
+    <iframe
+      class="video"
+      frameborder="0"
+      allowfullscreen
+      [src]="video.uri | safe"
+    >
+    </iframe>
   </div>
 </div>

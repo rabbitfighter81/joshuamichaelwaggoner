@@ -1,23 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoreModule } from '../../../core/core.module';
 import { SharedModule } from '../../../core/modules/shared/shared.module';
-import { ResourcesComponent } from './resources.component';
+import { WelcomeComponent } from './welcome.component';
 
-describe('ResourcesComponent', () => {
-
-  let component: ResourcesComponent;
-  let fixture: ComponentFixture<ResourcesComponent>;
+describe('WelcomeComponent', () => {
+  let component: WelcomeComponent;
+  let fixture: ComponentFixture<WelcomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule, CoreModule],
-      declarations: [ResourcesComponent],
-    })
-    .compileComponents();
+      declarations: [WelcomeComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ResourcesComponent);
+    fixture = TestBed.createComponent(WelcomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
