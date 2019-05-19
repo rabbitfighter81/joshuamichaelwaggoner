@@ -14,6 +14,7 @@ const isProd = environment === 'prod';
 const targetPath = `./src/environments/environment.${ environment }.ts`;
 const envConfigFile = `
 export const environment = {
+  apiUrl: 'https://www.joshuamichaelwaggoner.com',
   production: ${ isProd },
   discogsConsumerKey: '${ process.env.DISCOGS_CONSUMER_KEY }',
   discogsConsumerSecret: '${ process.env.DISCOGS_CONSUMER_SECRET }',

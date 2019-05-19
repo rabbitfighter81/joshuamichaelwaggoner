@@ -1,6 +1,6 @@
 
 export const environment = {
-  apiUrl: 'http://www.joshuamichaelwaggoner.com',
+  apiUrl: 'https://www.joshuamichaelwaggoner.com',
   production: true,
   discogsConsumerKey: 'xxx',
   discogsConsumerSecret: 'xxx',
