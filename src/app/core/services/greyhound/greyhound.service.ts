@@ -9,7 +9,7 @@ import { environment } from '../../../../environments/environment';
 export class GreyhoundService implements OnInit, OnDestroy {
   logging = true;
 
-  apiUrl = environment.apiUrl as string;
+  urlBase = `{ window.location.hostname }`;
 
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>(
@@ -17,7 +17,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   );
 
   constructor(private http: HttpClient) {
-    console.log(this.apiUrl);
+    // console.log(this.urlBase);
   }
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
     if (response) {
       this.greyhounds.next(response.map(x => new Greyhound(x)));
       if (this.logging) {
-        console.log(`Greyhounds data from ${ this.apiUrl }/api/greyhounds`, response);
+        console.log(`Greyhounds data from ${ this.urlBase }/api/greyhounds`, response);
       }
     }
   }
@@ -53,7 +53,7 @@ export class GreyhoundService implements OnInit, OnDestroy {
   }
 
   getGreyhounds(): Observable<IGreyhound[]> {
-    return this.http.get<IGreyhound[]>(`${ this.apiUrl }/api/greyhounds`).pipe(
+    return this.http.get<IGreyhound[]>(`${ this.urlBase }/api/greyhounds`).pipe(
       retry(1),
       map(data => data),
     );
