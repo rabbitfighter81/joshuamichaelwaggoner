@@ -1,44 +1,26 @@
 # www.joshuamichaelwaggoner.com
 
-This is my personal app, built using Angular and Angular Material
-
-## Screenshot for Desktop
-
-![Desktop](https://i.imgur.com/2T4qmcN.png)
-
-## Screenshot for Mobile
-
-![Mobile](https://i.imgur.com/gLH0ckY.png)
-
-## Reports and analytics of budle sizes
-
-* `npm run bundle-report` will generate a view of all modules so you can see dependencies in a visual layout.
+This is my personal app, built using Angular and Angular Material, along with other tech.
 
 ## Technologies used
 
-* Angular 7
-* Angular Material
-* SASS/SCSS
-* Yarn
-* Karma/Jasmine
-* Protractor
-* RxJs
-* Express
-* MongoDB
-* Lodash
-* Discogs API
-
-## Environment Variables
-
-### Accessing config var values from code
-
-Config vars are exposed to your app’s code as environment variables. For example, in Node.js you can access your app’s DATABASE_URL config var with process.env.DATABASE_URL. For discogs, I'm using `process.env.DISOCGS_CONSUMER_KEY` and `process.env.DISCOGS_CONSUMER_SECRET` in my Heroku environment to obscure them for GitHub.
+* [Angular 7](https://angular.io/)
+* [Angular Material](https://material.angular.io/)
+* [SASS](https://sass-lang.com/)
+* [Yarn](https://yarnpkg.com/en/)
+* [Jasmine](https://jasmine.github.io/)
+* [Protractor](https://www.protractortest.org)
+* [RxJs](http://reactivex.io/)
+* [Express](https://expressjs.com)
+* [MongoDB](https://www.mongodb.com)
+* [Lodash](https://lodash.com)
+* [Discogs API](https://www.discogs.com/developers)
 
 ## Limitations and requirements
 
-* You need to have Node and Yarn to run `yarn install` which is required for most eberything and included in most all scripts
+* You need to have Node and Yarn to run `yarn install` which is required for most everything and included in most all scripts
 
-## Installation
+## Installationa
 
 * Execute `yarn install` from root directory to grab all the necessary dependencies for both the server and client. The dev dependiencies will be pruned from the bundle on build.
 
@@ -46,30 +28,60 @@ Config vars are exposed to your app’s code as environment variables. For examp
 
 This app is currently set up to serve different builds for each language and locale and host them via a path prefix in the url. Supported locales are English, French, and German.
 
-Execute `yarn run translate` to generate an .xlf file for marking translations in the `src/translations` directory. This is a complex precess, so please see i18n docs to accompish these goals. I aim to add French and Chinese and have 100%  content translation in five languages by the end of year.
+```sh
+$ yarn run translate
+```
+
+Execute this will generate an .xlf file for marking translations in the `src/translations` directory. This is a complex precess, so please see i18n docs to accompish these goals.
 
 ## Serving
 
-* For English, execute `yarn run serve-en`
-* For Spanish, execute `yarn run serve-es`
-* For German, execute `yarn run serve-de`
+Run the corrosponding command for the appropriate locale to serve
 
-Navigate to `http://localhost:<port>/<locale>/`. The app will automatically reload if you change any of the source files.
+| Locale | Command |
+| ------ | ------ |
+| English (en) | `yarn run serve-en` |
+| Spanish (es) | `yarn run serve-es` |
+| German (de) | `yarn run serve-de` |
 
 ## Building
 
 Since this is a multi language `i18n` app, it has to be built for each locale at some point.
 
-* Build a non AOT version for `en` locale exclusively: execute `yarn run build`.
+### Build a non AOT version for `en` locale exclusively
 
-* Build an AOT version of any language alone: execute `yarn run build-locale:<locale>`, i.e. `npm run build-locale:de` for German
+```sh
+$ yarn run build-loacle:en
+```
 
-* Build an AOT version for all locales: execute `yarn run build-locale`
+### Build an AOT version of any language alone
 
-* If you have a bash environment, to install an AOT version all locales you can optionally run the script `npm run locale-postbuild` and it will fire off the `locale-postbuild.sh` script in the `root` directory of the app.
+```sh
+$ yarn run build-locale:<locale>
+```
 
-`locale-postbuild.sh` is the script that gets fired on `npm run heroku-postbuild` command that runs whenever the CD pipeline pushes to Heroku.
+### Build an AOT version for all locales
 
+```sh
+$ yarn run build-locale
+```
+
+### Build by script
+
+If you have a bash environment, to install an AOT version all locales you can optionally run a script.
+
+```sh
+$ yarn run locale-postbuild
+```
+It will fire off the `locale-postbuild.sh` script in the `root` directory of the app.
+
+### Heroku build
+
+`locale-postbuild.sh` is the script that gets fired on `yarn run heroku-postbuild` command that runs whenever the CD pipeline pushes to Heroku.
+
+## Reports and analytics of budle sizes
+
+* `yarn run bundle-report` will generate a view of all modules so you can see dependencies in a visual layout.
 
 ## Code scaffolding
 
@@ -107,3 +119,19 @@ There are no e2e tests yet. Coming soon...
 * Working links to all the projects in Git. Some need created.
 * Set up semantic versioning
 * Add features as they arise
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
