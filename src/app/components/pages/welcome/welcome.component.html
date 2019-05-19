@@ -22,13 +22,18 @@
           developer and a person. Feel free to
           <a class="link--body" routerLink="/contact">contact me</a>.
         </p>
-        <div class="img--container">
-          <img
-            [src]="estesImgSrc"
-            class="img--full"
-            title="Photo of Estes Park"
-          />
-        </div>
+        <slideshow
+          [height]="'auto'"
+          [minHeight]="'525px'"
+          [autoPlay]="true"
+          [showArrows]="true"
+          [autoPlayInterval]="15000"
+          [showDots]="true"
+          [dotColor]="'#ff0'"
+          [imageUrls]="imageSources"
+          [lazyLoad]="imageSources?.length > 1"
+          [autoPlayWaitForLazyLoad]="true">
+        </slideshow>
       </mat-card-content>
     </mat-card>
   </div>
