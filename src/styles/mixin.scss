@@ -1,11 +1,6 @@
 @import './app.scss';
-$breakpoints: (
-  'small': 768px,
-  'medium': 992px,
-  'large': 1024px,
-) !default;
 
-$tablet-width: 768px;
+$tablet-width: 700px;
 $desktop-width: 1024px;
 
 @mixin tablet {
@@ -15,7 +10,7 @@ $desktop-width: 1024px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$tablet-width - 1px}) {
+  @media (min-width: #{ $tablet-width - 1px }) {
     @content;
   }
 }
