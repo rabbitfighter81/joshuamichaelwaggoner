@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { unsubscribeAll } from '../../../../core/helpers/unsubscribe.helper';
+import { Release } from '../../../../core/models/release.model';
 import { DiscogsService } from '../../../../core/services/discogs/discogs.service';
 
 interface DiscogsRouteParamMap {
@@ -18,10 +19,9 @@ export class RecordDetailComponent implements OnInit, AfterViewInit, OnDestroy {
   private release$: Subscription;
 
   embedded = 'https://www.youtube.com/embed/1ozGKlOzEVc';
-  safeURL: any;
+  safeURL: string;
 
-  recordId: any;
-  release: any; // TODO. YARR!!
+  release: Release; // TODO. YARR!!
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -31,7 +31,7 @@ export class RecordDetailComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.route$ = this.activatedRoute.params.subscribe(
       (params: DiscogsRouteParamMap) => {
-        this.recordId = params.recordId;
+        this.service.callGetReleaseById(params.recordId);
       },
     );
     this.release$ = this.service.release.subscribe(next =>
@@ -40,7 +40,6 @@ export class RecordDetailComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.service.callGetReleaseById(this.recordId);
   }
 
   ngOnDestroy() {

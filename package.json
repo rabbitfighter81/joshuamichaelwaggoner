@@ -12,7 +12,7 @@
     "e2e": "ng e2e",
     "translate": "ng xi18n --output-path translate",
     "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
-    "serve:en": "yarn run config --environment=dev && ng serve --aot",
+    "serve:en": "ng serve --aot",
     "serve-es": "yarn run config --environment=dev && ng serve --aot --i18n-file=src/locale/messages.es.xlf --locale=en --i18n-format=xlf",
     "serve-de": "yarn run config --environment=dev && ng serve --aot --i18n-file=src/locale/messages.de.xlf --locale=en --i18n-format=xlf",
     "deploy": "git push && git push heroku master",
@@ -58,6 +58,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/language-service": "~7.2.0",
+    "@types/dotenv": "^6.1.1",
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^11.13.10",

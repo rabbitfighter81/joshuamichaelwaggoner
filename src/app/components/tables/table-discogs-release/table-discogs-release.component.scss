@@ -1,7 +1,7 @@
 @import '../../../../styles/mixin.scss';
 
 table {
-  width: calc(100% - calc($margin-common * 2));
+  width: calc(100% - 32px);
   margin: 0 $margin-common;
 }
 
@@ -28,10 +28,10 @@ div.div--video {
 
 .video-container {
   position: relative;
-  width: calc(100% - calc($margin-common * 2));
+  width: calc(100% - 32px);
   height: 0;
   padding-bottom: 56.25%;
-  margin: calc($margin-common * 2) $margin-common;
+  margin: $margin-common;
 }
 .video {
   position: absolute;
@@ -42,7 +42,7 @@ div.div--video {
 }
 
 table {
-  width: calc(100% - 26px);
+  width: calc(100% - 32px);
   margin: 0 $margin-common;
 }
 
