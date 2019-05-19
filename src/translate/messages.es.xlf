@@ -2,87 +2,111 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="Pinline_Greyhounds" datatype="html">
-        <source>grey·hounds</source>
-        <target>galgos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/common/greyhound-detail/greyhound-detail.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/greyhounds/greyhounds.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Home" datatype="html">
-        <source>Home</source>
-        <target>Inicio</target>
+      <trans-unit id="Global__WelcomePage__Title" datatype="html">
+        <source>Welcome</source>
+        <target>Bienvenido</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/welcome/welcome.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Resume" datatype="html">
+      <trans-unit id="Global__ResumePage__Title" datatype="html">
         <source>Resume</source>
         <target>Currículum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Projects" datatype="html">
+      <trans-unit id="Global__ProjectsPage__Title" datatype="html">
         <source>Projects</source>
-        <target>Proyecto</target>
+        <target>Proyecte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
           <context context-type="linenumber">29</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/projects/projects.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Networks" datatype="html">
+      <trans-unit id="Global__NetworksPage__Title" datatype="html">
         <source>Networks</source>
         <target>Redes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/networks/networks.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Greyhounds" datatype="html">
+      <trans-unit id="Global__GreyhoundsPage__Title" datatype="html">
         <source>Greyhounds</source>
         <target>Galgos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/greyhounds/greyhounds.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Discogs" datatype="html">
+      <trans-unit id="Global__DiscogsPage__Title" datatype="html">
         <source>Discogs</source>
         <target>Discogs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/discogs/discogs.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_Contact" datatype="html">
+      <trans-unit id="Global__ContactsPage__Title" datatype="html">
         <source>Contact</source>
         <target>Contacto</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="NavComponent_NavLink_About" datatype="html">
+      <trans-unit id="Global__AboutPage__Title" datatype="html">
         <source>About</source>
         <target>Acerca de</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/nav/nav.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/about/about.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="GreyhoundDetail__Title_GreyhoundDetails" datatype="html">
+        <source>Greyhound Details</source>
+        <target>Detalles del galgo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/pages/greyhounds/greyhound-detail/greyhound-detail.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="RecordCard__ListItemHeader__Format" datatype="html">
         <source>Format</source>
         <target>Formato</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
+          <context context-type="sourcefile">app/components/pages/discogs/record-card/record-card.component.html</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
@@ -90,81 +114,53 @@
         <source>Extras</source>
         <target>Extras</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
+          <context context-type="sourcefile">app/components/pages/discogs/record-card/record-card.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="RecordCard__Button__Details" datatype="html">
         <source>Details</source>
-        <target>Detallers</target>
+        <target>Detalles</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/common/record-card/record-card.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="sourcefile">app/components/pages/discogs/record-card/record-card.component.html</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_About" datatype="html">
-        <source>ab·out</source>
-        <target>acerca·de</target>
+      <trans-unit id="RecordDetail__Title_ReleaseDetails" datatype="html">
+        <source>Release Details</source>
+        <target>Detalles de lanzamiento</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/about/about.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="sourcefile">app/components/pages/discogs/record-detail/record-detail.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Contact" datatype="html">
-        <source>con·tact</source>
-        <target>con·tac·to</target>
+      <trans-unit id="ContctPage__Title" datatype="html">
+        <source>Contact</source>
+        <target>Contacto</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/contact/contact.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Discogs" datatype="html">
-        <source>disc·ogs</source>
-        <target>disc·ogs</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/discogs/discogs.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="Pinline_Forbidden" datatype="html">
-        <source>for·bid·den</source>
-        <target>pro·hi·bid·o</target>
+      <trans-unit id="ForbiddenPage__Title" datatype="html">
+        <source>Forbidden</source>
+        <target>Prohibido</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/forbidden/forbidden.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="Pinline_Welcome" datatype="html">
-        <source>wel·come</source>
-        <target>bien·ven·i·do</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/home/home.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="Pinline_Networks" datatype="html">
-        <source>net·works</source>
-        <target>red·es</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/networks/networks.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
+        <source>&apos;Page Not Found&apos;</source>
+        <target>&apos;Página no encontrada&apos;</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/not-found/not-found.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Projects" datatype="html">
-        <source>pro·jects</source>
-        <target>pro·yec·to</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/projects/projects.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="Projects_Actions_Share" datatype="html">
-        <source>SHARE</source>
-        <target>SHARE</target>
+        <source>Share</source>
+        <target>Compartir</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/color-picker/color-picker.component.html</context>
           <context context-type="linenumber">94</context>
@@ -175,11 +171,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/password-generator/password-generator.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">87</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/rand-color-text/rand-color-text.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/search-highlight/search-highlight.component.html</context>
@@ -187,8 +183,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="Projects_Actions_GitHub" datatype="html">
-        <source>GITHUB</source>
-        <target>GITHUB</target>
+        <source>GitHub</source>
+        <target>GitHub</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/color-picker/color-picker.component.html</context>
           <context context-type="linenumber">105</context>
@@ -199,58 +195,27 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/password-generator/password-generator.component.html</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/rand-color-text/rand-color-text.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/projects/search-highlight/search-highlight.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="Pinline_Resume" datatype="html">
-        <source>re·sume</source>
-        <target>cur·ríc·u·lum</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/resume/resume.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="Pinline_Unauthorized" datatype="html">
-        <source>un·au·thor·ize</source>
-         <target>no auto·rizado</target>
+      <trans-unit id="UnauthorizedPage__Title" datatype="html">
+        <source>Unauthorized</source>
+        <target>No autorizado</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/pages/unauthorized/unauthorized.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="Pinline_Resources" datatype="html">
-        <source>re·source·s</source>
-        <target>re·curs·so</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ResourcesComponent_Title" datatype="html">
-        <source>Resources</source>
-        <target>Recurso</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ResourcesComponent_SubTitle" datatype="html">
-        <source>Coming Soon...</source>
-        <target>Próximamente...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/components/pages/resources/resources.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
     </body>
   </file>
 </xliff>
+
 

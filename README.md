@@ -19,10 +19,14 @@ This is my personal app, built using Angular and Angular Material
 * Angular 7
 * Angular Material
 * SASS/SCSS
+* Yarn
+* Karma/Jasmine
+* Protractor
 * RxJs
 * Express
 * MongoDB
 * Lodash
+* Discogs API
 
 ## Environment Variables
 
@@ -32,23 +36,23 @@ Config vars are exposed to your app’s code as environment variables. For examp
 
 ## Limitations and requirements
 
-* You need to have Node to run `npm i` which is required for most eberything and included in most all scripts
+* You need to have Node and Yarn to run `yarn install` which is required for most eberything and included in most all scripts
 
 ## Installation
 
-* Execute `npm install` from root directory to grab all the necessary dependencies for both the server and client. The dev dependiencies will be pruned from the bundle on build.
+* Execute `yarn install` from root directory to grab all the necessary dependencies for both the server and client. The dev dependiencies will be pruned from the bundle on build.
 
 ## Internationalization (i18n)
 
-This app is currently set up to serve different builds for each language and locale and host them via a path prefix in the url. Supported locales are English, French, and German. 
+This app is currently set up to serve different builds for each language and locale and host them via a path prefix in the url. Supported locales are English, French, and German.
 
-Execute `ng xi18n` or other commands (see ...) to generate an .xlf file for marking translations. This is a complex precess, so please see i18n docs to accompish these goals. I aim to add French and Chinese and have 100% translation by end of year.
+Execute `yarn run translate` to generate an .xlf file for marking translations in the `src/translations` directory. This is a complex precess, so please see i18n docs to accompish these goals. I aim to add French and Chinese and have 100%  content translation in five languages by the end of year.
 
 ## Serving
 
-* For English, execute `npm run serve-en`
-* For Spanish, execute `npm run serve-es`
-* For German, execute `npm run serve-de`
+* For English, execute `yarn run serve-en`
+* For Spanish, execute `yarn run serve-es`
+* For German, execute `yarn run serve-de`
 
 Navigate to `http://localhost:<port>/<locale>/`. The app will automatically reload if you change any of the source files.
 
@@ -56,11 +60,11 @@ Navigate to `http://localhost:<port>/<locale>/`. The app will automatically relo
 
 Since this is a multi language `i18n` app, it has to be built for each locale at some point.
 
-* Build a non AOT version for `en` locale exclusively: execute `npm run build`.
+* Build a non AOT version for `en` locale exclusively: execute `yarn run build`.
 
-* Build an AOT version of any language alone: execute `npm run build-locale:<locale>`, i.e. `npm run build-locale:de` for German
+* Build an AOT version of any language alone: execute `yarn run build-locale:<locale>`, i.e. `npm run build-locale:de` for German
 
-* Build an AOT version for all locales: execute `npm run build-locale`
+* Build an AOT version for all locales: execute `yarn run build-locale`
 
 * If you have a bash environment, to install an AOT version all locales you can optionally run the script `npm run locale-postbuild` and it will fire off the `locale-postbuild.sh` script in the `root` directory of the app.
 
@@ -103,4 +107,3 @@ There are no e2e tests yet. Coming soon...
 * Working links to all the projects in Git. Some need created.
 * Set up semantic versioning
 * Add features as they arise
-

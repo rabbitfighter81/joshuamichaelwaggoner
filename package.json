@@ -10,6 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "translate": "ng xi18n --output-path translate",
     "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
     "serve-en": "npm run config -- --environment=dev && ng serve --aot --i18n-file=src/locale/messages.en.xlf --locale=en --i18n-format=xlf",
     "serve-es": "npm run config -- --environment=dev && ng serve --aot --i18n-file=src/locale/messages.es.xlf --locale=en --i18n-format=xlf",
