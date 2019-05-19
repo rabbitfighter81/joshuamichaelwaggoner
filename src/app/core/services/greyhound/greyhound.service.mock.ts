@@ -14,7 +14,7 @@ export class GreyhoundServiceMock implements OnInit, OnDestroy {
   }
   onGreyhoundUpdate(response: Greyhound[]): void {}
   onGreyhoundError(error: any): void {}
-  get url(): string {
-    return `/api/greyhounds`;
+  get urlBase(): string {
+    return `{ window.location.href }`;
   }
 }
