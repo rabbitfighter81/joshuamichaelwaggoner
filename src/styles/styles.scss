@@ -168,6 +168,11 @@ a.link--toolbar {
   margin-top: 64px;
   min-height: calc(100vh - 64px);
   margin-bottom: 64px;
+  @include tablet {
+    margin-top: 56px;
+    min-height: calc(100vh - 56px);
+    margin-bottom: 56px;
+  }
 }
 
 .toolbar-header {
