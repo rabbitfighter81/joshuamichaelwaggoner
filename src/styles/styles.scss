@@ -1,276 +1,9 @@
 @import './theme';
 @import './mixin';
-
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-/*
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body,
-p,
-li,
-a {
-  font-size: $app-header-font-size-mobile;
-  line-height: $app-body-line-height;
-  font-weight: $app-body-font-weight;
-}
-
-div.div--feature-detail > p {
-  margin: 0 13px;
-}
-
-h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 13px;
-  font-size: $app-header-font-size;
-}
-
-li {
-  line-height: $app-body-line-height;
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-form {
-  width: 100%;
-}
-
-input {
-  font-size: $app-body-font-size;
-}
-
-.bold {
-  font-weight: 500;
-  color: #333;
-}
-
-.border-bottom-20 {
-  margin-bottom: $border-bottom-20;
-}
-
-.btn-mat-icon {
-  .mat-icon {
-    color: $color-white;
-  }
-}
-
-.btn--flex-row {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 13px;
-}
-
-.center {
-  text-align: center;
-}
-
-.line-through {
-  text-decoration: line-through;
-}
-
-
-.flex-row-justify-start-align-start {
-  @include flex-row-justify-start-align-start();
-}
-
-.flex-row-justify-start-align-center {
-  @include flex-row-justify-start-align-center();
-}
-
-.flex-col {
-  @include flex-col();
-}
-
-.form-field-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-field-container > * {
-  width: 100%;
-}
-
-.full-image {
-  margin: auto;
-  width: 100%;
-}
-
-.img--center {
-  margin: auto;
-}
-
-.img--container > img {
-  width: 100%;
-}
-
-.link--body {
-  color: $color-med-blue;
-  text-decoration: none;
-  &:active {
-    color: $color-med-blue;
-  }
-
-  &:visited {
-    color: $color-med-blue;
-  }
-
-  &:link {
-    color: $color-med-blue;
-  }
-
-  &:hover {
-    color: $color-med-blue;
-    text-decoration: underline;
-  }
-}
-
-.link--yellow {
-  color: $color-electric-yellow;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.margin-right-10 {
-  margin-right: 10px;
-}
-
-.mat-card >.mat-card-actions >.mat-stroked-button {
-  margin: 13px;
-}
-
-.mat-card > .mat-card-header > .mat-card-title {
-  @include tablet {
-    font-size: $app-header-font-size-mobile;
-  }
-
-  font-size: $app-header-font-size;
-}
-
-.mat-card >.mat-card-content {
-  margin: 13px;
-}
-
-/*
-mat-list.list--compact > mat-list-item.mat-list-item {
-  height: 1.65rem !important;
-  font-size: $app-header-font-size-mobile;
-}
-*/
-
-
-/*
-.mat-stroked-button {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 13px;
-}
-
-.nav-item, .nav-item-active {
-  color: $color-electric-yellow;
-  outline: none;
-  cursor: pointer;
-}
-
-.nav-item-active {
-  color: $color-med-blue;
-}
-
-.personal-image {
-  background-image: url('/assets/img/me.jpg');
-  background-size: cover;
-}
-
-.pipeline-container {
-  margin: 20px 0;
-  width: 100%;
-
-  h1 {
-    @media only screen and (max-width: 600px) {
-      font-size: 1em;
-    }
-
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-  }
-
-  .pinline {
-    color: $color-black;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    margin: 20px 0;
-    overflow: hidden;
-    text-align: center;
-    text-transform: lowercase;
-  }
-
-  .pinline > span {
-    display: inline-block;
-    position: relative;
-  }
-
-  .pinline > span,
-  .pinline > span {
-
-    &::after {
-      background: $color-black;
-      content: '';
-      height: 1px;
-      margin-right: 20px;
-      position: absolute;
-      right: 100%;
-      top: 50%;
-      width: 99999px;
-    }
-
-    &::before {
-      background: $color-black;
-      content: '';
-      height: 1px;
-      left: 100%;
-      margin-left: 20px;
-      position: absolute;
-      top: 50%;
-      width: 99999px;
-    }
-  }
-
-}
-
-.spacer {
-  flex: 1 0 0;
-}
-
-.toolbar {
-  background: $color-toolbar-bg;
-  margin: 0;
-  width: 100%;
-}
-
-.touchable {
-  cursor: pointer;
-  outline: none;
-}
-
-*/
-
-
 @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500');
 
 * {
   outline: none;
@@ -302,9 +35,31 @@ li:nth-last-child {
  margin-bottom: 0;
 }
 
+.full-image {
+  margin: auto;
+  width: 100%;
+}
+
+.img--center {
+  margin: auto;
+}
+
+.img--container > img {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
 .mat-toolbar .title {
   font-family: $font-family-oswald;
   color: white;
+}
+
+.touchable {
+  cursor: pointer;
+  outline: none;
 }
 
 .form-field-container {
