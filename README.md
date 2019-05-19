@@ -40,9 +40,9 @@ Run the corrosponding command for the appropriate locale to serve
 
 | Locale | Command |
 | ------ | ------ |
-| English (en) | `yarn run serve-en` |
-| Spanish (es) | `yarn run serve-es` |
-| German (de) | `yarn run serve-de` |
+| English (en) | `yarn run serve:en` |
+| Spanish (es) | `yarn run serve:es` |
+| German (de) | `yarn run serve:de` |
 
 ## Building
 
@@ -119,19 +119,3 @@ There are no e2e tests yet. Coming soon...
 * Working links to all the projects in Git. Some need created.
 * Set up semantic versioning
 * Add features as they arise
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

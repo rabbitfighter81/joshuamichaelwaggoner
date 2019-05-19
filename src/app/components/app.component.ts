@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {

@@ -12,15 +12,15 @@
     "e2e": "ng e2e",
     "translate": "ng xi18n --output-path translate",
     "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
-    "serve-en": "npm run config -- --environment=dev && ng serve --aot --i18n-file=src/locale/messages.en.xlf --locale=en --i18n-format=xlf",
-    "serve-es": "npm run config -- --environment=dev && ng serve --aot --i18n-file=src/locale/messages.es.xlf --locale=en --i18n-format=xlf",
-    "serve-de": "npm run config -- --environment=dev && ng serve --aot --i18n-file=src/locale/messages.de.xlf --locale=en --i18n-format=xlf",
+    "serve:en": "yarn run config --environment=dev && ng serve --aot",
+    "serve-es": "yarn run config --environment=dev && ng serve --aot --i18n-file=src/locale/messages.es.xlf --locale=en --i18n-format=xlf",
+    "serve-de": "yarn run config --environment=dev && ng serve --aot --i18n-file=src/locale/messages.de.xlf --locale=en --i18n-format=xlf",
     "deploy": "git push && git push heroku master",
     "locale-postbuild": "bash ./locale-postbuild.sh",
-    "build-locale:en": "npm run config -- --environment=prod && ng build --prod --aot --i18n-locale en --i18n-format xlf --i18n-file src/translate/messages.en.xlf --output-path=dist/en --baseHref /en/",
-    "build-locale:de": "npm run config -- --environment=prod && ng build --prod --aot --i18n-locale de --i18n-format xlf --i18n-file src/translate/messages.de.xlf --output-path=dist/de --baseHref /de/",
-    "build-locale:es": "nnpm run config -- --environment=prod && ng build --prod --aot --i18n-locale es --i18n-format xlf --i18n-file src/translate/messages.es.xlf --output-path=dist/es --baseHref /es/",
-    "build-locale": "npm run build-locale:en && npm run build-locale:de & npm run build-locale:es"
+    "build-locale:en": "yarn run config -- --environment=prod && ng build --prod --aot --i18n-locale en --i18n-format xlf --i18n-file src/translate/messages.en.xlf --output-path=dist/en --baseHref /en/",
+    "build-locale:de": "yarn run config -- --environment=prod && ng build --prod --aot --i18n-locale de --i18n-format xlf --i18n-file src/translate/messages.de.xlf --output-path=dist/de --baseHref /de/",
+    "build-locale:es": "yarn run config -- --environment=prod && ng build --prod --aot --i18n-locale es --i18n-format xlf --i18n-file src/translate/messages.es.xlf --output-path=dist/es --baseHref /es/",
+    "build-locale": "yarn run build-locale:en && yarn run build-locale:de & yarn run build-locale:es"
   },
   "private": true,
   "dependencies": {

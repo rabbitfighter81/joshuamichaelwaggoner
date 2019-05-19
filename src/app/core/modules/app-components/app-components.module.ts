@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { WelcomeModule } from 'src/app/components/pages/welcome/welcome.module';
+import { WelcomeModule } from '../../../components/pages/welcome/welcome.module';
 import { FooterModule } from '../../../components/footer/footer.module';
 import { HeaderModule } from '../../../components/header/header.module';
 import { NavModule } from '../../../components/nav/nav.module';

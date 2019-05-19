@@ -26,13 +26,13 @@
   </p>
   <hr />
 
-  <h2 class="flex-row-fs" *ngIf="release.notes">
+  <h2 class="flex-row-fs-center" *ngIf="release.notes">
     Release Notes &nbsp;<mat-icon>notes</mat-icon>
   </h2>
   <p *ngIf="release.notes">{{ release.notes }}</p>
   <hr *ngIf="release.notes" />
 
-  <h2 class="flex-row-fs" *ngIf="release.tracklist">
+  <h2 class="flex-row-fs-center" *ngIf="release.tracklist">
     Tracklist &nbsp;<mat-icon>queue_music</mat-icon>
   </h2>
   <table mat-table [dataSource]="release.tracklist" class="mat-elevation-z8">
@@ -55,7 +55,7 @@
   <br />
   <hr *ngIf="release.tracklist" />
 
-  <h2 class="flex-row-fs" *ngIf="release.videos && release.videos.length">
+  <h2 class="flex-row-fs-center" *ngIf="release.videos && release.videos.length">
     Videos &nbsp;<mat-icon>music_video</mat-icon>
   </h2>
   <div

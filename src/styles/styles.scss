@@ -23,7 +23,7 @@ h1 {
 
 p,
 li {
-  font-size: $app-font-size-small;
+  font-size: $app-font-size-normal;
   line-height: 1.8rem;
 }
 
@@ -82,7 +82,7 @@ a.link--body {
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  color: $color-deep-sky-blue;
+  color: $color-med-blue;
 }
 
 a.link--toolbar {
@@ -157,6 +157,10 @@ a.link--toolbar {
   }
 }
 
+.mat-sidenav-container > .mat-sidenav {
+  background: $color-toolbar-bg;
+}
+
 .mat-paginator.paginator--centered {
   display: flex;
   justify-content: center;
@@ -186,6 +190,7 @@ a.link--toolbar {
   color: white;
   font-size: 1rem;
   z-index: 10;
+  background: $color-dark-grey;
 }
 
 .toolbar-header {
@@ -194,4 +199,5 @@ a.link--toolbar {
   width: 100%;
   margin: 0px;
   z-index: 10;
+  background: $color-dark-grey;
 }

@@ -33,10 +33,10 @@ $custom-typography: mat-typography-config(
 // Include theme styles for core and each component used in your app.
 // Alternatively, yous can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($rgb-app-theme-dark);
+@include angular-material-theme($rgb-app-theme);
 // Default colors
 $my-app-primary: mat-palette($mat-light-blue, 400, 100, 800);
 $my-app-accent: mat-palette($mat-green, 700, 100, 800);
 $my-app-warn: mat-palette($mat-red, 700, 100, 800);
-$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);

@@ -4,7 +4,7 @@
 $color-deep-sky-blue: #00bfff;
 $color-med-blue: #2983dd;
 $color-electric-yellow: #ff3;
-$color-dark-grey: #333;
+$color-dark-grey: #222;
 $color-white: #fff;
 $color-grey: #666;
 $color-off-white: #fdfdfd;
@@ -12,18 +12,12 @@ $color-black: #000;
 $color-body-bg: #fafafa;
 
 // Dark grey stuff...
-$color-mat-sidenav-bg: $color-dark-grey; // Follow this convention. Name the thing, not the color. The color is obvious
-$color-search-area-bg: $color-dark-grey;
 $color-toolbar-bg: $color-dark-grey;
-$color-footer-bg: $color-dark-grey;
 
 $margin-common: 1.3rem;
 
-$app-font-size-xl: 32px;
-$app-font-size-large: 28px;
-$app-font-size-medium: 22px;
-$app-font-size-small: 1rem;;
-$app-font-size-zs: 14px;
+$app-font-size-normal: 1rem;
+$app-title-font-size: 1.33rem;
 
 $font-family-lato: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-family-oswald: 'Oswald', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
