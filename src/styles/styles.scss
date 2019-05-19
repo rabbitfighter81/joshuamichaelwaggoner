@@ -95,9 +95,9 @@ a.link--toolbar {
 
 .button--margin {
   margin-top: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-left: $margin-common;
+  margin-right: $margin-common;
+  margin-bottom: $margin-common;
 }
 
 .col-margins > button:not(:last-child) {
@@ -114,6 +114,10 @@ a.link--toolbar {
 
 .flex-row-fs {
   @include flex-row-fs();
+}
+
+.flex-row-fs-center {
+  @include flex-row-fs-center();
 }
 
 .future-image {
@@ -136,7 +140,7 @@ a.link--toolbar {
 }
 
 .margin-bottom--card {
-  margin-bottom: 1rem;
+  margin-bottom: $margin-common;
 }
 
 .mat-icon-button.margin-6 {

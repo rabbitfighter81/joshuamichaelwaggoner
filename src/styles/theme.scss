@@ -25,7 +25,7 @@ $rgb-app-theme-dark: mat-dark-theme(
 
 // NOTE: From `2.0.0-beta.10`, you can now pass the typography via the mat-core() mixin:
 $custom-typography: mat-typography-config(
-  $font-family: 'Montserrat'
+  $font-family: 'Lato'
 );
 @include mat-core($custom-typography);
 
