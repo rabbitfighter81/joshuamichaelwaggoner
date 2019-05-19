@@ -6,7 +6,7 @@ import { Greyhound, IGreyhound } from '../../models/greyhound.model';
 
 @Injectable()
 export class GreyhoundService implements OnInit, OnDestroy {
-  logging = true;
+  logging = false;
 
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>(
@@ -14,7 +14,6 @@ export class GreyhoundService implements OnInit, OnDestroy {
   );
 
   constructor(private http: HttpClient) {
-    // console.log(this.urlBase);
   }
 
   ngOnInit() {
