@@ -22,17 +22,18 @@ h1 {
   font-family: $font-family-oswald;
 }
 
-p, li {
+p,
+li {
   font-size: $app-font-size-small;
   line-height: 1.8rem;
 }
 
 li {
-  margin-bottom: 1rem;;
+  margin-bottom: 1rem;
 }
 
 li:nth-last-child {
- margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .full-image {
@@ -92,10 +93,6 @@ a.link--toolbar {
   color: $color-electric-yellow;
 }
 
-.col-margins > button:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .button--margin {
   margin-top: 0;
   margin-left: 1rem;
@@ -103,24 +100,8 @@ a.link--toolbar {
   margin-bottom: 1rem;
 }
 
-.mat-card.card--no-logo > .mat-card-header > .mat-card-header-text {
- margin: 0;
-}
-
-.margin-bottom--card {
+.col-margins > button:not(:last-child) {
   margin-bottom: 1rem;
-}
-
-.spacer {
-  flex: 1 0 0;
-}
-
-.flex-row-fs {
-  @include flex-row-fs();
-}
-
-.mat-icon-button.margin-6 {
-  margin: 6px;
 }
 
 .container {
@@ -131,14 +112,13 @@ a.link--toolbar {
   @include flex-col-fs();
 }
 
-.toolbar-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0px;
-  color: white;
-  font-size: 1rem;;
-  z-index: 10;
+.flex-row-fs {
+  @include flex-row-fs();
+}
+
+.future-image {
+  background-image: url('/assets/img/crystal-ball.jpg');
+  background-size: cover;
 }
 
 .img--full {
@@ -147,21 +127,20 @@ a.link--toolbar {
   height: auto;
 }
 
-
-.nav-item, .nav-item-active {
-  color: $color-electric-yellow;
-  outline: none;
-  cursor: pointer;
+.line-through {
+  text-decoration: line-through;
 }
 
-.personal-image {
-  background-image: url('/assets/img/me.jpg');
-  background-size: cover;
+.mat-card.card--no-logo > .mat-card-header > .mat-card-header-text {
+  margin: 0;
 }
 
-.future-image {
-  background-image: url('/assets/img/crystal-ball.jpg');
-  background-size: cover;
+.margin-bottom--card {
+  margin-bottom: 1rem;
+}
+
+.mat-icon-button.margin-6 {
+  margin: 6px;
 }
 
 .mat-sidenav-container {
@@ -175,14 +154,41 @@ a.link--toolbar {
   }
 }
 
+.mat-paginator.paginator--centered {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item,
+.nav-item-active {
+  color: $color-electric-yellow;
+  outline: none;
+  cursor: pointer;
+}
+
+.personal-image {
+  background-image: url('/assets/img/me.jpg');
+  background-size: cover;
+}
+
+.spacer {
+  flex: 1 0 0;
+}
+
+.toolbar-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0px;
+  color: white;
+  font-size: 1rem;
+  z-index: 10;
+}
+
 .toolbar-header {
   position: fixed;
   top: 0;
   width: 100%;
   margin: 0px;
   z-index: 10;
-}
-
-.line-through {
-  text-decoration: line-through;
 }
