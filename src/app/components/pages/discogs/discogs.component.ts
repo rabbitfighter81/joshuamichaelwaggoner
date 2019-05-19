@@ -42,7 +42,7 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.discogsService.callGetFolders();
+    this.discogsService.callGetRecords(this.pagination);
   }
 
   ngOnDestroy() {
@@ -60,7 +60,7 @@ export class DiscogsComponent implements OnInit, AfterViewInit, OnDestroy {
     if (pagination) {
       this.pagination = pagination;
       this.discogsService.callGetRecords(pagination);
-      smoothScrollTop();
+      window.moveTo(0, 0);
     }
   }
 
