@@ -9,7 +9,7 @@ import { environment } from '../../../../environments/environment';
 export class GreyhoundService implements OnInit, OnDestroy {
   logging = true;
 
-  urlBase = `{ window.location.pathname }`;
+  urlBase = `{ window.location.origin }`;
 
   private greyhounds$: Subscription;
   greyhounds: BehaviorSubject<Greyhound[]> = new BehaviorSubject<Greyhound[]>(
