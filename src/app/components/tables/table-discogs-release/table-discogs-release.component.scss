@@ -1,9 +1,8 @@
 @import '../../../../styles/mixin.scss';
 
-/*
 table {
   width: calc(100% - 26px);
-  margin: 0 13px;
+  margin: 0 1rem;
 }
 
 iframe {
@@ -20,16 +19,11 @@ iframe {
   }
 }
 
-
 div.div--video {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.video-title {
-  color: $color-dark-grey;
 }
 
 .video-container {
@@ -46,8 +40,6 @@ div.div--video {
   width: 100%;
   height: 100%;
 }
-
-*/
 
 table {
   width: calc(100% - 26px);

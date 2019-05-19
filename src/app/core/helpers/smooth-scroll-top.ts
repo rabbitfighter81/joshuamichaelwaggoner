@@ -6,6 +6,6 @@ export const smoothScrollTop = (): void => {
     } else {
       window.clearInterval(scrollToTop);
     }
-  }, 2);
+  }, 8);
 };
 
