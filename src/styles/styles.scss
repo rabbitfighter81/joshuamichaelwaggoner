@@ -173,6 +173,11 @@ a.link--toolbar {
   cursor: pointer;
 }
 
+.page-title {
+  margin-left: $margin-common;
+  text-transform: UPPERCASE;
+}
+
 .personal-image {
   background-image: url('/assets/img/me.jpg');
   background-size: cover;
