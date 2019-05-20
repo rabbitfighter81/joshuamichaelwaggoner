@@ -13,8 +13,10 @@ export class WelcomeComponent implements OnInit {
     'assets/img/rino.jpg',
     'assets/img/st-cajetans.jpg',
     'assets/img/flight.jpg',
-    'assets/img/home.jpg',
-    'assets/img/jeep.jpg'
+    'assets/img/vail.png',
+    'assets/img/coffee.jpg',
+    'assets/img/sky.jpg',
+    'assets/img/estes.jpg'
   ];
 
   constructor() { }
