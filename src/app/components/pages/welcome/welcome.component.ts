@@ -14,10 +14,8 @@ export class WelcomeComponent implements OnInit {
     'assets/img/st-cajetans.jpg',
     'assets/img/flight.jpg',
     'assets/img/coffee.jpg',
-    'assets/img/vail/jpg',
-    'assets/img/studio.jpg',
+    'assets/img/vail.png',
     'assets/img/estes.jpg',
-    'assets/img/programming.jpg',
   ];
 
   constructor() { }
